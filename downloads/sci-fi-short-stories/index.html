@@ -1,0 +1,492 @@
+---
+layout: default
+title: "Free Sci-Fi Short Stories for Writers — Writing Desk"
+description: "Ten classic public-domain sci-fi stories, curated for writers — read for inspiration, study how Asimov, Bradbury, Pohl and Verne built a short story, then generate your own idea."
+permalink: /downloads/sci-fi-short-stories/
+---
+
+<style>
+  /* ═══════════════════════════════════════════════════════════
+     DOWNLOAD PAGE — shared component set (dl- prefix)
+     Brand tokens only: var(--purple), var(--ink), var(--serif) etc.
+  ═══════════════════════════════════════════════════════════ */
+
+  /* Book-cover component — 2:3 ratio, font-size on .dl-bc sets scale */
+  .dl-bc {
+    aspect-ratio: 2 / 3; border-radius: 6px; overflow: hidden;
+    box-shadow: 0 8px 28px rgba(26,26,46,0.28), 0 2px 6px rgba(26,26,46,0.14);
+    display: flex; flex-direction: column;
+    font-family: var(--sans); width: 100%;
+  }
+  .dl-bc-hdr {
+    background: var(--purple); padding: 0.32em 0.5em;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-shrink: 0; gap: 0.3em;
+  }
+  .dl-bc-hdr-label { font-size: 0.6em; font-weight: 700; letter-spacing: 0.08em; color: #fff; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .dl-bc-hdr-num { font-size: 0.6em; font-weight: 700; letter-spacing: 0.05em; color: rgba(255,255,255,0.75); text-transform: uppercase; white-space: nowrap; flex-shrink: 0; }
+  .dl-bc-body { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 0.6em 0.55em 0; min-height: 0; background: var(--ink); }
+  .dl-bc-sub { font-size: 0.55em; letter-spacing: 0.12em; text-transform: uppercase; color: var(--purple-mid); text-align: center; margin-bottom: 0.25em; flex-shrink: 0; }
+  .dl-bc-rule { width: 1.5em; height: 1px; background: rgba(175,169,236,0.35); margin-bottom: 0.4em; flex-shrink: 0; }
+  .dl-bc-ttl {
+    font-family: var(--serif); font-size: clamp(0.55em, 1.5cqw, 0.82em); font-weight: 700;
+    color: #fff; text-align: center; text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.3;
+    flex: 1; display: flex; align-items: center; justify-content: center; overflow: hidden;
+    word-break: break-word; hyphens: auto;
+  }
+  .dl-bc-div { display: flex; align-items: center; gap: 0.25em; padding-bottom: 0.4em; flex-shrink: 0; }
+  .dl-bc-dl { width: 1.1em; height: 1px; background: rgba(175,169,236,0.4); }
+  .dl-bc-dd { width: 0.35em; height: 0.35em; border-radius: 50%; border: 1px solid var(--purple-mid); background: transparent; flex-shrink: 0; }
+  .dl-bc-cream { background: var(--purple-faint); padding: 0.45em 0.55em 0.4em; flex-shrink: 0; position: relative; }
+  .dl-bc-by { font-size: 0.55em; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.1em; white-space: nowrap; }
+  .dl-bc-auth { font-family: var(--serif); font-size: 0.7em; font-weight: 700; color: var(--ink); line-height: 1.2; margin-bottom: 0.08em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .dl-bc-yr { font-size: 0.58em; color: var(--ink-faint); letter-spacing: 0.05em; white-space: nowrap; }
+  .dl-bc-badge { position: absolute; bottom: 0.38em; right: 0.38em; width: 2em; height: 2em; border-radius: 50%; background: var(--purple); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .dl-bc-badge span { font-size: 0.5em; font-weight: 700; color: white; letter-spacing: 0.03em; line-height: 1.3; text-transform: uppercase; text-align: center; }
+
+  /* ── Hero — dark, on-brand ── */
+  .dl-hero { background: var(--ink); color: white; padding: 4rem 0 4.5rem; position: relative; overflow: hidden; }
+  .dl-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(83,74,183,0.55) 0%, transparent 60%); pointer-events: none; }
+  .dl-hero-inner { max-width: 1160px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 230px; gap: 3rem; align-items: center; position: relative; z-index: 1; }
+  @media (max-width: 700px) { .dl-hero-inner { grid-template-columns: 1fr; padding: 0 24px; } .dl-hero-books { display: none; } }
+  .dl-hero-eyebrow { display: flex; align-items: center; gap: 0.6rem; font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--purple-mid); font-weight: 600; margin-bottom: 1.1rem; }
+  .dl-hero-eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--purple-mid); border-radius: 2px; flex-shrink: 0; }
+  .dl-hero h1 { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3rem); line-height: 1.1; margin: 0 0 1.1rem; font-weight: 400; color: white; }
+  .dl-hero h1 em { font-style: italic; color: var(--purple-mid); }
+  .dl-hero-copy > p { font-family: var(--sans); font-size: 1.0625rem; line-height: 1.65; color: rgba(255,255,255,0.72); margin: 0 0 1.75rem; max-width: 540px; font-weight: 300; }
+  .dl-hero-prompt-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--sans); font-size: 0.85rem; color: var(--purple-mid); text-decoration: none; margin-bottom: 1.75rem; border-bottom: 1px solid rgba(175,169,236,0.35); padding-bottom: 2px; transition: color 0.15s, border-color 0.15s; }
+  .dl-hero-prompt-link:hover { color: white; border-color: white; }
+
+  .dl-hero-form { max-width: 480px; }
+  .dl-form-row { display: flex; gap: 0.6rem; align-items: stretch; }
+  @media (max-width: 480px) { .dl-form-row { flex-direction: column; } .dl-form-row .dl-form-btn { width: 100%; justify-content: center; } }
+  .dl-form-input { flex: 1; padding: 0.75rem 1rem; border-radius: 999px; border: 1.5px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.08); color: white; font-family: var(--sans); font-size: 0.9375rem; outline: none; transition: border-color 0.15s, background 0.15s; min-width: 0; }
+  .dl-form-input::placeholder { color: rgba(255,255,255,0.45); }
+  .dl-form-input:focus { border-color: var(--purple-mid); background: rgba(255,255,255,0.13); }
+  .dl-form-btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.75rem 1.5rem; border-radius: 999px; background: var(--purple); color: white; font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; cursor: pointer; border: none; transition: background 0.15s, transform 0.15s; white-space: nowrap; flex-shrink: 0; }
+  .dl-form-btn:hover { background: var(--purple-dark); transform: translateY(-1px); }
+  .dl-form-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+  .dl-form-status { font-family: var(--sans); font-size: 0.82rem; margin-top: 0.6rem; min-height: 1.2em; color: rgba(255,255,255,0.75); display: none; }
+  .dl-form-status.success { color: #9fd9a8; display: block; }
+  .dl-form-status.error { color: #f2a3a3; display: block; }
+  .dl-trust-line { font-family: var(--sans); font-size: 0.72rem; color: rgba(255,255,255,0.35); margin-top: 0.65rem; letter-spacing: 0.02em; }
+  .dl-trust-line span { margin: 0 0.4rem; }
+  .dl-hero-books { display: flex; justify-content: center; align-items: center; }
+  .dl-hero-cover-wrap { width: 200px; font-size: 15px; }
+
+  /* ── Craft strip ── */
+  .dl-craft-strip { background: var(--purple-faint); padding: 2.5rem 1.5rem; border-bottom: 1px solid var(--border); text-align: center; }
+  .dl-craft-pill { display: inline-flex; align-items: center; font-family: var(--sans); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--purple); font-weight: 700; border: 1px solid var(--purple); padding: 0.3rem 1rem; border-radius: 999px; margin-bottom: 1.25rem; }
+  .dl-craft-strip h2 { font-family: var(--serif); font-size: clamp(1.5rem, 3.5vw, 2.2rem); color: var(--ink); margin: 0 0 0.9rem; font-weight: 400; line-height: 1.15; }
+  .dl-craft-strip h2 em { font-style: italic; color: var(--purple); }
+  .dl-craft-strip p { max-width: 660px; margin: 0 auto 0.75rem; font-family: var(--sans); font-size: 1rem; line-height: 1.7; color: var(--ink-muted); font-weight: 300; }
+
+  /* ── Stories list ── */
+  .dl-stories-section { background: var(--purple-faint); padding: 3rem 1.5rem; }
+  .dl-stories-inner { max-width: 760px; margin: 0 auto; background: var(--white); border-radius: var(--radius-lg); padding: 2rem 2rem 0.5rem; box-shadow: 0 2px 16px rgba(26,26,46,0.06); }
+  @media (max-width: 560px) { .dl-stories-inner { padding: 1.25rem 1.25rem 0.25rem; } }
+  .dl-stories-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; }
+  .dl-stories-header h3 { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--ink); margin: 0; }
+  .dl-stories-count { font-family: var(--sans); font-size: 0.72rem; color: var(--ink-faint); letter-spacing: 0.07em; font-weight: 500; }
+  .dl-story-item { display: grid; grid-template-columns: 64px 1fr; gap: 1.25rem; padding: 1.25rem 0; border-bottom: 1px solid var(--border); align-items: start; }
+  .dl-story-item:last-child { border-bottom: none; }
+  .dl-story-cover-wrap { width: 64px; font-size: 9px; flex-shrink: 0; }
+  .dl-story-meta { display: flex; flex-direction: column; gap: 0.15rem; }
+  .dl-story-num { font-family: var(--sans); font-size: 0.68rem; color: var(--ink-faint); letter-spacing: 0.08em; font-weight: 500; margin-bottom: 0.05rem; }
+  .dl-story-badge { display: inline-block; font-family: var(--sans); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 999px; background: var(--purple-light); color: var(--purple); margin-left: 0.4rem; vertical-align: middle; }
+  .dl-story-title { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; color: var(--ink); margin: 0; line-height: 1.2; }
+  .dl-story-author { font-family: var(--sans); font-size: 0.8rem; color: var(--purple); font-weight: 600; margin-top: 0.1rem; }
+  .dl-story-desc { font-family: var(--sans); font-size: 0.88rem; line-height: 1.6; color: var(--ink-muted); margin-top: 0.4rem; font-weight: 300; }
+  .dl-story-craft { display: flex; gap: 0.45rem; align-items: baseline; margin-top: 0.55rem; padding-top: 0.55rem; border-top: 1px dashed var(--border); }
+  .dl-story-craft-label { flex-shrink: 0; font-family: var(--sans); font-size: 0.62rem; letter-spacing: 0.09em; text-transform: uppercase; font-weight: 700; color: var(--purple); }
+  .dl-story-craft-note { font-family: var(--sans); font-size: 0.82rem; line-height: 1.55; color: var(--ink-muted); font-style: italic; }
+
+  /* ── Second CTA — reuses manifesto's dark purple treatment ── */
+  .dl-cta-dark { background: var(--purple); padding: 4.5rem 1.5rem; text-align: center; color: white; position: relative; overflow: hidden; }
+  .dl-cta-dark::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 100%, rgba(26,26,46,0.25) 0%, transparent 60%); pointer-events: none; }
+  .dl-cta-dark-inner { max-width: 560px; margin: 0 auto; position: relative; z-index: 1; }
+  .dl-cta-eyebrow { font-family: var(--sans); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--purple-mid); font-weight: 600; margin-bottom: 0.75rem; }
+  .dl-cta-dark h2 { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 0.5rem; font-weight: 400; color: white; }
+  .dl-cta-dark .dl-cta-sub { font-family: var(--sans); color: rgba(255,255,255,0.72); margin: 0 auto 2rem; max-width: 480px; font-size: 0.95rem; line-height: 1.65; font-weight: 300; }
+  .dl-cta-form { max-width: 440px; margin: 0 auto; }
+  .dl-cta-dark .dl-form-input { border-color: rgba(255,255,255,0.3); }
+  .dl-cta-dark .dl-form-btn { background: var(--ink); }
+  .dl-cta-dark .dl-form-btn:hover { background: #000; }
+
+  /* ── FAQ ── */
+  .dl-faq-section { background: var(--white); padding: 3.5rem 1.5rem; }
+  .dl-faq-inner { max-width: 680px; margin: 0 auto; }
+  .dl-faq-eyebrow { font-family: var(--sans); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; margin-bottom: 0.6rem; text-align: center; }
+  .dl-faq-section h2 { font-family: var(--serif); font-size: 1.5rem; text-align: center; margin: 0 0 2.5rem; color: var(--ink); font-weight: 600; }
+  .dl-faq-accordion { list-style: none; padding: 0; margin: 0; }
+  .dl-faq-item { border-top: 1px solid var(--border); }
+  .dl-faq-item:last-child { border-bottom: 1px solid var(--border); }
+  .dl-faq-trigger { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.1rem 0; background: none; border: none; cursor: pointer; text-align: left; font-family: var(--sans); font-size: 0.95rem; font-weight: 600; color: var(--ink); line-height: 1.4; }
+  .dl-faq-trigger:hover { color: var(--purple); }
+  .dl-faq-icon { flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid var(--border-strong); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; color: var(--ink-faint); transition: transform 0.2s, border-color 0.2s, color 0.2s; line-height: 1; }
+  .dl-faq-item.open .dl-faq-icon { transform: rotate(45deg); border-color: var(--purple); color: var(--purple); }
+  .dl-faq-body { display: none; padding: 0 0 1.1rem; font-family: var(--sans); font-size: 0.88rem; line-height: 1.65; color: var(--ink-muted); font-weight: 300; }
+  .dl-faq-item.open .dl-faq-body { display: block; }
+
+  /* ── Keep exploring ── */
+  .dl-keep-exploring { background: var(--purple-faint); padding: 3rem 1.5rem; }
+  .dl-keep-exploring-inner { max-width: 760px; margin: 0 auto; }
+  .dl-keep-exploring h3 { font-family: var(--serif); font-size: 1rem; color: var(--ink); margin: 0 0 0.4rem; font-weight: 600; }
+  .dl-keep-exploring-sub { font-family: var(--sans); font-size: 0.85rem; color: var(--ink-faint); margin: 0 0 1.25rem; }
+  .dl-keep-exploring-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.6rem; }
+  .dl-keep-exploring-link { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 1rem; border: 1px solid var(--border-strong); border-radius: var(--radius); font-family: var(--sans); font-size: 0.82rem; color: var(--ink); text-decoration: none; background: var(--white); transition: border-color 0.15s, background 0.15s, box-shadow 0.15s; }
+  .dl-keep-exploring-link:hover { border-color: var(--purple); background: var(--purple-light); box-shadow: 0 2px 12px rgba(83,74,183,0.08); }
+  .dl-keep-exploring-link .krl-type { font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--purple); font-weight: 600; display: block; margin-bottom: 0.2rem; }
+  .dl-keep-exploring-link .krl-arrow { color: var(--ink-faint); font-size: 0.75rem; flex-shrink: 0; margin-left: 0.5rem; }
+  .dl-keep-exploring-link:hover .krl-arrow { color: var(--purple); }
+</style>
+
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<div class="dl-hero">
+  <div class="dl-hero-inner">
+
+    <div class="dl-hero-copy">
+      <div class="dl-hero-eyebrow">Free Download · 10 Classic Stories · PDF</div>
+      <h1>Ten Classic Sci-Fi Stories,<br><em>Read Like a Writer.</em></h1>
+      <p>Asimov, Bradbury, Pohl, Verne, Laumer — ten public-domain sci-fi stories, chosen not just for the ideas but for the craft. Study how each one opens, paces its reveal, and lands its ending in a handful of pages. Drop your email and we'll send the full PDF to your inbox.</p>
+      <a href="/tools/writing-prompts/sci-fi" class="dl-hero-prompt-link">
+        Or skip straight to an idea — Sci-Fi Writing Prompt Generator →
+      </a>
+      <div class="dl-hero-form">
+        <form class="dl-form-row" id="dl-sf-hero-form" novalidate>
+          <input class="dl-form-input" type="email" name="email" placeholder="Your email address" required autocomplete="email">
+          <button type="submit" class="dl-form-btn" id="dl-sf-hero-btn">↓ Download</button>
+        </form>
+        <div class="dl-form-status" id="dl-sf-hero-status"></div>
+        <p class="dl-trust-line">Free forever <span>·</span> Sent instantly <span>·</span> One-click unsubscribe</p>
+      </div>
+    </div>
+
+    <div class="dl-hero-books" aria-hidden="true">
+      <div class="dl-hero-cover-wrap">
+        <div class="dl-bc">
+          <div class="dl-bc-hdr">
+            <span class="dl-bc-hdr-label">Writing Desk</span>
+            <span class="dl-bc-hdr-num">Collection</span>
+          </div>
+          <div class="dl-bc-body">
+            <div class="dl-bc-sub">A Craft Collection</div>
+            <div class="dl-bc-rule"></div>
+            <div class="dl-bc-ttl">Journeys Through Space &amp; Time</div>
+            <div class="dl-bc-div"><div class="dl-bc-dl"></div><div class="dl-bc-dd"></div><div class="dl-bc-dl"></div></div>
+          </div>
+          <div class="dl-bc-cream">
+            <div class="dl-bc-by">10 Classic Stories</div>
+            <div class="dl-bc-auth">Sci-Fi Short Stories</div>
+            <div class="dl-bc-yr">For writers, not just readers</div>
+            <div class="dl-bc-badge"><span>FREE<br>PDF</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════ CRAFT STRIP ═══════════════════════ -->
+<div class="dl-craft-strip">
+  <div class="dl-craft-pill">A Writing Desk Craft Collection</div>
+  <h2>Short stories from <em>the golden age</em> of science fiction</h2>
+  <p>Between roughly 1935 and the early 1960s, a generation of writers worked out almost everything science fiction would go on to be — first contact, robot ethics, simulated reality, surveillance dystopia, faster-than-light travel, the unthinkable. And they did it in a few thousand words at a time.</p>
+  <p>This collection gathers ten of the cleanest, sharpest examples in the public domain — not just to read, but to study. Notice where each writer opens the scene, how long they wait to reveal the twist, and how little they explain. Then, when you're ready, generate your own idea with the <a href="/tools/writing-prompts/sci-fi" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">Sci-Fi Writing Prompt Generator</a>.</p>
+</div>
+
+
+<!-- ═══════════════════════ STORIES LIST ═══════════════════════ -->
+<section class="dl-stories-section">
+  <div class="dl-stories-inner">
+    <div class="dl-stories-header">
+      <h3>What's in the collection</h3>
+      <span class="dl-stories-count">10 STORIES · 1 PDF</span>
+    </div>
+
+    <div class="dl-story-item">
+      <div class="dl-story-cover-wrap"><div class="dl-bc">
+        <div class="dl-bc-hdr"><span class="dl-bc-hdr-label">Writing Desk</span><span class="dl-bc-hdr-num">№01</span></div>
+        <div class="dl-bc-body"><div class="dl-bc-sub">Sci-Fi</div><div class="dl-bc-rule"></div><div class="dl-bc-ttl">Youth</div><div class="dl-bc-div"><div class="dl-bc-dl"></div><div class="dl-bc-dd"></div><div class="dl-bc-dl"></div></div></div>
+        <div class="dl-bc-cream"><div class="dl-bc-by">By</div><div class="dl-bc-auth">Isaac Asimov</div><div class="dl-bc-yr">1952</div></div>
+      </div></div>
+      <div class="dl-story-meta">
+        <span class="dl-story-num">1 · 1952</span>
+        <h4 class="dl-story-title">Youth</h4>
+        <div class="dl-story-author">by Isaac Asimov</div>
+        <p class="dl-story-desc">Two boys find strange creatures in their garden and decide to keep them. The creatures, it turns out, are doing the same. A quietly perfect first-contact story with a twist Asimov throws in effortlessly.</p>
+        <div class="dl-story-craft"><span class="dl-story-craft-label">Craft note</span><span class="dl-story-craft-note">Watch how long Asimov withholds the reveal — and how little he needs to spell it out.</span></div>
+      </div>
+    </div>
+
+    <div class="dl-story-item">
+      <div class="dl-story-cover-wrap"><div class="dl-bc">
+        <div class="dl-bc-hdr"><span class="dl-bc-hdr-label">Writing Desk</span><span class="dl-bc-hdr-num">№02</span></div>
+        <div class="dl-bc-body"><div class="dl-bc-sub">Sci-Fi</div><div class="dl-bc-rule"></div><div class="dl-bc-ttl">Let's Get Together</div><div class="dl-bc-div"><div class="dl-bc-dl"></div><div class="dl-bc-dd"></div><div class="dl-bc-dl"></div></div></div>
+        <div class="dl-bc-cream"><div class="dl-bc-by">By</div><div class="dl-bc-auth">Isaac Asimov</div><div class="dl-bc-yr">1957</div></div>
+      </div></div>
+      <div class="dl-story-meta">
+        <span class="dl-story-num">2 · 1957</span>
+        <h4 class="dl-story-title">Let's Get Together</h4>
+        <div class="dl-story-author">by Isaac Asimov</div>
+        <p class="dl-story-desc">Cold War paranoia at full stretch: ten humanoid robots are smuggled into the United States — each carrying a fragment of a hydrogen bomb that will only arm when they all stand in the same room.</p>
+        <div class="dl-story-craft"><span class="dl-story-craft-label">Craft note</span><span class="dl-story-craft-note">A masterclass in raising stakes through a simple countdown mechanic, not exposition.</span></div>
+      </div>
+    </div>
+
+    <div class="dl-story-item">
+      <div class="dl-story-cover-wrap"><div class="dl-bc">
+        <div class="dl-bc-hdr"><span class="dl-bc-hdr-label">Writing Desk</span><span class="dl-bc-hdr-num">№03</span></div>
+        <div class="dl-bc-body"><div class="dl-bc-sub">Sci-Fi</div><div class="dl-bc-rule"></div><div class="dl-bc-ttl">A Little Journey</div><div class="dl-bc-div"><div class="dl-bc-dl"></div><div class="dl-bc-dd"></div><div class="dl-bc-dl"></div></div></div>
+        <div class="dl-bc-cream"><div class="dl-bc-by">By</div><div class="dl-bc-auth">Ray Bradbury</div><div class="dl-bc-yr">1951</div></div>
+      </div></div>
+      <div class="dl-story-meta">
+        <span class="dl-story-num">3 · 1951</span>
+        <h4 class="dl-story-title">A Little Journey</h4>
+        <div class="dl-story-author">by Ray Bradbury</div>
+        <p class="dl-story-desc">An elderly woman buys a ticket on the new rocket service to Mars, certain the young captain at the controls is something he's not. Bradbury at his most tender.</p>
+        <div class="dl-story-craft"><span class="dl-story-craft-label">Craft note</span><span class="dl-story-craft-note">Notice the single planted detail early on that the whole ending quietly depends on.</span></div>
+      </div>
+    </div>
+
+    <div class="dl-story-item">
+      <div class="dl-story-cover-wrap"><div class="dl-bc">
+        <div class="dl-bc-hdr"><span class="dl-bc-hdr-label">Writing Desk</span><span class="dl-bc-hdr-num">№04</span></div>
+        <div class="dl-bc-body"><div class="dl-bc-sub">Sci-Fi</div><div class="dl-bc-rule"></div><div class="dl-bc-ttl">The Tunnel Under the World</div><div class="dl-bc-div"><div class="dl-bc-dl"></div><div class="dl-bc-dd"></div><div class="dl-bc-dl"></div></div></div>
+        <div class="dl-bc-cream"><div class="dl-bc-by">By</div><div class="dl-bc-auth">Frederik Pohl</div><div class="dl-bc-yr">1954</div></div>
+      </div></div>
+      <div class="dl-story-meta">
+        <span class="dl-story-num">4 · 1954</span>
+        <h4 class="dl-story-title">The Tunnel Under the World</h4>
+        <div class="dl-story-author">by Frederik Pohl</div>
+        <p class="dl-story-desc">Guy Birckhead wakes from a dream of dying in an explosion. The same advertisement plays on every channel. The town is not the town it appears — and neither, possibly, is he.</p>
+        <div class="dl-story-craft"><span class="dl-story-craft-label">Craft note</span><span class="dl-story-craft-note">Structured as a loop — see how repetition itself becomes the source of dread.</span></div>
+      </div>
+    </div>
+
+    <div class="dl-story-item">
+      <div class="dl-story-cover-wrap"><div class="dl-bc">
+        <div class="dl-bc-hdr"><span class="dl-bc-hdr-label">Writing Desk</span><span class="dl-bc-hdr-num">№05</span></div>
+        <div class="dl-bc-body"><div class="dl-bc-sub">Original</div><div class="dl-bc-rule"></div><div class="dl-bc-ttl">Headstart</div><div class="dl-bc-div"><div class="dl-bc-dl"></div><div class="dl-bc-dd"></div><div class="dl-bc-dl"></div></div></div>
+        <div class="dl-bc-cream"><div class="dl-bc-by">By</div><div class="dl-bc-auth">Ben Luxon</div><div class="dl-bc-yr">Contemporary</div></div>
+      </div></div>
+      <div class="dl-story-meta">
+        <span class="dl-story-num">5 · Contemporary</span>
+        <h4 class="dl-story-title">Headstart <span class="dl-story-badge">Original</span></h4>
+        <div class="dl-story-author">by Ben Luxon</div>
+        <p class="dl-story-desc">When offered the chance to trial a new technology to assist him in his therapy sessions, Dr Philip Schele is distraught. He jumps at this opportunity.</p>
+        <div class="dl-story-craft"><span class="dl-story-craft-label">Craft note</span><span class="dl-story-craft-note">A contemporary counterpoint — see how a modern voice handles the same classic irony.</span></div>
+      </div>
+    </div>
+
+    <div class="dl-story-item">
+      <div class="dl-story-cover-wrap"><div class="dl-bc">
+        <div class="dl-bc-hdr"><span class="dl-bc-hdr-label">Writing Desk</span><span class="dl-bc-hdr-num">№06</span></div>
+        <div class="dl-bc-body"><div class="dl-bc-sub">Sci-Fi</div><div class="dl-bc-rule"></div><div class="dl-bc-ttl">Dalrymple's Equation</div><div class="dl-bc-div"><div class="dl-bc-dl"></div><div class="dl-bc-dd"></div><div class="dl-bc-dl"></div></div></div>
+        <div class="dl-bc-cream"><div class="dl-bc-by">By</div><div class="dl-bc-auth">Paul W. Fairman</div><div class="dl-bc-yr">1951</div></div>
+      </div></div>
+      <div class="dl-story-meta">
+        <span class="dl-story-num">6 · 1951</span>
+        <h4 class="dl-story-title">Dalrymple's Equation</h4>
+        <div class="dl-story-author">by Paul W. Fairman</div>
+        <p class="dl-story-desc">A physicist's equation could end the world — or save it. The trouble is no one, the physicist included, can yet tell which side of the line his proof actually falls on.</p>
+        <div class="dl-story-craft"><span class="dl-story-craft-label">Craft note</span><span class="dl-story-craft-note">Tension built entirely from ambiguity — the danger is never confirmed, only implied.</span></div>
+      </div>
+    </div>
+
+    <div class="dl-story-item">
+      <div class="dl-story-cover-wrap"><div class="dl-bc">
+        <div class="dl-bc-hdr"><span class="dl-bc-hdr-label">Writing Desk</span><span class="dl-bc-hdr-num">№07</span></div>
+        <div class="dl-bc-body"><div class="dl-bc-sub">Sci-Fi</div><div class="dl-bc-rule"></div><div class="dl-bc-ttl">Doorstep</div><div class="dl-bc-div"><div class="dl-bc-dl"></div><div class="dl-bc-dd"></div><div class="dl-bc-dl"></div></div></div>
+        <div class="dl-bc-cream"><div class="dl-bc-by">By</div><div class="dl-bc-auth">Keith Laumer</div><div class="dl-bc-yr">1951</div></div>
+      </div></div>
+      <div class="dl-story-meta">
+        <span class="dl-story-num">7 · 1951</span>
+        <h4 class="dl-story-title">Doorstep</h4>
+        <div class="dl-story-author">by Keith Laumer</div>
+        <p class="dl-story-desc">An enormous craft has landed on the White House lawn and refuses to open. A government negotiator is sent in. The story is short, sly, and almost entirely about interacting with what is in front of you.</p>
+        <div class="dl-story-craft"><span class="dl-story-craft-label">Craft note</span><span class="dl-story-craft-note">One location, one problem, no subplots — a lesson in restraint and scene economy.</span></div>
+      </div>
+    </div>
+
+    <div class="dl-story-item">
+      <div class="dl-story-cover-wrap"><div class="dl-bc">
+        <div class="dl-bc-hdr"><span class="dl-bc-hdr-label">Writing Desk</span><span class="dl-bc-hdr-num">№08</span></div>
+        <div class="dl-bc-body"><div class="dl-bc-sub">Sci-Fi</div><div class="dl-bc-rule"></div><div class="dl-bc-ttl">In the Year 2889</div><div class="dl-bc-div"><div class="dl-bc-dl"></div><div class="dl-bc-dd"></div><div class="dl-bc-dl"></div></div></div>
+        <div class="dl-bc-cream"><div class="dl-bc-by">By</div><div class="dl-bc-auth">Jules &amp; Michel Verne</div><div class="dl-bc-yr">1889</div></div>
+      </div></div>
+      <div class="dl-story-meta">
+        <span class="dl-story-num">8 · 1889</span>
+        <h4 class="dl-story-title">In The Year 2889</h4>
+        <div class="dl-story-author">by Jules &amp; Michel Verne</div>
+        <p class="dl-story-desc">A media baron's ordinary workday, one thousand years from now — flying machines, video calls, advertising projected onto clouds. Remarkable for how much he got right.</p>
+        <div class="dl-story-craft"><span class="dl-story-craft-label">Craft note</span><span class="dl-story-craft-note">No plot to speak of — worldbuilding carried entirely through mundane, specific detail.</span></div>
+      </div>
+    </div>
+
+    <div class="dl-story-item">
+      <div class="dl-story-cover-wrap"><div class="dl-bc">
+        <div class="dl-bc-hdr"><span class="dl-bc-hdr-label">Writing Desk</span><span class="dl-bc-hdr-num">№09</span></div>
+        <div class="dl-bc-body"><div class="dl-bc-sub">Sci-Fi</div><div class="dl-bc-rule"></div><div class="dl-bc-ttl">Export Commodity</div><div class="dl-bc-div"><div class="dl-bc-dl"></div><div class="dl-bc-dd"></div><div class="dl-bc-dl"></div></div></div>
+        <div class="dl-bc-cream"><div class="dl-bc-by">By</div><div class="dl-bc-auth">Irving Cox, Jr.</div><div class="dl-bc-yr">1951</div></div>
+      </div></div>
+      <div class="dl-story-meta">
+        <span class="dl-story-num">9 · 1951</span>
+        <h4 class="dl-story-title">Export Commodity</h4>
+        <div class="dl-story-author">by Irving Cox, Jr.</div>
+        <p class="dl-story-desc">A trader arrives on a backwater colony world with terms that are far too generous and a smile that doesn't reach his eyes. The locals are probably adorable.</p>
+        <div class="dl-story-craft"><span class="dl-story-craft-label">Craft note</span><span class="dl-story-craft-note">Told entirely from the wrong point of view on purpose — dramatic irony as structure.</span></div>
+      </div>
+    </div>
+
+    <div class="dl-story-item">
+      <div class="dl-story-cover-wrap"><div class="dl-bc">
+        <div class="dl-bc-hdr"><span class="dl-bc-hdr-label">Writing Desk</span><span class="dl-bc-hdr-num">№10</span></div>
+        <div class="dl-bc-body"><div class="dl-bc-sub">Sci-Fi</div><div class="dl-bc-rule"></div><div class="dl-bc-ttl">A Spaceship Named McGuire</div><div class="dl-bc-div"><div class="dl-bc-dl"></div><div class="dl-bc-dd"></div><div class="dl-bc-dl"></div></div></div>
+        <div class="dl-bc-cream"><div class="dl-bc-by">By</div><div class="dl-bc-auth">Randall Garrett</div><div class="dl-bc-yr">1961</div></div>
+      </div></div>
+      <div class="dl-story-meta">
+        <span class="dl-story-num">10 · 1961</span>
+        <h4 class="dl-story-title">A Spaceship Named McGuire</h4>
+        <div class="dl-story-author">by Randall Garrett</div>
+        <p class="dl-story-desc">A private detective is hired to recover an experimental ship with a mind of its own — and a tendency, like its previous pilots, to develop resources. Pulp at its most affectionate.</p>
+        <div class="dl-story-craft"><span class="dl-story-craft-label">Craft note</span><span class="dl-story-craft-note">Voice does the heavy lifting here — see how comic pacing replaces plot mechanics.</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ SECOND CTA ═══════════════════════ -->
+<div class="dl-cta-dark">
+  <div class="dl-cta-dark-inner">
+    <div class="dl-cta-eyebrow">Free download · PDF</div>
+    <h2>Get the full sci-fi collection now</h2>
+    <p class="dl-cta-sub">Ten classic sci-fi short stories, typeset for comfortable reading on phone, tablet or e-reader — and worth a second read once you know what to look for. Sent the moment you hit Download.</p>
+    <div class="dl-cta-form">
+      <form class="dl-form-row" id="dl-sf-cta-form" novalidate>
+        <input class="dl-form-input" type="email" name="email" placeholder="Your email address" required autocomplete="email">
+        <button type="submit" class="dl-form-btn" id="dl-sf-cta-btn">↓ Download</button>
+      </form>
+      <div class="dl-form-status" id="dl-sf-cta-status"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════ FAQ ═══════════════════════ -->
+<section class="dl-faq-section">
+  <div class="dl-faq-inner">
+    <div class="dl-faq-eyebrow">FAQ</div>
+    <h2>Common questions</h2>
+    <ul class="dl-faq-accordion">
+      <li class="dl-faq-item">
+        <button class="dl-faq-trigger" aria-expanded="false">Is this collection really free?<span class="dl-faq-icon">+</span></button>
+        <div class="dl-faq-body">Yes — every story in the collection is in the public domain (with the exception of the original piece by Ben Luxon, included by the author). Drop your email and we'll send the full PDF straight to your inbox.</div>
+      </li>
+      <li class="dl-faq-item">
+        <button class="dl-faq-trigger" aria-expanded="false">Why is Writing Desk giving away short stories?<span class="dl-faq-icon">+</span></button>
+        <div class="dl-faq-body">Because reading well is part of writing well. These ten stories are short enough to study in one sitting — structure, pacing, and all — and each comes with a craft note pointing at what to notice. Pair it with the Sci-Fi Writing Prompt Generator when you're ready to write your own.</div>
+      </li>
+      <li class="dl-faq-item">
+        <button class="dl-faq-trigger" aria-expanded="false">Can I share the PDF with a friend or writing group?<span class="dl-faq-icon">+</span></button>
+        <div class="dl-faq-body">Please do. These are public-domain classics — share, print, email, bring it to a workshop. The more writers reading closely, the better.</div>
+      </li>
+      <li class="dl-faq-item">
+        <button class="dl-faq-trigger" aria-expanded="false">What format will I receive?<span class="dl-faq-icon">+</span></button>
+        <div class="dl-faq-body">A single PDF optimised for both screen and print. If you'd prefer EPUB, reply to the welcome email and we'll send over a version.</div>
+      </li>
+      <li class="dl-faq-item">
+        <button class="dl-faq-trigger" aria-expanded="false">Will I get spammed?<span class="dl-faq-icon">+</span></button>
+        <div class="dl-faq-body">No. You'll get the stories, plus occasional notes from Writing Desk on craft and features — never more than once a week, and one-click to unsubscribe.</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ KEEP EXPLORING ═══════════════════════ -->
+<section class="dl-keep-exploring">
+  <div class="dl-keep-exploring-inner">
+    <h3>Keep exploring</h3>
+    <p class="dl-keep-exploring-sub">More ways to turn inspiration into pages.</p>
+    <div class="dl-keep-exploring-grid">
+      <a href="/tools/writing-prompts/sci-fi" class="dl-keep-exploring-link"><div><span class="krl-type">Tool</span>Sci-Fi Writing Prompt Generator</div><span class="krl-arrow">→</span></a>
+      <a href="/features/plot-your-novel/" class="dl-keep-exploring-link"><div><span class="krl-type">Feature</span>Plot Your Novel with the Story Plotter</div><span class="krl-arrow">→</span></a>
+      <a href="/downloads/horror-short-stories/" class="dl-keep-exploring-link"><div><span class="krl-type">Also</span>Free Horror Short Stories</div><span class="krl-arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<script>
+/* ── Email subscribe — posts to our own /api/subscribe proxy, which
+   forwards to EmailOctopus server-side (API key never touches the browser) ── */
+
+function dlSubscribe(email, listId, statusEl, btnEl) {
+  btnEl.disabled = true;
+  btnEl.textContent = 'Sending…';
+  statusEl.className = 'dl-form-status';
+  statusEl.textContent = '';
+
+  fetch('/api/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, listId: listId })
+  })
+  .then(function(res) { return res.json().then(function(data) { return { ok: res.ok, data: data }; }); })
+  .then(function(result) {
+    if (result.data.success) {
+      statusEl.textContent = '✓ Check your inbox — the PDF is on its way!';
+      statusEl.className = 'dl-form-status success';
+      btnEl.closest('form').reset();
+    } else {
+      throw new Error(result.data.message || 'Something went wrong. Please try again.');
+    }
+  })
+  .catch(function(err) {
+    statusEl.textContent = err.message || 'Something went wrong. Please try again.';
+    statusEl.className = 'dl-form-status error';
+  })
+  .finally(function() {
+    btnEl.disabled = false;
+    btnEl.textContent = '↓ Download';
+  });
+}
+
+function dlBindForm(formId, statusId, btnId, listId) {
+  var form   = document.getElementById(formId);
+  var status = document.getElementById(statusId);
+  var btn    = document.getElementById(btnId);
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var email = form.querySelector('input[type="email"]').value.trim();
+    if (!email || !email.includes('@')) {
+      status.textContent = 'Please enter a valid email address.';
+      status.className = 'dl-form-status error';
+      return;
+    }
+    dlSubscribe(email, listId, status, btn);
+  });
+}
+
+dlBindForm('dl-sf-hero-form', 'dl-sf-hero-status', 'dl-sf-hero-btn', 'sci-fi-download');
+dlBindForm('dl-sf-cta-form',  'dl-sf-cta-status',  'dl-sf-cta-btn',  'sci-fi-download');
+
+/* ── FAQ accordion ─────────────────────────────────────────── */
+document.querySelectorAll('.dl-faq-trigger').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = this.closest('.dl-faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.dl-faq-item.open').forEach(function(el) {
+      el.classList.remove('open');
+      el.querySelector('.dl-faq-trigger').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) { item.classList.add('open'); this.setAttribute('aria-expanded', 'true'); }
+  });
+});
+</script>

@@ -1,0 +1,595 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing - Free Writing App for Novelists | Writing Desk</title>
+  <meta name="description" content="Simple pricing for serious writers. Start free, upgrade when you're ready.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+
+{% include nav.html %}
+
+
+<main>
+  <div class="pricing-hero">
+  <span class="eyebrow">Pricing</span>
+  <h1>Simple pricing for<br><em>serious writers.</em></h1>
+  <p>Start free. Upgrade when you're ready. All plans include the full offline writing environment.</p>
+  <div class="billing-toggle">
+    <div class="toggle-track">
+      <button class="toggle-btn active" id="btn-monthly" onclick="setBilling('monthly')">Monthly</button>
+      <button class="toggle-btn" id="btn-annual" onclick="setBilling('annual')">Annual</button>
+    </div>
+    <span class="save-pill">Save 20% annually</span>
+  </div>
+  <div class="currency-note">
+    <span id="currency-note-text">Prices shown in GBP (£).</span>
+    <a href="?currency=usd" id="currency-toggle-usd">View in USD ($)</a>
+    <a href="?currency=gbp" id="currency-toggle-gbp" style="display:none">View in GBP (£)</a>
+  </div>
+</div>
+
+<!-- ── TIER CARDS ─────────────────────────────── -->
+<div class="pricing-grid-wrap">
+  <div class="pricing-grid">
+
+    <!-- FREE -->
+    <div class="tier-card scroll-fade">
+      <div class="tier-label">Free</div>
+      <div class="tier-price-row">
+        <span class="tier-amount" data-usd="$0">£0</span>
+      </div>
+      <div class="tier-annual-note">&nbsp;</div>
+      <div class="tier-desc">The full writing environment, forever free. 30-day Premium trial on signup.</div>
+      <a href="#" class="tier-cta-btn cta-lined">Download free</a>
+      <ul class="tier-features">
+        <span class="feat-section">Writing tools</span>
+        <li>Distraction-free editor</li>
+        <li>Story Plotter</li>
+        <li>Reference folders</li>
+        <li>The Pad &amp; tabs</li>
+        <li>Proofreader</li>
+        <li>Version history</li>
+        <span class="feat-section">Export</span>
+        <li>Export to .docx, .md, .txt, .pdf</li>
+        <li>Agent-ready query format (.docx)</li>
+        <li>1 free self-publishing export (EPUB + typeset PDF)</li>
+        <span class="feat-section">AI features</span>
+        <li class="trial-feat">Trial: 3 full chapter reviews</li>
+        <li class="trial-feat">Trial: 20 research queries</li>
+        <li class="unavail">No AI after 30 days</li>
+        <span class="feat-section">Add-ons available</span>
+        <li>Full Manuscript Review — <span data-usd="$36">£30</span></li>
+      </ul>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="tier-card featured scroll-fade">
+      <div class="popular-tag">Most popular</div>
+      <div class="tier-label">Premium</div>
+      <div class="tier-price-row">
+        <span class="tier-amount monthly-price" data-usd="$12">£10</span>
+        <span class="tier-amount annual-price" data-usd="$10" style="display:none">£8</span>
+        <span class="tier-period">/mo</span>
+      </div>
+      <div class="tier-annual-note">
+        <span class="monthly-price">&nbsp;</span>
+        <span class="annual-price" data-usd="<strong>$115/yr</strong> — saving $29" style="display:none"><strong>£96/yr</strong> — saving £24</span>
+      </div>
+      <div class="tier-desc">All tools with sensible daily limits. Built for one manuscript at a time, written with steady discipline.</div>
+      <a href="#" class="tier-cta-btn cta-filled">Get Premium</a>
+      <ul class="tier-features">
+        <span class="feat-section">Everything in Free, plus</span>
+        <li>Prose Analysis — unlimited, runs locally</li>
+        <li>Story Board &amp; Timeline view</li>
+        <li>Structured Resource Hub</li>
+        <li>3 self-publishing exports (EPUB + typeset PDF)/month</li>
+        <span class="feat-section">AI usage per month</span>
+        <li class="monthly-price">~15 full chapter reviews</li>
+        <li class="monthly-price">100 research queries</li>
+        <li class="monthly-price">50 AI Editor chat messages</li>
+        <li>Top-ups available when you need more</li>
+        <span class="feat-section">Add-ons available</span>
+        <li>Full Manuscript Review — <span data-usd="$24">£20</span></li>
+      </ul>
+    </div>
+
+    <!-- PRO -->
+    <div class="tier-card scroll-fade">
+      <div class="tier-label">Pro</div>
+      <div class="tier-price-row">
+        <span class="tier-amount monthly-price" data-usd="$22">£18</span>
+        <span class="tier-amount annual-price" data-usd="$18" style="display:none">£14</span>
+        <span class="tier-period">/mo</span>
+      </div>
+      <div class="tier-annual-note">
+        <span class="monthly-price">&nbsp;</span>
+        <span class="annual-price" data-usd="<strong>$211/yr</strong> — saving $53" style="display:none"><strong>£168/yr</strong> — saving £48</span>
+      </div>
+      <div class="tier-desc">Generous limits for writers working at pace, juggling multiple projects, or deep in revisions.</div>
+      <a href="#" class="tier-cta-btn cta-lined">Get Pro</a>
+      <ul class="tier-features">
+        <span class="feat-section">Everything in Premium, plus</span>
+        <li>Unlimited self-publishing exports (EPUB + typeset PDF)</li>
+        <span class="feat-section">AI usage per month</span>
+        <li>~30 full chapter reviews</li>
+        <li>180 research queries</li>
+        <li>100 AI Editor chat messages</li>
+        <li>Top-ups available when you need more</li>
+        <span class="feat-section">Full Manuscript Review</span>
+        <li>1 review included per year</li>
+        <li class="trial-feat">Additional reviews at <span data-usd="$18">£15</span></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── FULL COMPARISON TABLE ─────────────────── -->
+<div class="compare-section scroll-fade">
+  <div class="compare-header">
+    <h2>Everything, compared.</h2>
+    <p>Every feature across every plan, in one place.</p>
+  </div>
+
+  <div class="ftable">
+    <!-- Sticky header with buy buttons -->
+    <div class="frow fhead fhead-sticky">
+      <div class="fcell flabel"></div>
+      <div class="fcell fcenter">
+        <span class="fplan-name">Free</span>
+        <span class="fplan-price"><span data-usd="$0">£0</span><span>/mo</span></span>
+        <a href="#" class="fplan-cta cta-lined">Download free</a>
+      </div>
+      <div class="fcell fcenter fhi">
+        <span class="fplan-badge">Popular</span>
+        <span class="fplan-name" style="color:var(--purple)">Premium</span>
+        <span class="fplan-price"><span data-usd="$12">£10</span><span>/mo</span></span>
+        <a href="#" class="fplan-cta cta-filled">Get Premium</a>
+      </div>
+      <div class="fcell fcenter">
+        <span class="fplan-name">Pro</span>
+        <span class="fplan-price"><span data-usd="$22">£18</span><span>/mo</span></span>
+        <a href="#" class="fplan-cta cta-lined">Get Pro</a>
+      </div>
+    </div>
+
+    <!-- Writing environment -->
+    <div class="frow fsection"><div class="fsection-label">Writing environment</div></div>
+    <div class="frow"><div class="fcell flabel">Distraction-free editor</div><div class="fcell fcenter check-yes">✓</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">Focus Mode</div><div class="fcell fcenter check-yes">✓</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">The Pad — per-chapter scratchpad</div><div class="fcell fcenter check-yes">✓</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">Tabs — open reference docs alongside manuscript</div><div class="fcell fcenter check-yes">✓</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">Reference folder linking</div><div class="fcell fcenter check-yes">✓</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+
+    <!-- Story planning -->
+    <div class="frow fsection"><div class="fsection-label">Story planning</div></div>
+    <div class="frow"><div class="fcell flabel">Story Plotter — chapter &amp; scene outlining</div><div class="fcell fcenter check-yes">✓</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">Story Board — visualise story structure </div><div class="fcell fcenter check-no">–</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">Story Timeline — track narrative threads </div><div class="fcell fcenter check-no">–</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">Story structure templates</div><div class="fcell fcenter check-no">–</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">Drag &amp; drop scene reordering</div><div class="fcell fcenter check-no">–</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+
+    <!-- Resource Hub -->
+    <div class="frow fsection"><div class="fsection-label">Resource Hub</div></div>
+    <div class="frow"><div class="fcell flabel">Characters, locations, lore, factions</div><div class="fcell fcenter check-yes">-</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">Relationships, timeline, glossary, world notes</div><div class="fcell fcenter check-yes">-</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">Images &amp; attachments on resource sheets</div><div class="fcell fcenter check-yes">-</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+
+    <!-- Editing -->
+    <div class="frow fsection"><div class="fsection-label">Editing &amp; feedback</div></div>
+    <div class="frow"><div class="fcell flabel">Proofreader — spelling, grammar</div><div class="fcell fcenter check-yes">✓</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">Style checking — filter words, adverbs</div><div class="fcell fcenter check-yes">✓</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">Prose Analysis - sentence structure, passive voice</div><div class="fcell fcenter check-no">–</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">AI Editor (4 modes)</div><div class="fcell fcenter check-dim">-</div><div class="fcell fcenter fhi check-yes">Limited</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">Full Manuscript Review</div><div class="fcell fcenter check-dim">Add-on <span data-usd="$36">£30</span></div><div class="fcell fcenter fhi check-dim">Add-on <span data-usd="$24">£20</span></div><div class="fcell fcenter check-yes">1/yr incl.</div></div>
+    <div class="frow"><div class="fcell flabel">Version history</div><div class="fcell fcenter check-yes">✓</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">Chapter variants</div><div class="fcell fcenter check-yes">-</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+
+    <!-- AI usage -->
+    <div class="frow fsection"><div class="fsection-label">AI usage</div></div>
+    <div class="frow"><div class="fcell flabel">Full chapter reviews</div><div class="fcell fcenter check-dim">Trial only</div><div class="fcell fcenter fhi check-yes">~15/mo</div><div class="fcell fcenter check-yes">~30/mo</div></div>
+    <div class="frow"><div class="fcell flabel">Research Assistant queries</div><div class="fcell fcenter check-dim">Trial only</div><div class="fcell fcenter fhi check-yes">100/mo</div><div class="fcell fcenter check-yes">180/mo</div></div>
+    <div class="frow"><div class="fcell flabel">AI Editor chat messages</div><div class="fcell fcenter check-no">–</div><div class="fcell fcenter fhi check-yes">50/mo</div><div class="fcell fcenter check-yes">100/mo</div></div>
+    <div class="frow"><div class="fcell flabel">Usage top-ups</div><div class="fcell fcenter check-no">–</div><div class="fcell fcenter fhi check-yes">Available</div><div class="fcell fcenter check-yes">Available</div></div>
+
+    <!-- Export -->
+    <div class="frow fsection"><div class="fsection-label">Export</div></div>
+    <div class="frow"><div class="fcell flabel">.docx, .md, .txt, .pdf export</div><div class="fcell fcenter check-yes">✓</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+    <div class="frow"><div class="fcell flabel">Self-publishing formats (EPUB &amp; typeset PDF)</div><div class="fcell fcenter check-dim">1 free</div><div class="fcell fcenter fhi check-yes">3/mo incl.</div><div class="fcell fcenter check-yes">Unlimited</div></div>
+    <div class="frow"><div class="fcell flabel">Agent query templates</div><div class="fcell fcenter check-yes">✓</div><div class="fcell fcenter fhi check-yes">✓</div><div class="fcell fcenter check-yes">✓</div></div>
+
+  </div>
+</div>
+
+<!-- ── ADD-ONS ─────────────────────────────────── -->
+<div class="credits-section scroll-fade">
+  <div class="compare-header">
+    <h2>Add-ons.</h2>
+    <p>Need something beyond your plan's monthly usage? These are available to everyone, priced by tier.</p>
+  </div>
+
+  <div class="addons-wrap">
+    <div class="addon-row addon-head">
+      <div class="lbl">Add-on</div>
+      <div class="val">Free</div>
+      <div class="val">Premium</div>
+      <div class="val">Pro</div>
+    </div>
+    <div class="addon-row">
+      <div class="lbl">Full Manuscript Review<small>Complete 4-mode read of your entire manuscript</small></div>
+      <div class="val hi"><span data-usd="$36">£30</span></div>
+      <div class="val hi"><span data-usd="$24">£20</span></div>
+      <div class="val">1 free/yr included<span style="font-size:11px;color:var(--purple);display:block">then <span data-usd="$18">£15</span> each</span></div>
+    </div>
+    <div class="addon-row">
+      <div class="lbl">Self-publishing export bundles<small>Auto-formatted EPUB &amp; professionally typeset PDF, same price for everyone</small></div>
+      <div class="val hi">5 exports — <span data-usd="$6">£5</span><br><span style="font-size:11px">12 — <span data-usd="$12">£10</span> · 35 — <span data-usd="$30">£25</span></span></div>
+      <div class="val">3/month included<span style="font-size:11px;display:block">then 5 — <span data-usd="$6">£5</span> · 12 — <span data-usd="$12">£10</span> · 35 — <span data-usd="$30">£25</span></span></div>
+      <div class="val inc">Unlimited</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── AI CREDIT TOP-UPS ───────────────────────── -->
+<div class="credits-section scroll-fade">
+  <div class="compare-header">
+    <h2>AI usage top-ups.</h2>
+    <p>Used up your monthly allowance before the month is out? Top up any time — top-ups roll over and never expire.</p>
+  </div>
+
+  <div class="credits-wrap">
+    <div class="credits-box">
+      <div class="credits-head">
+        <h3>Top-up packs</h3>
+        <p>Buy more when you need it. Top-ups are drawn down only once your plan's monthly allowance runs out.</p>
+      </div>
+      <div class="credits-packs">
+        <div class="credit-pack">
+          <div class="pack-name">Small</div>
+          <div class="pack-price" data-usd="$6">£5</div>
+          <div class="pack-includes">
+            <strong>~24</strong> chapter reviews<br>
+            or <strong>~120</strong> research queries<br>
+            or <strong>~120</strong> AI Editor chat messages<br>
+            or any mix
+          </div>
+          <a href="#" class="tier-cta-btn cta-lined pack-cta">Top up</a>
+        </div>
+        <div class="credit-pack featured">
+          <div class="pack-name">Medium</div>
+          <div class="pack-price" data-usd="$12">£10</div>
+          <div class="pack-includes">
+            <strong>~60</strong> chapter reviews<br>
+            or <strong>~300</strong> research queries<br>
+            or <strong>~300</strong> AI Editor chat messages<br>
+            or any mix
+          </div>
+          <a href="#" class="tier-cta-btn cta-filled pack-cta">Top up</a>
+        </div>
+        <div class="credit-pack">
+          <div class="pack-name">Large</div>
+          <div class="pack-price" data-usd="$24">£20</div>
+          <div class="pack-includes">
+            <strong>~120</strong> chapter reviews<br>
+            or <strong>~600</strong> research queries<br>
+            or <strong>~600</strong> AI Editor chat messages<br>
+            or any mix
+          </div>
+          <a href="#" class="tier-cta-btn cta-lined pack-cta">Top up</a>
+        </div>
+      </div>
+      <div class="credits-note">Top-ups never expire and carry across billing periods. Not available on the Free trial.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── WHAT IS A CREDIT ────────────────────────── -->
+<div class="credits-section scroll-fade" style="padding-top:0">
+  <div class="compare-header">
+    <h2>What's a credit?</h2>
+    <p>Behind the scenes, every AI action draws from a credit balance — it's how usage gets measured fairly across different kinds of requests. You'll never need to think about it day to day; your plan and top-ups are shown in plain terms like chapter reviews and research queries.</p>
+  </div>
+
+  <div class="credit-rate-card">
+    <div class="credit-rate-grid">
+      <div class="credit-rate-item">
+        <span class="cr-label">Research Assistant query</span>
+      </div>
+      <div class="credit-rate-item">
+        <span class="cr-label">AI Editor chat message (digging into your feedback)</span>
+      </div>
+      <div class="credit-rate-item">
+        <span class="cr-label">Full chapter review (4-mode, per chapter)</span>
+      </div>
+    </div>
+    <div class="credit-rate-allowance" style="justify-content:center">
+      <span>Lighter actions cost less, deeper analysis costs more — your monthly allowance and top-ups are scaled accordingly. Prose Analysis runs locally on your Mac and is never metered.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── FAQ ───────────────────────────────────── -->
+<div class="compare-section scroll-fade" style="padding-bottom:80px">
+  <div class="compare-header" style="margin-bottom:40px">
+    <h2>Common questions.</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:820px;margin:0 auto">
+    <div>
+      <h3 style="font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:8px">Does my manuscript leave my Mac?</h3>
+      <p style="font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.7">No. Your manuscript is stored locally on your Mac. When you use AI features, your text is sent to process your request and immediately discarded — we never store, retain, or train on your writing.</p>
+    </div>
+    <div>
+      <h3 style="font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:8px">What happens after the 30-day trial?</h3>
+      <p style="font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.7">The full writing environment stays free forever. The offline editor, Story Plotter, Resource Hub, Proofreader, and Version History never go away. Only the AI features require a subscription.</p>
+    </div>
+    <div>
+      <h3 style="font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:8px">What happens if I use up my monthly AI allowance?</h3>
+      <p style="font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.7">Everything else keeps working as normal. You can buy a top-up pack any time to keep going — top-ups never expire, so unused usage simply carries forward.</p>
+    </div>
+    <div>
+      <h3 style="font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:8px">How is a "chapter review" actually measured?</h3>
+      <p style="font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.7">Your plan's monthly figure (~15 or ~30) is calibrated to a typical 4,000-word chapter run through all four editorial modes. Shorter chapters draw less from your allowance — so if you write concise chapters, you'll get more than ~15 or ~30 reviews a month. Longer chapters draw more, scaling up gradually the further past 4,000 words they run. A short scene is never worse value than the headline number suggests.</p>
+    </div>
+    <div>
+      <h3 style="font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:8px">What about research queries and AI Editor chat?</h3>
+      <p style="font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.7">Those stay simple — each question or message draws one from your monthly allowance, whatever its length. Only chapter reviews scale with word count, since that's where actual analysis depth varies most. Prose Analysis is different again: it runs entirely on your Mac, so it's unlimited and never counted against your usage.</p>
+    </div>
+    <div>
+      <h3 style="font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:8px">Can I cancel at any time?</h3>
+      <p style="font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.7">Yes, monthly and annual plans can be cancelled at any time. You keep access until the end of the billing period.</p>
+    </div>
+    <div>
+      <h3 style="font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:8px">What macOS version do I need?</h3>
+      <p style="font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.7">macOS 13 Ventura or later. Writing Desk is a native macOS app distributed directly — no Mac App Store required.</p>
+    </div>
+    <div>
+      <h3 style="font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:8px">Where can I see exactly how much I've used?</h3>
+      <p style="font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.7">A usage tracker in the app shows your remaining chapter reviews, research queries, and prose checks for the current billing period, updated as you go, so there's never any guesswork.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+/* pricing billing toggle JS classes */
+body.annual .annual-price { display: block !important; }
+body.annual .monthly-price { display: none !important; }
+
+.currency-note {
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: var(--ink-muted);
+  font-weight: 300;
+}
+
+.currency-note a {
+  color: var(--purple, #534AB7);
+  margin-left: 8px;
+  text-decoration: underline;
+}
+
+/* ── Credits & add-ons section ───────────────── */
+.credits-section {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 60px 24px 40px;
+}
+
+.credit-rate-card {
+  border: 0.5px solid var(--color-border-secondary, #e3e0d8);
+  border-radius: var(--border-radius-lg, 14px);
+  padding: 28px 32px;
+  margin-bottom: 28px;
+  background: var(--color-background-primary, #fff);
+}
+
+.credit-rate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.credit-rate-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 16px;
+  border-radius: 10px;
+  background: var(--color-background-secondary, #f7f5f0);
+  min-height: 60px;
+}
+
+.cr-label {
+  font-size: 13.5px;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.credit-rate-allowance {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--ink-muted);
+  font-weight: 300;
+  border-top: 0.5px solid var(--color-border-secondary, #e3e0d8);
+  padding-top: 16px;
+}
+
+/* Credit packs */
+.credits-wrap { margin-bottom: 28px; }
+
+.credits-box {
+  border: 0.5px solid var(--color-border-secondary, #e3e0d8);
+  border-radius: var(--border-radius-lg, 14px);
+  padding: 28px 32px;
+  background: var(--color-background-primary, #fff);
+}
+
+.credits-head { margin-bottom: 20px; }
+
+.credits-head h3 {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.credits-head p {
+  font-size: 13.5px;
+  color: var(--ink-muted);
+  font-weight: 300;
+}
+
+.credits-packs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.credit-pack {
+  border: 0.5px solid var(--color-border-secondary, #e3e0d8);
+  border-radius: 12px;
+  padding: 20px 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.credit-pack.featured {
+  border-color: var(--purple, #534AB7);
+  background: #EEEDFE;
+}
+
+.pack-name {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+.pack-price {
+  font-family: var(--serif);
+  font-size: 28px;
+  color: var(--ink);
+}
+
+.pack-includes {
+  font-size: 12.5px;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.pack-cta {
+  margin-top: 4px;
+  padding: 8px 0;
+  font-size: 13px;
+}
+
+.credits-note {
+  font-size: 12px;
+  color: var(--ink-faint, #9a958a);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Other add-ons table */
+.addons-wrap {
+  border: 0.5px solid var(--color-border-secondary, #e3e0d8);
+  border-radius: var(--border-radius-lg, 14px);
+  overflow: hidden;
+  background: var(--color-background-primary, #fff);
+}
+
+.addon-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: start;
+  padding: 18px 24px;
+  border-bottom: 0.5px solid var(--color-border-secondary, #e3e0d8);
+  gap: 8px;
+}
+
+.addon-row.addon-head { align-items: center; }
+
+.addon-row:last-child { border-bottom: none; }
+
+.addon-row.addon-head {
+  background: var(--color-background-secondary, #f7f5f0);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+.addon-row .lbl {
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.addon-row .lbl small {
+  display: block;
+  font-size: 12px;
+  color: var(--ink-muted);
+  font-weight: 300;
+  margin-top: 2px;
+}
+
+.addon-row .val {
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--ink);
+}
+
+.addon-row .val.hi { color: var(--ink-muted); }
+.addon-row .val.inc { color: var(--purple, #534AB7); font-weight: 500; }
+
+/* ── Sticky comparison header with buy buttons ── */
+.ftable { position: relative; }
+
+.fhead-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--color-background-primary, #fff);
+  box-shadow: 0 1px 0 var(--color-border-secondary, #e3e0d8);
+}
+
+.fplan-cta {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 7px 18px;
+  font-size: 12.5px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .credit-rate-grid,
+  .credits-packs { grid-template-columns: 1fr; }
+  .addon-row { grid-template-columns: 1.4fr 1fr 1fr 1fr; padding: 14px 12px; font-size: 12px; }
+  .fhead-sticky .fplan-cta { padding: 6px 10px; font-size: 11px; }
+}
+</style>
+</main>
+
+{% include footer.html %}
+
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

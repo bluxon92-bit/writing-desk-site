@@ -1,0 +1,340 @@
+---
+layout: default
+title: "Thriller Writing Prompt Generator — 80+ Prompts for Psychological and Action Thrillers"
+description: "Free thriller writing prompt generator. Generate prompts for psychological thrillers, conspiracies, action thrillers, and high-stakes suspense. Beat writer's block instantly."
+permalink: /tools/writing-prompts/thriller/
+---
+
+<style>
+.tool-hero{max-width:1100px;margin:0 auto;padding:64px 40px 48px;border-bottom:1px solid var(--border)}
+.tool-hero-inner{max-width:640px}
+.tool-label{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--purple);margin-bottom:16px}
+.tool-label-line{width:24px;height:1.5px;background:var(--purple);display:block}
+.tool-hero h1{font-family:var(--serif);font-size:46px;font-weight:400;line-height:1.1;color:var(--ink);margin-bottom:16px}
+.tool-hero h1 em{color:var(--purple);font-style:italic}
+.tool-hero p{font-size:17px;color:var(--ink-muted);font-weight:300;line-height:1.7}
+.tool-body{max-width:1100px;margin:0 auto;padding:48px 40px}
+.tool-body-inner{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+/* Generator card */
+.gen-card{background:var(--white);border:1px solid var(--border-strong);border-radius:var(--radius-lg);overflow:hidden}
+.gen-card-head{background:var(--purple-faint);border-bottom:1px solid var(--border);padding:20px 24px;display:flex;align-items:center;gap:10px}
+.gen-card-head h2{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink)}
+.gen-card-head svg{width:18px;height:18px;fill:none;stroke:var(--purple);stroke-width:1.75;flex-shrink:0}
+/* Controls */
+.gen-controls{padding:20px 24px;display:flex;flex-direction:column;gap:18px;border-bottom:1px solid var(--border)}
+.ctrl-group{display:flex;flex-direction:column;gap:8px}
+.ctrl-group label{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint)}
+/* Pill buttons for category */
+.pill-row{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:var(--white);border:1px solid var(--border-strong);border-radius:20px;padding:6px 14px;cursor:pointer;transition:all .15s}
+.pill:hover{border-color:var(--purple);color:var(--purple)}
+.pill.active{background:var(--purple);border-color:var(--purple);color:white;font-weight:500}
+/* Tone slider */
+.tone-wrap{display:flex;align-items:center;gap:10px}
+.tone-wrap input[type=range]{flex:1;accent-color:var(--purple);cursor:pointer}
+.tone-end{font-size:12px;color:var(--ink-faint);white-space:nowrap}
+.tone-label{font-size:12px;color:var(--purple);font-weight:500;text-align:center;margin-top:4px;min-height:18px}
+/* Generate button */
+.btn-gen{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--purple);color:white;font-family:var(--sans);font-size:14px;font-weight:500;padding:11px 24px;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:opacity .15s;width:100%}
+.btn-gen:hover{opacity:.85}
+.btn-gen svg{width:14px;height:14px;fill:none;stroke:white;stroke-width:2}
+/* Output */
+.gen-output{padding:24px;min-height:180px}
+.gen-placeholder{font-size:14px;color:var(--ink-faint);font-style:italic;text-align:center;padding:32px 0}
+.prompt-meta{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.prompt-tag{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--purple);background:var(--purple-faint);padding:3px 10px;border-radius:12px}
+.prompt-tone{font-size:11px;color:var(--ink-faint);background:var(--bg);padding:3px 10px;border-radius:12px;border:1px solid var(--border)}
+.prompt-text{font-size:16px;color:var(--ink);line-height:1.75;font-family:var(--serif);font-weight:400}
+/* Actions */
+.gen-actions{padding:14px 24px;border-top:1px solid var(--border);display:flex;gap:8px;flex-wrap:wrap}
+.btn-secondary{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:transparent;border:1px solid var(--border-strong);padding:8px 16px;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s}
+.btn-secondary:hover{border-color:var(--purple);color:var(--purple)}
+.btn-save{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:transparent;border:1px solid var(--border-strong);padding:8px 16px;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s}
+.btn-save:hover{border-color:var(--purple);color:var(--purple)}
+/* Saved */
+.saved-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-bottom:0}
+.saved-card h4{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.saved-item{padding:10px 0;border-top:1px solid var(--border)}
+.saved-item:first-child{border-top:none;padding-top:0}
+.saved-item p{font-size:13px;color:var(--ink-muted);line-height:1.5;margin-bottom:6px}
+.saved-item button{font-size:11.5px;color:var(--purple);background:none;border:none;cursor:pointer;padding:0;font-family:var(--sans)}
+.btn-clear{font-size:11px;color:var(--ink-faint);background:none;border:none;cursor:pointer;padding:0;font-family:var(--sans)}
+.btn-clear:hover{color:var(--ink)}
+/* Sidebar */
+.tool-sidebar{display:flex;flex-direction:column;gap:20px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px}
+.sidebar-card h3{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:12px}
+.sidebar-card p{font-size:13.5px;color:var(--ink-muted);font-weight:300;line-height:1.65;margin-bottom:12px}
+.sidebar-card ul{list-style:none}
+.sidebar-card li{font-size:13.5px;color:var(--ink-muted);font-weight:300;padding:6px 0 6px 16px;position:relative;line-height:1.55;border-top:1px solid var(--border)}
+.sidebar-card li:first-child{border-top:none;padding-top:0}
+.sidebar-card li::before{content:"→";position:absolute;left:0;color:var(--purple-mid);font-size:10px;top:8px}
+.sidebar-link{display:block;font-size:13.5px;font-weight:500;color:var(--purple);text-decoration:none;padding:8px 0;border-top:1px solid var(--border);transition:opacity .15s}
+.sidebar-link:first-of-type{border-top:none}
+.sidebar-link:hover{opacity:.7}
+/* SEO */
+.tool-seo{max-width:1100px;margin:0 auto;padding:0 40px 72px;border-top:1px solid var(--border)}
+.seo-inner{max-width:720px;padding-top:48px}
+.seo-inner h2{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--ink);margin-bottom:14px;line-height:1.2}
+.seo-inner h3{font-family:var(--serif);font-size:21px;font-weight:400;color:var(--ink);margin:28px 0 10px}
+.seo-inner p{font-size:15.5px;color:var(--ink-muted);font-weight:300;line-height:1.8;margin-bottom:14px}
+.seo-inner ul{list-style:none;margin-bottom:20px}
+.seo-inner li{font-size:15px;color:var(--ink-muted);font-weight:300;padding:7px 0 7px 20px;position:relative;line-height:1.6;border-top:1px solid var(--border)}
+.seo-inner li:last-child{border-bottom:1px solid var(--border)}
+.seo-inner li::before{content:"→";position:absolute;left:0;color:var(--purple-mid);font-size:11px;top:9px}
+@media(max-width:900px){
+  .tool-hero{padding:40px 24px 32px}
+  .tool-hero h1{font-size:34px}
+  .tool-body{padding:32px 24px}
+  .tool-body-inner{grid-template-columns:1fr}
+  .tool-seo{padding:0 24px 48px}
+}
+</style>
+
+<div class="tool-hero">
+  <div class="tool-hero-inner">
+    <div class="tool-label"><span class="tool-label-line"></span><span>Free Writer's Tool</span></div>
+    <h1>Thriller Writing <em>Prompt Generator</em></h1>
+    <p>Generate thriller writing prompts across three registers: psychological dread, conspiracy, and action. High-stakes plots, morally complex characters, and the slow burn of a world that isn't what it seems.</p>
+  </div>
+</div>
+
+<section class="tool-body">
+  <div class="tool-body-inner">
+    <div class="gen-card">
+      <div class="gen-card-head">
+        <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <h2>Generate a Writing Prompt</h2>
+      </div>
+      <div class="gen-controls">
+        <div class="ctrl-group">
+          <label>Category</label>
+          <div class="pill-row" id="cat-pills">
+            <button class="pill" data-value="plot">Plot</button>
+            <button class="pill" data-value="character">Character</button>
+            <button class="pill" data-value="setup">Setup</button>
+            <button class="pill" data-value="opening">Opening Line</button>
+          </div>
+        </div>
+        <div class="ctrl-group">
+          <label>Type</label>
+          <div class="pill-row">
+            <button class="pill active" data-tone="0">Psychological</button>
+            <button class="pill" data-tone="1">Conspiracy</button>
+            <button class="pill" data-tone="2">Action</button>
+          </div>
+          <div class="tone-label" id="tone-display">Psychological</div>
+        </div>
+        <button class="btn-gen" id="btn-generate">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Generate Prompt
+        </button>
+      </div>
+      <div class="gen-output" id="gen-output"><p class="gen-placeholder">Choose a category and click Generate.</p></div>
+      <div class="gen-actions" id="gen-actions" style="display:none;">
+        <button class="btn-secondary" id="btn-copy">Copy prompt</button>
+        <button class="btn-save" id="btn-save">Save ♡</button>
+        <button class="btn-secondary" id="btn-regen">New prompt ↻</button>
+      </div>
+    </div>
+    <aside class="tool-sidebar">
+      <div class="saved-card" id="saved-wrap" style="display:none;">
+        <h4>Saved prompts <button class="btn-clear" id="btn-clear-saved">Clear</button></h4>
+        <div id="saved-list"></div>
+      </div>
+      <div class="sidebar-card">
+        <h3>Tips for using prompts</h3>
+        <ul><li>Thrillers live on stakes — establish what your protagonist stands to lose early</li>
+          <li>Psychological thrillers: restrict information ruthlessly; let the reader feel the uncertainty</li>
+          <li>Conspiracy plots need a clear antagonist interest — someone benefits from the cover-up</li>
+          <li>Action thrillers need breathing room between set pieces — moments of quiet that make the noise hit harder</li>
+          <li>Opening line prompts: start mid-action, but make sure the reader knows what's at risk</li></ul>
+      </div>
+      <div class="sidebar-card">
+        <h3>More prompt generators</h3>
+        <a href="/tools/writing-prompts/mystery/" class="sidebar-link">Mystery Writing Prompts →</a>
+        <a href="/tools/writing-prompts/horror/" class="sidebar-link">Horror Writing Prompts →</a>
+        <a href="/tools/writing-prompts/fantasy/" class="sidebar-link">Fantasy Writing Prompts →</a>
+        <a href="/tools/writing-prompt-generator/" class="sidebar-link">Random Prompt Generator →</a>
+      </div>
+      <div class="sidebar-card">
+        <h3>Draft in Writing Desk</h3>
+        <p>When a prompt sparks something, Writing Desk's distraction-free editor is where you write it.</p>
+        <a href="/" class="sidebar-link">Download Writing Desk →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="tool-seo">
+  <div class="seo-inner">
+    <h2>Thriller fiction: the craft of sustained tension</h2>
+    <p>Thriller fiction is built on a simple promise: something terrible is coming, and the reader will feel it approaching. Sustaining that feeling across a whole novel is a craft challenge that requires careful control of information, pacing, and character investment.</p>
+    <p>The most common mistake in thriller writing is confusing busy with tense. Events happening isn't the same as tension. Tension is the gap between what the reader knows or fears and what the protagonist knows or can do — and that gap has to be maintained, even in action sequences.</p>
+    <h3>Psychological vs action thriller</h3>
+    <p>Psychological thrillers work through paranoia, restricted perception, and the unreliability of the protagonist's understanding of their situation. The threat is often close — a colleague, a partner, a neighbour — and the story is about the protagonist's slow, dawning realisation. Information is the primary currency.</p>
+    <p>Action thrillers work through external, physical threat with a higher pace and more kinetic energy. The stakes are usually clear and large. The craft challenge is maintaining emotional investment through action sequences that could easily become mechanical.</p>
+
+  </div>
+</section>
+
+<script>
+const tpPrompts = {
+  plot: {
+    0: [
+      "A woman begins to suspect that her therapist is using information from their sessions against her — not illegally, not obviously, but in small ways that she can't quite prove.",
+      "A man discovers his wife has a second phone. He doesn't confront her. He starts tracking her instead. Three weeks later, he discovers it isn't an affair. It's something worse.",
+      "A journalist receives an anonymous tip about financial fraud at a major institution. The tip is accurate. The source has since disappeared. The institution is her employer.",
+      "A woman who survived a home invasion five years ago begins to believe the man who did it has found her. The police found the original suspect not guilty. She is not sure she believes that verdict.",
+      "A woman wakes from a coma with no memory of the past six months. Her husband tells her she was in an accident. The physiotherapist treating her quietly passes her a note that says 'don't trust him.'",
+    ],
+    1: [
+      "A mid-level government analyst flags an anomaly in procurement data that shouldn't be there. Her supervisor closes the inquiry. Two days later, her access is revoked for unrelated reasons.",
+      "A forensic accountant hired to audit a charity finds that money is flowing correctly in — but not quite correctly out. The discrepancy is tiny. The destination, when he traces it, is not.",
+      "A woman is recruited to a task force investigating a high-profile disappearance. Three weeks in, she realises that two members of her own team are withholding information — from each other, not just from her.",
+      "An intelligence analyst discovers that a classified operation she helped design five years ago is still running — under a different name, with a different stated purpose, and without her knowledge.",
+      "A data breach at a government contractor exposes something that was never supposed to be on the servers — records of an operation officially shut down in 1987.",
+    ],
+    2: [
+      "A security consultant hired to stress-test a bank's systems finds a backdoor that didn't come from the penetration test. Someone else put it there. It has been there for two years.",
+      "A hostage negotiator receives a call from someone claiming to be holding three people in a building she can see from her window. The building appears empty. The call is definitely real.",
+      "An extraction specialist is sent to retrieve an asset. The asset refuses to come. The asset shows her documentation that suggests she is the threat, not the rescue.",
+      "A convoy transporting classified materials is ambushed. The only person who knew the route was the operation commander. The commander is in the convoy.",
+    ]
+  },
+  character: {
+    0: [
+      "A psychiatrist who has been treating a patient for two years begins to suspect the patient has been studying her as carefully as she's been studying them — and for longer.",
+      "A forensic linguist who analyses threatening communications for the police realises that a series of messages sent to three different recipients were all written by the same person — someone she knows.",
+      "A woman who has reinvented herself entirely — new name, new city, new history — after escaping an abusive situation discovers that someone from her old life has found her. The question is which someone.",
+      "A grief counsellor whose own grief is unprocessed begins to recognise, in one of her clients, the same coping mechanisms she uses — including the one she knows is dangerous.",
+    ],
+    1: [
+      "A fixer who solves problems for powerful people has spent twenty years keeping other people's secrets. Someone has started keeping a record of hers.",
+      "An undercover officer who has been embedded in an organised crime network for three years receives orders to withdraw. The orders feel wrong. She doesn't withdraw.",
+      "A whistleblower who went public two years ago and whose case went nowhere is contacted by someone claiming to have the evidence that will make the case undeniable. The someone wants something in return.",
+      "A private security contractor hired to protect a witness discovers that the threat to the witness is coming from the organisation that hired her.",
+    ],
+    2: [
+      "A soldier returned from a classified operation that officially didn't happen begins receiving messages that reference specific details that only someone on the operation could know — including details she never put in any report.",
+      "A logistics coordinator for a criminal network who has never committed a crime directly is given an order that requires her to. She's been telling herself for years that she's not really part of it.",
+      "A former intelligence officer hired as a corporate security consultant discovers that his new employer is running an operation that looks very much like the kind of operation he used to run for governments.",
+      "A bodyguard assigned to protect a technology executive discovers that the executive is not afraid of the threat they described — they are afraid of something else entirely, which they have not mentioned.",
+    ]
+  },
+  twist: {
+    0: [
+      "The narrator has been reliable throughout — every detail accurate, every observation sharp — except for one thing they've been carefully not mentioning, which changes everything that came before.",
+      "The person the protagonist has been trying to protect has known the truth from the beginning and has been managing the protagonist's investigation, not to hide it, but to ensure it reaches the right conclusion.",
+      "The threat is real. The person who warned about it is lying. Both of these things are true simultaneously, which is the most dangerous possible combination.",
+      "The detective solving the crime is the only person in the story who doesn't know they witnessed the critical moment — because they were there for an unrelated reason and didn't realise what they were seeing.",
+    ],
+    1: [
+      "The conspiracy the protagonist has been uncovering is a cover for a different conspiracy. The people running the cover are trying to expose the one beneath it. The protagonist is now in the way of both.",
+      "The document that contains the truth has been in plain sight the entire novel. The reader has been told what it is. The protagonist has read it. Neither of them understood it at the time.",
+      "The antagonist and the protagonist have the same goal. They've been working against each other for the entire novel in service of an outcome neither could achieve alone.",
+      "The leak that started the plot wasn't a betrayal. It was an invitation — sent by someone who needed the investigation to happen and had no other way to start it.",
+    ],
+    2: [
+      "The extraction mission was always going to fail. The real mission — which nobody briefed the protagonist on — required the failure.",
+      "The organisation the protagonist has been fighting is a front for the organisation that hired her. Both organisations know this. She is the only person in the book who doesn't.",
+      "The evidence was planted — not to frame the wrong person, but to expose the right one in a way that would be admissible. The person who planted it is technically a criminal. They are also correct.",
+      "The operation the protagonist has been running has been compromised from the start. The asset who was supposed to be turned has been running the protagonist, not the other way around.",
+    ]
+  },
+  setting: {
+    0: [
+      "A gated community where everyone knows everyone and the homeowners' association has access to security camera footage from every common area — footage that one resident has just discovered is also being watched by someone else.",
+      "A corporate wellness retreat in a remote location where participants' phones are collected on arrival. One participant doesn't hand theirs in. Three days later, they wish they had.",
+      "A prestigious academic conference at a lakeside hotel where three of the delegates share a secret from fifteen years ago, a fourth delegate knows what it is, and a fifth delegate has just arrived who shouldn't be there.",
+    ],
+    1: [
+      "A financial district law firm where the junior associate has just discovered that two senior partners are billing the same client for opposite advice — and that the client is a government body.",
+      "A foreign embassy during a diplomatic crisis, where the staff are confined to the building, communications are monitored, and someone inside has been passing information to the wrong people for months.",
+      "An international shipping hub where the paperwork moves faster than the cargo, where what's declared and what's shipped are often different things, and where a new compliance officer has just started asking the wrong questions.",
+    ],
+    2: [
+      "A military black site officially shut down three years ago that is very clearly still operational, according to the satellite imagery the journalist has just been sent by an anonymous source.",
+      "A border crossing point where the standard procedure has a gap in it that everyone knows about and nobody mentions — and which someone has just started using in a way that suggests they know things they shouldn't.",
+      "A private airport used by exactly the kind of clients who pay for privacy, where a refuelling technician has started photographing tail numbers and the people who get off the planes.",
+    ]
+  },
+  opening: {
+    0: [
+      "I'd been married for nine years before I found the passport. Not a fake one — mine. A real one, with my real name, and a photo I didn't remember being taken.",
+      "She said it was paranoia. I said paranoia implies there's nothing there. We agreed on the word for years. We disagreed about what it meant.",
+      "The message arrived at 3am. I read it. I deleted it. I have been unable to remember a single other detail of that week.",
+      "He told me I was safe. I'd heard that before. The people who said it were usually right. He was the first one I didn't believe.",
+    ],
+    1: [
+      "The file shouldn't exist. It definitely shouldn't be on my desk. The person whose name was on it had been dead for six years.",
+      "Three people knew about the operation. One of them was now dead. One had disappeared. I was the third.",
+      "I found the bug on a Wednesday. By Friday, I needed to decide whether to sweep it or feed it.",
+      "She'd been on the list for four months before anyone noticed. By then, noticing was already too late to be useful.",
+    ],
+    2: [
+      "The car that wasn't following me turned left when I turned left for the third time. I stopped treating it as coincidence.",
+      "The brief said extraction. When I arrived, I understood why they hadn't called it what it was.",
+      "Seven minutes before the building came down, I was still inside it. That wasn't part of the plan. I was beginning to think it was part of someone's plan.",
+      "I've been burned twice. Both times I trusted someone I shouldn't have. Both times I had reasons. I was about to make the same decision for the same reasons.",
+    ]
+  }
+};
+const toneLabels=['Psychological','Conspiracy','Action'];let currentTone=0;
+document.querySelectorAll('[data-tone]').forEach(b=>{b.addEventListener('click',()=>{
+  document.querySelectorAll('[data-tone]').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');currentTone=parseInt(b.dataset.tone);
+  document.getElementById('tone-display').textContent=toneLabels[currentTone];
+});});
+let currentCat = null;
+document.querySelectorAll('.pill[data-value]').forEach(pill => {
+  pill.addEventListener('click', () => {
+    pill.closest('.pill-row').querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active'); currentCat = pill.dataset.value;
+  });
+});
+const fp = document.querySelector('.pill[data-value]');
+if(fp){fp.classList.add('active');currentCat=fp.dataset.value;}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function showPrompt(text,cat,tone){
+  const o=document.getElementById('gen-output');o.innerHTML='';o.dataset.current=text;
+  const m=document.createElement('div');m.className='prompt-meta';
+  m.innerHTML=`<span class="prompt-tag">${cat}</span><span class="prompt-tone">${tone}</span>`;
+  const p=document.createElement('p');p.className='prompt-text';p.textContent=text;
+  o.appendChild(m);o.appendChild(p);document.getElementById('gen-actions').style.display='flex';
+}
+function generate(){
+  if(!currentCat)return;
+  const bank=tpPrompts[currentCat];if(!bank)return;
+  let pool=Array.isArray(bank)?bank:(bank[currentTone]||bank[Object.keys(bank)[0]]);
+  showPrompt(pick(pool),currentCat.charAt(0).toUpperCase()+currentCat.slice(1),toneLabels[currentTone]);
+}
+
+let savedPrompts = [];
+function renderSaved() {
+  const wrap = document.getElementById('saved-wrap');
+  const list = document.getElementById('saved-list');
+  if (!savedPrompts.length) { if(wrap) wrap.style.display='none'; return; }
+  if(wrap) wrap.style.display='block';
+  list.innerHTML = '';
+  savedPrompts.forEach(p => {
+    const item = document.createElement('div');item.className='saved-item';
+    const short = p.length>90?p.substring(0,90)+'…':p;
+    item.innerHTML=`<p>${short}</p><button onclick="navigator.clipboard.writeText(decodeURIComponent('${encodeURIComponent(p)}'))">Copy</button>`;
+    list.appendChild(item);
+  });
+}
+document.getElementById('btn-generate').addEventListener('click',generate);
+document.getElementById('btn-regen').addEventListener('click',generate);
+document.getElementById('btn-copy').addEventListener('click',()=>{
+  const p=document.getElementById('gen-output').dataset.current;if(!p)return;
+  navigator.clipboard.writeText(p).then(()=>{const b=document.getElementById('btn-copy');b.textContent='Copied!';setTimeout(()=>b.textContent='Copy prompt',1500);});
+});
+document.getElementById('btn-save').addEventListener('click',()=>{
+  const p=document.getElementById('gen-output').dataset.current;if(!p||savedPrompts.includes(p))return;
+  savedPrompts.unshift(p);if(savedPrompts.length>10)savedPrompts=savedPrompts.slice(0,10);renderSaved();
+  const b=document.getElementById('btn-save');b.textContent='Saved ♥';setTimeout(()=>b.textContent='Save ♡',1500);
+});
+const cb=document.getElementById('btn-clear-saved');if(cb)cb.addEventListener('click',()=>{savedPrompts=[];renderSaved();});
+generate();
+</script>

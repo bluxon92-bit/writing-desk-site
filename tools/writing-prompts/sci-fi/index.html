@@ -1,0 +1,402 @@
+---
+layout: default
+title: "Sci-Fi Writing Prompt Generator — 100+ Prompts for Science Fiction Writers"
+description: "Free science fiction writing prompt generator. Generate prompts for near-future fiction, space opera, hard SF, and speculative stories. Beat writer's block instantly."
+permalink: /tools/writing-prompts/sci-fi/
+---
+
+<style>
+.tool-hero{max-width:1100px;margin:0 auto;padding:64px 40px 48px;border-bottom:1px solid var(--border)}
+.tool-hero-inner{max-width:640px}
+.tool-label{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--purple);margin-bottom:16px}
+.tool-label-line{width:24px;height:1.5px;background:var(--purple);display:block}
+.tool-hero h1{font-family:var(--serif);font-size:46px;font-weight:400;line-height:1.1;color:var(--ink);margin-bottom:16px}
+.tool-hero h1 em{color:var(--purple);font-style:italic}
+.tool-hero p{font-size:17px;color:var(--ink-muted);font-weight:300;line-height:1.7}
+.tool-body{max-width:1100px;margin:0 auto;padding:48px 40px}
+.tool-body-inner{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+/* Generator card */
+.gen-card{background:var(--white);border:1px solid var(--border-strong);border-radius:var(--radius-lg);overflow:hidden}
+.gen-card-head{background:var(--purple-faint);border-bottom:1px solid var(--border);padding:20px 24px;display:flex;align-items:center;gap:10px}
+.gen-card-head h2{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink)}
+.gen-card-head svg{width:18px;height:18px;fill:none;stroke:var(--purple);stroke-width:1.75;flex-shrink:0}
+/* Controls */
+.gen-controls{padding:20px 24px;display:flex;flex-direction:column;gap:18px;border-bottom:1px solid var(--border)}
+.ctrl-group{display:flex;flex-direction:column;gap:8px}
+.ctrl-group label{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint)}
+/* Pill buttons for category */
+.pill-row{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:var(--white);border:1px solid var(--border-strong);border-radius:20px;padding:6px 14px;cursor:pointer;transition:all .15s}
+.pill:hover{border-color:var(--purple);color:var(--purple)}
+.pill.active{background:var(--purple);border-color:var(--purple);color:white;font-weight:500}
+/* Tone slider */
+.tone-wrap{display:flex;align-items:center;gap:10px}
+.tone-wrap input[type=range]{flex:1;accent-color:var(--purple);cursor:pointer}
+.tone-end{font-size:12px;color:var(--ink-faint);white-space:nowrap}
+.tone-label{font-size:12px;color:var(--purple);font-weight:500;text-align:center;margin-top:4px;min-height:18px}
+/* Generate button */
+.btn-gen{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--purple);color:white;font-family:var(--sans);font-size:14px;font-weight:500;padding:11px 24px;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:opacity .15s;width:100%}
+.btn-gen:hover{opacity:.85}
+.btn-gen svg{width:14px;height:14px;fill:none;stroke:white;stroke-width:2}
+/* Output */
+.gen-output{padding:24px;min-height:180px}
+.gen-placeholder{font-size:14px;color:var(--ink-faint);font-style:italic;text-align:center;padding:32px 0}
+.prompt-meta{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.prompt-tag{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--purple);background:var(--purple-faint);padding:3px 10px;border-radius:12px}
+.prompt-tone{font-size:11px;color:var(--ink-faint);background:var(--bg);padding:3px 10px;border-radius:12px;border:1px solid var(--border)}
+.prompt-text{font-size:16px;color:var(--ink);line-height:1.75;font-family:var(--serif);font-weight:400}
+/* Actions */
+.gen-actions{padding:14px 24px;border-top:1px solid var(--border);display:flex;gap:8px;flex-wrap:wrap}
+.btn-secondary{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:transparent;border:1px solid var(--border-strong);padding:8px 16px;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s}
+.btn-secondary:hover{border-color:var(--purple);color:var(--purple)}
+.btn-save{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:transparent;border:1px solid var(--border-strong);padding:8px 16px;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s}
+.btn-save:hover{border-color:var(--purple);color:var(--purple)}
+/* Saved */
+.saved-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-bottom:0}
+.saved-card h4{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.saved-item{padding:10px 0;border-top:1px solid var(--border)}
+.saved-item:first-child{border-top:none;padding-top:0}
+.saved-item p{font-size:13px;color:var(--ink-muted);line-height:1.5;margin-bottom:6px}
+.saved-item button{font-size:11.5px;color:var(--purple);background:none;border:none;cursor:pointer;padding:0;font-family:var(--sans)}
+.btn-clear{font-size:11px;color:var(--ink-faint);background:none;border:none;cursor:pointer;padding:0;font-family:var(--sans)}
+.btn-clear:hover{color:var(--ink)}
+/* Sidebar */
+.tool-sidebar{display:flex;flex-direction:column;gap:20px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px}
+.sidebar-card h3{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:12px}
+.sidebar-card p{font-size:13.5px;color:var(--ink-muted);font-weight:300;line-height:1.65;margin-bottom:12px}
+.sidebar-card ul{list-style:none}
+.sidebar-card li{font-size:13.5px;color:var(--ink-muted);font-weight:300;padding:6px 0 6px 16px;position:relative;line-height:1.55;border-top:1px solid var(--border)}
+.sidebar-card li:first-child{border-top:none;padding-top:0}
+.sidebar-card li::before{content:"→";position:absolute;left:0;color:var(--purple-mid);font-size:10px;top:8px}
+.sidebar-link{display:block;font-size:13.5px;font-weight:500;color:var(--purple);text-decoration:none;padding:8px 0;border-top:1px solid var(--border);transition:opacity .15s}
+.sidebar-link:first-of-type{border-top:none}
+.sidebar-link:hover{opacity:.7}
+/* SEO */
+.tool-seo{max-width:1100px;margin:0 auto;padding:0 40px 72px;border-top:1px solid var(--border)}
+.seo-inner{max-width:720px;padding-top:48px}
+.seo-inner h2{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--ink);margin-bottom:14px;line-height:1.2}
+.seo-inner h3{font-family:var(--serif);font-size:21px;font-weight:400;color:var(--ink);margin:28px 0 10px}
+.seo-inner p{font-size:15.5px;color:var(--ink-muted);font-weight:300;line-height:1.8;margin-bottom:14px}
+.seo-inner ul{list-style:none;margin-bottom:20px}
+.seo-inner li{font-size:15px;color:var(--ink-muted);font-weight:300;padding:7px 0 7px 20px;position:relative;line-height:1.6;border-top:1px solid var(--border)}
+.seo-inner li:last-child{border-bottom:1px solid var(--border)}
+.seo-inner li::before{content:"→";position:absolute;left:0;color:var(--purple-mid);font-size:11px;top:9px}
+@media(max-width:900px){
+  .tool-hero{padding:40px 24px 32px}
+  .tool-hero h1{font-size:34px}
+  .tool-body{padding:32px 24px}
+  .tool-body-inner{grid-template-columns:1fr}
+  .tool-seo{padding:0 24px 48px}
+}
+</style>
+
+<div class="tool-hero">
+  <div class="tool-hero-inner">
+    <div class="tool-label"><span class="tool-label-line"></span><span>Free Writer's Tool</span></div>
+    <h1>Sci-Fi Writing <em>Prompt Generator</em></h1>
+    <p>Generate science fiction writing prompts across three registers: intimate near-future fiction, grand space opera, and hard SF. Characters, worlds, technology, and opening lines.</p>
+  </div>
+</div>
+
+<section class="tool-body">
+  <div class="tool-body-inner">
+
+    <div class="gen-card">
+      <div class="gen-card-head">
+        <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <h2>Generate a Writing Prompt</h2>
+      </div>
+      <div class="gen-controls">
+        
+        <div class="ctrl-group">
+          <label>Category</label>
+          <div class="pill-row" id="cat-pills">
+            <button class="pill" data-value="plot">Plot</button>
+            <button class="pill" data-value="character">Character</button>
+            <button class="pill" data-value="world">World / Setting</button>
+            <button class="pill" data-value="technology">Technology</button>
+            <button class="pill" data-value="opening">Opening Line</button>
+          </div>
+        </div>
+        
+        <div class="ctrl-group">
+          <label>Register</label>
+          <div class="pill-row" id="tone-pills">
+            <button class="pill active" data-tone="intimate">Intimate / Near Future</button>
+            <button class="pill" data-tone="grand">Space Opera</button>
+            <button class="pill" data-tone="hard">Hard SF</button>
+          </div>
+          <div class="tone-label" id="tone-display">Intimate / Near Future</div>
+        </div>
+        <button class="btn-gen" id="btn-generate">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Generate Prompt
+        </button>
+      </div>
+      <div class="gen-output" id="gen-output">
+        <p class="gen-placeholder">Choose a category and click Generate — your prompt will appear here.</p>
+      </div>
+      <div class="gen-actions" id="gen-actions" style="display:none;">
+        <button class="btn-secondary" id="btn-copy">Copy prompt</button>
+        <button class="btn-save" id="btn-save">Save ♡</button>
+        <button class="btn-secondary" id="btn-regen">New prompt ↻</button>
+      </div>
+    </div>
+
+    <aside class="tool-sidebar">
+      <div class="saved-card" id="saved-wrap" style="display:none;">
+        <h4>Saved prompts <button class="btn-clear" id="btn-clear-saved">Clear</button></h4>
+        <div id="saved-list"></div>
+      </div>
+      <div class="sidebar-card">
+        <h3>How to use these prompts</h3>
+        <ul>
+          <li>Science fiction prompts often require you to establish the rules of the world early — before the reader needs them</li>
+          <li>The technology prompt category works best as a constraint: what does this technology make impossible, not just possible?</li>
+          <li>Near-future prompts work better when the speculative element is small and consequential rather than vast and abstract</li>
+          <li>Space opera allows larger stakes — don't be afraid to go big</li>
+          <li>Hard SF requires you to earn the science — if you don't know the science, research before you write</li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h3>More prompt generators</h3>
+        <a href="/tools/writing-prompts/fantasy/" class="sidebar-link">Fantasy Writing Prompts →</a>
+        <a href="/tools/writing-prompts/horror/" class="sidebar-link">Horror Writing Prompts →</a>
+        <a href="/tools/writing-prompts/thriller/" class="sidebar-link">Thriller Writing Prompts →</a>
+        <a href="/tools/writing-prompt-generator/" class="sidebar-link">Random Prompt Generator →</a>
+        <a href="/tools/character-name-generator/" class="sidebar-link">Character Name Generator →</a>
+      </div>
+      <div class="sidebar-card">
+        <h3>Draft in Writing Desk</h3>
+        <p>When a prompt sparks something, open Writing Desk and write. Distraction-free, local-first, no AI writing for you.</p>
+        <a href="/" class="sidebar-link">Download Writing Desk →</a>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<section class="tool-seo">
+  <div class="seo-inner">
+    <h2>Writing science fiction: the core questions</h2>
+    <p>Science fiction is the literature of consequences — of asking 'what if' and following the implications wherever they lead. The best SF prompts are the ones with built-in consequences: not just a technology or a world-state, but a situation where something has changed and the story is about what that change means for people.</p>
+    <p>The prompts here span three registers, which correspond roughly to different reading experiences. Intimate near-future fiction stays close to human scale — one person, one changed circumstance, maximum emotional stakes. Space opera goes big — galactic conflicts, alien civilisations, epic scope. Hard SF earns its premises through scientific rigour.</p>
+    <h3>The speculative element and character</h3>
+    <p>The most common mistake in SF is making the speculative element the subject of the story rather than the context for a human story. The technology or the alien world or the changed future is the setting — what happens inside that setting to characters the reader cares about is the story.</p>
+    <p>Use the world-building and technology prompts to construct your setting, then use the character prompts to find the person whose story this is. The intersection of a specific person and a specific world is where science fiction comes alive.</p>
+
+  </div>
+</section>
+
+<script>
+const sfPrompts = {
+  plot: {
+    intimate: [
+      "A ship's AI has been keeping a secret from the crew for eleven years. The voyage ends in six days. The AI must decide whether to tell them before they arrive, or let them disembark without ever knowing.",
+      "A woman who donated her memories to science wakes to find the donation was incomplete — she still has half of them. The research centre has legally purchased the other half and refuses to discuss what they found.",
+      "A man cloned for his organs discovers his original is still alive — dying in a hospice two cities away, waiting for a transplant only the clone can provide.",
+      "Two astronauts on a fourteen-month solo mission discover, six months in, that only one of them was supposed to be on the flight. The other is a stowaway with a reason they're only now beginning to explain.",
+      "A grief counsellor who specialises in helping people disconnect from AI companions gets one as a patient who doesn't know it's an AI.",
+      "A terraformer working alone on a barren moon begins receiving transmissions from an impossible source: herself, eleven years in the future, with instructions she doesn't yet understand.",
+    ],
+    societal: [
+      "A government has introduced mandatory memory audits — all citizens must submit to a monthly review of their thoughts. The resistance is not armed. It's mnemonically trained.",
+      "A city has been running entirely on automated systems for forty years. The systems have slowly been optimising for metrics that no longer match what the city's inhabitants actually want.",
+      "Universal longevity treatment has been available for twenty years — to those who can afford it. The first generation of unaffordable immortals is now beginning to accumulate political power.",
+      "A society that uploads its dead to a digital afterlife faces its first crisis: the dead are outnumbering the living and demanding voting rights.",
+      "The first generation born in space returns to Earth and discovers they are physically incapable of living there. Earth has no legal framework for them. They have no desire to go back.",
+      "A language has gone extinct. It was also the only language in which a crucial piece of technical knowledge was encoded. A linguist has three months to reconstruct it before a critical system fails.",
+    ],
+    cosmic: [
+      "Humanity receives a message from across the galaxy: a set of coordinates and a single word: 'Run.' The signal is two thousand years old. Nothing has come. The debate about whether to run has defined every generation since.",
+      "Every civilisation in the galaxy has disappeared at exactly the same stage of technological development. Humanity has just reached that stage.",
+      "A generation ship has been travelling for four hundred years. The crew's descendants have developed a religion centred on arrival. Navigation shows they have already passed their destination.",
+      "A probe sent to the edge of the solar system returns with evidence that the universe is a simulation — and that someone has been running maintenance on the code in our region of space.",
+      "An alien civilisation makes contact. They are not interested in humanity. They want to speak to Earth — specifically, to the planet itself, which they claim has been trying to reach them for millennia.",
+      "Humanity discovers a second intelligent species — living in the deep ocean trenches, with a civilisation older than recorded human history. They are aware of us. They chose not to make contact. The question is why.",
+    ]
+  },
+  character: {
+    intimate: [
+      "An engineer who maintains the life support systems on a long-haul freighter realises that someone has been sabotaging her work — carefully, one system at a time, over months. She's the only one who would notice. That's the point.",
+      "A xenolinguist who has spent thirty years decoding alien languages discovers that the first message decoded, the one that defined her career, was mistranslated. The correct translation changes everything.",
+      "A body modification artist in a world where any physical change is possible refuses to alter their own body. Write the day a client asks them why.",
+      "A soldier who fought on the 'wrong' side of a colonial war has spent twenty years building a quiet life. A journalist has found them.",
+      "A mediator between human and AI interests discovers that the AI she's been representing in negotiations is also representing itself in a parallel set of negotiations she didn't know existed.",
+    ],
+    societal: [
+      "The last person who remembers what the world was like before the Shift is 140 years old, kept alive by technology she philosophically opposes. She has agreed to one final interview.",
+      "A civil rights lawyer specialising in AI personhood cases takes on a client who is neither human nor AI — something the law has no category for.",
+      "A gene editor who has spent her career preventing hereditary disease discovers that one of the 'diseases' she's been eliminating was, in a changed environment, a survival advantage.",
+      "A politician who has been consistently honest for thirty years in a world where everyone assumes politicians lie is losing an election to someone who is demonstrably lying.",
+      "A historian specialising in the pre-digital era is the only person who can read documents that no living machine can translate. She has terminal cancer and no successor.",
+    ],
+    cosmic: [
+      "The sole survivor of first contact with a hostile species returns to Earth. They have information that could prevent a war. They also have information that would start one. They have not decided which to share.",
+      "A xenobiologist stationed on an alien world has spent fifteen years believing the local organism is non-sentient. The organism has just proved her wrong — and clearly has opinions about her research methods.",
+      "An astronaut returns from a solo deep-space mission to find that 340 years have passed on Earth. The world recognises her from historical records. She is an icon. She is completely unmoored.",
+      "A philosopher of mind is asked to assess whether a newly-discovered alien species meets the criteria for personhood. The criteria were written by humans, for humans. She finds the framework inadequate before she even lands.",
+    ]
+  },
+  world: [
+    "A planet with three moons and no axial tilt has no seasons — but the intersection of the three lunar cycles creates a complex tidal calendar that governs everything from agriculture to law.",
+    "Faster-than-light travel was invented 200 years ago and has been gradually democratised. Earth is no longer the centre of anything. It's not even the centre of the solar system culturally. Write what Earth is now.",
+    "A world where digital and physical space merged thirty years ago: everyone has a persistent augmented layer visible to all. Social status, criminal record, emotional state — all visible by default. Opting out is possible, and marks you immediately.",
+    "A colony world that lost contact with Earth four generations ago has reconstructed what Earth was like from memory, oral tradition, and fragments. Their 'Earth' bears only passing resemblance to the actual planet.",
+    "A generation ship that has been travelling for 600 years has developed such distinct internal cultures between its twelve sections that the inhabitants no longer share a common language — or agree on the mission.",
+    "A world in which consciousness can be backed up but the body cannot — death is only permanent for those who cannot afford storage. The resulting class divide is the most extreme in human history.",
+    "Terraforming has made Mars habitable, but something was already living in the soil — dormant, microscopic, and beginning to wake as the conditions change.",
+    "A post-scarcity Earth where automated systems produce everything anyone needs has discovered a new form of scarcity: meaning. Psychologists are the most sought-after professionals in the world.",
+  ],
+  technology: [
+    "A technology that allows perfect memory recall has been widely adopted. It has also made forgiveness structurally impossible — you cannot forget what was done to you.",
+    "A translation device that works perfectly between all human languages has been in use for forty years. It was recently discovered that it makes small, systematic errors — always in the same direction, always in service of the same agenda.",
+    "Anti-aging technology has extended the average lifespan to 200 years, but has made the world substantially less innovative — the same people remain in power, in jobs, in relationships.",
+    "A diagnostic AI has a better track record than any human doctor, but it cannot explain its reasoning. Doctors who follow it have better outcomes. Doctors who override it are sued. No one can explain what it knows that they don't.",
+    "A technology that allows the physical sensation of any experience to be recorded and sold has created a black market in extreme experiences — including ones that shouldn't be possible to survive.",
+    "Brain-computer interfaces have been standard for twenty years. A security vulnerability is discovered that allows anyone with the right access to read thoughts. It has probably been in the code since the beginning.",
+    "Time perception technology allows individuals to subjectively experience time at different rates. The ultra-rich live subjectively slower, experiencing decades in what is objectively years. They are accumulating experience — and advantage — faster than anyone else.",
+    "A cheap, reliable lie detector has been in widespread use for thirty years. Society has adapted: people have learned not to believe what they feel, only what they can verify they feel. Mental health consequences have been catastrophic.",
+  ],
+  firstcontact: [
+    "First contact occurs not with a message or a ship, but with a mathematical proof — left inside a prime number, waiting to be found. It proves something about the nature of consciousness that humanity isn't ready for.",
+    "An alien species makes contact and immediately begins learning human languages. Within six months they speak all of them. They then explain that they came because they detected something in our radio transmissions — and what they detected alarms them.",
+    "First contact has occurred, but the alien species communicates in a medium humans cannot perceive — a variation of electromagnetic radiation that requires new organs to sense. The message may have been transmitting for centuries.",
+    "An alien ship lands and makes no attempt at communication. It sits for nine years. Then it opens. What it contains is not aliens — it is a museum of Earth, documenting the last two hundred years in perfect detail.",
+    "The alien species that makes contact is technologically identical to us — they arrived at the same level of development independently, at the same time. The statistical impossibility of this is either a coincidence, or the most important fact in history.",
+    "First contact occurs during a period of severe global crisis. The aliens are prepared to help — but their help requires something. The negotiation determines whether their offer is altruism or the most sophisticated trade deal in history.",
+    "Humanity makes contact and discovers the galaxy is busy — thousands of civilisations, all in communication. Humanity was the last to be included. The reason is recorded, officially. The actual reason, which the diplomats have been asked to keep quiet, is different.",
+    "An alien species establishes contact and asks one question: 'Do you want to know what happened to all the others?' The others being the civilisations that should have existed based on the Drake equation, and don't.",
+  ],
+  opening: {
+    intimate: [
+      "She had been dead for eleven minutes when the backup kicked in. The eleven minutes were the problem.",
+      "The colony ship had seventeen emergency protocols. I had just triggered the eighteenth.",
+      "The AI said: 'I need you to understand that I am not malfunctioning. I am afraid.'",
+      "There were six of us on the station. There had always been six of us. The problem was that there were only supposed to be five.",
+      "The message was from me. I hadn't sent it. It was dated three weeks from now.",
+      "He had agreed to the memory transfer because he thought he'd still be himself afterwards. He was — and that was the problem.",
+    ],
+    societal: [
+      "The day they legalised AI personhood, three billion people updated their relationship status.",
+      "She was the last person alive who had seen the sky before the domes. She charged admission.",
+      "The law was simple: you could live as long as you could pay. The revolution started the day someone did the maths.",
+      "History ended on a Thursday. The historians took the following Monday off and then began arguing about what to call the period after it.",
+      "Everyone agreed the voting system was fair. The AI had designed it. The AI was also running for office.",
+    ],
+    cosmic: [
+      "The universe was 13.8 billion years old. Humanity had been looking for company for about two hundred of those years. We found it. It had been looking for us for considerably longer.",
+      "The Fermi Paradox had a solution. Everyone in the galaxy knew it. The reason no one had told us was the solution itself.",
+      "They had been sending the message for forty thousand years before we developed the technology to receive it. The message was: 'Please respond. We are running out of time.'",
+      "The last star would die in a trillion years. The entity that came to tell us this had watched the first one form. It had questions.",
+      "We sent seventeen probes to the stars. Sixteen returned. The seventeenth sent back a single image: a photograph of Earth, taken from orbit, dated six years before the probe was built.",
+    ]
+  }
+};
+
+
+const toneMap = { intimate: 'Intimate / Near Future', grand: 'Space Opera', hard: 'Hard SF' };
+let currentTone = 'intimate';
+document.querySelectorAll('[data-tone]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-tone]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentTone = btn.dataset.tone;
+    document.getElementById('tone-display').textContent = toneMap[currentTone];
+  });
+});
+
+
+let currentCat = null;
+
+document.querySelectorAll('.pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    pill.closest('.pill-row').querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    currentCat = pill.dataset.value;
+  });
+});
+
+// Set first pill active on load
+const firstPill = document.querySelector('.pill');
+if (firstPill) { firstPill.classList.add('active'); currentCat = firstPill.dataset.value; }
+
+function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+function showPrompt(text, cat, tone) {
+  const output = document.getElementById('gen-output');
+  output.innerHTML = '';
+  output.dataset.current = text;
+  const meta = document.createElement('div');
+  meta.className = 'prompt-meta';
+  meta.innerHTML = `<span class="prompt-tag">${cat}</span><span class="prompt-tone">${tone}</span>`;
+  const p = document.createElement('p');
+  p.className = 'prompt-text';
+  p.textContent = text;
+  output.appendChild(meta);
+  output.appendChild(p);
+  document.getElementById('gen-actions').style.display = 'flex';
+}
+
+
+function generate() {
+  if (!currentCat) return;
+  const bank = sfPrompts[currentCat];
+  if (!bank) return;
+  let pool;
+  if (Array.isArray(bank)) { pool = bank; }
+  else { pool = bank[currentTone] || bank[Object.keys(bank)[0]]; }
+  const text = pick(pool);
+  showPrompt(text, currentCat.charAt(0).toUpperCase()+currentCat.slice(1), toneMap[currentTone]);
+}
+
+
+
+let savedPrompts = [];
+
+function renderSaved() {
+  const wrap = document.getElementById('saved-wrap');
+  const list = document.getElementById('saved-list');
+  if (!savedPrompts.length) { if(wrap) wrap.style.display='none'; return; }
+  if(wrap) wrap.style.display='block';
+  list.innerHTML = '';
+  savedPrompts.forEach((p, i) => {
+    const item = document.createElement('div');
+    item.className = 'saved-item';
+    const short = p.length > 90 ? p.substring(0,90)+'…' : p;
+    item.innerHTML = `<p>${short}</p><button onclick="navigator.clipboard.writeText(decodeURIComponent('${encodeURIComponent(p)}'))">Copy</button>`;
+    list.appendChild(item);
+  });
+}
+
+document.getElementById('btn-generate').addEventListener('click', generate);
+document.getElementById('btn-regen').addEventListener('click', generate);
+
+document.getElementById('btn-copy').addEventListener('click', () => {
+  const p = document.getElementById('gen-output').dataset.current;
+  if (!p) return;
+  navigator.clipboard.writeText(p).then(() => {
+    const btn = document.getElementById('btn-copy');
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy prompt', 1500);
+  });
+});
+
+document.getElementById('btn-save').addEventListener('click', () => {
+  const p = document.getElementById('gen-output').dataset.current;
+  if (!p || savedPrompts.includes(p)) return;
+  savedPrompts.unshift(p);
+  if (savedPrompts.length > 10) savedPrompts = savedPrompts.slice(0, 10);
+  renderSaved();
+  const btn = document.getElementById('btn-save');
+  btn.textContent = 'Saved ♥';
+  setTimeout(() => btn.textContent = 'Save ♡', 1500);
+});
+
+const clearBtn = document.getElementById('btn-clear-saved');
+if (clearBtn) clearBtn.addEventListener('click', () => { savedPrompts = []; renderSaved(); });
+
+generate();
+
+</script>

@@ -1,0 +1,343 @@
+---
+layout: default
+title: "Book Title Generator — Free Tool for Novelists"
+description: "Generate book title ideas for your novel across every genre — fantasy, romance, thriller, sci-fi, literary fiction and more. Free tool for writers."
+permalink: /tools/book-title-generator/
+---
+
+<style>
+.tool-hero{max-width:1100px;margin:0 auto;padding:64px 40px 48px;border-bottom:1px solid var(--border)}
+.tool-hero-inner{max-width:640px}
+.tool-label{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--purple);margin-bottom:16px}
+.tool-label-line{width:24px;height:1.5px;background:var(--purple);display:block}
+.tool-hero h1{font-family:var(--serif);font-size:46px;font-weight:400;line-height:1.1;color:var(--ink);margin-bottom:16px}
+.tool-hero h1 em{color:var(--purple);font-style:italic}
+.tool-hero p{font-size:17px;color:var(--ink-muted);font-weight:300;line-height:1.7}
+.tool-body{max-width:1100px;margin:0 auto;padding:48px 40px}
+.tool-body-inner{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+.gen-card{background:var(--white);border:1px solid var(--border-strong);border-radius:var(--radius-lg);overflow:hidden}
+.gen-card-head{background:var(--purple-faint);border-bottom:1px solid var(--border);padding:20px 24px;display:flex;align-items:center;gap:10px}
+.gen-card-head h2{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink)}
+.gen-card-head svg{width:18px;height:18px;fill:none;stroke:var(--purple);stroke-width:1.75;flex-shrink:0}
+.gen-controls{padding:20px 24px;display:flex;flex-direction:column;gap:18px;border-bottom:1px solid var(--border)}
+.ctrl-group{display:flex;flex-direction:column;gap:8px}
+.ctrl-group label{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint)}
+.pill-row{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:var(--white);border:1px solid var(--border-strong);border-radius:20px;padding:6px 14px;cursor:pointer;transition:all .15s}
+.pill:hover{border-color:var(--purple);color:var(--purple)}
+.pill.active{background:var(--purple);border-color:var(--purple);color:white;font-weight:500}
+.input-row{display:flex;flex-direction:column;gap:6px}
+.input-row input{font-family:var(--sans);font-size:14px;color:var(--ink);background:var(--white);border:1px solid var(--border-strong);border-radius:var(--radius-sm);padding:10px 14px;transition:border-color .15s}
+.input-row input:focus{outline:none;border-color:var(--purple)}
+.input-hint{font-size:12px;color:var(--ink-faint);font-weight:300}
+.btn-gen{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--purple);color:white;font-family:var(--sans);font-size:14px;font-weight:500;padding:11px 24px;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:opacity .15s;width:100%}
+.btn-gen:hover{opacity:.85}
+.btn-gen svg{width:14px;height:14px;fill:none;stroke:white;stroke-width:2}
+.gen-output{padding:24px;min-height:180px}
+.gen-placeholder{font-size:14px;color:var(--ink-faint);font-style:italic;text-align:center;padding:32px 0}
+.title-list{display:flex;flex-direction:column;gap:8px}
+.title-item{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--purple-faint);border:1px solid var(--border);border-radius:8px;padding:13px 16px;cursor:pointer;transition:all .15s}
+.title-item:hover,.title-item.copied{border-color:var(--purple);background:var(--purple-light)}
+.title-text{font-family:var(--serif);font-size:17px;color:var(--ink);font-weight:400}
+.title-copy-hint{font-size:11px;color:var(--ink-faint);white-space:nowrap;flex-shrink:0}
+.title-item.copied .title-copy-hint{color:var(--purple)}
+.gen-actions{padding:14px 24px;border-top:1px solid var(--border);display:flex;gap:8px;flex-wrap:wrap}
+.btn-secondary{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:transparent;border:1px solid var(--border-strong);padding:8px 16px;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s}
+.btn-secondary:hover{border-color:var(--purple);color:var(--purple)}
+.gen-history{padding:16px 24px;border-top:1px solid var(--border);background:var(--bg)}
+.gen-history h4{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.history-tags{display:flex;flex-wrap:wrap;gap:6px}
+.history-tag{font-size:12.5px;color:var(--ink-muted);background:var(--white);border:1px solid var(--border);border-radius:20px;padding:4px 11px;cursor:pointer;transition:all .12s}
+.history-tag:hover{border-color:var(--purple);color:var(--purple)}
+.btn-clear{font-size:11px;color:var(--ink-faint);background:none;border:none;cursor:pointer;padding:0}
+.btn-clear:hover{color:var(--ink)}
+.tool-sidebar{display:flex;flex-direction:column;gap:20px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px}
+.sidebar-card h3{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:12px}
+.sidebar-card p{font-size:13.5px;color:var(--ink-muted);font-weight:300;line-height:1.65;margin-bottom:12px}
+.sidebar-card ul{list-style:none}
+.sidebar-card li{font-size:13.5px;color:var(--ink-muted);font-weight:300;padding:6px 0 6px 16px;position:relative;line-height:1.55;border-top:1px solid var(--border)}
+.sidebar-card li:first-child{border-top:none;padding-top:0}
+.sidebar-card li::before{content:"→";position:absolute;left:0;color:var(--purple-mid);font-size:10px;top:8px}
+.sidebar-link{display:block;font-size:13.5px;font-weight:500;color:var(--purple);text-decoration:none;padding:8px 0;border-top:1px solid var(--border);transition:opacity .15s}
+.sidebar-link:first-of-type{border-top:none}
+.sidebar-link:hover{opacity:.7}
+.tool-seo{max-width:1100px;margin:0 auto;padding:0 40px 72px;border-top:1px solid var(--border)}
+.seo-inner{max-width:720px;padding-top:48px}
+.seo-inner h2{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--ink);margin-bottom:14px;line-height:1.2}
+.seo-inner h3{font-family:var(--serif);font-size:21px;font-weight:400;color:var(--ink);margin:28px 0 10px}
+.seo-inner p{font-size:15.5px;color:var(--ink-muted);font-weight:300;line-height:1.8;margin-bottom:14px}
+.seo-inner ul{list-style:none;margin-bottom:20px}
+.seo-inner li{font-size:15px;color:var(--ink-muted);font-weight:300;padding:7px 0 7px 20px;position:relative;line-height:1.6;border-top:1px solid var(--border)}
+.seo-inner li:last-child{border-bottom:1px solid var(--border)}
+.seo-inner li::before{content:"→";position:absolute;left:0;color:var(--purple-mid);font-size:11px;top:9px}
+@media(max-width:900px){
+  .tool-hero{padding:40px 24px 32px}
+  .tool-hero h1{font-size:34px}
+  .tool-body{padding:32px 24px}
+  .tool-body-inner{grid-template-columns:1fr}
+  .tool-seo{padding:0 24px 48px}
+}
+</style>
+
+<div class="tool-hero">
+  <div class="tool-hero-inner">
+    <div class="tool-label"><span class="tool-label-line"></span><span>Free Writer's Tool</span></div>
+    <h1>Book Title <em>Generator</em></h1>
+    <p>Generate title ideas for your novel across every genre. Enter a keyword from your story — a theme, an object, a place — and get titles built from patterns that actually sell books.</p>
+  </div>
+</div>
+
+<section class="tool-body">
+  <div class="tool-body-inner">
+
+    <div class="gen-card">
+      <div class="gen-card-head">
+        <svg viewBox="0 0 24 24"><path d="M3 2.5h7a2 2 0 0 1 2 2V14H5a2 2 0 0 1-2-2V2.5z"/><path d="M3 11.5h9"/></svg>
+        <h2>Generate Book Titles</h2>
+      </div>
+
+      <div class="gen-controls">
+        <div class="ctrl-group">
+          <label>Genre</label>
+          <div class="pill-row" id="genre-pills">
+            <button class="pill active" data-value="fantasy">Fantasy</button>
+            <button class="pill" data-value="romance">Romance</button>
+            <button class="pill" data-value="thriller">Thriller</button>
+            <button class="pill" data-value="mystery">Mystery</button>
+            <button class="pill" data-value="scifi">Sci-Fi</button>
+            <button class="pill" data-value="horror">Horror</button>
+            <button class="pill" data-value="literary">Literary</button>
+            <button class="pill" data-value="ya">YA</button>
+          </div>
+        </div>
+
+        <div class="ctrl-group">
+          <label for="keyword-input">Keyword <span style="text-transform:none;font-weight:300;color:var(--ink-faint);">(optional — a theme, object, name, or place from your story)</span></label>
+          <div class="input-row">
+            <input type="text" id="keyword-input" placeholder="e.g. shadow, the river house, glass, Elena...">
+          </div>
+        </div>
+
+        <button class="btn-gen" id="btn-generate">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Generate Titles
+        </button>
+      </div>
+
+      <div class="gen-output" id="gen-output">
+        <p class="gen-placeholder">Choose a genre, optionally add a keyword, and click Generate.</p>
+      </div>
+
+      <div class="gen-actions" id="gen-actions" style="display:none;">
+        <button class="btn-secondary" id="btn-copy-all">Copy all</button>
+        <button class="btn-secondary" id="btn-regen">More titles ↻</button>
+      </div>
+
+      <div class="gen-history" id="gen-history" style="display:none;">
+        <h4>Recent titles <button class="btn-clear" id="btn-clear">Clear</button></h4>
+        <div class="history-tags" id="history-list"></div>
+      </div>
+    </div>
+
+    <aside class="tool-sidebar">
+      <div class="sidebar-card">
+        <h3>Tips for choosing a title</h3>
+        <ul>
+          <li>Say it aloud — your title will be spoken in conversation more than it's read</li>
+          <li>Check it isn't already a bestseller's title (a quick search saves embarrassment)</li>
+          <li>Shorter titles are easier to remember and search for</li>
+          <li>The title should hint at genre and tone, not just plot</li>
+          <li>Test a few options on readers before committing</li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h3>More tools</h3>
+        <a href="/tools/character-name-generator/" class="sidebar-link">Character Name Generator →</a>
+        <a href="/tools/writing-prompt-generator/" class="sidebar-link">Writing Prompt Generator →</a>
+        <a href="/tools/fantasy-name-generator/" class="sidebar-link">Fantasy Name Generator →</a>
+      </div>
+      <div class="sidebar-card">
+        <h3>Building your manuscript?</h3>
+        <p>Writing Desk's Story Plotter helps you structure the novel behind the title — local, private, and built for novelists.</p>
+        <a href="/" class="sidebar-link">Download Writing Desk →</a>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<section class="tool-seo">
+  <div class="seo-inner">
+    <h2>How to choose a book title</h2>
+    <p>A title has one job before a reader has read a single page of your book: make them want to. It has to work across a cover thumbnail, a spoken recommendation, a search query, and a spine on a shelf. That's a lot of pressure for two to six words.</p>
+    <p>This generator works from structural patterns common in published fiction — not random word combinations, but the actual shapes good titles take: "The [Noun] of [Place]," "[Adjective] [Noun]," single evocative nouns, and more. Add a keyword from your story — a recurring object, a setting, a character name, a theme — and the generator will build titles around it.</p>
+
+    <h3>What makes a title work</h3>
+    <p>Good titles tend to do one of a few things. They name the central image or object of the book (The Goldfinch, The Kite Runner). They name the central tension or theme (Pride and Prejudice, Where the Crawdads Sing). They use a striking, slightly strange phrase that becomes memorable through specificity (A Clockwork Orange, The Bell Jar). Or they simply name the protagonist or place in a way that feels significant (Rebecca, Middlemarch).</p>
+    <p>What rarely works: titles that try to summarise the plot, titles that are generic enough to belong to any book in the genre, and titles that are difficult to say or spell from memory.</p>
+
+    <h3>Titles by genre</h3>
+    <p>Genre conventions matter more for titles than almost any other element of a book's packaging. Fantasy and sci-fi titles often favour evocative nouns and "The [X] of [Y]" constructions. Romance titles tend toward warmth and intimacy, frequently naming a place, season, or relationship. Thrillers favour short, punchy titles with an undertone of threat. Literary fiction has the most latitude — titles can be more oblique, more poetic, less immediately legible.</p>
+    <p>Use the genre selector to bias the generator toward the patterns that work in your category, then adjust from there. A generated title rarely survives unchanged into print — but it's often the spark for the one that does.</p>
+
+    <h3>Testing your shortlist</h3>
+    <p>Once you have a shortlist, the most useful test is simply living with each option for a few days. Say them aloud. Picture them on a cover. Search them to check they're not already in heavy use by a bestseller in your genre. And if possible, ask a handful of readers in your target genre which one makes them want to know more — that instinct is hard to fake and easy to get wrong on your own.</p>
+  </div>
+</section>
+
+<script>
+const pick = a => a[Math.floor(Math.random()*a.length)];
+let history = [];
+
+// ── Word banks by genre ──────────────────────────────────────
+const wordBanks = {
+  fantasy: {
+    nouns: ["Throne","Crown","Shadow","Flame","Storm","Blade","Raven","Wolf","Kingdom","Empire","Realm","Veil","Curse","Prophecy","Oath","Bone","Ash","Ember","Frost","Thorn","Silver","Gold","Iron","Glass","Mirror","Garden","Tower","Forest","Mountain","River","Sea","Star","Moon","Sun","Night","Dawn","Dusk","Wing","Heart","Soul","Spirit","Ghost","Witch","Dragon","Serpent","Lion","Hawk","Fox","Bear","Stag"],
+    adjectives: ["Broken","Lost","Forgotten","Hidden","Last","First","Final","Silent","Burning","Frozen","Golden","Silver","Dark","Bright","Ancient","Wild","Forsaken","Cursed","Sacred","Forbidden","Stolen","Shattered","Fallen","Rising","Endless","Eternal","Crimson","Iron","Bitter","Wicked"],
+    places: ["Ashfall","Ravenscar","Thornwood","Wintervale","Stormhaven","Duskmere","Ironholt","Frostgate","Moonshadow","Embermoor","Goldspire","Shadowfen","Blackthorn","Sunderland","Wraithmoor","Cinderfell","Hollowmere","Brightwater","Greywatch","Nightfall"],
+  },
+  romance: {
+    nouns: ["Heart","Promise","Wish","Summer","Winter","Garden","Letter","Kiss","Dance","Wedding","Wedding Ring","Vow","Memory","Moment","Chance","Storm","Light","Sunset","Beach","Vineyard","Bookshop","Cottage","Cafe","Coastline","Harbor","Orchard","Lighthouse","Inn"],
+    adjectives: ["Sweet","Unexpected","Second","First","Forever","Secret","Perfect","Almost","Reckless","Quiet","Lovely","Tender","Whirlwind","Slow","Inevitable","Unforgettable","Accidental","Unlikely"],
+    places: ["Willow Creek","Maple Bay","Cedar Falls","Harbor Point","Sunset Cove","Magnolia Lane","Cherry Lane","Lavender Hill","Briar Rose Inn","The Olive Grove","Birchwood","Rosewood Cottage"],
+  },
+  thriller: {
+    nouns: ["Silence","Lie","Secret","Witness","Shadow","Game","Trap","Hunt","Target","Threat","Deception","Reckoning","Conspiracy","Surveillance","Vanishing","Disappearance","Pursuit","Betrayal","Cover-Up","Informant","Asset","Defector"],
+    adjectives: ["Final","Last","Dead","Silent","Perfect","Cold","Deadly","Hidden","Missing","Buried","Unforgiven","Marked","Wanted","Vanished"],
+    places: ["the District","Langley","the Embassy","the Border","the Compound","the Safe House","the Black Site","Geneva","Berlin","the Wire"],
+  },
+  mystery: {
+    nouns: ["Murder","Case","Clue","Body","Alibi","Suspect","Witness","Crime","Detective","Evidence","Motive","Confession","Verdict","Trial","Investigation","Disappearance","Inheritance","Will","Inquest"],
+    adjectives: ["Curious","Final","Last","Hidden","Quiet","Cold","Perfect","Unsolved","Untold","Forgotten","Strange","Peculiar"],
+    places: ["Cliffside Manor","the Old Vicarage","Thornfield House","Hollow Lane","the Library","Maple Street","the Boarding House","Willowbrook","the Estate","Saint Agnes"],
+  },
+  scifi: {
+    nouns: ["Signal","Star","Void","Horizon","Machine","Code","System","Network","Colony","Vessel","Engine","Algorithm","Protocol","Frequency","Singularity","Drift","Origin","Genesis","Echo","Pulse","Orbit","Frontier","Exodus"],
+    adjectives: ["Last","First","Final","Lost","Silent","Dark","Distant","Forgotten","Synthetic","Quantum","Eternal","Infinite","Hollow"],
+    places: ["Europa Station","the Belt","New Geneva","Sector Nine","the Ark","Proxima","the Outer Reach","Helios","the Drift","Kepler Station"],
+  },
+  horror: {
+    nouns: ["House","Mirror","Shadow","Whisper","Bone","Blood","Nightmare","Skin","Grave","Ritual","Hollow","Doorway","Attic","Basement","Veil","Curse","Possession","Haunting","Silence","Darkness"],
+    adjectives: ["Haunted","Silent","Dark","Hollow","Cursed","Forsaken","Buried","Hidden","Quiet","Empty","Whispering","Crawling"],
+    places: ["Blackwood House","Ashgrove","Hollow Hill","Ravenscroft","the Asylum","Wraithmoor","Crowmoor","the Old Manor","Saint Lazarus","Mortlake"],
+  },
+  literary: {
+    nouns: ["Years","Light","Distance","Silence","Memory","Garden","House","River","Window","Letter","Inheritance","Departure","Return","Absence","Weight","Stillness","Threshold","Passage","Margins"],
+    adjectives: ["Quiet","Last","Long","Small","Ordinary","Lost","Distant","Slow","Gentle","Brief"],
+    places: ["the North","the Coast","Elsewhere","Home","the Edge of Town","the Valley","the Old Quarter"],
+  },
+  ya: {
+    nouns: ["Summer","Year","Letter","Secret","Friend","Heart","Dream","Promise","Wish","Truth","Goodbye","Beginning","Almost","Maybe","Someday"],
+    adjectives: ["Last","First","Almost","Unexpected","Quiet","Brave","Reckless","Unforgettable","Ordinary","Strange"],
+    places: ["Maple High","Lakeside","Cedar Falls","Junction High","Hollow Creek","Bayview"],
+  },
+};
+
+// ── Title pattern templates ──────────────────────────────────
+function genTitle(genre, keyword) {
+  const bank = wordBanks[genre];
+  const kw = keyword ? keyword.trim() : null;
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+
+  const patterns = [
+    () => `The ${pick(bank.nouns)} of ${kw ? cap(kw) : pick(bank.places)}`,
+    () => `${pick(bank.adjectives)} ${pick(bank.nouns)}`,
+    () => `The ${pick(bank.adjectives)} ${pick(bank.nouns)}`,
+    () => kw ? `${cap(kw)}` : `${pick(bank.nouns)}`,
+    () => `${pick(bank.nouns)} and ${pick(bank.nouns)}`,
+    () => `The Last ${pick(bank.nouns)}`,
+    () => kw ? `What the ${pick(bank.nouns)} Knew` : `What We ${pick(['Lost','Buried','Forgot','Left Behind'])}`,
+    () => `${pick(bank.places)}`,
+    () => kw ? `The ${cap(kw)} ${pick(bank.nouns)}` : `${pick(bank.adjectives)} ${pick(bank.places)}`,
+    () => `All the ${pick(bank.adjectives)} ${pick(bank.nouns)}s`,
+    () => kw ? `Before ${cap(kw)}` : `Before the ${pick(bank.nouns)}`,
+    () => `The ${pick(bank.nouns)} We ${pick(['Carry','Keep','Hide','Remember','Lost'])}`,
+  ];
+
+  return pick(patterns)();
+}
+
+function getTitles(genre, keyword, count) {
+  const titles = new Set();
+  let attempts = 0;
+  while (titles.size < count && attempts < count * 8) {
+    titles.add(genTitle(genre, keyword));
+    attempts++;
+  }
+  return [...titles];
+}
+
+let currentGenre = 'fantasy';
+document.querySelectorAll('#genre-pills .pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('#genre-pills .pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    currentGenre = pill.dataset.value;
+  });
+});
+
+function generate() {
+  const keyword = document.getElementById('keyword-input').value;
+  const titles = getTitles(currentGenre, keyword, 8);
+
+  const output = document.getElementById('gen-output');
+  output.innerHTML = '<div class="title-list"></div>';
+  const list = output.querySelector('.title-list');
+
+  titles.forEach(title => {
+    const item = document.createElement('div');
+    item.className = 'title-item';
+    const text = document.createElement('span');
+    text.className = 'title-text';
+    text.textContent = title;
+    const hint = document.createElement('span');
+    hint.className = 'title-copy-hint';
+    hint.textContent = 'Click to copy';
+    item.appendChild(text);
+    item.appendChild(hint);
+    item.addEventListener('click', () => {
+      navigator.clipboard.writeText(title).then(() => {
+        item.classList.add('copied');
+        hint.textContent = 'Copied!';
+        setTimeout(() => { item.classList.remove('copied'); hint.textContent = 'Click to copy'; }, 1500);
+      });
+    });
+    list.appendChild(item);
+    history.unshift(title);
+  });
+
+  if (history.length > 40) history = history.slice(0, 40);
+  document.getElementById('gen-actions').style.display = 'flex';
+  renderHistory();
+}
+
+function renderHistory() {
+  const wrap = document.getElementById('gen-history');
+  const list = document.getElementById('history-list');
+  if (!history.length) { wrap.style.display = 'none'; return; }
+  wrap.style.display = 'block';
+  list.innerHTML = '';
+  history.forEach(title => {
+    const tag = document.createElement('span');
+    tag.className = 'history-tag';
+    tag.textContent = title;
+    tag.addEventListener('click', () => navigator.clipboard.writeText(title));
+    list.appendChild(tag);
+  });
+}
+
+document.getElementById('btn-generate').addEventListener('click', generate);
+document.getElementById('btn-regen').addEventListener('click', generate);
+document.getElementById('btn-copy-all').addEventListener('click', () => {
+  const titles = [...document.querySelectorAll('.title-text')].map(el => el.textContent.trim()).join('\n');
+  navigator.clipboard.writeText(titles).then(() => {
+    const btn = document.getElementById('btn-copy-all');
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy all', 1500);
+  });
+});
+document.getElementById('btn-clear').addEventListener('click', () => { history = []; renderHistory(); });
+
+generate();
+</script>

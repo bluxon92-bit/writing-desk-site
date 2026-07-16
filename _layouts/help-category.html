@@ -1,0 +1,141 @@
+---
+layout: default
+---
+{% include help-styles.html %}
+{% assign cat = site.data.help_faqs.categories | where: "slug", page.category | first %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in cat.questions %}
+    {
+      "@type": "Question",
+      "name": {{ item.q | strip | jsonify }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | strip | jsonify }} }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+<div class="help-shell page-wrap">
+
+  <div class="help-crumb">
+    <a href="{{ '/help/' | relative_url }}">Help Centre</a>
+    <span>/</span>
+    <span>{{ cat.name }}</span>
+  </div>
+
+  <aside class="help-sidebar">
+    <div class="help-sidebar-search">
+      <div class="help-search-box help-search-box-sm">
+        {% include help-icon.html icon="search" %}
+        <input type="text" id="help-sitewide-input-sidebar" placeholder="Search help centre…" autocomplete="off" data-index-url="{{ '/help/search-index.json' | relative_url }}" data-contact-url="{{ '/help/contact/' | relative_url }}">
+      </div>
+      <div class="help-search-results" id="help-sitewide-results-sidebar"></div>
+    </div>
+    <nav class="help-cat-nav">
+      {% for c in site.data.help_faqs.categories %}
+      <a href="{{ '/help/' | append: c.slug | append: '/' | relative_url }}"
+         class="help-cat-nav-link {% if c.slug == page.category %}active{% endif %}">
+        <span class="help-cat-nav-icon">{% include help-icon.html icon=c.icon %}</span>
+        {{ c.name }}
+      </a>
+      {% endfor %}
+      <div class="help-cat-nav-divider"></div>
+      <a href="{{ '/help/contact/' | relative_url }}" class="help-cat-nav-link help-cat-nav-contact">
+        <span class="help-cat-nav-icon">{% include help-icon.html icon="mail" %}</span>
+        Contact us
+      </a>
+    </nav>
+  </aside>
+
+  <div class="help-main">
+    <div class="help-cat-header">
+      <span class="help-cat-header-icon">{% include help-icon.html icon=cat.icon %}</span>
+      <div>
+        <h1>{{ cat.name }}</h1>
+        <p>{{ cat.description }}</p>
+      </div>
+    </div>
+
+    {% if cat.videos %}
+    {% for video in cat.videos %}
+    <div class="help-video">
+      <div class="help-video-toprow">
+        <h2 class="help-video-title">{{ video.title }}</h2>
+        {% if video.guide %}
+        <a href="{{ '/help/' | append: cat.slug | append: '/guide/' | append: video.slug | append: '/' | relative_url }}" target="_blank" rel="noopener" class="help-guide-link">
+          Open full how-to guide
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 2H2v8h8V7.5"/><path d="M6.5 1.5H10.5V5.5"/><path d="M5.5 6.5L10.5 1.5"/></svg>
+        </a>
+        {% endif %}
+      </div>
+      <div class="help-video-frame">
+        <iframe src="{{ video.embed_url }}" title="{{ video.title }}" frameborder="0" referrerpolicy="unsafe-url" allowfullscreen="true" allow="clipboard-write" sandbox="allow-popups allow-popups-to-escape-sandbox allow-scripts allow-forms allow-same-origin allow-presentation" loading="lazy"></iframe>
+      </div>
+      {% if video.transcript %}
+      <details class="help-video-transcript">
+        <summary>Show transcript</summary>
+        <div class="help-video-transcript-body">
+          {% assign lines = video.transcript | newline_to_br | split: '<br />' %}
+          {% for line in lines %}
+            {% assign trimmed = line | strip %}
+            {% if trimmed != '' %}<p>{{ trimmed }}</p>{% endif %}
+          {% endfor %}
+        </div>
+      </details>
+      {% endif %}
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <div class="help-filter-box">
+      <input type="text" id="help-local-filter" placeholder="Filter questions in {{ cat.name }}…" autocomplete="off">
+    </div>
+
+    <div class="help-accordion" id="help-accordion">
+      {% for item in cat.questions %}
+      <div class="help-item" id="{{ item.id }}" data-search="{{ item.q | append: ' ' | append: item.a | strip_newlines | downcase }}">
+        <button class="help-item-q" aria-expanded="false">
+          <span>{{ item.q }}</span>
+          <svg class="help-item-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="help-item-a">
+          <div class="help-item-a-inner">
+            <p>{{ item.a }}{% if item.link %} <a href="{{ item.link | relative_url }}">{{ item.link_text }}</a>.{% endif %}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="help-no-results" id="help-no-results" hidden>
+      <p>No questions match that search in {{ cat.name }}.</p>
+      <p>Try the search bar above for results across the whole help centre, or <a href="{{ '/help/contact/' | relative_url }}?topic={{ cat.name | url_encode }}">contact us</a> directly.</p>
+    </div>
+
+    <div class="help-still-stuck">
+      <div>
+        <h3>Still stuck?</h3>
+        <p>Send us a message and we'll help you out.</p>
+      </div>
+      <a href="{{ '/help/contact/' | relative_url }}?topic={{ cat.name | url_encode }}" class="btn btn-ghost">Contact us</a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
+<script src="{{ '/assets/js/help-search.js' | relative_url }}" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.WDHelp) {
+      window.WDHelp.initAccordion('help-accordion');
+      window.WDHelp.initLocalFilter('help-local-filter', 'help-accordion', 'help-no-results');
+      window.WDHelp.initSitewideSearch('help-sitewide-input-sidebar', 'help-sitewide-results-sidebar');
+      window.WDHelp.openFromHash('help-accordion');
+    }
+  });
+</script>

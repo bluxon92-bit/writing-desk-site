@@ -1,0 +1,392 @@
+---
+layout: default
+title: "Blog — Writing advice, craft guides, and product updates"
+description: "Writing advice for novelists, craft guides, plotting and character resources, and product updates from Writing Desk."
+permalink: /blog/
+---
+
+<div class="blog-hero scroll-fade">
+  <div class="blog-hero-inner page-wrap">
+    <span class="eyebrow">From the desk</span>
+    <h1>Writing advice, craft guides, <em>and more.</em></h1>
+    <p>For novelists who are serious about finishing — craft, structure, character, and the occasional update from us.</p>
+  </div>
+</div>
+
+<!-- ── FILTER BAR ──────────────────────────── -->
+<div class="blog-filter-bar">
+  <div class="blog-filter-bar-inner page-wrap">
+
+    <div class="blog-filter-search">
+      <svg viewBox="0 0 20 20" fill="none" width="14" height="14">
+        <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M13 13l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <input type="search" id="blog-search" class="blog-search-input" placeholder="Search articles…" aria-label="Search articles">
+    </div>
+
+    <div class="blog-filter-divider"></div>
+
+    <div class="blog-filter-group">
+      <div class="blog-dropdown" data-dropdown="category">
+        <button type="button" class="blog-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          <span class="blog-dropdown-label">Category</span>
+          <span class="blog-dropdown-value" data-value>All</span>
+          <svg class="blog-dropdown-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="blog-dropdown-menu">
+          <button class="blog-dropdown-option active" data-filter="all">All</button>
+          <button class="blog-dropdown-option" data-filter="Craft">Craft</button>
+          <button class="blog-dropdown-option" data-filter="Structure">Structure</button>
+          <button class="blog-dropdown-option" data-filter="Character">Character</button>
+          <button class="blog-dropdown-option" data-filter="Dialogue">Dialogue</button>
+          <button class="blog-dropdown-option" data-filter="Self-Publishing">Self-Publishing</button>
+          <button class="blog-dropdown-option" data-filter="Process">Process</button>
+          <button class="blog-dropdown-option" data-filter="Product">Product</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-filter-divider"></div>
+
+    <div class="blog-filter-group">
+      <div class="blog-dropdown" data-dropdown="type">
+        <button type="button" class="blog-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          <span class="blog-dropdown-label">Type</span>
+          <span class="blog-dropdown-value" data-value>All</span>
+          <svg class="blog-dropdown-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="blog-dropdown-menu">
+          <button class="blog-dropdown-option active" data-type="all">All</button>
+          <button class="blog-dropdown-option" data-type="Guide">Guides</button>
+          <button class="blog-dropdown-option" data-type="Tool">Tools</button>
+          <button class="blog-dropdown-option" data-type="Product">Product</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ────────────────────────── -->
+<div class="blog-main-wrap page-wrap">
+
+  <div class="blog-results-bar">
+    <span id="results-count"></span>
+    <span id="no-results" style="display:none;">No articles found — try a different search.</span>
+  </div>
+
+  <div class="blog-post-grid" id="posts-list">
+    {% for post in site.posts %}
+    <a class="post-card scroll-fade"
+       href="{{ post.url | relative_url }}"
+       data-category="{{ post.category | default: 'Craft' }}"
+       data-type="{{ post.type | default: 'Guide' }}"
+       data-title="{{ post.title | downcase }}"
+       data-excerpt="{{ post.excerpt | strip_html | downcase | truncate: 200 }}">
+      {% if post.image %}
+      <div class="post-card-image">
+        <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+      </div>
+      {% else %}
+      <div class="post-card-image post-card-image-placeholder">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#AFA9EC" stroke-width="1.5"><rect x="2" y="2" width="28" height="28" rx="3"/><path d="M2 9h28M8 5.5h.01M11 5.5h.01M14 5.5h.01"/><path d="M8 18l4-4 4 4 4-5 4 3"/></svg>
+      </div>
+      {% endif %}
+      <div class="post-card-body">
+        <div class="post-card-tags">
+          {% if post.category %}<span class="post-tag">{{ post.category }}</span>{% endif %}
+          {% if post.type %}<span class="post-type-tag">{{ post.type }}</span>{% endif %}
+        </div>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+        <div class="post-meta">{{ post.date | date: "%B %Y" }} · {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read</div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+  <!-- Sidebar CTA -->
+  <div class="blog-cta-strip scroll-fade">
+    <div class="blog-cta-strip-inner">
+      <div class="blog-cta-text">
+        <span class="eyebrow">Writing Desk</span>
+        <h2>The writing app built for novelists.</h2>
+        <p>Plot, draft, edit, and format your manuscript in one private, local Mac app. Free to download. Your writing never leaves your machine.</p>
+      </div>
+      <div class="blog-cta-action">
+       <a href="#" class="btn btn-primary" data-waitlist-trigger>
+  <svg viewBox="0 0 15 15" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M3 7.5h9M8 4l3.5 3.5L8 11"/></svg>
+  Join the waitlist
+</a>
+        <p class="blog-cta-micro">macOS 13 Ventura or later · No account required</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<style>
+/* ── Blog hero ────────────────────────────── */
+.blog-hero {
+  border-bottom: 1px solid var(--border);
+  padding: 64px 0 48px;
+}
+.blog-hero h1 {
+  font-family: var(--serif); font-size: 42px; font-weight: 400;
+  color: var(--ink); line-height: 1.15; margin: 12px 0 16px;
+}
+.blog-hero h1 em { color: var(--purple); font-style: italic; }
+.blog-hero p { font-size: 16px; color: var(--ink-muted); font-weight: 300; max-width: 520px; }
+
+/* ── Filter bar ───────────────────────────── */
+.blog-filter-bar {
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+  position: sticky; top: 56px; z-index: 50;
+}
+.blog-filter-bar-inner {
+  display: flex; align-items: center; gap: 20px;
+  padding-top: 14px; padding-bottom: 14px;
+  flex-wrap: wrap;
+}
+.blog-filter-search {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--bg); border: 1px solid var(--border-strong);
+  border-radius: 8px; padding: 7px 12px;
+  color: var(--ink-faint); flex-shrink: 0;
+}
+.blog-search-input {
+  border: none; background: transparent; outline: none;
+  font-family: var(--sans); font-size: 13.5px; color: var(--ink);
+  width: 180px;
+}
+.blog-search-input::placeholder { color: var(--ink-faint); }
+.blog-filter-divider {
+  width: 1px; height: 20px; background: var(--border-strong); flex-shrink: 0;
+}
+.blog-filter-group {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+}
+.blog-filter-label {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--ink-faint); white-space: nowrap;
+}
+
+/* ── Filter dropdowns ─────────────────────── */
+.blog-dropdown { position: relative; }
+.blog-dropdown-trigger {
+  display: flex; align-items: center; gap: 7px;
+  font-family: var(--sans); font-size: 12.5px; color: var(--ink);
+  background: var(--white); border: 1px solid var(--border-strong);
+  border-radius: 20px; padding: 6px 12px 6px 14px;
+  cursor: pointer; transition: border-color 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.blog-dropdown-trigger:hover { border-color: var(--purple); }
+.blog-dropdown-label {
+  font-size: 10.5px; font-weight: 500; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--ink-faint);
+}
+.blog-dropdown-value { font-weight: 500; color: var(--ink); }
+.blog-dropdown-chevron { width: 8px; height: 8px; flex-shrink: 0; color: var(--ink-faint); transition: transform 0.18s; }
+.blog-dropdown.open .blog-dropdown-trigger { border-color: var(--purple); }
+.blog-dropdown.open .blog-dropdown-trigger .blog-dropdown-value { color: var(--purple); }
+.blog-dropdown.open .blog-dropdown-chevron { transform: rotate(180deg); color: var(--purple); }
+
+.blog-dropdown-menu {
+  position: absolute; top: calc(100% + 8px); left: 0;
+  min-width: 190px; background: var(--white);
+  border: 1px solid var(--border-strong); border-radius: 12px;
+  padding: 6px; box-shadow: 0 8px 32px rgba(83,74,183,0.12), 0 2px 8px rgba(0,0,0,0.06);
+  display: flex; flex-direction: column; gap: 1px;
+  opacity: 0; visibility: hidden; transform: translateY(-6px);
+  transition: opacity 0.16s, transform 0.16s, visibility 0.16s;
+  z-index: 60;
+}
+.blog-dropdown.open .blog-dropdown-menu {
+  opacity: 1; visibility: visible; transform: translateY(0);
+}
+.blog-dropdown-option {
+  font-family: var(--sans); font-size: 13px; text-align: left;
+  color: var(--ink-muted); background: none; border: none;
+  border-radius: 8px; padding: 8px 10px; cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+.blog-dropdown-option:hover { background: var(--purple-faint); color: var(--ink); }
+.blog-dropdown-option.active { color: var(--purple); font-weight: 500; background: var(--purple-faint); }
+
+/* ── Main wrap ────────────────────────────── */
+.blog-main-wrap {
+  padding-top: 40px; padding-bottom: 80px;
+}
+.blog-results-bar {
+  font-size: 13px; color: var(--ink-faint);
+  margin-bottom: 24px; min-height: 20px;
+}
+#no-results { font-style: italic; }
+
+/* ── Post grid ────────────────────────────── */
+.blog-post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 64px;
+}
+
+/* ── Post cards ───────────────────────────── */
+.post-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); text-decoration: none;
+  display: flex; flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+  overflow: hidden;
+}
+.post-card:hover { box-shadow: 0 4px 20px rgba(83,74,183,0.09); transform: translateY(-2px); }
+.post-card-image img {
+  width: 100%; height: 180px; object-fit: cover; display: block;
+}
+.post-card-image-placeholder {
+  height: 180px; background: var(--purple-faint);
+  display: flex; align-items: center; justify-content: center;
+}
+.post-card-body { padding: 20px; display: flex; flex-direction: column; flex: 1; }
+.post-card-tags { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; align-items: center; }
+.post-tag {
+  font-size: 10.5px; font-weight: 500; letter-spacing: 0.07em;
+  text-transform: uppercase; color: var(--purple);
+}
+.post-type-tag {
+  font-size: 10.5px; font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--ink-faint); padding-left: 6px; border-left: 1px solid var(--border-strong);
+}
+.post-card h2 {
+  font-family: var(--serif); font-size: 17px; font-weight: 400;
+  color: var(--ink); line-height: 1.35; margin-bottom: 8px;
+}
+.post-card p {
+  font-size: 13px; color: var(--ink-muted); font-weight: 300;
+  line-height: 1.65; flex: 1;
+}
+.post-meta {
+  margin-top: 14px; font-size: 12px; color: var(--ink-faint);
+  padding-top: 12px; border-top: 1px solid var(--border);
+}
+
+/* ── CTA strip ────────────────────────────── */
+.blog-cta-strip {
+  background: var(--purple); border-radius: var(--radius-lg);
+  padding: 40px 48px;
+}
+.blog-cta-strip-inner {
+  display: flex; justify-content: space-between;
+  align-items: center; gap: 40px; flex-wrap: wrap;
+}
+.blog-cta-text .eyebrow { color: var(--purple-mid); margin-bottom: 10px; }
+.blog-cta-text h2 {
+  font-family: var(--serif); font-size: 28px; font-weight: 400;
+  color: white; line-height: 1.2; margin-bottom: 12px;
+}
+.blog-cta-text p {
+  font-size: 15px; color: rgba(255,255,255,0.72);
+  font-weight: 300; line-height: 1.7; max-width: 480px;
+}
+.blog-cta-action { flex-shrink: 0; text-align: center; }
+.blog-cta-micro {
+  font-size: 11.5px; color: rgba(255,255,255,0.45);
+  margin-top: 10px; text-align: center;
+}
+
+/* ── Responsive ───────────────────────────── */
+@media (max-width: 1024px) {
+  .blog-post-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 900px) {
+  .blog-hero { padding: 40px 0 32px; }
+  .blog-hero h1 { font-size: 32px; }
+  .blog-filter-bar { position: static; }
+  .blog-filter-bar-inner { gap: 12px; }
+  .blog-filter-divider { display: none; }
+  .blog-cta-strip { padding: 32px 28px; }
+  .blog-cta-strip-inner { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 600px) {
+  .blog-post-grid { grid-template-columns: 1fr; }
+  .blog-search-input { width: 140px; }
+}
+</style>
+
+<script>
+(function() {
+  var search      = document.getElementById('blog-search');
+  var posts       = document.querySelectorAll('#posts-list .post-card');
+  var countEl     = document.getElementById('results-count');
+  var noResults   = document.getElementById('no-results');
+  var dropdowns   = document.querySelectorAll('.blog-dropdown');
+
+  var activeCategory = 'all';
+  var activeType     = 'all';
+  var searchTerm     = '';
+
+  function update() {
+    var visible = 0;
+    posts.forEach(function(post) {
+      var matchCat    = activeCategory === 'all' || post.dataset.category === activeCategory;
+      var matchType   = activeType === 'all' || post.dataset.type === activeType;
+      var matchSearch = !searchTerm || post.dataset.title.includes(searchTerm) || post.dataset.excerpt.includes(searchTerm);
+      if (matchCat && matchType && matchSearch) { post.style.display = ''; visible++; }
+      else { post.style.display = 'none'; }
+    });
+    countEl.textContent = visible + ' article' + (visible !== 1 ? 's' : '');
+    noResults.style.display = visible === 0 ? '' : 'none';
+    countEl.style.display = visible === 0 ? 'none' : '';
+  }
+
+  function closeAllDropdowns(except) {
+    dropdowns.forEach(function(dd) {
+      if (dd !== except) {
+        dd.classList.remove('open');
+        dd.querySelector('.blog-dropdown-trigger').setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  dropdowns.forEach(function(dd) {
+    var trigger  = dd.querySelector('.blog-dropdown-trigger');
+    var valueEl  = dd.querySelector('.blog-dropdown-value');
+    var options  = dd.querySelectorAll('.blog-dropdown-option');
+    var kind     = dd.dataset.dropdown; // 'category' or 'type'
+
+    trigger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = dd.classList.contains('open');
+      closeAllDropdowns(dd);
+      dd.classList.toggle('open', !isOpen);
+      trigger.setAttribute('aria-expanded', !isOpen);
+    });
+
+    options.forEach(function(opt) {
+      opt.addEventListener('click', function() {
+        options.forEach(function(o) { o.classList.remove('active'); });
+        opt.classList.add('active');
+        valueEl.textContent = opt.textContent;
+        if (kind === 'category') { activeCategory = opt.dataset.filter; }
+        else { activeType = opt.dataset.type; }
+        dd.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+        update();
+      });
+    });
+  });
+
+  document.addEventListener('click', function() { closeAllDropdowns(); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeAllDropdowns(); });
+
+  search.addEventListener('input', function() {
+    searchTerm = search.value.toLowerCase().trim();
+    update();
+  });
+
+  update();
+})();
+</script>

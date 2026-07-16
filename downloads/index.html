@@ -1,0 +1,173 @@
+---
+layout: default
+title: "Free Downloads for Novelists — Writing Desk"
+description: "Free craft collections, templates, and tools for novelists — curated short story collections, character sheets, checklists, and more. No account required."
+permalink: /downloads/
+---
+
+<style>
+  .dl-hub-section { max-width: 1100px; margin: 0 auto; padding: 0 40px 64px; }
+  .dl-hub-section-header { margin-bottom: 24px; }
+  .dl-hub-section-header h2 { font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--ink); margin-bottom: 6px; }
+  .dl-hub-section-header p { font-size: 14.5px; color: var(--ink-muted); font-weight: 300; }
+
+  .dl-hub-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  @media (max-width: 720px) { .dl-hub-grid { grid-template-columns: 1fr; } }
+
+  .dl-hub-card {
+    display: grid; grid-template-columns: 88px 1fr; gap: 20px;
+    padding: 24px; background: var(--white); border: 1px solid var(--border-strong);
+    border-radius: var(--radius-lg); text-decoration: none;
+    box-shadow: 0 2px 0 var(--border); transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  }
+  .dl-hub-card:hover { border-color: var(--purple); box-shadow: 0 2px 0 var(--border), 0 12px 32px rgba(83,74,183,0.1); transform: translateY(-2px); }
+  .dl-hub-card-cover { width: 88px; font-size: 12px; }
+  .dl-hub-card-body { display: flex; flex-direction: column; }
+  .dl-hub-card-eyebrow { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--purple-mid); font-weight: 600; margin-bottom: 6px; }
+  .dl-hub-card h3 { font-family: var(--serif); font-size: 17px; font-weight: 600; color: var(--ink); margin: 0 0 6px; line-height: 1.3; }
+  .dl-hub-card p { font-size: 13.5px; color: var(--ink-muted); font-weight: 300; line-height: 1.6; margin-bottom: 12px; }
+  .dl-hub-card-arrow { margin-top: auto; display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 500; color: var(--purple); }
+  .dl-hub-card-arrow svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 2; transition: transform 0.15s; }
+  .dl-hub-card:hover .dl-hub-card-arrow svg { transform: translateX(2px); }
+
+  /* Mini book-cover, reused from the collection pages */
+  .dl-hub-bc { aspect-ratio: 2 / 3; border-radius: 5px; overflow: hidden; box-shadow: 0 4px 14px rgba(26,26,46,0.2); display: flex; flex-direction: column; font-family: var(--sans); width: 100%; }
+  .dl-hub-bc-hdr { background: var(--purple); padding: 0.32em 0.5em; }
+  .dl-hub-bc-hdr span { font-size: 0.55em; font-weight: 700; letter-spacing: 0.06em; color: #fff; text-transform: uppercase; }
+  .dl-hub-bc-body { flex: 1; background: var(--ink); display: flex; align-items: center; justify-content: center; padding: 0.4em; }
+  .dl-hub-bc-body span { font-family: var(--serif); font-size: 0.68em; font-weight: 700; color: #fff; text-align: center; text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.25; }
+  .dl-hub-bc-foot { background: var(--purple-faint); padding: 0.35em 0.5em; }
+  .dl-hub-bc-foot span { font-size: 0.55em; color: var(--ink-faint); letter-spacing: 0.04em; }
+
+  /* Coming soon placeholders */
+  .dl-hub-soon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 900px) { .dl-hub-soon-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .dl-hub-soon-grid { grid-template-columns: 1fr; } }
+  .dl-hub-soon-card {
+    padding: 22px; border: 1px dashed var(--border-strong); border-radius: var(--radius-lg);
+    background: var(--purple-faint);
+  }
+  .dl-hub-soon-icon { width: 34px; height: 34px; border-radius: 8px; background: var(--purple-light); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+  .dl-hub-soon-icon svg { width: 16px; height: 16px; fill: none; stroke: var(--purple); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .dl-hub-soon-badge { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); background: var(--white); border: 1px solid var(--border-strong); padding: 2px 8px; border-radius: 10px; margin-bottom: 10px; }
+  .dl-hub-soon-card h4 { font-family: var(--serif); font-size: 15.5px; font-weight: 600; color: var(--ink-muted); margin: 0 0 4px; }
+  .dl-hub-soon-card p { font-size: 13px; color: var(--ink-faint); font-weight: 300; line-height: 1.55; margin: 0; }
+</style>
+
+<div class="features-hero">
+  <span class="eyebrow">Free Resources</span>
+  <h1>Downloads for <em>novelists.</em></h1>
+  <p>Craft collections, templates, and tools to help you plot, write, and finish your novel — free, no account required.</p>
+</div>
+
+<!-- ═══════════════════════ CRAFT COLLECTIONS ═══════════════════════ -->
+<div class="dl-hub-section">
+  <div class="dl-hub-section-header">
+    <h2>Craft collections</h2>
+    <p>Public-domain short stories, curated for what they teach — read for inspiration, then study the structure.</p>
+  </div>
+  <div class="dl-hub-grid">
+
+    <a href="/downloads/sci-fi-short-stories/" class="dl-hub-card">
+      <div class="dl-hub-card-cover">
+        <div class="dl-hub-bc">
+          <div class="dl-hub-bc-hdr"><span>Writing Desk</span></div>
+          <div class="dl-hub-bc-body"><span>Sci-Fi</span></div>
+          <div class="dl-hub-bc-foot"><span>10 stories</span></div>
+        </div>
+      </div>
+      <div class="dl-hub-card-body">
+        <span class="dl-hub-card-eyebrow">Free · PDF</span>
+        <h3>Sci-Fi Short Stories</h3>
+        <p>Ten classics from Asimov, Bradbury, Pohl, and Verne — with a craft note on every story.</p>
+        <span class="dl-hub-card-arrow">Get the collection <svg viewBox="0 0 14 14"><path d="M5 2l5 5-5 5"/></svg></span>
+      </div>
+    </a>
+
+    <a href="/downloads/horror-short-stories/" class="dl-hub-card">
+      <div class="dl-hub-card-cover">
+        <div class="dl-hub-bc">
+          <div class="dl-hub-bc-hdr"><span>Writing Desk</span></div>
+          <div class="dl-hub-bc-body"><span>Horror</span></div>
+          <div class="dl-hub-bc-foot"><span>6 stories</span></div>
+        </div>
+      </div>
+      <div class="dl-hub-card-body">
+        <span class="dl-hub-card-eyebrow">Free · PDF</span>
+        <h3>Horror Short Stories</h3>
+        <p>Six classics from Poe, Lovecraft, Blackwood, and Irving — with a craft note on every story.</p>
+        <span class="dl-hub-card-arrow">Get the collection <svg viewBox="0 0 14 14"><path d="M5 2l5 5-5 5"/></svg></span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════ TEMPLATES & WORKSHEETS ═══════════════════════ -->
+<div class="dl-hub-section">
+  <div class="dl-hub-section-header">
+    <h2>Templates &amp; worksheets</h2>
+    <p>Fill-in tools for building the parts of your novel that live outside the manuscript.</p>
+  </div>
+  <div class="dl-hub-soon-grid">
+    <div class="dl-hub-soon-card">
+      <div class="dl-hub-soon-icon"><svg viewBox="0 0 16 16"><circle cx="8" cy="5.5" r="3"/><path d="M2.5 14c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/></svg></div>
+      <span class="dl-hub-soon-badge">Coming soon</span>
+      <h4>Character Sheet Template</h4>
+      <p>A structured worksheet for building characters worth writing about.</p>
+    </div>
+    <div class="dl-hub-soon-card">
+      <div class="dl-hub-soon-icon"><svg viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5"/><path d="M5.5 6h5M5.5 9h5" stroke-linecap="round"/></svg></div>
+      <span class="dl-hub-soon-badge">Coming soon</span>
+      <h4>Query Letter Template</h4>
+      <p>A starting structure for querying agents, built around industry convention.</p>
+    </div>
+    <div class="dl-hub-soon-card">
+      <div class="dl-hub-soon-icon"><svg viewBox="0 0 16 16"><path d="M2 8l4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <span class="dl-hub-soon-badge">Coming soon</span>
+      <h4>Plot Structure Cheat Sheet</h4>
+      <p>A quick-reference guide to Three-Act, Save the Cat, and Hero's Journey beats.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ CHECKLISTS ═══════════════════════ -->
+<div class="dl-hub-section">
+  <div class="dl-hub-section-header">
+    <h2>Checklists</h2>
+    <p>Step-by-step lists for the moments a novel changes phase.</p>
+  </div>
+  <div class="dl-hub-soon-grid">
+    <div class="dl-hub-soon-card">
+      <div class="dl-hub-soon-icon"><svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 8.5l2 2 4-4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <span class="dl-hub-soon-badge">Coming soon</span>
+      <h4>Self-Editing Checklist</h4>
+      <p>What to check before you send a draft to beta readers or an editor.</p>
+    </div>
+    <div class="dl-hub-soon-card">
+      <div class="dl-hub-soon-icon"><svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 8.5l2 2 4-4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <span class="dl-hub-soon-badge">Coming soon</span>
+      <h4>Self-Publishing Launch Checklist</h4>
+      <p>Everything to line up before your book goes live on KDP and beyond.</p>
+    </div>
+    <div class="dl-hub-soon-card">
+      <div class="dl-hub-soon-icon"><svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 8.5l2 2 4-4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <span class="dl-hub-soon-badge">Coming soon</span>
+      <h4>Manuscript Submission Checklist</h4>
+      <p>Formatting and prep to run through before querying agents.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER CTA ─────────────────────────────── -->
+<div class="footer-cta scroll-fade">
+  <h2>Start writing.<br><em>Nothing to set up.</em></h2>
+  <p>Get started for free. No card required.</p>
+  <div class="hero-actions" style="justify-content:center">
+    <a href="#" class="btn btn-primary">
+      <svg viewBox="0 0 15 15" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M7.5 2v9M4 8l3.5 3.5L11 8M2 13h11"/></svg>
+      Download for Mac — free
+    </a>
+    <a href="{{ '/pricing/' | relative_url }}" class="btn btn-ghost">See pricing</a>
+  </div>
+</div>

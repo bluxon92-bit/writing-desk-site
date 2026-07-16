@@ -1,0 +1,594 @@
+---
+layout: default
+title: "Character Name Generator — Free Tool for Fiction Writers"
+description: "Generate character names for any genre — fantasy, sci-fi, historical, contemporary. Free tool for novelists. Generate up to 20 names at a time."
+permalink: /tools/character-name-generator/
+---
+
+<style>
+/* ── Tool Hero ───────────────────────────────── */
+.tool-hero {
+  max-width: 1100px; margin: 0 auto;
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--border);
+}
+.tool-hero-inner { max-width: 640px; }
+.tool-label {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase;
+  color: var(--purple); margin-bottom: 16px;
+}
+.tool-label-line { width: 24px; height: 1.5px; background: var(--purple); display: block; }
+.tool-hero h1 {
+  font-family: var(--serif); font-size: 46px; font-weight: 400;
+  line-height: 1.1; color: var(--ink); margin-bottom: 16px;
+}
+.tool-hero h1 em { color: var(--purple); font-style: italic; }
+.tool-hero p { font-size: 17px; color: var(--ink-muted); font-weight: 300; line-height: 1.7; }
+
+/* ── Tool Layout ─────────────────────────────── */
+.tool-body { max-width: 1100px; margin: 0 auto; padding: 48px 40px; }
+.tool-body-inner { display: grid; grid-template-columns: 1fr 340px; gap: 48px; align-items: start; }
+
+/* ── Generator Card ──────────────────────────── */
+.gen-card {
+  background: var(--white); border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg); overflow: hidden;
+}
+.gen-card-head {
+  background: var(--purple-faint); border-bottom: 1px solid var(--border);
+  padding: 20px 24px;
+  display: flex; align-items: center; gap: 10px;
+}
+.gen-card-head h2 { font-family: var(--serif); font-size: 18px; font-weight: 400; color: var(--ink); }
+.gen-card-head svg { width: 18px; height: 18px; fill: none; stroke: var(--purple); stroke-width: 1.75; flex-shrink: 0; }
+.gen-controls { padding: 20px 24px; display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; border-bottom: 1px solid var(--border); }
+.ctrl-group { display: flex; flex-direction: column; gap: 5px; }
+.ctrl-group label { font-size: 11px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-faint); }
+.ctrl-group select {
+  font-family: var(--sans); font-size: 14px; color: var(--ink);
+  background: var(--white); border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm); padding: 9px 32px 9px 12px;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238888aa' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 10px center;
+  cursor: pointer; transition: border-color 0.15s;
+}
+.ctrl-group select:focus { outline: none; border-color: var(--purple); }
+.btn-gen {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--purple); color: white;
+  font-family: var(--sans); font-size: 14px; font-weight: 500;
+  padding: 10px 22px; border-radius: var(--radius-sm);
+  border: none; cursor: pointer; transition: opacity 0.15s;
+  white-space: nowrap;
+}
+.btn-gen:hover { opacity: 0.85; }
+.btn-gen svg { width: 14px; height: 14px; fill: none; stroke: white; stroke-width: 2; }
+
+/* ── Output ──────────────────────────────────── */
+.gen-output { padding: 24px; min-height: 160px; }
+.gen-placeholder {
+  font-size: 14px; color: var(--ink-faint); font-style: italic;
+  text-align: center; padding: 32px 0;
+}
+.name-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
+.name-pill {
+  background: var(--purple-faint); border: 1px solid var(--border);
+  border-radius: 8px; padding: 11px 16px;
+  font-size: 15px; color: var(--ink); font-weight: 400;
+  cursor: pointer; transition: all 0.15s; position: relative;
+  user-select: none;
+}
+.name-pill:hover { border-color: var(--purple); background: var(--purple-light); }
+.name-pill.copied { border-color: var(--purple); background: var(--purple-light); }
+.name-pill .copy-hint { font-size: 10px; color: var(--ink-faint); display: block; margin-top: 2px; }
+.name-pill.copied .copy-hint { color: var(--purple); }
+
+/* ── Actions ─────────────────────────────────── */
+.gen-actions {
+  padding: 14px 24px; border-top: 1px solid var(--border);
+  display: flex; gap: 10px; align-items: center;
+}
+.btn-secondary {
+  font-family: var(--sans); font-size: 13px; color: var(--ink-muted);
+  background: transparent; border: 1px solid var(--border-strong);
+  padding: 8px 16px; border-radius: var(--radius-sm);
+  cursor: pointer; transition: all 0.15s;
+}
+.btn-secondary:hover { border-color: var(--purple); color: var(--purple); }
+
+/* ── History ─────────────────────────────────── */
+.gen-history { padding: 16px 24px; border-top: 1px solid var(--border); background: var(--bg); }
+.gen-history h4 { font-size: 11px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
+.history-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.history-tag {
+  font-size: 12.5px; color: var(--ink-muted);
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 20px; padding: 4px 11px; cursor: pointer;
+  transition: all 0.12s;
+}
+.history-tag:hover { border-color: var(--purple); color: var(--purple); }
+.history-tag em { color: var(--ink-faint); font-style: normal; font-size: 11px; margin-left: 4px; }
+.btn-clear { font-size: 11px; color: var(--ink-faint); background: none; border: none; cursor: pointer; padding: 0; }
+.btn-clear:hover { color: var(--ink); }
+
+/* ── Sidebar ─────────────────────────────────── */
+.tool-sidebar { display: flex; flex-direction: column; gap: 20px; }
+.sidebar-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 22px;
+}
+.sidebar-card h3 { font-family: var(--serif); font-size: 17px; font-weight: 400; color: var(--ink); margin-bottom: 12px; }
+.sidebar-card ul { list-style: none; }
+.sidebar-card li {
+  font-size: 13.5px; color: var(--ink-muted); font-weight: 300;
+  padding: 6px 0 6px 16px; position: relative; line-height: 1.55;
+  border-top: 1px solid var(--border);
+}
+.sidebar-card li:first-child { border-top: none; padding-top: 0; }
+.sidebar-card li::before { content: "→"; position: absolute; left: 0; color: var(--purple-mid); font-size: 10px; top: 8px; }
+.sidebar-card p { font-size: 13.5px; color: var(--ink-muted); font-weight: 300; line-height: 1.65; margin-bottom: 12px; }
+.sidebar-link {
+  display: block; font-size: 13.5px; font-weight: 500; color: var(--purple);
+  text-decoration: none; padding: 8px 0; border-top: 1px solid var(--border);
+  transition: opacity 0.15s;
+}
+.sidebar-link:first-of-type { border-top: none; }
+.sidebar-link:hover { opacity: 0.7; }
+
+/* Sub-generator links */
+.sub-gen-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
+.sub-gen-link {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 13px; color: var(--ink-muted); font-weight: 400;
+  background: var(--purple-faint); border: 1px solid var(--border);
+  border-radius: 8px; padding: 9px 12px; text-decoration: none;
+  transition: all 0.15s;
+}
+.sub-gen-link:hover { border-color: var(--purple); color: var(--purple); background: var(--purple-light); }
+.sub-gen-link svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.75; flex-shrink: 0; }
+
+/* ── SEO Body ────────────────────────────────── */
+.tool-seo {
+  max-width: 1100px; margin: 0 auto;
+  padding: 0 40px 72px;
+  border-top: 1px solid var(--border);
+}
+.seo-inner { max-width: 720px; padding-top: 48px; }
+.seo-inner h2 { font-family: var(--serif); font-size: 28px; font-weight: 400; color: var(--ink); margin-bottom: 14px; line-height: 1.2; }
+.seo-inner h3 { font-family: var(--serif); font-size: 21px; font-weight: 400; color: var(--ink); margin: 28px 0 10px; }
+.seo-inner p { font-size: 15.5px; color: var(--ink-muted); font-weight: 300; line-height: 1.8; margin-bottom: 14px; }
+.seo-inner ul { list-style: none; margin-bottom: 20px; }
+.seo-inner li {
+  font-size: 15px; color: var(--ink-muted); font-weight: 300;
+  padding: 7px 0 7px 20px; position: relative; line-height: 1.6;
+  border-top: 1px solid var(--border);
+}
+.seo-inner li:last-child { border-bottom: 1px solid var(--border); }
+.seo-inner li::before { content: "→"; position: absolute; left: 0; color: var(--purple-mid); font-size: 11px; top: 9px; }
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 900px) {
+  .tool-hero { padding: 40px 24px 32px; }
+  .tool-hero h1 { font-size: 34px; }
+  .tool-body { padding: 32px 24px; }
+  .tool-body-inner { grid-template-columns: 1fr; }
+  .tool-seo { padding: 0 24px 48px; }
+  .gen-controls { flex-direction: column; align-items: stretch; }
+  .btn-gen { justify-content: center; }
+}
+</style>
+
+<div class="tool-hero">
+  <div class="tool-hero-inner">
+    <div class="tool-label">
+      <span class="tool-label-line"></span>
+      <span>Free Writer's Tool</span>
+    </div>
+    <h1>Character Name <em>Generator</em></h1>
+    <p>Generate names for any character in any genre — fantasy heroes, historical figures, sci-fi protagonists, contemporary villains. Built for novelists who need the right name fast.</p>
+  </div>
+</div>
+
+<section class="tool-body">
+  <div class="tool-body-inner">
+
+    <div class="gen-card">
+      <div class="gen-card-head">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <h2>Generate Character Names</h2>
+      </div>
+
+      <div class="gen-controls">
+        <div class="ctrl-group">
+          <label for="gen-type">Name type</label>
+          <select id="gen-type">
+            <optgroup label="Fantasy">
+              <option value="elf">Elf</option>
+              <option value="dwarf">Dwarf</option>
+              <option value="orc">Orc</option>
+              <option value="dragon">Dragon</option>
+              <option value="vampire">Vampire</option>
+              <option value="goblin">Goblin</option>
+              <option value="demon">Demon</option>
+              <option value="angel">Angel</option>
+              <option value="fae">Fae / Fairy</option>
+              <option value="werewolf">Werewolf</option>
+            </optgroup>
+            <optgroup label="Historical / Cultural">
+              <option value="medieval">Medieval</option>
+              <option value="viking">Viking / Norse</option>
+              <option value="celtic">Celtic</option>
+              <option value="japanese">Japanese</option>
+              <option value="korean">Korean</option>
+              <option value="chinese">Chinese</option>
+              <option value="russian">Russian</option>
+              <option value="german">German</option>
+              <option value="french">French</option>
+              <option value="latin">Latin / Roman</option>
+            </optgroup>
+            <optgroup label="Contemporary">
+              <option value="contemporary-m">Contemporary (masculine)</option>
+              <option value="contemporary-f">Contemporary (feminine)</option>
+              <option value="contemporary-n">Contemporary (neutral)</option>
+              <option value="villain">Villain</option>
+              <option value="detective">Detective / Noir</option>
+            </optgroup>
+            <optgroup label="Sci-Fi">
+              <option value="scifi-alien">Alien / Extraterrestrial</option>
+              <option value="scifi-human">Sci-Fi Human</option>
+              <option value="android">Android / AI</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="ctrl-group">
+          <label for="gen-gender">Gender feel</label>
+          <select id="gen-gender">
+            <option value="any">Any</option>
+            <option value="masc">Masculine</option>
+            <option value="fem">Feminine</option>
+            <option value="neutral">Neutral</option>
+          </select>
+        </div>
+
+        <div class="ctrl-group">
+          <label for="gen-count">How many</label>
+          <select id="gen-count">
+            <option value="5">5 names</option>
+            <option value="10" selected>10 names</option>
+            <option value="20">20 names</option>
+          </select>
+        </div>
+
+        <button class="btn-gen" id="btn-generate">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Generate
+        </button>
+      </div>
+
+      <div class="gen-output" id="gen-output">
+        <p class="gen-placeholder">Select a type and click Generate — your names will appear here.</p>
+      </div>
+
+      <div class="gen-actions" id="gen-actions" style="display:none;">
+        <button class="btn-secondary" id="btn-copy-all">Copy all names</button>
+        <button class="btn-secondary" id="btn-regen">Regenerate ↻</button>
+      </div>
+
+      <div class="gen-history" id="gen-history" style="display:none;">
+        <h4>Recent names <button class="btn-clear" id="btn-clear">Clear</button></h4>
+        <div class="history-tags" id="history-list"></div>
+      </div>
+    </div>
+
+    <aside class="tool-sidebar">
+      <div class="sidebar-card">
+        <h3>Explore by type</h3>
+        <div class="sub-gen-grid">
+          <a href="/tools/fantasy-name-generator/" class="sub-gen-link">
+            <svg viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg>
+            Fantasy
+          </a>
+          <a href="/tools/villain-name-generator/" class="sub-gen-link">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 15s1.5-2 4-2 4 2 4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            Villain
+          </a>
+          <a href="/tools/japanese-name-generator/" class="sub-gen-link">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+            Japanese
+          </a>
+          <a href="/tools/medieval-name-generator/" class="sub-gen-link">
+            <svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg>
+            Medieval
+          </a>
+          <a href="/tools/viking-name-generator/" class="sub-gen-link">
+            <svg viewBox="0 0 24 24"><path d="M12 22V8M5 12H2a10 10 0 0 0 20 0h-3"/></svg>
+            Viking
+          </a>
+          <a href="/tools/celtic-name-generator/" class="sub-gen-link">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg>
+            Celtic
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Tips for choosing names</h3>
+        <ul>
+          <li>Say the name aloud — if it's hard to read naturally, readers will stumble too</li>
+          <li>Consider how the name sounds alongside your other characters</li>
+          <li>Avoid starting too many main characters' names with the same letter</li>
+          <li>Tweak spellings to fit your world's phonetics</li>
+          <li>Combine syllables from two results to make something unique</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Related tools</h3>
+        <a href="/tools/fantasy-name-generator/" class="sidebar-link">Fantasy Name Generator →</a>
+        <a href="/tools/book-title-generator/" class="sidebar-link">Book Title Generator →</a>
+        <a href="/tools/character-backstory-generator/" class="sidebar-link">Character Backstory Generator →</a>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<section class="tool-seo">
+  <div class="seo-inner">
+    <h2>How to find the right name for your character</h2>
+    <p>A character's name does more work than most writers realise. It carries connotations of culture, era, and personality before a single line of dialogue is written. The right name helps readers hold a character in mind; the wrong one creates low-level friction that accumulates across a whole novel.</p>
+    <p>This generator gives you a starting point — a range of options across genres and cultural backgrounds to spark the right idea. Most writers don't use generated names verbatim; they use them to find a sound or structure they then refine.</p>
+
+    <h3>Fantasy character names</h3>
+    <p>Fantasy names need to feel distinct from the real world without being unpronounceable. The best ones have internal logic — they feel like they belong to a language, even if that language doesn't exist. When building a fantasy world, try to establish phonetic patterns for different cultures within it: the elven names should sound different from the dwarven names, and both should feel coherent within themselves.</p>
+
+    <h3>Historical and cultural names</h3>
+    <p>For historical fiction, research matters. A name that's anachronistic — too modern for the period, or wrong for the culture — breaks immersion immediately for readers who know. Use the generator to find the right sound and era, then verify against historical sources before you commit.</p>
+    <p>Cultural names — Japanese, Korean, Russian, Chinese, German, French — also carry meaning in their original languages. If your character's name translates to something significant, that's either an asset or a problem depending on your story. It's worth knowing either way.</p>
+
+    <h3>Contemporary character names</h3>
+    <p>Contemporary names date. A name that feels modern now will feel dated in ten years, which matters if you want your novel to have a long shelf life. Names that were popular in the 1980s and 90s signal a character's age to readers who grew up in that era. Use that intentionally — or avoid it if you want your character to feel timeless.</p>
+
+    <h3>Villain names</h3>
+    <p>The best villain names don't announce themselves. Obvious villain names — names that sound sinister on first reading — tend to undercut the character by making their villainy legible before it's been earned. Consider giving your villain a name that's ordinary, or even pleasant, and letting their actions do the work.</p>
+
+    <h3>Using this tool with Writing Desk</h3>
+    <p>When you find a name you like, keep a running list in Writing Desk's Resource Centre alongside your character profiles. The names you discard are often just as useful — knowing what doesn't fit tells you something about who the character actually is.</p>
+  </div>
+</section>
+
+<script>
+const nameData = {
+  elf: {
+    masc: { first:["Aelric","Caelen","Elowen","Faeron","Ithran","Lorindel","Myrion","Quellas","Thalion","Varindor","Celeborn","Finrod","Glorfindel","Haldir","Orophin","Rúmil","Silvan","Thranduil","Ereinion","Fingon"], last:["Brightmantle","Dawnwhisper","Evenstar","Forestborn","Goldenleaf","Highwind","Ironbark","Lightfoot","Moonveil","Nightsong","Riverflow","Silverbow","Stardrift","Sunweave","Treetop","Whisperbranch"] },
+    fem: { first:["Aelindra","Caelith","Elowyn","Faerindë","Ithilwen","Lorianna","Myriël","Quellasë","Thalindra","Varindriel","Arwen","Galadriel","Idril","Lúthien","Melian","Nimrodel","Rían","Silmariën","Varda","Yavanna"], last:["Brightmantle","Dawnwhisper","Evenstar","Forestborn","Goldenleaf","Highwind","Ironbark","Lightfoot","Moonveil","Nightsong","Riverflow","Silverbow","Stardrift","Sunweave","Treetop","Whisperbranch"] },
+    neutral: { first:["Ael","Cael","Elow","Faer","Ith","Lori","Myri","Quel","Thal","Vari"], last:["Brightmantle","Dawnwhisper","Evenstar","Forestborn","Goldenleaf","Moonveil","Nightsong","Riverflow","Silverbow","Stardrift"] }
+  },
+  dwarf: {
+    masc: { first:["Baldric","Brundar","Dolgrin","Durgin","Fargrim","Garrum","Gimrak","Gundrun","Harbek","Kagran","Korvald","Mordak","Narag","Ogremath","Rangrim","Rurik","Skamos","Tordek","Uldar","Vondal"], last:["Axehand","Boulderback","Deepdelver","Firemane","Goldvein","Hammerfall","Ironboot","Oathkeeper","Rockbreaker","Stoneshield","Strongarm","Thunderbrow","Tunnelborn","Waraxe","Wyrmbane"] },
+    fem: { first:["Agna","Bofri","Dagna","Disma","Eldra","Femke","Grunda","Helga","Ilda","Katla","Krimhild","Marta","Osrika","Revka","Runda","Sonja","Tordis","Ulrika","Vigdis","Wulfrun"], last:["Axehand","Boulderback","Deepdelver","Firemane","Goldvein","Hammerfall","Ironboot","Oathkeeper","Rockbreaker","Stoneshield","Strongarm","Thunderbrow","Tunnelborn","Waraxe","Wyrmbane"] },
+    neutral: { first:["Bron","Dol","Dur","Gar","Gim","Gun","Har","Kor","Mor","Nar","Ori","Ran","Rur","Ska","Tor"], last:["Axehand","Deepdelver","Goldvein","Ironboot","Oathkeeper","Rockbreaker","Stoneshield","Thunderbrow","Tunnelborn","Waraxe"] }
+  },
+  orc: {
+    masc: { first:["Brakgor","Drogash","Gorash","Grakk","Grum","Karg","Krusk","Lurz","Morg","Narak","Ragash","Rorg","Skullsmasher","Thokk","Tulmar","Ugnak","Urgash","Vorag","Wrathgor","Zug"], last:["Bloodaxe","Bonesmasher","Darkhide","Gorekill","Grimtusk","Ironskin","Meatcleaver","Ragefist","Shieldbreaker","Skullcrusher","Stonefist","Warborn","Warbringer","Wolfmaw"] },
+    fem: { first:["Baggi","Dura","Enka","Gothma","Hroka","Kansif","Kruga","Murg","Oga","Ovak","Ownka","Shautha","Sutha","Tagga","Throwk","Ugi","Vola","Yevelda","Zarka","Zutha"], last:["Bloodaxe","Darkhide","Grimtusk","Ironskin","Ragefist","Shieldbreaker","Stonefist","Warborn","Wolfmaw"] },
+    neutral: { first:["Gor","Grak","Karg","Morg","Nak","Rag","Ruk","Shak","Thok","Ug","Vorg","Zog","Zug"], last:["Bloodaxe","Darkhide","Grimtusk","Ironmaw","Ragefist","Stonefist","Warborn"] }
+  },
+  goblin: {
+    masc: { first:["Blixt","Bugsy","Crink","Drizzle","Fizzy","Fnubb","Gizmo","Gnash","Gritch","Grix","Krink","Nib","Pibble","Ratch","Rix","Skix","Snark","Sprocket","Twitch","Zix"], last:["Bogfoot","Dirtdigger","Dungpile","Filchfingers","Grimecoat","Junkscraper","Mudpaw","Rotclaw","Rustbucket","Scrapheap","Sludgepicker","Stinkwort","Trashgrubber","Wormdigger"] },
+    fem: { first:["Binx","Bix","Crix","Dripsy","Fizz","Grix","Inkle","Nix","Nixie","Pix","Rixi","Snip","Snippy","Squig","Trixie","Vex","Vixy","Wix","Zixi","Zizzle"], last:["Bogfoot","Dirtdigger","Dungpile","Filchfingers","Grimecoat","Mudpaw","Scrapheap","Sludgepicker","Stinkwort","Wormdigger"] },
+    neutral: { first:["Bix","Crix","Driz","Fizz","Grix","Krink","Nib","Pib","Rix","Snark","Sprox","Twitch","Vex","Wix","Zix"], last:["Bogfoot","Dirtdigger","Mudpaw","Rotclaw","Scrapheap","Stinkwort","Trashgrubber"] }
+  },
+  dragon: {
+    any: { first:["Aerdranath","Auranthos","Blazewing","Chrysalix","Cinderscale","Cryovain","Ebonwing","Embervast","Flameheart","Frostmourne","Gargax","Ignivex","Infernus","Iridax","Malchorax","Mordrenax","Noctarion","Obsidivath","Pyrovian","Quildraxis","Razorwing","Scorchmantle","Skullwing","Sorvixian","Thaldraxis","Venomfang","Vexitharax","Voragrimm","Xanathos","Zoldrax"] }
+  },
+  vampire: {
+    masc: { first:["Aleksei","Balthazar","Caius","Damien","Dorian","Eckhart","Gregor","Hadrian","Isidore","Kaspar","Lestat","Lucius","Magnus","Marius","Mordecai","Nikolai","Oleander","Ravelin","Sebastian","Valerian"], last:["Blackwood","Corvin","Darkhollow","Dreadmere","Duskmore","Greymantle","Halloway","Ironveil","Mordecrest","Nightshade","Ravenmoore","Sanguine","Shadowfen","Thornveil","Vanthorn"] },
+    fem: { first:["Anastasia","Belladonna","Camille","Celestine","Delphine","Elspeth","Isadora","Katarzyna","Lavinia","Lilith","Morrigan","Octavia","Persephonia","Rosamund","Seraphina","Tatiana","Valentina","Vesper","Vivienne","Zelda"], last:["Blackwood","Corvin","Darkhollow","Dreadmere","Duskmore","Greymantle","Halloway","Ironveil","Mordecrest","Nightshade","Ravenmoore","Sanguine","Shadowfen","Thornveil","Vanthorn"] },
+    neutral: { first:["Ash","Caius","Cass","Dorian","Emrys","Hadrian","Isidore","Magnus","Maris","Nikolai","Oleander","Raven","Sebastian","Vale","Vesper"], last:["Blackwood","Corvin","Darkhollow","Greymantle","Nightshade","Ravenmoore","Shadowfen","Thornveil"] }
+  },
+  fae: {
+    masc: { first:["Adaon","Bran","Caradoc","Cernunnos","Cú","Donal","Erimon","Fionn","Gawain","Gwydion","Lleu","Lugh","Nuada","Oberon","Ossian","Puck","Robin","Rowan","Silvanus","Tithen"], last:["Brightholm","Dewdrop","Fernwhisper","Glimmerbrook","Goldengrove","Larkspell","Misthollow","Moonblossom","Mushrooming","Nightbloom","Oakthorn","Riverbell","Silverleaf","Starwort","Thistledown","Willowmere"] },
+    fem: { first:["Aoife","Arianrhod","Blodeuwedd","Brigid","Caoimhe","Clíodhna","Étaín","Fand","Gráinne","Iseult","Líadan","Mab","Medb","Niamh","Rhiannon","Saoirse","Síofra","Sorcha","Tinker","Titania"], last:["Brightholm","Dewdrop","Fernwhisper","Glimmerbrook","Goldengrove","Larkspell","Misthollow","Moonblossom","Nightbloom","Oakthorn","Riverbell","Silverleaf","Starwort","Thistledown","Willowmere"] },
+    neutral: { first:["Briar","Dawn","Dusk","Ember","Fern","Glow","Lark","Mist","Moss","Oak","Petal","Robin","Rowan","Silver","Wisp"], last:["Brightholm","Fernwhisper","Glimmerbrook","Larkspell","Misthollow","Moonblossom","Nightbloom","Riverbell","Silverleaf","Thistledown"] }
+  },
+  demon: {
+    masc: { first:["Abaddon","Achernar","Astaroth","Bael","Barbatos","Beleth","Belial","Forneus","Gaap","Glasya","Gusion","Haures","Ipos","Leraje","Malphas","Marchosias","Murmur","Naberius","Phenex","Raum"], last:["Ashenveil","Blightcrown","Cinderfall","Damnedspire","Darkflame","Deathwhisper","Emberblight","Flameborn","Hellscorn","Ironblight","Ruinbrand","Scorchmantle","Shadowblight","Soulcrush","Voidmark"] },
+    fem: { first:["Agares","Amdusias","Amdusius","Amon","Andromalius","Bathin","Bifrons","Botis","Buer","Camio","Dantalion","Decarabia","Eligos","Flauros","Foras","Furcas","Furfur","Gremory","Haagenti","Halphas"], last:["Ashenveil","Blightcrown","Cinderfall","Damnedspire","Darkflame","Deathwhisper","Hellscorn","Ironblight","Ruinbrand","Shadowblight","Voidmark"] },
+    neutral: { first:["Ash","Blight","Char","Dusk","Ember","Flare","Gloom","Grim","Hex","Mire","Murk","Scorch","Shade","Soot","Void"], last:["Ashenveil","Blightcrown","Cinderfall","Darkflame","Deathwhisper","Hellscorn","Ironblight","Shadowblight","Soulcrush","Voidmark"] }
+  },
+  angel: {
+    masc: { first:["Adriel","Aniel","Araqiel","Ariel","Azrael","Barachiel","Camael","Cassiel","Chamuel","Ezekiel","Gabriel","Haniel","Jegudiel","Jerahmeel","Jophiel","Michael","Raphael","Remiel","Saraqael","Selaphiel"], last:["Brightspire","Crystalwing","Dawnbringer","Evenlight","Goldenray","Highvault","Luminara","Pearlgate","Prismveil","Radiantsoar","Sanctum","Silverflame","Skytower","Starbeam","Sunshard","Vaultborn"] },
+    fem: { first:["Anahita","Ariel","Cassandra","Celeste","Celestia","Evangeline","Gabrielle","Hadassah","Haniel","Isadora","Israfil","Layla","Luminara","Mikaela","Morael","Phanuel","Raphahel","Seraphina","Urielle","Zaphkiel"], last:["Brightspire","Crystalwing","Dawnbringer","Evenlight","Goldenray","Highvault","Luminara","Pearlgate","Radiantsoar","Sanctum","Silverflame","Starbeam","Sunshard","Vaultborn"] },
+    neutral: { first:["Adriel","Aniel","Ariel","Azrael","Cassiel","Chamuel","Ezekiel","Gabriel","Haniel","Jophiel","Michael","Raphael","Remiel","Saraqael","Selaphiel"], last:["Brightspire","Dawnbringer","Goldenray","Luminara","Pearlgate","Radiantsoar","Sanctum","Silverflame","Starbeam","Sunshard"] }
+  },
+  werewolf: {
+    masc: { first:["Alaric","Brock","Cade","Dagger","Drake","Fenrir","Garrett","Gideon","Gunnar","Harley","Heath","Jace","Kael","Kane","Lars","Leif","Logan","Marcus","Rand","Saxon"], last:["Ashcroft","Blackmoor","Crestwood","Darkwood","Duskholm","Fangwood","Greymoor","Grimwood","Huntwood","Ironwood","Lunarfen","Moonridge","Nightfen","Ravenwood","Shadowfen","Silverfen","Stoneholm","Thornwood","Wildfen","Wolfmoor"] },
+    fem: { first:["Adara","Brynn","Cara","Darcy","Ember","Faye","Gemma","Harper","Iris","Jade","Kira","Leah","Luna","Maya","Nadia","Raya","Sage","Tara","Vera","Willow"], last:["Ashcroft","Blackmoor","Crestwood","Darkwood","Duskholm","Fangwood","Greymoor","Huntwood","Ironwood","Lunarfen","Moonridge","Nightfen","Ravenwood","Shadowfen","Silverfen","Stoneholm","Thornwood","Wildfen","Wolfmoor"] },
+    neutral: { first:["Ash","Blaze","Cade","Dawn","Ember","Fang","Grey","Hunt","Iron","Jade","Lunar","Moon","Raven","Sage","Shadow","Silver","Stone","Thorn","Wild","Wolf"], last:["Ashcroft","Blackmoor","Darkwood","Fangwood","Greymoor","Huntwood","Moonridge","Ravenwood","Shadowfen","Thornwood","Wolfmoor"] }
+  },
+  medieval: {
+    masc: { first:["Aldric","Alfred","Baldwin","Bartram","Cedric","Edric","Edwin","Egbert","Ethelred","Frederick","Geoffrey","Gerald","Gilbert","Godwin","Harold","Herbert","Humphrey","Leofric","Osbert","Oswald","Reginald","Roger","Roland","Siegfried","Ulric","Wulfric","Wulfstan"], last:["de Beaumont","de Clare","de Montfort","de Vere","FitzGerald","FitzRoy","Mallory","Plantagenet","of Sherwood","of Westmere","Blackwood","Grimshaw","Hartwell","Ironforge","Ravenscroft","Whitmore"] },
+    fem: { first:["Adelheid","Agnes","Alienor","Beatrix","Cecily","Constance","Edith","Eleanor","Emma","Ermengarde","Eustacia","Gunhild","Hildegard","Isolde","Judith","Mabel","Margery","Matilda","Millicent","Rosamund"], last:["de Beaumont","de Clare","de Montfort","FitzGerald","Mallory","of Westmere","Blackwood","Grimshaw","Hartwell","Ravenscroft","Whitmore"] },
+    neutral: { first:["Aelred","Aldric","Baldwin","Cedric","Edric","Edwin","Geoffrey","Gerald","Gilbert","Harold","Herbert","Leofric","Osbert","Oswald","Roger","Roland","Ulric"], last:["de Beaumont","de Clare","FitzGerald","Mallory","Blackwood","Grimshaw","Hartwell","Ironforge","Ravenscroft","Whitmore"] }
+  },
+  viking: {
+    masc: { first:["Arne","Arvid","Asbjorn","Askell","Bjarne","Bjorn","Dag","Egil","Eindride","Einnar","Erik","Eyvind","Finn","Folkvar","Gunnar","Halfdan","Hallvard","Harald","Helgi","Hjalmar","Ivar","Knut","Leif","Magnus","Olaf","Ragnar","Sigurd","Snorri","Thorvald","Ulf"], last:["Bjornson","Eriksson","Gustafsson","Halvorsen","Ingvarsson","Johansson","Karlsson","Larsson","Magnusson","Nilsson","Olofsson","Petersen","Ragnarsson","Sigurdsson","Thorvaldsson","Yngvarsson"] },
+    fem: { first:["Alfhild","Asa","Ashild","Astrid","Bergljot","Bodil","Freydis","Gunnhild","Gudrid","Helga","Hild","Hildigunn","Ingeborg","Jorunn","Oddny","Ragnhild","Sigrid","Solveig","Thora","Unn"], last:["Bjornsdóttir","Eriksdóttir","Gustafsdóttir","Halvorsdóttir","Ingvarsdóttir","Johansdóttir","Karlsdóttir","Larsdóttir","Magnúsdóttir","Nilsdóttir","Olofsdóttir","Ragnarsdóttir","Sigurdsdóttir","Thorvaldsdóttir"] },
+    neutral: { first:["Arne","Arvid","Dag","Egil","Erik","Finn","Gunnar","Harald","Helgi","Ivar","Knut","Leif","Magnus","Olaf","Ragnar","Sigurd","Snorri","Thorvald","Ulf"], last:["Bjornson","Eriksson","Halvorsen","Ingvarsson","Magnusson","Ragnarsson","Sigurdsson","Thorvaldsson"] }
+  },
+  celtic: {
+    masc: { first:["Ailill","Bran","Caradoc","Ciarán","Cú Chulainn","Donal","Eoghan","Fionn","Gawain","Gwydion","Labhraidh","Lleu","Lugh","Mac Tire","Niall","Oisín","Pádraig","Ruairí","Séamus","Tadhg"], last:["mac Aodha","mac Briain","mac Cárthaigh","mac Donnchaidh","mac Lochlainn","mac Mathghamhna","mac Muircheartaigh","mac Suibhne","O'Brien","O'Connor","O'Donnell","O'Neill","O'Sullivan"] },
+    fem: { first:["Aoife","Aisling","Bríd","Caoimhe","Clíodhna","Deirdre","Étaín","Findabair","Gráinne","Íde","Líadan","Maeve","Niamh","Oonagh","Rónán","Saoirse","Sorcha","Síofra","Úna","Yenat"], last:["ní Bhriain","ní Chárthaigh","ní Dhonnchaidh","ní Lochlainn","ní Mathghamhna","ní Mhuircheartaigh","ní Shúilleabháin","O'Brien","O'Connor","O'Donnell","O'Neill","O'Sullivan"] },
+    neutral: { first:["Aoife","Arawn","Bran","Brigid","Caer","Caradoc","Ciarán","Danu","Eoghan","Fionn","Gawain","Lugh","Maeve","Niamh","Oisín","Rhiannon","Rowan","Saoirse","Sorcha","Tadhg"], last:["mac Aodha","O'Brien","O'Connor","O'Donnell","O'Neill","O'Sullivan"] }
+  },
+  japanese: {
+    masc: { first:["Akira","Daichi","Haruki","Hayato","Hiroshi","Isamu","Jiro","Kaito","Kenji","Makoto","Masao","Naoki","Ren","Ryota","Satoshi","Shun","Takeshi","Taro","Yoshi","Yuki"], last:["Fujimoto","Hashimoto","Hayashi","Honda","Inoue","Ito","Kato","Kimura","Kobayashi","Matsumoto","Mori","Nakamura","Ogawa","Saito","Sasaki","Sato","Suzuki","Tanaka","Watanabe","Yamamoto"] },
+    fem: { first:["Aiko","Akemi","Emiko","Fumiko","Hanako","Haruka","Hina","Keiko","Mana","Mei","Midori","Misato","Naomi","Natsumi","Sakura","Shiori","Tomoko","Yui","Yuka","Yumiko"], last:["Fujimoto","Hashimoto","Hayashi","Honda","Inoue","Ito","Kato","Kimura","Kobayashi","Matsumoto","Mori","Nakamura","Ogawa","Saito","Sasaki","Sato","Suzuki","Tanaka","Watanabe","Yamamoto"] },
+    neutral: { first:["Akira","Haruki","Hikaru","Kaito","Kenji","Makoto","Ren","Ryota","Satoshi","Tomo","Yoshi","Yuki"], last:["Fujimoto","Hashimoto","Inoue","Kato","Kimura","Kobayashi","Matsumoto","Nakamura","Saito","Sato","Suzuki","Tanaka","Watanabe","Yamamoto"] }
+  },
+  korean: {
+    masc: { first:["Byeong-ho","Dae-jung","Dong-hyun","Hyeon-jun","Jae-won","Ji-hoon","Jong-suk","Jun-seo","Min-jun","Seok-jin","Si-woo","Sung-min","Tae-yang","Woo-jin","Yang-ho","Yoo-jun","Yoon-jae","Young-jae","Jun-pyo","Do-kyung"], last:["Ahn","Choi","Cho","Han","Im","Jang","Jung","Kang","Kim","Lee","Lim","Moon","Oh","Park","Shin","Son","Yoon","Yun"] },
+    fem: { first:["Bo-young","Chae-won","Da-eun","Eun-ji","Ha-eun","Hye-jin","Ji-eun","Ji-won","Min-ji","Mi-rae","Na-yeon","Seul-gi","So-yeon","Su-jin","Ye-jin","Yoo-ri","Young-joo","Yu-na","Ji-soo","Soo-ah"], last:["Ahn","Choi","Cho","Han","Im","Jang","Jung","Kang","Kim","Lee","Lim","Moon","Oh","Park","Shin","Son","Yoon","Yun"] },
+    neutral: { first:["Bo","Chae","Da","Eun","Ha","Hye","Ji","Min","Na","Seul","So","Su","Ye","Yoo","Young","Yu"], last:["Ahn","Choi","Han","Jang","Jung","Kang","Kim","Lee","Moon","Oh","Park","Shin","Yoon"] }
+  },
+  chinese: {
+    masc: { first:["Bao","Bo","Cheng","Da","Dong","Feng","Gang","Hao","Jian","Lei","Li","Liang","Long","Ming","Ping","Qiang","Tao","Wei","Xin","Yang"], last:["Chan","Chen","Cheng","Cheung","Cho","Chow","Hui","Lam","Lee","Leung","Li","Lin","Liu","Lo","Mak","Ng","Tang","Tsang","Wong","Wu"] },
+    fem: { first:["Ai","Bao","Chun","Fang","Fei","Hua","Hui","Juan","Li","Ling","Mei","Min","Na","Ning","Ping","Qing","Rong","Xia","Yan","Yun"], last:["Chan","Chen","Cheng","Cheung","Cho","Chow","Hui","Lam","Lee","Leung","Li","Lin","Liu","Lo","Mak","Ng","Tang","Tsang","Wong","Wu"] },
+    neutral: { first:["An","Bo","Feng","Jun","Le","Lei","Li","Liang","Ming","Ping","Qian","Wei","Xin","Yang","Yun"], last:["Chan","Chen","Cheng","Cheung","Lee","Leung","Li","Lin","Liu","Lo","Ng","Tang","Wong","Wu"] }
+  },
+  russian: {
+    masc: { first:["Aleksandr","Aleksei","Anatoli","Andrei","Artyom","Boris","Dmitri","Fyodor","Grigori","Igor","Ivan","Kirill","Konstantin","Lev","Mikhail","Nikolai","Pavel","Pyotr","Sergei","Vadim","Vasili","Viktor","Vladimir","Vladislav","Vsevolod","Yevgeni","Yuri","Zakhar"], last:["Borisov","Chekhov","Dostoevsky","Fedorov","Ivanov","Karpov","Kozlov","Kuznetsov","Lebedev","Morozov","Orlov","Pavlov","Popov","Romanov","Serov","Smirnov","Sokolov","Volkov","Voronov","Zhukov"] },
+    fem: { first:["Aleksandra","Alina","Anastasia","Dasha","Darya","Ekaterina","Galina","Irina","Katya","Larisa","Liliya","Lyudmila","Marina","Natasha","Natalya","Olga","Polina","Sofiya","Svetlana","Tatiana","Valentina","Vera","Xenia","Yelena","Yulia","Zhenya","Zoya"], last:["Borisova","Chekhova","Dostoevskaya","Fedorova","Ivanova","Karpova","Kozlova","Kuznetsova","Lebedeva","Morozova","Orlova","Pavlova","Popova","Romanova","Serova","Smirnova","Sokolova","Volkova","Voronova","Zhukova"] },
+    neutral: { first:["Aleksandr","Aleksei","Anatoli","Andrei","Boris","Dmitri","Fyodor","Igor","Ivan","Kirill","Lev","Mikhail","Nikolai","Pavel","Sergei","Viktor","Yuri"], last:["Borisov","Ivanov","Kozlov","Kuznetsov","Lebedev","Morozov","Orlov","Pavlov","Smirnov","Sokolov","Volkov","Zhukov"] }
+  },
+  german: {
+    masc: { first:["Albrecht","Arno","Bernhard","Caspar","Dietrich","Ernst","Friedrich","Günther","Hans","Heinrich","Hermann","Johann","Karl","Klaus","Konrad","Ludwig","Manfred","Otto","Rolf","Siegfried","Stefan","Ulrich","Wilhelm","Wolfgang"], last:["Bauer","Berg","Fischer","Hartmann","Hoffmann","Kaiser","Klein","Koch","Krause","Lange","Lehmann","Meier","Meyer","Müller","Richter","Schneider","Schulz","Schwarz","Wagner","Weber","Weiss","Werner","Wolf"] },
+    fem: { first:["Adelheid","Britta","Charlotte","Dorothea","Elisabeth","Frieda","Gertrude","Hannelore","Hedwig","Ilse","Ingrid","Käthe","Klara","Lena","Lieselotte","Luise","Marta","Mathilde","Renate","Sabine","Ursula","Walburga","Wilhelmina"], last:["Bauer","Berg","Fischer","Hartmann","Hoffmann","Kaiser","Klein","Koch","Krause","Lange","Lehmann","Meier","Meyer","Müller","Richter","Schneider","Schulz","Schwarz","Wagner","Weber","Weiss","Werner","Wolf"] },
+    neutral: { first:["Albrecht","Arno","Bernhard","Caspar","Dietrich","Ernst","Friedrich","Hans","Heinrich","Johann","Karl","Klaus","Konrad","Ludwig","Otto","Rolf","Stefan","Ulrich","Wilhelm","Wolfgang"], last:["Bauer","Fischer","Hoffmann","Kaiser","Klein","Koch","Müller","Richter","Schneider","Schulz","Wagner","Weber","Wolf"] }
+  },
+  french: {
+    masc: { first:["Adrien","Alexandre","Antoine","Armand","Auguste","Baptiste","Charles","Claude","Edouard","Etienne","François","Gabriel","Gaston","Henri","Jacques","Jean","Louis","Luc","Marcel","Nicolas","Philippe","Pierre","Raoul","René","Robert","Sylvain","Théodore","Victor","Vincent","Xavier"], last:["Beaumont","Bertrand","Blanchard","Bourgeois","Chevalier","Dubois","Dumont","Dupont","Fontaine","Gauthier","Girard","Guerrier","Laurent","Leclerc","Lefebvre","Martin","Mercier","Moreau","Petit","Richard","Robert","Simon","Thomas","Vincent"] },
+    fem: { first:["Adèle","Amélie","Anne","Brigitte","Camille","Cécile","Charlotte","Claire","Clémence","Elise","Émilie","Geneviève","Hélène","Isabelle","Jeanne","Joséphine","Juliette","Laure","Lucie","Marguerite","Marie","Mathilde","Nicole","Sophie","Thérèse","Véronique","Victoire","Virginie"], last:["Beaumont","Bertrand","Blanchard","Bourgeois","Chevalier","Dubois","Dumont","Dupont","Fontaine","Gauthier","Girard","Laurent","Leclerc","Lefebvre","Martin","Mercier","Moreau","Petit","Richard","Robert","Simon","Thomas","Vincent"] },
+    neutral: { first:["Adrien","Alexandre","Antoine","Auguste","Baptiste","Charles","Claude","Edouard","François","Gabriel","Henri","Jacques","Jean","Louis","Luc","Nicolas","Philippe","Pierre","René","Victor","Vincent"], last:["Beaumont","Bertrand","Dubois","Dumont","Dupont","Gauthier","Laurent","Leclerc","Martin","Mercier","Moreau","Petit","Richard","Simon","Thomas"] }
+  },
+  latin: {
+    masc: { first:["Aemilius","Antonius","Augustus","Brutus","Caecilius","Caesar","Cassius","Claudius","Cornelius","Decimus","Gaius","Gnaeus","Julius","Lucius","Marcus","Maximus","Nero","Octavius","Quintus","Romulus","Rufus","Septimus","Titus","Trajan","Valerius","Vergilius"], last:["Agricola","Aquila","Aurelianus","Caecilianus","Cassianus","Claudianus","Cornelianus","Domitianus","Flavianus","Iulianus","Marcianus","Maximianus","Pompeianus","Quintilianus","Rufinus","Sabinianus","Severianus","Traianus","Valerianus","Vespasianus"] },
+    fem: { first:["Aelia","Aemilia","Antonia","Augusta","Aurelia","Caecilia","Cassia","Claudia","Cornelia","Domitia","Fabia","Flavia","Fulvia","Horatia","Julia","Livia","Lucilla","Marcia","Minucia","Octavia","Porcia","Postumia","Quinta","Servia","Sulpicia","Tullia","Valeria","Vergilia"], last:["Agricola","Aquila","Aureliana","Caeciliana","Cassiana","Claudiana","Corneliana","Flaviana","Iuliana","Marciana","Maximiana","Quintiliana","Rufina","Sabiniana","Severiana","Traiana","Valeriana"] },
+    neutral: { first:["Aemilius","Antonius","Augustus","Brutus","Caecus","Caesar","Cassius","Claudius","Cornelius","Decimus","Gaius","Julius","Lucius","Marcus","Maximus","Octavius","Quintus","Rufus","Titus","Valerius"], last:["Agricola","Aurelianus","Cassianus","Claudianus","Cornelianus","Flavianus","Iulianus","Marcianus","Maximianus","Valerianus"] }
+  },
+  villain: {
+    masc: { first:["Aldric","Balthazar","Casimir","Damien","Dorian","Edric","Fabian","Gregor","Hadrian","Inigo","Jasper","Konstantin","Lazarus","Lucius","Malachar","Mordecai","Nathaniel","Oleander","Ptolemy","Quentin","Reginald","Silas","Theron","Umberto","Valerian","Victor","Wolfe","Xander","Yorick","Zephyr"], last:["Ashgrove","Blackthorn","Coldmere","Darkwater","Dreadmoor","Greymantle","Grimshaw","Harbinger","Ironveil","Malachar","Mordecrest","Nighthollow","Quillmere","Ravenscroft","Sablewick","Shadowmere","Thornbury","Vanthorn","Wickwood","Wolfmere"] },
+    fem: { first:["Acantha","Belladonna","Celestine","Delphine","Elspeth","Fantine","Griselda","Hecate","Isadora","Jacinda","Katarzyna","Lilith","Morwenna","Narcissa","Octavia","Persephonia","Quintessa","Rosamund","Seraphina","Tabitha","Ulrica","Valentina","Winifred","Xanthe","Ysolde","Zelda"], last:["Ashgrove","Blackthorn","Coldmere","Darkwater","Dreadmoor","Greymantle","Grimshaw","Ironveil","Mordecrest","Nighthollow","Ravenscroft","Sablewick","Shadowmere","Thornbury","Vanthorn","Wickwood","Wolfmere"] },
+    neutral: { first:["Ash","Cain","Damien","Dorian","Gregor","Hadrian","Jasper","Konstantin","Lucius","Mordecai","Nathaniel","Oleander","Quentin","Silas","Theron","Valerian","Victor","Wolfe","Xander","Zephyr"], last:["Ashgrove","Blackthorn","Coldmere","Darkwater","Grimshaw","Ironveil","Mordecrest","Nighthollow","Ravenscroft","Shadowmere","Thornbury","Vanthorn","Wickwood"] }
+  },
+  detective: {
+    masc: { first:["Alistair","Archie","Blake","Cal","Carter","Cole","Dash","Declan","Eli","Finn","Fletcher","Gideon","Holt","Jack","Jasper","Leo","Mack","Marcus","Nash","Oliver","Reid","Rex","Ronan","Sam","Sullivan","Theo","Wade","Will","Zach"], last:["Adler","Banks","Barrett","Blake","Briggs","Castle","Chase","Cole","Cross","Drake","Dunn","Flynn","Foster","Greer","Hale","Harper","Harrow","Kane","Keller","Larkin","Malone","Monroe","Nash","Quinn","Ramsey","Reeves","Sloane","Steele","Stone","Voss"] },
+    fem: { first:["Ava","Blair","Cate","Darcy","Ellie","Evie","Frankie","Grace","Harper","Jade","Jess","Jo","Kate","Laura","Lena","Mara","Meg","Nova","Quinn","Remy","Robin","Sam","Scout","Sloane","Sophia","Tess","Vera","Wren","Zara"], last:["Adler","Banks","Barrett","Blake","Briggs","Castle","Chase","Cole","Cross","Drake","Dunn","Flynn","Foster","Greer","Hale","Harper","Harrow","Kane","Keller","Larkin","Malone","Monroe","Nash","Quinn","Ramsey","Reeves","Sloane","Steele","Stone","Voss"] },
+    neutral: { first:["Alex","Blake","Casey","Charlie","Dakota","Ellis","Finley","Harper","Harlow","Jordan","Jules","Lane","Lee","Logan","Mackenzie","Morgan","Parker","Quinn","Reese","Riley","River","Rowan","Sage","Sam","Scout","Sidney","Sloane","Taylor","Wren","Wynne"], last:["Adler","Banks","Barrett","Blake","Briggs","Castle","Chase","Cole","Cross","Drake","Dunn","Flynn","Foster","Greer","Hale","Harper","Kane","Keller","Larkin","Malone","Monroe","Nash","Quinn","Ramsey","Reeves","Sloane","Steele","Stone","Voss"] }
+  },
+  "contemporary-m": {
+    masc: { first:["Aaron","Adam","Alex","Ben","Caleb","Carter","Connor","Daniel","Eli","Ethan","Finn","Henry","Isaac","Jake","James","Jason","Josh","Leo","Liam","Lucas","Mason","Max","Nathan","Noah","Oliver","Owen","Ryan","Sam","Sebastian","Tyler"], last:["Anderson","Baker","Brown","Campbell","Carter","Clark","Collins","Cook","Cooper","Davis","Evans","Foster","Garcia","Green","Hall","Harris","Hill","Jackson","Johnson","Jones","Lewis","Martin","Martinez","Miller","Moore","Robinson","Scott","Smith","Taylor","Thompson","Walker","White","Wilson","Wood","Wright","Young"] },
+    fem: {}, neutral: {}
+  },
+  "contemporary-f": {
+    masc: {}, fem: { first:["Abby","Alexis","Alicia","Alyssa","Amber","Amy","Anna","Ashley","Brianna","Charlotte","Chloe","Claire","Emma","Grace","Hannah","Holly","Isabella","Jessica","Julia","Kayla","Lauren","Lily","Megan","Mia","Natalie","Nicole","Olivia","Rachel","Sarah","Sophia","Zoe"], last:["Anderson","Baker","Brown","Campbell","Carter","Clark","Collins","Cook","Cooper","Davis","Evans","Foster","Garcia","Green","Hall","Harris","Hill","Jackson","Johnson","Jones","Lewis","Martin","Martinez","Miller","Moore","Robinson","Scott","Smith","Taylor","Thompson","Walker","White","Wilson","Wood","Wright","Young"] }, neutral: {}
+  },
+  "contemporary-n": {
+    masc: {}, fem: {}, neutral: { first:["Alex","Avery","Bailey","Blake","Cameron","Casey","Charlie","Dakota","Drew","Ellis","Finley","Harley","Harper","Hayden","Jamie","Jordan","Jules","Lane","Lee","Logan","Mackenzie","Morgan","Parker","Quinn","Reese","Riley","River","Robin","Rowan","Sage","Sam","Scout","Shawn","Sidney","Skylar","Spencer","Taylor","Wren","Wynne"], last:["Anderson","Baker","Brown","Campbell","Carter","Clark","Collins","Cook","Cooper","Davis","Evans","Foster","Garcia","Green","Hall","Harris","Hill","Jackson","Johnson","Jones","Lewis","Martin","Martinez","Miller","Moore","Robinson","Scott","Smith","Taylor","Thompson","Walker","White","Wilson","Wood","Wright","Young"] }
+  },
+  "scifi-alien": {
+    any: { first:["Aev'rix","Bzareth","Cyx'al","Drel","Evoraan","Fxxar","Grel'th","Hraxis","Ix'thar","Jov'ran","Krel","Lyx","Mzar","Nex'al","Ovrix","Phar'ax","Qrel","Rxan","Syx'al","Thal'vex","Uvrak","Vex'thal","Wx'ari","Xrel","Yv'zar","Zrex","Akorath","Blezan","Crezik","Dvoran"] }
+  },
+  "scifi-human": {
+    masc: { first:["Aidan","Ares","Asher","Atlas","Axel","Blake","Cael","Cal","Cassian","Cole","Corin","Crew","Dax","Drake","Eli","Ezra","Finn","Grey","Gage","Harlan","Jace","Jax","Jett","Kai","Knox","Leo","Mace","Marco","Nate","Nero","Orion","Pax","Reed","Rex","Rhys","Rio","Rook","Ryder","Slate","Sol","Stark","Tor","Troy","Vance","Vesper","Wade","Xan","Zane","Zero","Zion"], last:["Ashford","Axel","Blackhurst","Caine","Coldwell","Corvin","Cross","Dayne","Drake","Duskwood","Elias","Falcon","Ghost","Grant","Grim","Halcyon","Harren","Jagger","Kane","Kestrel","Lake","Lorne","March","Nox","Orion","Phantom","Reyes","Rift","Rook","Shade","Sol","Stark","Stone","Storm","Thorn","Vale","Void","Ward","Wren","Zeith"] },
+    fem: { first:["Aela","Aire","Ariel","Asha","Asher","Astra","Avery","Aylin","Blair","Blaze","Blue","Bree","Bryn","Caelis","Ceres","Cira","Cleo","Corin","Cova","Crux","Dara","Dawn","Daya","Delta","Echo","Eden","Elan","Eris","Eve","Evra","Faye","Fira","Flint","Freya","Gaia","Ghost","Grey","Halo","Harlow","Haven","Iris","Jade","Jax","Juno","Kaia","Kaira","Kira","Lake","Larka","Lena","Lyra","Mara","Mare","Mars","Mira","Moon","Nala","Nara","Nera","Nix","Nova","Nyx","Orion","Pell","Petra","Phoebe","Plume","Quinn","Raven","Rayne","Ren","Reva","Rex","Rift","River","Rylan","Sage","Sena","Sera","Shore","Shyla","Sila","Sky","Slate","Sloane","Sol","Sola","Sorin","Starr","Storm","Styx","Sunday","Sylvan","Tai","Tal","Tara","Tave","Taya","Thea","Thorn","Tia","Tira","Tova","Trace","Trin","Triss","Tyra","Ula","Umber","Vala","Vale","Vara","Veil","Vex","Via","Vik","Vita","Vix","Vox","Wren","Xen","Xia","Xin","Yara","Yeva","Yris","Zara","Zeal","Zena","Zero","Zeta","Zia","Zinnia","Zion","Zira","Ziva","Zoe","Zosia"], last:["Ashford","Axel","Blackhurst","Caine","Coldwell","Corvin","Cross","Dayne","Drake","Duskwood","Elias","Falcon","Ghost","Grant","Grim","Halcyon","Harren","Jagger","Kane","Kestrel","Lake","Lorne","March","Nox","Orion","Phantom","Reyes","Rift","Rook","Shade","Sol","Stark","Stone","Storm","Thorn","Vale","Void","Ward","Wren","Zeith"] },
+    neutral: { first:["Aela","Atlas","Axel","Blake","Cal","Cael","Cassian","Cole","Dax","Drake","Echo","Eli","Ezra","Faye","Finn","Grey","Jace","Jax","Jett","Kai","Knox","Leo","Lyra","Mara","Nara","Nix","Nova","Orion","Pax","Quinn","Raven","Reed","Ren","Rex","Rhys","Rook","Ryder","Sage","Slate","Sol","Stark","Storm","Thorn","Vale","Vex","Wade","Wren","Xan","Zane","Zero"], last:["Ashford","Caine","Corvin","Cross","Dayne","Drake","Elias","Falcon","Ghost","Grant","Halcyon","Jagger","Kane","Kestrel","Lake","Lorne","March","Nox","Orion","Phantom","Reyes","Rift","Rook","Shade","Sol","Stark","Stone","Storm","Thorn","Vale","Void","Ward","Wren","Zeith"] }
+  },
+  android: {
+    any: { first:["ARIA","ARK","ATLAS","AXL","BYTE","CALIX","CHIP","CHORUS","CORTEX","CRYPT","CYPHER","DATA","DELPHI","ECHO","EDEN","ELYSIUM","ENCODE","EPOCH","ERIS","ETHOS","FORGE","GHOST","GRID","HELIX","IRIS","JUNO","KARMA","KINETIC","KIRA","LOCUS","LUMIS","LYNX","MATRIX","MEMO","MESH","MIRROR","NEXUS","NODE","NOVA","NULL","OMEGA","ONYX","OPTIC","ORACLE","ORBIT","ORIGIN","PARADOX","PASCAL","PHOENIX","PILOT","PIXEL","PRIME","PRISM","PROXY","PULSE","QUBIT","QUANTUM","QUERY","QUILL","RADIX","RAZE","RELAY","REMEDY","RENDER","RESET","RESOLVER","RIFT","ROGUE","ROTOR","RUBY","RUNIC","RUNTIME","SAGE","SENTRY","SEQUENCE","SHADE","SIGNAL","SILO","SLATE","SOLAR","SOLVE","SONIC","SPARK","SPECTER","STACK","STASIS","STATIC","STEM","STRIX","STROBE","SYNC","SYNTAX","SYNTH","SYSOP","SYSTEM"] }
+  }
+};
+
+const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+let history = [];
+
+function getNames(type, gender, count) {
+  const data = nameData[type];
+  if (!data) return Array.from({length: count}, () => "Unknown-" + Math.floor(Math.random()*1000));
+  
+  // Determine which pool to use
+  let pool;
+  if (data.any) {
+    pool = data.any;
+  } else {
+    if (gender === 'masc' && data.masc?.first?.length) pool = data.masc;
+    else if (gender === 'fem' && data.fem?.first?.length) pool = data.fem;
+    else if (gender === 'neutral' && data.neutral?.first?.length) pool = data.neutral;
+    else {
+      // fallback: merge all available
+      const all = { first: [], last: [] };
+      ['masc','fem','neutral'].forEach(g => {
+        if (data[g]?.first?.length) all.first.push(...data[g].first);
+        if (data[g]?.last?.length) all.last.push(...data[g].last);
+      });
+      pool = all;
+    }
+  }
+  
+  const names = [];
+  for (let i = 0; i < count; i++) {
+    if (pool.last && pool.last.length) {
+      names.push(pick(pool.first) + ' ' + pick(pool.last));
+    } else {
+      names.push(pick(pool.first));
+    }
+  }
+  return names;
+}
+
+function generate() {
+  const type = document.getElementById('gen-type').value;
+  const gender = document.getElementById('gen-gender').value;
+  const count = parseInt(document.getElementById('gen-count').value);
+  const names = getNames(type, gender, count);
+
+  const output = document.getElementById('gen-output');
+  output.innerHTML = '<div class="name-grid"></div>';
+  const grid = output.querySelector('.name-grid');
+
+  names.forEach(name => {
+    const pill = document.createElement('div');
+    pill.className = 'name-pill';
+    pill.innerHTML = `${name}<span class="copy-hint">Click to copy</span>`;
+    pill.addEventListener('click', () => {
+      navigator.clipboard.writeText(name).then(() => {
+        pill.classList.add('copied');
+        pill.querySelector('.copy-hint').textContent = 'Copied!';
+        setTimeout(() => {
+          pill.classList.remove('copied');
+          pill.querySelector('.copy-hint').textContent = 'Click to copy';
+        }, 1500);
+      });
+    });
+    grid.appendChild(pill);
+    history.unshift({ name, type });
+  });
+
+  if (history.length > 40) history = history.slice(0, 40);
+  document.getElementById('gen-actions').style.display = 'flex';
+  renderHistory();
+}
+
+function renderHistory() {
+  const wrap = document.getElementById('gen-history');
+  const list = document.getElementById('history-list');
+  if (!history.length) { wrap.style.display = 'none'; return; }
+  wrap.style.display = 'block';
+  list.innerHTML = '';
+  history.forEach(({ name, type }) => {
+    const tag = document.createElement('span');
+    tag.className = 'history-tag';
+    tag.innerHTML = `${name}<em>${type}</em>`;
+    tag.addEventListener('click', () => navigator.clipboard.writeText(name));
+    list.appendChild(tag);
+  });
+}
+
+document.getElementById('btn-generate').addEventListener('click', generate);
+document.getElementById('btn-regen').addEventListener('click', generate);
+document.getElementById('btn-copy-all').addEventListener('click', () => {
+  const names = [...document.querySelectorAll('.name-pill')].map(el => el.firstChild.textContent.trim()).join('\n');
+  navigator.clipboard.writeText(names).then(() => {
+    const btn = document.getElementById('btn-copy-all');
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy all names', 1500);
+  });
+});
+document.getElementById('btn-clear').addEventListener('click', () => { history = []; renderHistory(); });
+
+generate();
+</script>

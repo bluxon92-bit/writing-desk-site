@@ -1,0 +1,1295 @@
+# Writing Desk Help Centre — content source
+# Every help page (landing + category pages + search index) pulls from this file.
+# To edit an answer: find it below and edit the `a:` field. To add a question,
+# copy an existing block under the right category and give it a unique `id`.
+# `id` is used as the anchor (#id) and must be unique across the whole file.
+
+categories:
+  - slug: getting-started
+    name: Getting Started
+    description: What Writing Desk is, what platforms it runs on, and the basics of how it works.
+    icon: door
+    videos:
+      - slug: writing-tools
+        embed_url: https://embed.app.guidde.com/playbooks/jZyYR95wAgP8PJrLaF6Xhb?mode=videoOnly
+        title: "Exploring Focus Mode and Writing Tools in Writing Desk"
+        transcript: |-
+          0:00 Writing Desk can help you enhance your writing with features like The Pad, Chapter Variants, connected resources, and Prose Analysis.
+          0:08 Writing Desk has three main sections. The first, which is what it's all about, is the editor.
+          0:17 Click Focus Mode to dismiss sidebars and distractions and get down to the business of writing.
+          0:22 The Pad, on the left, is where all your chapter and scene notes live alongside your manuscript for quick reference, organised by chapter.
+          0:35 Quickly navigate through your chapters, and from here you can also create new Chapter Variants, so you can experiment with ideas freely without ever losing your work.
+          0:46 Bottom left, above the word counter, you have your connected resources. Add structured character sheets, locations, lore, magic, relationships, and more, and attach images for quick reference.
+          1:01 You also have Story Plotter on the left, which we'll visit in a separate video.
+          1:05 Over on the right, you have the analysis tools: Proofreader, Editor, and Prose Analysis.
+          1:12 The Proofreader gives you grammar and style tips, highlighting things like filter words, weak intensifiers, overuse of adverbs, and repetition.
+          1:24 Writing Desk is designed to bring your words front and centre, so you can get down to the business of writing.
+          1:30 Download the app for free today.
+        guide:
+          title: "Focus Mode and Writing Tools: A Step-by-Step Guide"
+          intro: >-
+            A tour of the writing environment itself: the editor, The Pad,
+            Chapter Variants, connected resources, and the analysis tools
+            sitting right alongside your manuscript.
+          steps:
+            - heading: Open the editor
+              text: >-
+                Your manuscript is front and centre. Click Focus Mode to
+                dismiss sidebars and distractions and get down to writing.
+              image_alt: The editor in Focus Mode with sidebars hidden
+            - heading: Use The Pad
+              text: >-
+                The Pad, on the left, holds your chapter and scene notes
+                alongside your manuscript, organised by chapter.
+              image_alt: The Pad open beside the manuscript
+            - heading: Navigate your chapters
+              text: >-
+                Quickly move between chapters from the left-hand sidebar.
+              image_alt: The chapter navigation list in the sidebar
+            - heading: Create a Chapter Variant
+              text: >-
+                Create a new Chapter Variant to experiment with ideas
+                freely, without ever losing your original work.
+              image_alt: Creating a new Chapter Variant
+            - heading: Connect your resources
+              text: >-
+                Bottom left, above the word counter, add structured
+                character sheets, locations, lore, magic, and
+                relationships, with images attached for quick reference.
+              image_alt: The connected resources panel with a character sheet
+            - heading: Open Story Plotter
+              text: >-
+                Story Plotter also lives on the left, for planning your
+                story's structure.
+              image_alt: The Story Plotter link in the left-hand sidebar
+            - heading: Run the analysis tools
+              text: >-
+                On the right, Proofreader, AI Editor, and Prose Analysis
+                give you grammar, style, and structural feedback, including
+                filter words, weak intensifiers, overused adverbs, and
+                repetition.
+              image_alt: The analysis tools panel on the right
+    questions:
+      - id: what-is-writing-desk
+        q: >-
+          What is Writing Desk?
+        a: >-
+          Writing Desk is a desktop writing app for creative writers. It brings
+          together story planning, distraction-free drafting, editorial review,
+          and manuscript typesetting in one place, so you can go from a blank
+          page to a submission-ready manuscript without leaving the app.
+
+      - id: who-is-it-for
+        q: >-
+          Who is Writing Desk for?
+        a: >-
+          Writers at any stage. Whether you want a distraction-free space to
+          get a first draft down, or you're polishing a finished manuscript
+          ahead of publishing, Writing Desk is built around your process.
+
+      - id: platforms
+        q: >-
+          What platforms does Writing Desk run on?
+        a: >-
+          The writing, planning, and editing tools currently run on macOS
+          only. The typesetting and formatting tools are available separately
+          through the online Formatter, which works in any browser.
+
+      - id: windows-version
+        q: >-
+          Is a Windows version coming?
+        a: >-
+          It's on the roadmap, but there's no launch date yet.
+
+      - id: internet-required
+        q: >-
+          Do I need an internet connection to use Writing Desk?
+        a: >-
+          No, you can write fully offline. A few features need a connection:
+          the Research Assistant, AI editorial review, and the online
+          Formatter.
+
+      - id: first-launch
+        q: >-
+          What do I see when I first open Writing Desk?
+        a: >-
+          Three options: open an existing project, create a new file, or
+          open a file already on your device. If this is your first time,
+          Create a New File or setting up a project is the place to start.
+
+      - id: quick-start-project
+        q: >-
+          What's the quickest way to get started with my first project?
+        a: >-
+          Select Projects, then Create New Project. Choose novel, short
+          story, or poetry, add a title and target word count, then click
+          Create. Writing Desk sets up a folder for your manuscript and
+          takes you straight into the editor.
+        link: /help/projects-organization/
+        link_text: More on creating and organizing projects
+
+      - id: open-existing-manuscript
+        q: >-
+          How do I open a manuscript I've already started?
+        a: >-
+          From the start screen, select Projects to see your existing
+          projects, or Open a File to browse for a manuscript on your
+          device. Opening a project takes you straight into the editor,
+          with your manuscript front and centre.
+
+      - id: editor-tour
+        q: >-
+          What am I looking at once I'm in the editor?
+        a: >-
+          Your manuscript sits front and centre. The left-hand sidebar
+          connects your resources, lets you navigate chapters, and holds
+          The Pad for chapter notes, Story Plotter lives there too. Top
+          right shows your Writing Tracker. Analysis opens the editorial
+          tools, and the hamburger menu, top left, has your export options.
+
+      - id: start-writing-first-chapter
+        q: >-
+          How do I start writing my first chapter?
+        a: >-
+          New chapters are created with an H2 heading, or the shortcut
+          Cmd+Opt+2. Just start typing, Writing Desk autosaves as you go.
+
+      - id: plan-before-write
+        q: >-
+          Should I plan with Story Plotter before I start writing, or just
+          start writing?
+        a: >-
+          Whichever suits you. Story Plotter is there if you want to map
+          chapters and threads first, but nothing stops you from opening a
+          blank page and writing straight away. Add structure whenever it's
+          useful, not because you have to.
+
+      - id: distraction-free-start
+        q: >-
+          How do I get straight into a distraction-free writing session?
+        a: >-
+          Hit Focus Mode to hide the sidebars and get down to writing
+          immediately. One click to enter, Esc to exit.
+
+  - slug: projects-organization
+    name: Projects, Notes & Organization
+    description: Setting up projects, organizing files, and where things live on your Mac.
+    icon: folder
+    videos:
+      - slug: projects
+        embed_url: https://embed.app.guidde.com/playbooks/w8RGckjjS8iXfBPeWDKeF6?mode=videoOnly
+        title: "Creating and Managing Projects with the Writing Desk App"
+        transcript: |-
+          0:00 This video outlines how to create, open, and manage projects within Writing Desk, and gives you a tour of the core features.
+          0:08 When you open the app, you have three options: open a project, create a new file, or open a file from your device.
+          0:19 Select Projects to see your existing projects, or create a new project if you're starting from scratch.
+          0:27 Select the type of project: novel, short story, or poetry.
+          0:34 Add your novel title and target word count, then click Create. Writing Desk creates a folder structure alongside your manuscript.
+          0:43 If you select New File, you can create it as a new project, as a note, or add it to an existing project.
+          0:50 Notes are one-off documents not associated with a project.
+          0:53 Opening an existing project takes you straight into the editor.
+          0:58 Your manuscript is front and centre in Writing Desk.
+          1:02 The left-hand menu connects related resources, lets you navigate your manuscript chapters, and add chapter notes to The Pad.
+          1:15 Top right, you'll find the Writing Tracker, where you can track your progress, words written today, and your velocity.
+          1:23 Click Analysis to view the built-in editorial tools.
+          1:28 Click the hamburger menu, top left, to access export tools.
+          1:31 The toolbar has all the formatting tools you'd expect from a word processor.
+          1:37 You can even add comments and review them there.
+          1:42 Finally, hit Focus Mode to hide everything, so you can get down to the business of writing.
+          1:48 Start writing with Writing Desk today. Download the app for free.
+        guide:
+          title: "Creating and Managing Projects: A Step-by-Step Guide"
+          intro: >-
+            A quick tour of getting set up in Writing Desk, from creating your
+            first project through to the core features you'll use every time you
+            write.
+          steps:
+            - heading: Open Writing Desk
+              text: >-
+                When you open the app, choose Open a Project, Create a New File,
+                or Open a File from your device.
+              image_alt: The Writing Desk start screen with three opening options
+            - heading: Create a new project
+              text: >-
+                Select Projects, then Create New Project. Choose your project
+                type, novel, short story, or poetry, add a title and target word
+                count, then click Create. Writing Desk sets up a folder structure
+                alongside your manuscript.
+              image_alt: Creating a new novel project with a title and word count target
+            - heading: Start from a new file
+              text: >-
+                Select New File to create it as a new project, as a note, or to
+                add it to an existing project. Notes are one-off documents not
+                tied to any project.
+              image_alt: Choosing what a new file becomes, a project, a note, or an addition
+            - heading: Open your manuscript
+              text: >-
+                Opening an existing project takes you straight into the editor,
+                with your manuscript front and centre.
+              image_alt: The Writing Desk editor with a manuscript open
+            - heading: Use the left-hand menu
+              text: >-
+                Connect related resources, navigate your manuscript's chapters,
+                and add chapter notes to The Pad, all from the left-hand sidebar.
+              image_alt: The left-hand sidebar with resources and chapter navigation
+            - heading: Track your progress
+              text: >-
+                Top right, the Writing Tracker shows your progress, words written
+                today, and your writing velocity.
+              image_alt: The Writing Tracker summary in the top-right corner
+            - heading: Run an editorial review
+              text: >-
+                Click Analysis to open Writing Desk's built-in editorial tools.
+              image_alt: The Analysis menu with editorial tools listed
+            - heading: Export your manuscript
+              text: >-
+                Click the hamburger menu, top left, to access export tools.
+              image_alt: The hamburger menu with export options
+            - heading: Format and comment
+              text: >-
+                The toolbar has the formatting tools you'd expect from a word
+                processor, and you can add and review comments directly in the
+                manuscript.
+              image_alt: The formatting toolbar and a comment on the manuscript
+            - heading: Enter Focus Mode
+              text: >-
+                Hit Focus Mode to hide everything else, so you can get down to
+                writing.
+              image_alt: Focus Mode with all side panels hidden
+    questions:
+      - id: start-new-project
+        q: >-
+          How do I start a new project?
+        a: >-
+          There are two ways to get going, depending on where your manuscript
+          already lives.
+
+          Starting fresh:
+
+          1. Click Projects, then Create New Project.
+
+          2. Give your project a name. Writing Desk sets up a folder for it
+          on your device.
+
+          Bringing in an existing manuscript:
+
+          1. Save your manuscript as a .docx file if it isn't already.
+
+          2. Click Projects, then + Existing Project.
+
+          3. Select your .docx file to link it as a project.
+
+          Either way, we recommend keeping each project in its own folder on
+          your device, so all its related files stay organized together.
+
+      - id: project-types
+        q: >-
+          What's the difference between project types (Novel, Short Story,
+          Poem, etc.)?
+        a: >-
+          Project types are labels only. They help you organize and identify
+          your work, but they don't change how the app behaves, whatever type
+          you choose, you get the same full set of features.
+
+      - id: project-vs-note
+        q: >-
+          What's the difference between a project and a Note (unlinked file)?
+        a: >-
+          A Note is a simple one-off file that isn't linked to a project.
+          It's a good fit for story ideas, quick notes, or anything you don't
+          need a full project folder for.
+
+      - id: multiple-documents
+        q: >-
+          Can I add more than one document to a single project?
+        a: >-
+          Yes. If you're working on a poetry or short story collection, you
+          can link multiple files together within the same project.
+
+      - id: where-files-stored
+        q: >-
+          Where are my files actually stored?
+        a: >-
+          On your own machine. Writing Desk saves a .docx file plus a
+          .wdjson sidecar file alongside it in your project folder.
+
+      - id: move-project-files
+        q: >-
+          Can I move my project files to a different folder or computer?
+        a: >-
+          Moving your files out of their original folder breaks the link
+          the app uses to find them. If that happens, just click Open
+          Existing File and select your manuscript from its new location to
+          reconnect it.
+
+      - id: reference-folder
+        q: >-
+          What is the Reference Folder?
+        a: >-
+          A single folder for all your story-related notes, screenshots,
+          images, and PDFs. Link it from the Resource section and you'll
+          have quick access to everything in it from the writing zone.
+
+      - id: the-pad
+        q: >-
+          What is The Pad?
+        a: >-
+          A collapsible notes panel that sits alongside your manuscript,
+          scoped to the chapter you're working on. You can import your Story
+          Plotter notes for the current chapter into it with one click, and
+          use it for quick ideas or chapter thoughts as you write.
+
+      - id: pad-sync
+        q: >-
+          Does The Pad sync with Story Plotter automatically?
+        a: >-
+          Import runs one way, from Story Plotter into The Pad, and it's
+          manual rather than automatic. This keeps your content from
+          duplicating across the two.
+
+      - id: resource-centre
+        q: >-
+          What is the Resource Centre?
+        a: >-
+          A place to build out characters, locations, and other worldbuilding
+          material, with support for images and galleries on character and
+          location entries.
+
+      - id: resource-centre-ai
+        q: >-
+          Are my Resource Centre notes sent to the AI?
+        a: >-
+          Only fields you've explicitly marked as shareable with AI are ever
+          included in an AI request. Anything marked private is never
+          transmitted, no matter which AI feature you use.
+
+      - id: import-manuscript
+        q: >-
+          Can I import a manuscript from Word or Google Docs?
+        a: >-
+          Yes. Save your file as a .docx from Word or Google Docs, then open
+          it with Writing Desk.
+
+      - id: heading-style-import
+        q: >-
+          What happens if my manuscript uses a different chapter-heading
+          style than Writing Desk expects?
+        a: >-
+          Writing Desk will import most standard formatting from your file,
+          but unusual or non-standard heading styles may not carry across
+          perfectly. It's worth checking your chapter breaks after import.
+
+  - slug: writing-editing
+    name: Writing & Editing
+    description: The editor itself, formatting, autosave, version history, and export.
+    icon: pencil
+    videos:
+      - slug: editor-tools
+        embed_url: https://embed.app.guidde.com/playbooks/3dBHrJRP7ayykMqNhWsS55?mode=videoOnly
+        title: "Editing Your Manuscript with Writing Desk"
+        transcript: |-
+          0:00 Writing Desk's comprehensive editorial tools are designed to help you refine and improve your manuscript. Here's how.
+          0:06 First, there's the Proofreader, which provides spelling, grammar, and style suggestions, including filter words, weak intensifiers, weak adverbs, and repetition.
+          0:20 The Analysis dropdown offers additional editorial tools to help you examine your writing style and structure.
+          0:27 Open Prose Analysis to review sentence length, passive voice, where you might be telling versus showing, and repeated sentence openings, so you can polish and improve the impact of your writing.
+          0:44 Finally, there's the AI Editor. This runs an AI editorial review across four lenses, highlighting the chapter's strengths and potential areas for improvement.
+          0:55 For example, here it says the tension drops in the middle of the first chapter, creating an uneven emotional arc.
+          1:02 The AI editorial review should never replace human feedback, but it's a good way to get quick insights so you can hone your writing as you go.
+          1:12 Additional editorial features include Chapter Variants. A variant creates a second copy of the chapter you can edit side by side, so you can edit boldly without losing the original, for example to try a different point of view.
+          1:28 Right-click to rename a variant or promote a variant to active status.
+          1:33 There's also full Version History. Click the hamburger menu, go to Version History, and open it to see the last 10 versions of your document, created automatically and periodically as you edit.
+          1:47 The final editing tool is Finish Draft. Clicking it creates a draft snapshot saved alongside your manuscript, so you can keep editing knowing your initial draft is saved and reviewable if you ever want to revert.
+          2:08 Writing Desk's editorial tools are designed to help you make your manuscript the best it can be, without getting in the way.
+          2:15 Download Writing Desk today to take them for a spin.
+        guide:
+          title: "Editing Your Manuscript: A Step-by-Step Guide"
+          intro: >-
+            Three layers of feedback, plus the safety net to edit boldly:
+            here's how to use Writing Desk's editorial tools together.
+          steps:
+            - heading: Check spelling and grammar
+              text: >-
+                Open Proofreader for spelling, grammar, and style
+                suggestions, including filter words, weak intensifiers, weak
+                adverbs, and repetition.
+              image_alt: Proofreader suggestions highlighted inline
+            - heading: Open Prose Analysis
+              text: >-
+                From the Analysis dropdown, open Prose Analysis to review
+                sentence length, passive voice, telling versus showing, and
+                repeated sentence openings.
+              image_alt: The Prose Analysis panel with style metrics
+            - heading: Run an AI Editor review
+              text: >-
+                Open the AI Editor to run a review across four editorial
+                lenses, highlighting a chapter's strengths and potential
+                areas for improvement.
+              image_alt: The AI Editor review panel
+            - heading: Read the feedback
+              text: >-
+                AI Editorial feedback is a good way to get quick insights and
+                hone your writing as you go, but it should never replace
+                human feedback.
+              image_alt: AI Editor feedback on an uneven emotional arc
+            - heading: Create a Chapter Variant
+              text: >-
+                Create a Chapter Variant to edit a second copy of a chapter
+                side by side with the original, for example to try a
+                different point of view.
+              image_alt: A Chapter Variant open side by side with the original
+            - heading: Manage variants
+              text: >-
+                Right-click a variant to rename it or promote it to active
+                status.
+              image_alt: The right-click menu on a Chapter Variant
+            - heading: Open Version History
+              text: >-
+                Click the hamburger menu, then Version History, to see the
+                last 10 versions of your document, saved automatically as
+                you edit.
+              image_alt: Version History listing the last 10 saved versions
+            - heading: Use Finish Draft
+              text: >-
+                Click Finish Draft to save a snapshot of your manuscript
+                alongside your current file, so you can keep editing knowing
+                you can always go back.
+              image_alt: The Finish Draft confirmation
+    questions:
+      - id: formatting-options
+        q: >-
+          What formatting options are available in the editor?
+        a: >-
+          Headings, bold, italic, underline, strikethrough, highlight,
+          alignment, first-line indent, bullet and numbered lists, links,
+          tables, blockquotes, line spacing, and adjustable font size.
+
+      - id: new-chapter
+        q: >-
+          How do I create a new chapter?
+        a: >-
+          New chapters are defined by H2 headings. Insert an H2 directly, or
+          select some text and use Cmd+Opt+2.
+
+      - id: autosave
+        q: >-
+          Does Writing Desk autosave?
+        a: >-
+          Yes, Writing Desk autosaves your work every few seconds, and saves
+          a new version at the end of each session that you can find in
+          Version History.
+
+      - id: version-history
+        q: >-
+          Can I see the version history of my manuscript?
+        a: >-
+          Yes. Open Settings, click Version History, then select any dated
+          version from the list to open it.
+
+      - id: finish-draft
+        q: >-
+          What does "Finish Draft" do?
+        a: >-
+          It saves a copy of your manuscript exactly as it is right now into
+          your drafts folder, alongside your current file. That means you
+          can keep editing the current version freely, knowing you can always
+          revert to that snapshot if you need to.
+
+      - id: chapter-iterations
+        q: >-
+          What are "chapter variations"?
+        a: >-
+          Chapter Iterations let you create alternate versions of a chapter
+          while keeping the original fully intact, and switch between them
+          whenever you like. Edit boldly, without ever losing anything.
+
+      - id: find-replace
+        q: >-
+          Does Writing Desk support Find & Replace?
+        a: >-
+          Yes, and you can scope it to the current chapter or the whole
+          manuscript.
+
+      - id: focus-mode
+        q: >-
+          What is Focus Mode?
+        a: >-
+          A distraction-free writing view that hides all side panels. Press
+          Esc to exit.
+
+      - id: font-text-size
+        q: >-
+          Can I change the writing font or text size?
+        a: >-
+          Text size is adjustable from the toolbar.
+
+      - id: dark-mode
+        q: >-
+          Does Writing Desk support dark mode?
+        a: >-
+          Not yet. It's on the roadmap, but there's no launch date yet.
+
+      - id: insert-images
+        q: >-
+          Can I insert images into my manuscript?
+        a: >-
+          Not into the manuscript text itself. You can open image files as
+          reference tabs while you write, and add them to character and
+          location entries in the Resource Centre.
+
+      - id: export-vs-submission-vs-print
+        q: >-
+          What's the difference between "Export," "Submission Export," and
+          "Print / Save as PDF"?
+        a: >-
+          Export saves a copy of your manuscript in a new file format.
+          Submission Export formats it to Shunn guidelines for submitting to
+          agents. Print / Save as PDF uses your Mac's print dialogue to
+          print or save a PDF of your manuscript.
+
+  - slug: story-plotter
+    name: Story Plotter
+    description: Planning and structuring your story across Doc, Board, and Timeline views.
+    icon: map
+    videos:
+      - slug: plotter
+        embed_url: https://embed.app.guidde.com/playbooks/51ZYBXJLtkpdvahUpHKJrD?mode=videoOnly
+        title: "Organize and Map Your Novel Using Writing Desk's Story Plotter"
+        transcript: |-
+          0:00 Use Writing Desk's Story Plotter to organize and map your novel's chapters and narrative threads.
+          0:05 To get started, open your manuscript, then expand the left-hand sidebar and click Story Plotter at the bottom.
+          0:13 Here you can add chapter summaries and scene-by-scene breakdowns for each of your chapters, with as little or as much detail and structure as you like.
+          0:22 Match the chapter title in Story Plotter to the title in your manuscript to import chapter notes into your Pad for each chapter with a click, so your chapter notes are always there when you need them, but never in the way.
+          0:37 The Pad is a free-form area where you can brain dump without structure.
+          0:41 There are two additional views. First, the Board view.
+          0:46 Here you can map chapters and scenes against any of 11 different story structures.
+          0:51 If we click Save the Cat, you'll see it lays out the Save the Cat story beats broken out across three acts.
+          0:59 Drag and drop chapters and scenes as needed until you're happy with your story's pacing.
+          1:07 The final view is the Timeline, where you can track all the narrative threads for your story.
+          1:15 Click to expand the chapter summary and add each thread you want to track below it, whether that's a relationship, the main plot, or a plant-and-payoff moment.
+          1:27 It highlights open threads so you can see whether they've been fully developed and resolved, or left half-baked and dangling.
+          1:34 Click an empty space to add a new thread card with a title, description, and tag, so you can track multiple threads and complex plotlines with ease.
+          1:46 Add as many or as few cards as you need.
+          1:49 Give your novel as much or as little structure as you like, and keep everything in one place with Writing Desk's Story Plotter.
+        guide:
+          title: "How to Use Story Plotter: A Step-by-Step Guide"
+          intro: >-
+            Story Plotter has three linked views, Doc, Board, and Timeline, for
+            planning and structuring your novel. Here's how to get started with
+            each one.
+          steps:
+            - heading: Open Story Plotter
+              text: >-
+                Open your manuscript, then expand the left-hand sidebar and click
+                Story Plotter at the bottom.
+              image_alt: The Story Plotter link in the left-hand sidebar
+            - heading: Add your chapter summaries
+              text: >-
+                In the Doc view, add chapter summaries and scene-by-scene
+                breakdowns for each of your chapters, with as little or as much
+                detail and structure as you like.
+              image_alt: A chapter summary and scene breakdown in the Doc view
+            - heading: Import notes into The Pad
+              text: >-
+                Match the chapter title in Story Plotter to the title in your
+                manuscript, then import chapter notes into The Pad for that
+                chapter with a click. Your chapter notes stay close at hand when
+                you're writing, but out of the way when you're not.
+              image_alt: Importing a chapter's Story Plotter notes into The Pad
+            - heading: Switch to the Board view
+              text: >-
+                Open the Board view to map chapters and scenes against any of 11
+                built-in story structures.
+              image_alt: The Board view with a story structure template applied
+            - heading: Apply a structure template
+              text: >-
+                Select a template, for example Save the Cat, and Story Plotter
+                lays out its story beats across three acts.
+              image_alt: Save the Cat story beats broken out across three acts
+            - heading: Arrange your pacing
+              text: >-
+                Drag and drop chapters and scenes on the Board until you're happy
+                with your story's pacing.
+              image_alt: Dragging a scene card between acts on the Board
+            - heading: Switch to the Timeline view
+              text: >-
+                Open the Timeline view to track every narrative thread running
+                through your story.
+              image_alt: The Timeline view showing chapters and threads
+            - heading: Track a thread
+              text: >-
+                Click to expand a chapter summary and add each thread you want to
+                track below it, whether that's a relationship, the main plot, or
+                a plant-and-payoff moment.
+              image_alt: Adding a narrative thread beneath a chapter summary
+            - heading: Spot dangling threads
+              text: >-
+                Open threads are highlighted, so you can see at a glance whether
+                they've been fully developed and resolved, or left half-baked and
+                dangling.
+              image_alt: A highlighted open thread on the Timeline
+            - heading: Add a new thread card
+              text: >-
+                Click an empty space to add a new thread card with a title,
+                description, and tag, so you can track multiple threads and
+                complex plotlines with ease.
+              image_alt: Creating a new thread card with a title and tag
+    questions:
+      - id: what-is-story-plotter
+        q: >-
+          What is Story Plotter?
+        a: >-
+          A structural planning tool with three linked views: a document
+          outline view, a visual Board view, and a causality-focused Timeline
+          view.
+
+      - id: board-vs-timeline
+        q: >-
+          What's the difference between the Board and Timeline views?
+        a: >-
+          The Board organizes chapters into acts and structure using
+          story-structure templates. The Timeline tracks narrative threads
+          across chapters as a causality audit tool, it never generates
+          content, only visualizes what you've already written.
+
+      - id: structure-templates
+        q: >-
+          How many structure templates are available?
+        a: >-
+          11 built-in structure templates, plus an option to auto-assign
+          your chapters to a 3-act structure.
+
+      - id: plotter-generate-plot
+        q: >-
+          Can Story Plotter write or generate plot points for me?
+        a: >-
+          No. The Timeline in particular is explicitly a causality audit
+          tool, not a generative one. It never creates or suggests plot
+          content.
+
+      - id: chapter-deleted-threads
+        q: >-
+          What happens to my Story Plotter threads if I delete a chapter?
+        a: >-
+          Cards on a deleted chapter automatically shift to the nearest
+          surviving chapter, and you'll see a dismissible notice so you know
+          it happened.
+
+      - id: timeline-create-delete-chapters
+        q: >-
+          Can I create or delete chapters from the Timeline view?
+        a: >-
+          No. Timeline can only reorganize and visualize existing chapters.
+          Creating or deleting chapters happens in the Doc or Board views.
+
+      - id: seed-develop-complication-payoff
+        q: >-
+          What do the Seed / Develop / Complication / Payoff tags mean?
+        a: >-
+          They track the life of a narrative thread, whether it's a
+          relationship, a piece of foreshadowing, or a red herring, from
+          when it's first planted, through development, complication, and
+          resolution. Tracking these on the Timeline helps make sure nothing
+          gets left dangling, however complicated your plot gets.
+
+  - slug: export-formatter
+    name: Export & The Formatter
+    description: Exporting your manuscript and typesetting it into a finished book with the Formatter.
+    icon: book
+    videos:
+      - slug: exporting
+        embed_url: https://embed.app.guidde.com/playbooks/nB8gW9FMPp37wKhM4NouzM?mode=videoOnly
+        title: "Exporting and Formatting Manuscripts with Writing Desk"
+        transcript: |-
+          0:00 With Writing Desk you can export your manuscript in multiple formats, ready for agent submissions or for self-publishing.
+          0:07 What do you do when you finish your manuscript? Writing Desk gives you a few different options.
+          0:14 The first is exporting as one of these formats: .docx, .md, .txt, or PDF.
+          0:24 If you download as a PDF, it uses the print dialogue, and you save that to your device.
+          0:31 You can also use the agent-ready Submission Export. Add your name and contact details, the manuscript title, and total word count.
+          0:45 Then choose the font, page size, and how many chapters or total word count, and click Export as .docx.
+          0:52 This uses standardised formatting, so your document is ready for submission in moments.
+          1:03 Finally, there's a professional typesetting and formatting feature.
+          1:08 Click Typeset and this opens the Formatter in your browser, automatically uploading your manuscript.
+          1:15 Here you can design and format your novel for print and EPUB.
+          1:21 Set the front and back matter details, then use the designer to select the font, heading size, and more.
+          1:26 When you're ready, click Export, and your EPUB and print-ready PDF download to your device.
+          1:33 And that's how to export, typeset, and prepare your manuscript for print and agent submissions with Writing Desk.
+        guide:
+          title: "Exporting and Formatting Manuscripts: A Step-by-Step Guide"
+          intro: >-
+            Writing Desk gives you three ways to get a finished manuscript out
+            into the world: a quick export, an agent-ready submission format, or
+            a fully typeset book through the Formatter. Here's how to use each
+            one.
+          steps:
+            - heading: Choose your export format
+              text: >-
+                From the Export menu, choose .docx, Markdown, plain text, or PDF.
+              image_alt: The Export menu with format options
+            - heading: Save a PDF
+              text: >-
+                PDF export uses your Mac's print dialogue. Choose Save as PDF and
+                pick where to save it on your device.
+              image_alt: The print dialogue saving a manuscript as PDF
+            - heading: Open Submission Export
+              text: >-
+                For agent submissions, open Submission Export and add your name,
+                contact details, manuscript title, and total word count.
+              image_alt: The Submission Export form with author and manuscript details
+            - heading: Set your formatting options
+              text: >-
+                Choose your font, page size, and whether to show chapters by
+                number or total word count.
+              image_alt: Submission Export formatting options
+            - heading: Export as .docx
+              text: >-
+                Click Export as .docx. Writing Desk applies standardised Shunn
+                manuscript formatting automatically, ready to submit.
+              image_alt: A completed Shunn-formatted manuscript export
+            - heading: Open the Formatter
+              text: >-
+                For a fully typeset book, click Typeset. This opens the Formatter
+                in your browser and uploads your manuscript automatically.
+              image_alt: Launching the Formatter from Writing Desk
+            - heading: Design your book
+              text: >-
+                In the Formatter, set your front and back matter details, then
+                use the designer to choose font, heading size, and more.
+              image_alt: The Formatter design screen with live page preview
+            - heading: Export EPUB and PDF
+              text: >-
+                When you're happy with the design, click Export. Your EPUB and
+                print-ready PDF download to your device, ready to publish.
+              image_alt: The Formatter export screen with EPUB and PDF ready to download
+    questions:
+      - id: export-formats
+        q: >-
+          What file formats can I export to?
+        a: >-
+          From the desktop app: .docx, Markdown, plain text, and a
+          submission-standard manuscript format. From the Formatter: EPUB
+          and print-ready PDF.
+
+      - id: what-is-formatter
+        q: >-
+          What is the Formatter?
+        a: >-
+          A companion web app for professional book typesetting. It turns
+          your manuscript into a properly designed, print- and e-book-ready
+          file, with a range of customizable design options.
+
+      - id: formatter-separate-account
+        q: >-
+          Do I need a separate account for the Formatter?
+        a: >-
+          No, use the same login for both the desktop app and the Formatter.
+
+      - id: edit-in-formatter
+        q: >-
+          Can I edit my chapter text inside the Formatter?
+        a: >-
+          No, chapter body text is read-only in the Formatter by design. Fix
+          typos back in Writing Desk, then re-upload to the Formatter.
+
+      - id: why-read-only
+        q: >-
+          Why is chapter text read-only in the Formatter?
+        a: >-
+          To keep one source of truth for your manuscript. Writing Desk is
+          where your text lives and gets edited; the Formatter is where it
+          gets designed and typeset.
+
+      - id: trim-size
+        q: >-
+          What trim size does the Formatter use?
+        a: >-
+          A fixed 5x8 inch trim size.
+
+      - id: epub-pdf-separate
+        q: >-
+          Can I export just an EPUB without a PDF, or vice versa?
+        a: >-
+          Yes, EPUB and PDF export together as a bundle, or you can export
+          either one individually.
+
+      - id: ready-for-kdp
+        q: >-
+          Is my exported book ready to submit to a print-on-demand service
+          like Amazon KDP or IngramSpark?
+        a: >-
+          Yes. Once it's typeset and formatted, you can upload your PDF and
+          EPUB files to most major self-publishing platforms.
+
+      - id: beta-readers-formatter
+        q: >-
+          Can beta readers see my manuscript through the Formatter?
+        a: >-
+          Not yet. A beta reader and feedback feature is planned, but there's
+          no launch date yet.
+
+  - slug: editorial-ai
+    name: Editorial AI Suite
+    description: Proofreader, Chapter Review, Prose Analysis, Manuscript Review, and the AI Editor chat.
+    icon: sparkle
+    videos:
+      - slug: ai-editor
+        embed_url: https://embed.app.guidde.com/playbooks/1MiQDiGePjK6VFU7jec5w2?mode=videoOnly
+        title: "Exploring AI Editorial Review Features in Writing Desk"
+        transcript: |-
+          0:00 Writing Desk's AI Editorial Review gives you fast, structured feedback on a chapter-by-chapter basis.
+          0:06 Along with the Research Assistant, Writing Desk uses AI for fast editorial feedback when you need it.
+          0:13 Select Analysis and click Editor.
+          0:19 Select Analyse, and the review panel analyses your prose across four editorial lenses, looking for strengths and areas for improvement.
+          0:29 Here, the protagonist is too passive. We need to think about how to make him more active.
+          0:35 Writing Desk doesn't rewrite your prose or tell you how to fix it. It highlights areas you might want to focus on.
+          0:43 You can ask follow-up questions in the chat to dig deeper into the feedback.
+          0:49 The core issue here is the protagonist spends most of the chapter reacting to external events.
+          0:56 It's important to recognise that Writing Desk's AI feedback will never replace human feedback.
+          1:02 But it's a good way to get quick editorial notes, so you can polish your writing as you go.
+          1:09 Download Writing Desk today to try the AI Editorial feature.
+        guide:
+          title: "Using AI Editorial Review: A Step-by-Step Guide"
+          intro: >-
+            The AI Editor gives you fast, structured feedback on a chapter, across
+            four editorial lenses, without ever rewriting your prose for you.
+            Here's how to run a review and get the most out of it.
+          steps:
+            - heading: Open the Editor
+              text: >-
+                Select Analysis, then click Editor.
+              image_alt: The Analysis menu with Editor selected
+            - heading: Run the review
+              text: >-
+                Click Analyse. The review panel checks your chapter across four
+                editorial lenses and surfaces strengths and areas to improve.
+              image_alt: The AI Editor review panel analysing a chapter
+            - heading: Read the feedback
+              text: >-
+                Feedback highlights specific areas to focus on, for example a
+                protagonist who's too passive, without rewriting your prose or
+                telling you exactly how to fix it.
+              image_alt: AI Editor feedback highlighting a passive protagonist
+            - heading: Dig deeper in the chat
+              text: >-
+                Ask follow-up questions in the chat to understand any point the
+                review raises in more detail.
+              image_alt: A follow-up question in the AI Editor chat
+            - heading: Use it as a starting point
+              text: >-
+                Treat the feedback as quick editorial notes to polish your
+                writing as you go, not a replacement for a human editor.
+              image_alt: The AI Editor chat with a follow-up exchange
+      - slug: research-assistant
+        embed_url: https://embed.app.guidde.com/playbooks/cw5FQ5vxQBoEtGzeAxsCLw?mode=videoOnly
+        title: "Stay Focused with Writing Desk's Research Assistant"
+        transcript: |-
+          0:00 Writing Desk's Research Assistant helps you avoid distractions by providing quick, accurate research responses in the app.
+          0:07 Avoid rabbit holes with the Research Assistant. Click the small search icon, bottom left.
+          0:12 Ask anything and get a quick response based on your question in moments.
+          0:22 If you want more information, click Go Deeper.
+          0:26 Going deeper runs a full web search and pulls out a researched, sourced answer for your question.
+          0:32 Stay focused with Writing Desk's Research Assistant.
+        guide:
+          title: "Using the Research Assistant: A Step-by-Step Guide"
+          intro: >-
+            Quick, sourced answers without leaving your manuscript or falling
+            down a research rabbit hole.
+          steps:
+            - heading: Open the Research Assistant
+              text: >-
+                Click the small search icon, bottom left.
+              image_alt: The Research Assistant search icon in the editor
+            - heading: Ask your question
+              text: >-
+                Ask anything and get a quick response in moments.
+              image_alt: A quick response in the Research Assistant panel
+            - heading: Go deeper if you need more
+              text: >-
+                Click Go Deeper to run a full web search and pull out a
+                researched, sourced answer.
+              image_alt: A sourced, in-depth answer after clicking Go Deeper
+            - heading: Get back to writing
+              text: >-
+                The Research Assistant answers your question without pulling
+                you out of the manuscript, so you can stay focused.
+              image_alt: Returning to the manuscript after a Research Assistant query
+    questions:
+      - id: editorial-ai-tools
+        q: >-
+          What editorial AI tools does Writing Desk offer?
+        a: >-
+          Four options from the Analysis menu: Proofreader for spelling and
+          grammar, Editor for AI Chapter Review, Prose for client-side prose
+          analysis, and Manuscript for full-novel review.
+
+      - id: proofreader-vs-prose-analysis
+        q: >-
+          What's the difference between Proofreader and Prose Analysis?
+        a: >-
+          Proofreader handles spelling and grammar through LanguageTool, plus
+          a Style tab covering filter words, weak intensifiers, adverb
+          density, and repeated physical beats. Prose Analysis is a separate,
+          fully local tool covering sentence-length variety, passive voice,
+          telling versus showing, repeated openings, paragraph length,
+          dialogue percentage, and reading ease, with no AI involved and no
+          credit cost.
+
+      - id: prose-analysis-cost
+        q: >-
+          Does Prose Analysis use AI or cost credits?
+        a: >-
+          No, it's entirely local, pattern-based analysis. It's free and
+          instant.
+
+      - id: four-chapter-review-modes
+        q: >-
+          What are the four Chapter Review modes?
+        a: >-
+          Developmental, covering structure, pacing, arcs, and scene
+          purpose. Line Editor, covering repetition, crutch words, dialogue,
+          and clarity. Beta Reader, covering emotional response, engagement,
+          and confusion. And World Editor, covering lore consistency,
+          worldbuilding, and magic logic.
+
+      - id: chapter-review-charged-separately
+        q: >-
+          Do I get charged separately for each of the four Chapter Review
+          modes?
+        a: >-
+          No, all four run from a single combined request and a single
+          credit charge.
+
+      - id: chapter-review-cost
+        q: >-
+          How much does a Chapter Review cost?
+        a: >-
+          A typical 4,000-word chapter costs 4 credits, and it scales from
+          there with chapter length.
+        link: /pricing/
+        link_text: See full pricing
+
+      - id: cached-reviews
+        q: >-
+          Does Writing Desk remember my previous Chapter Review results?
+        a: >-
+          Yes. Results are cached per chapter and reused until you've edited
+          the chapter significantly, so you're not charged again just to
+          view the same analysis.
+
+      - id: significant-editing-threshold
+        q: >-
+          What counts as "significant" editing that invalidates a cached
+          review?
+        a: >-
+          Enough that the previous review no longer reflects your current
+          draft. Small tweaks won't trigger a new charge, but a meaningful
+          rewrite of the chapter will.
+
+      - id: ai-editor-chat
+        q: >-
+          What is the AI Editor chat?
+        a: >-
+          A conversational chat with the AI about your current chapter, with
+          context carried across the conversation as you go.
+
+      - id: ai-editor-chat-cost
+        q: >-
+          How much does an AI Editor chat message cost?
+        a: >-
+          1 credit per message.
+
+      - id: research-assistant
+        q: >-
+          What is the Research Assistant?
+        a: >-
+          An AI research tool for background and worldbuilding questions.
+          Your initial question is answered without a web search; it only
+          searches the web when you explicitly choose to "go deeper."
+
+      - id: manuscript-review
+        q: >-
+          What is Manuscript Review?
+        a: >-
+          A full-novel-level AI review that looks across your whole
+          manuscript rather than one chapter at a time, surfacing feedback on
+          things like character consistency, character motivation, and
+          broader developmental notes on structure and pacing. As with all of
+          Writing Desk's AI features, it's meant as fast, high-level guidance
+          to sit alongside your own judgment, not a replacement for human
+          feedback.
+
+      - id: trust-ai-suggestions
+        q: >-
+          Can I trust the AI's suggestions completely?
+        a: >-
+          No. AI models can sometimes get things wrong. Use your own
+          knowledge, judgment, and instincts alongside any AI editorial
+          feedback. It's meant as fast, high-level guidance, not a
+          replacement for human feedback.
+
+  - slug: writing-tracker
+    name: Writing Tracker
+    description: Tracking your sessions, pace, and progress toward your goals.
+    icon: bars
+    questions:
+      - id: what-tracker-measures
+        q: >-
+          What does the Writing Tracker measure?
+        a: >-
+          Session word counts and time spent, your writing velocity, your
+          most productive times of day, and your progress against daily and
+          manuscript-level goals.
+
+      - id: target-completion-date
+        q: >-
+          Can I set a target completion date for my manuscript?
+        a: >-
+          Yes. Set a word-count goal and a target date, and the tracker
+          calculates the pace you need to hit it.
+
+      - id: tracker-multiple-projects
+        q: >-
+          Does the Writing Tracker work across multiple projects?
+        a: >-
+          No, the tracker follows each project independently.
+
+  - slug: account
+    name: Account
+    description: Creating, managing, and deleting your Writing Desk account.
+    icon: user
+    questions:
+      - id: create-account
+        q: >-
+          How do I create an account?
+        a: >-
+          Download the app, then create an account with your email and
+          password. Once you're logged in, the app keeps you signed in on
+          that device. The same login also works on the Formatter web app.
+
+      - id: account-required
+        q: >-
+          Can I use Writing Desk without creating an account?
+        a: >-
+          No, an account is required.
+
+      - id: reset-password
+        q: >-
+          How do I reset my password?
+        a: >-
+          1. Open the hamburger menu and select Settings.
+
+          2. Click Reset Password.
+
+          3. Check your email and follow the link.
+
+          If you're logged out, you can start the same process from the
+          Reset Password link beneath the login form.
+
+      - id: multiple-macs
+        q: >-
+          Can I use Writing Desk on more than one Mac?
+        a: >-
+          Yes, there's no limit on the number of devices you can use Writing
+          Desk on.
+
+      - id: delete-account
+        q: >-
+          How do I delete my account?
+        a: >-
+          Go to Settings and select Delete Account. This erases your account
+          details and anything you've uploaded to the Formatter. It doesn't
+          touch any files on your own device.
+
+  - slug: pricing-billing
+    name: Pricing, Credits & Billing
+    description: Plans, credits, top-ups, and managing your subscription.
+    icon: card
+    questions:
+      - id: what-does-it-cost
+        q: >-
+          What does Writing Desk cost?
+        a: >-
+          There's a Free tier, plus Premium and Pro paid plans.
+        link: /pricing/
+        link_text: View full pricing
+
+      - id: free-tier
+        q: >-
+          What can I do on the Free tier?
+        a: >-
+          See the pricing page for exactly what's included.
+        link: /pricing/
+        link_text: View full pricing
+
+      - id: what-are-credits
+        q: >-
+          What are "credits" and what do they pay for?
+        a: >-
+          Credits are spent on AI-powered features: Chapter Review, AI Editor
+          chat messages, Research Assistant queries, and Manuscript Review.
+          Writing, formatting, Story Plotter, and Prose Analysis never cost
+          credits.
+
+      - id: credits-rollover
+        q: >-
+          Do unused credits roll over month to month?
+        a: >-
+          Top-up credits never expire. Credits included in your plan refresh
+          each month and don't carry over.
+
+      - id: buy-extra-credits
+        q: >-
+          Can I buy extra credits without upgrading my plan?
+        a: >-
+          Yes. Top-up packs are available: 120 credits for £5, 300 credits
+          for £10, or 600 credits for £20.
+
+      - id: topup-credits-cancel
+        q: >-
+          What happens to my top-up credits if I downgrade or cancel my
+          subscription?
+        a: >-
+          Top-up credits never expire, so they stay available either way.
+
+      - id: switch-premium-pro
+        q: >-
+          Can I switch between Premium and Pro at any time?
+        a: >-
+          Yes, upgrading and downgrading is quick and can be done from the
+          billing page in the app.
+
+      - id: cancel-subscription
+        q: >-
+          How do I cancel my subscription?
+        a: >-
+          1. Open the hamburger menu and select Billing.
+
+          2. Select Manage My Subscription.
+
+          3. Follow the prompts to cancel.
+
+      - id: manuscripts-after-cancel
+        q: >-
+          What happens to my manuscripts if I cancel my subscription?
+        a: >-
+          Your manuscript stays yours and stays on your device. After
+          cancelling, you can keep using Writing Desk's free version, or open
+          your manuscript in a different app and carry on from there. Your
+          work is always yours.
+
+      - id: refunds
+        q: >-
+          Do you offer refunds?
+        a: >-
+          We look at refund requests case by case. Contact
+          help@writingdeskapp.com and we'll take a look.
+
+      - id: annual-discount
+        q: >-
+          Is there a discount for annual billing?
+        a: >-
+          Yes, annual plans are 20% cheaper than paying monthly.
+
+      - id: student-discounts
+        q: >-
+          Do you offer student, non-profit, or other discounts?
+        a: >-
+          No.
+
+      - id: update-payment-method
+        q: >-
+          How do I update my payment method or view past invoices?
+        a: >-
+          Through the Stripe Customer Portal, accessible from Account
+          Settings.
+
+  - slug: privacy-ai
+    name: Privacy & AI
+    description: How Writing Desk's AI works, and what does (and doesn't) leave your machine.
+    icon: shield
+    questions:
+      - id: ai-writes-prose
+        q: >-
+          Does Writing Desk's AI write my prose for me?
+        a: >-
+          No. Writing Desk's AI assists editorially, with feedback, analysis,
+          and suggestions, but it never generates or writes your prose for
+          you.
+
+      - id: manuscript-leave-computer
+        q: >-
+          Does my manuscript ever leave my computer?
+        a: >-
+          Your manuscript is stored locally. You can back it up to iCloud or
+          Google Drive if you like, but Writing Desk never uploads or backs
+          up your file on your behalf, so it stays under your control.
+
+          The one exception is the Formatter. Since it runs in your browser,
+          you'll need to upload your manuscript to use it, and you can delete
+          it at any time.
+
+      - id: what-data-sent-to-ai
+        q: >-
+          What data is sent to the AI when I use an editorial feature?
+        a: >-
+          Writing Desk calls the Anthropic API transiently, sending your
+          chapter content and any resource notes you've marked as shareable
+          for context, and receives an answer back. Nothing is stored on our
+          side.
+
+      - id: ai-training
+        q: >-
+          Is my manuscript used to train AI models?
+        a: >-
+          No. Nothing is stored or used to train AI models at any point.
+          Your writing is your own, and every AI call is transient.
+
+      - id: which-ai-model
+        q: >-
+          Which AI model powers Writing Desk's editorial features?
+        a: >-
+          The Anthropic API.
+
+      - id: use-without-ai
+        q: >-
+          Can I use Writing Desk entirely without AI?
+        a: >-
+          Yes.
+
+      - id: how-different-from-ai-writers
+        q: >-
+          How is this different from AI writing tools that generate my story
+          for me?
+        a: >-
+          Writing Desk will never generate prose on your behalf. Its AI
+          features give you high-level, structural, editorial feedback to
+          help you spot what you can't see anymore in your own draft, so you
+          can improve your prose your way.
+
+  - slug: technical-troubleshooting
+    name: Technical & Troubleshooting
+    description: Offline behaviour, manuscript limits, and getting help.
+    icon: wrench
+    questions:
+      - id: grammar-offline
+        q: >-
+          Does grammar checking work offline?
+        a: >-
+          Yes.
+
+      - id: max-manuscript-length
+        q: >-
+          Is there a maximum manuscript length Writing Desk can handle?
+        a: >-
+          No.
+
+      - id: report-bug
+        q: >-
+          I found a bug, how do I report it?
+        a: >-
+          Contact help@writingdeskapp.com to report bugs and get assistance.
+
+      - id: get-help
+        q: >-
+          Where can I get help if I'm stuck?
+        a: >-
+          Contact help@writingdeskapp.com and we'll help you out.

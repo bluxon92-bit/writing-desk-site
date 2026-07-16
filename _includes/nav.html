@@ -1,0 +1,421 @@
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">
+      <div class="logo-mark">
+        <img src="{{ '/assets/Writing-Desk-Icon-dark-no-bg-HIRES.png' | relative_url }}" alt="Writing Desk" />
+      </div>
+      Writing Desk
+    </a>
+    <div class="nav-links">
+
+      <!-- Features with dropdown -->
+      <div class="nav-item has-dropdown">
+        <a href="{{ '/features/' | relative_url }}" class="nav-link {% if page.url contains 'features' %}active{% endif %}">
+          Features
+          <svg class="nav-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="{{ '/features/plot-your-novel/' | relative_url }}" class="dropdown-item">
+            <span class="dropdown-icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 14l3-6 3 4 2-3 2 5"/></svg>
+            </span>
+            <span>
+              <strong>Plot</strong>
+              Story Plotter &amp; structure templates
+            </span>
+          </a>
+          <a href="{{ '/features/distraction-free-writing-app/' | relative_url }}" class="dropdown-item">
+            <span class="dropdown-icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="11" height="13" rx="1.5"/><path d="M5 6h6M5 9h4"/></svg>
+            </span>
+            <span>
+              <strong>Write</strong>
+              Editor, Pad, Research &amp; Resource Hub
+            </span>
+          </a>
+          <a href="{{ '/features/novel-editing-software/' | relative_url }}" class="dropdown-item">
+            <span class="dropdown-icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M11.5 2.5l2 2-8 8H3.5v-2l8-8zM9.5 4.5l2 2"/></svg>
+            </span>
+            <span>
+              <strong>Edit</strong>
+              Proofreader, Prose Analysis &amp; AI Editor
+            </span>
+          </a>
+          <a href="{{ '/features/writing-tracker-app/' | relative_url }}" class="dropdown-item">
+            <span class="dropdown-icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="10" width="3" height="4" rx="0.5"/><rect x="6.5" y="7" width="3" height="7" rx="0.5"/><rect x="11" y="4" width="3" height="10" rx="0.5"/></svg>
+            </span>
+            <span>
+              <strong>Track</strong>
+              Writing Tracker &amp; milestones
+            </span>
+          </a>
+          <a href="{{ '/features/book-formatting-tool/' | relative_url }}" class="dropdown-item">
+            <span class="dropdown-icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 2v9M5 8l3 3 3-3M2 13h12"/></svg>
+            </span>
+            <span>
+              <strong>Format</strong>
+              Export, typesetting &amp; agent templates
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="{{ '/pricing/' | relative_url }}" class="nav-link {% if page.url contains 'pricing' %}active{% endif %}">Pricing</a>
+
+      <!-- Resources with dropdown: Tools, Blog, Downloads -->
+      <div class="nav-item has-dropdown">
+        <a href="{{ '/tools/' | relative_url }}" class="nav-link {% if page.url contains '/tools/' or page.url contains '/blog' or page.url contains '/downloads/' %}active{% endif %}">
+          Resources
+          <svg class="nav-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="nav-dropdown nav-dropdown-mega">
+
+          <div class="dropdown-col">
+            <span class="dropdown-col-label">Tools</span>
+            <a href="{{ '/tools/character-name-generator/' | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="5.5" r="2.5"/><path d="M3 14v-1a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v1"/></svg>
+              </span>
+              <span>
+                <strong>Name Generators</strong>
+                Character, fantasy &amp; cultural names
+              </span>
+            </a>
+            <a href="{{ '/tools/writing-prompt-generator/' | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 1.5l1.6 3.4 3.7.4-2.8 2.5.8 3.7L8 9.6 4.7 11.5l.8-3.7L2.7 5.3l3.7-.4z"/></svg>
+              </span>
+              <span>
+                <strong>Writing Prompts</strong>
+                Every genre, beat writer's block fast
+              </span>
+            </a>
+            <a href="{{ '/tools/book-title-generator/' | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 2.5h7a2 2 0 0 1 2 2V14H5a2 2 0 0 1-2-2V2.5z"/><path d="M3 11.5h9"/></svg>
+              </span>
+              <span>
+                <strong>Book Title Generator</strong>
+                Find a title that fits your story
+              </span>
+            </a>
+            <a href="{{ '/tools/' | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg>
+              </span>
+              <span>
+                <strong>All Tools</strong>
+                Browse every free writer's tool
+              </span>
+            </a>
+          </div>
+
+          <div class="dropdown-col">
+            <span class="dropdown-col-label">Blog</span>
+            <a href="{{ '/blog/' | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="12" height="12" rx="1.5"/><path d="M5 6h6M5 9h4"/></svg>
+              </span>
+              <span>
+                <strong>All Articles</strong>
+                Craft, publishing &amp; product updates
+              </span>
+            </a>
+            {% if site.posts.size > 0 %}
+            <a href="{{ site.posts.first.url | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 1.5l1.6 3.4 3.7.4-2.8 2.5.8 3.7L8 9.6 4.7 11.5l.8-3.7L2.7 5.3l3.7-.4z"/></svg>
+              </span>
+              <span>
+                <strong>Latest Article</strong>
+                {{ site.posts.first.title }}
+              </span>
+            </a>
+            {% endif %}
+          </div>
+
+          <div class="dropdown-col">
+            <span class="dropdown-col-label">Downloads</span>
+            <a href="{{ '/downloads/' | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 2v9M5 8l3 3 3-3M2 13h12"/></svg>
+              </span>
+              <span>
+                <strong>All Downloads</strong>
+                Craft collections, templates &amp; checklists
+              </span>
+            </a>
+            <a href="{{ '/downloads/sci-fi-short-stories/' | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 8h6M8 5v6"/></svg>
+              </span>
+              <span>
+                <strong>Sci-Fi Short Stories</strong>
+                10 classics, free PDF
+              </span>
+            </a>
+            <a href="{{ '/downloads/horror-short-stories/' | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 8h6M8 5v6"/></svg>
+              </span>
+              <span>
+                <strong>Horror Short Stories</strong>
+                6 classics, free PDF
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <a href="#" class="nav-cta" data-waitlist-trigger>Join the waitlist</a>
+    </div>
+
+    <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-inner">
+
+      <div class="mobile-accordion">
+        <button class="mobile-accordion-toggle" data-target="mobile-features" aria-expanded="false">
+          Features
+          <svg class="mobile-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="mobile-submenu" id="mobile-features">
+          <a href="{{ '/features/plot-your-novel/' | relative_url }}">Plot</a>
+          <a href="{{ '/features/distraction-free-writing-app/' | relative_url }}">Write</a>
+          <a href="{{ '/features/novel-editing-software/' | relative_url }}">Edit</a>
+          <a href="{{ '/features/writing-tracker-app/' | relative_url }}">Track</a>
+          <a href="{{ '/features/book-formatting-tool/' | relative_url }}">Format</a>
+        </div>
+      </div>
+
+      <a href="{{ '/pricing/' | relative_url }}" class="mobile-link {% if page.url contains 'pricing' %}active{% endif %}">Pricing</a>
+
+      <div class="mobile-accordion">
+        <button class="mobile-accordion-toggle" data-target="mobile-resources" aria-expanded="false">
+          Resources
+          <svg class="mobile-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="mobile-submenu" id="mobile-resources">
+          <span class="mobile-submenu-label">Tools</span>
+          <a href="{{ '/tools/character-name-generator/' | relative_url }}">Name Generators</a>
+          <a href="{{ '/tools/writing-prompt-generator/' | relative_url }}">Writing Prompts</a>
+          <a href="{{ '/tools/book-title-generator/' | relative_url }}">Book Title Generator</a>
+          <a href="{{ '/tools/' | relative_url }}">All Tools</a>
+          <span class="mobile-submenu-label">Blog</span>
+          <a href="{{ '/blog/' | relative_url }}">All Articles</a>
+          {% if site.posts.size > 0 %}
+          <a href="{{ site.posts.first.url | relative_url }}">Latest: {{ site.posts.first.title }}</a>
+          {% endif %}
+          <span class="mobile-submenu-label">Downloads</span>
+          <a href="{{ '/downloads/' | relative_url }}">All Downloads</a>
+          <a href="{{ '/downloads/sci-fi-short-stories/' | relative_url }}">Sci-Fi Short Stories</a>
+          <a href="{{ '/downloads/horror-short-stories/' | relative_url }}">Horror Short Stories</a>
+        </div>
+      </div>
+
+      <a href="#" class="mobile-cta" data-waitlist-trigger>Join the waitlist</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+/* ── Resources mega-dropdown ─────────────────── */
+.nav-dropdown-mega {
+  min-width: 640px;
+  left: auto; right: 0; transform: translateY(-6px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+.nav-item.has-dropdown:hover .nav-dropdown-mega,
+.nav-item.has-dropdown:focus-within .nav-dropdown-mega {
+  transform: translateY(0);
+}
+.nav-dropdown-mega::before { left: auto; right: 24px; transform: rotate(45deg); }
+.dropdown-col { display: flex; flex-direction: column; }
+.dropdown-col + .dropdown-col { border-left: 1px solid var(--border); padding-left: 8px; }
+.dropdown-col-label {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink-faint); padding: 6px 12px 8px;
+}
+@media (max-width: 1100px) {
+  .nav-dropdown-mega { min-width: 520px; }
+  .nav-dropdown-mega .dropdown-item span:last-child { font-size: 12px; }
+}
+
+/* ── Mobile Resources section labels ─────────── */
+.mobile-submenu-label {
+  display: block;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink-faint); padding: 12px 4px 4px;
+}
+.mobile-submenu-label:first-child { padding-top: 4px; }
+
+/* ── Dropdown hover gap fix ──────────────────── */
+/* Extend the nav-item's hover area downward to bridge
+   the pixel gap between the trigger and the dropdown */
+.nav-item.has-dropdown {
+  padding-bottom: 8px;
+  margin-bottom: -8px;
+}
+
+/* Move dropdown up to close the gap */
+.nav-dropdown {
+  top: calc(100% + 8px);
+}
+
+/* Invisible bridge between trigger and dropdown */
+.nav-item.has-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+/* ── Mobile menu ──────────────────────────────── */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.nav-burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none;
+  position: fixed !important;
+  top: 56px;
+  left: 0; right: 0; bottom: 0;
+  background: #fff;
+  z-index: 9999;
+  overflow-y: auto;
+  border-top: 1px solid var(--border);
+}
+.mobile-menu.open { display: block; }
+
+.mobile-menu-inner {
+  padding: 12px 24px 32px;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-link {
+  padding: 15px 4px;
+  font-size: 16px;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+}
+.mobile-link.active { color: var(--purple); }
+
+.mobile-accordion { border-bottom: 1px solid var(--border); }
+.mobile-accordion-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 4px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  cursor: pointer;
+}
+.mobile-chevron { width: 10px; height: 6px; flex-shrink: 0; transition: transform 0.2s ease; }
+.mobile-accordion-toggle.open .mobile-chevron { transform: rotate(180deg); }
+
+.mobile-submenu {
+  display: none;
+  flex-direction: column;
+  padding: 0 4px 14px 14px;
+}
+.mobile-submenu.open { display: flex; }
+.mobile-submenu a {
+  padding: 10px 4px;
+  font-size: 14.5px;
+  color: var(--ink-muted);
+  text-decoration: none;
+}
+.mobile-submenu a:hover { color: var(--ink); }
+
+.mobile-cta {
+  margin-top: 20px;
+  text-align: center;
+  background: var(--purple);
+  color: #fff !important;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-burger { display: flex; }
+}
+</style>
+
+<script>
+(function () {
+  var menu = document.getElementById('mobile-menu');
+  // Move to a direct child of <body> so position:fixed can't be broken by
+  // an ancestor (e.g. nav bar) using transform/filter/backdrop-filter/will-change,
+  // any of which would otherwise redefine the containing block for fixed elements.
+  document.body.appendChild(menu);
+
+  var burger = document.getElementById('nav-burger');
+
+  burger.addEventListener('click', function () {
+    var isOpen = menu.classList.toggle('open');
+    burger.classList.toggle('open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  document.querySelectorAll('.mobile-accordion-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = document.getElementById(btn.getAttribute('data-target'));
+      var isOpen = target.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 900 && menu.classList.contains('open')) {
+      menu.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+})();
+</script>

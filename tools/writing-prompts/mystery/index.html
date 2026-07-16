@@ -1,0 +1,320 @@
+---
+layout: default
+title: "Mystery Writing Prompt Generator — 50+ Prompts for Crime and Detective Fiction"
+description: "Free mystery writing prompt generator. Generate prompts for detective fiction, cosy mysteries, noir, and crime thrillers. Plot, character, setting, and opening line prompts."
+permalink: /tools/writing-prompts/mystery/
+---
+
+<style>
+.tool-hero{max-width:1100px;margin:0 auto;padding:64px 40px 48px;border-bottom:1px solid var(--border)}
+.tool-hero-inner{max-width:640px}
+.tool-label{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--purple);margin-bottom:16px}
+.tool-label-line{width:24px;height:1.5px;background:var(--purple);display:block}
+.tool-hero h1{font-family:var(--serif);font-size:46px;font-weight:400;line-height:1.1;color:var(--ink);margin-bottom:16px}
+.tool-hero h1 em{color:var(--purple);font-style:italic}
+.tool-hero p{font-size:17px;color:var(--ink-muted);font-weight:300;line-height:1.7}
+.tool-body{max-width:1100px;margin:0 auto;padding:48px 40px}
+.tool-body-inner{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+/* Generator card */
+.gen-card{background:var(--white);border:1px solid var(--border-strong);border-radius:var(--radius-lg);overflow:hidden}
+.gen-card-head{background:var(--purple-faint);border-bottom:1px solid var(--border);padding:20px 24px;display:flex;align-items:center;gap:10px}
+.gen-card-head h2{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink)}
+.gen-card-head svg{width:18px;height:18px;fill:none;stroke:var(--purple);stroke-width:1.75;flex-shrink:0}
+/* Controls */
+.gen-controls{padding:20px 24px;display:flex;flex-direction:column;gap:18px;border-bottom:1px solid var(--border)}
+.ctrl-group{display:flex;flex-direction:column;gap:8px}
+.ctrl-group label{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint)}
+/* Pill buttons for category */
+.pill-row{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:var(--white);border:1px solid var(--border-strong);border-radius:20px;padding:6px 14px;cursor:pointer;transition:all .15s}
+.pill:hover{border-color:var(--purple);color:var(--purple)}
+.pill.active{background:var(--purple);border-color:var(--purple);color:white;font-weight:500}
+/* Tone slider */
+.tone-wrap{display:flex;align-items:center;gap:10px}
+.tone-wrap input[type=range]{flex:1;accent-color:var(--purple);cursor:pointer}
+.tone-end{font-size:12px;color:var(--ink-faint);white-space:nowrap}
+.tone-label{font-size:12px;color:var(--purple);font-weight:500;text-align:center;margin-top:4px;min-height:18px}
+/* Generate button */
+.btn-gen{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--purple);color:white;font-family:var(--sans);font-size:14px;font-weight:500;padding:11px 24px;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:opacity .15s;width:100%}
+.btn-gen:hover{opacity:.85}
+.btn-gen svg{width:14px;height:14px;fill:none;stroke:white;stroke-width:2}
+/* Output */
+.gen-output{padding:24px;min-height:180px}
+.gen-placeholder{font-size:14px;color:var(--ink-faint);font-style:italic;text-align:center;padding:32px 0}
+.prompt-meta{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.prompt-tag{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--purple);background:var(--purple-faint);padding:3px 10px;border-radius:12px}
+.prompt-tone{font-size:11px;color:var(--ink-faint);background:var(--bg);padding:3px 10px;border-radius:12px;border:1px solid var(--border)}
+.prompt-text{font-size:16px;color:var(--ink);line-height:1.75;font-family:var(--serif);font-weight:400}
+/* Actions */
+.gen-actions{padding:14px 24px;border-top:1px solid var(--border);display:flex;gap:8px;flex-wrap:wrap}
+.btn-secondary{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:transparent;border:1px solid var(--border-strong);padding:8px 16px;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s}
+.btn-secondary:hover{border-color:var(--purple);color:var(--purple)}
+.btn-save{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:transparent;border:1px solid var(--border-strong);padding:8px 16px;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s}
+.btn-save:hover{border-color:var(--purple);color:var(--purple)}
+/* Saved */
+.saved-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-bottom:0}
+.saved-card h4{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.saved-item{padding:10px 0;border-top:1px solid var(--border)}
+.saved-item:first-child{border-top:none;padding-top:0}
+.saved-item p{font-size:13px;color:var(--ink-muted);line-height:1.5;margin-bottom:6px}
+.saved-item button{font-size:11.5px;color:var(--purple);background:none;border:none;cursor:pointer;padding:0;font-family:var(--sans)}
+.btn-clear{font-size:11px;color:var(--ink-faint);background:none;border:none;cursor:pointer;padding:0;font-family:var(--sans)}
+.btn-clear:hover{color:var(--ink)}
+/* Sidebar */
+.tool-sidebar{display:flex;flex-direction:column;gap:20px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px}
+.sidebar-card h3{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:12px}
+.sidebar-card p{font-size:13.5px;color:var(--ink-muted);font-weight:300;line-height:1.65;margin-bottom:12px}
+.sidebar-card ul{list-style:none}
+.sidebar-card li{font-size:13.5px;color:var(--ink-muted);font-weight:300;padding:6px 0 6px 16px;position:relative;line-height:1.55;border-top:1px solid var(--border)}
+.sidebar-card li:first-child{border-top:none;padding-top:0}
+.sidebar-card li::before{content:"→";position:absolute;left:0;color:var(--purple-mid);font-size:10px;top:8px}
+.sidebar-link{display:block;font-size:13.5px;font-weight:500;color:var(--purple);text-decoration:none;padding:8px 0;border-top:1px solid var(--border);transition:opacity .15s}
+.sidebar-link:first-of-type{border-top:none}
+.sidebar-link:hover{opacity:.7}
+/* SEO */
+.tool-seo{max-width:1100px;margin:0 auto;padding:0 40px 72px;border-top:1px solid var(--border)}
+.seo-inner{max-width:720px;padding-top:48px}
+.seo-inner h2{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--ink);margin-bottom:14px;line-height:1.2}
+.seo-inner h3{font-family:var(--serif);font-size:21px;font-weight:400;color:var(--ink);margin:28px 0 10px}
+.seo-inner p{font-size:15.5px;color:var(--ink-muted);font-weight:300;line-height:1.8;margin-bottom:14px}
+.seo-inner ul{list-style:none;margin-bottom:20px}
+.seo-inner li{font-size:15px;color:var(--ink-muted);font-weight:300;padding:7px 0 7px 20px;position:relative;line-height:1.6;border-top:1px solid var(--border)}
+.seo-inner li:last-child{border-bottom:1px solid var(--border)}
+.seo-inner li::before{content:"→";position:absolute;left:0;color:var(--purple-mid);font-size:11px;top:9px}
+@media(max-width:900px){
+  .tool-hero{padding:40px 24px 32px}
+  .tool-hero h1{font-size:34px}
+  .tool-body{padding:32px 24px}
+  .tool-body-inner{grid-template-columns:1fr}
+  .tool-seo{padding:0 24px 48px}
+}
+</style>
+
+<div class="tool-hero">
+  <div class="tool-hero-inner">
+    <div class="tool-label"><span class="tool-label-line"></span><span>Free Writer's Tool</span></div>
+    <h1>Mystery Writing <em>Prompt Generator</em></h1>
+    <p>Generate mystery writing prompts for detective fiction, crime novels, and cosy mysteries — plot setups, character starting points, atmospheric settings, and perfect opening lines.</p>
+  </div>
+</div>
+
+<section class="tool-body">
+  <div class="tool-body-inner">
+
+    <div class="gen-card">
+      <div class="gen-card-head">
+        <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <h2>Generate a Writing Prompt</h2>
+      </div>
+      <div class="gen-controls">
+        
+        <div class="ctrl-group">
+          <label>Category</label>
+          <div class="pill-row" id="cat-pills">
+            <button class="pill" data-value="plot">Plot</button>
+            <button class="pill" data-value="character">Character</button>
+            <button class="pill" data-value="setting">Setting</button>
+            <button class="pill" data-value="opening">Opening Line</button>
+          </div>
+        </div>
+        
+        <button class="btn-gen" id="btn-generate">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Generate Prompt
+        </button>
+      </div>
+      <div class="gen-output" id="gen-output">
+        <p class="gen-placeholder">Choose a category and click Generate — your prompt will appear here.</p>
+      </div>
+      <div class="gen-actions" id="gen-actions" style="display:none;">
+        <button class="btn-secondary" id="btn-copy">Copy prompt</button>
+        <button class="btn-save" id="btn-save">Save ♡</button>
+        <button class="btn-secondary" id="btn-regen">New prompt ↻</button>
+      </div>
+    </div>
+
+    <aside class="tool-sidebar">
+      <div class="saved-card" id="saved-wrap" style="display:none;">
+        <h4>Saved prompts <button class="btn-clear" id="btn-clear-saved">Clear</button></h4>
+        <div id="saved-list"></div>
+      </div>
+      <div class="sidebar-card">
+        <h3>How to use these prompts</h3>
+        <ul>
+          <li>Mystery prompts often work best as the final scene first — know your revelation before you build the investigation</li>
+          <li>The best mysteries are fair — the clues are there; the reader just misses them</li>
+          <li>Setting prompts in mystery are unusually important: the sealed room, the isolated location, the locked timeline</li>
+          <li>Character prompts: give your detective a professional or personal stake in the outcome</li>
+          <li>Opening line prompts are the hook — make the reader ask a question they can't leave unanswered</li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h3>More prompt generators</h3>
+        <a href="/tools/writing-prompts/thriller/" class="sidebar-link">Thriller Writing Prompts →</a>
+        <a href="/tools/writing-prompts/horror/" class="sidebar-link">Horror Writing Prompts →</a>
+        <a href="/tools/writing-prompts/fantasy/" class="sidebar-link">Fantasy Writing Prompts →</a>
+        <a href="/tools/writing-prompt-generator/" class="sidebar-link">Random Prompt Generator →</a>
+        <a href="/tools/character-name-generator/" class="sidebar-link">Character Name Generator →</a>
+      </div>
+      <div class="sidebar-card">
+        <h3>Draft in Writing Desk</h3>
+        <p>When a prompt sparks something, open Writing Desk and write. Distraction-free, local-first, no AI writing for you.</p>
+        <a href="/" class="sidebar-link">Download Writing Desk →</a>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<section class="tool-seo">
+  <div class="seo-inner">
+    <h2>Writing mystery and crime fiction</h2>
+    <p>Mystery fiction has the strictest formal requirements of any genre. The genre promise is explicit: there is a puzzle, and the story will resolve it. Everything else — character, prose, setting, theme — serves that central contract. Breaking it, or being vague about it, loses readers in ways that other genres might forgive.</p>
+    <p>The craft challenge in mystery is fairness combined with misdirection. The reader should be able to find the solution in retrospect — all the clues are there — but they shouldn't find it before the reveal. This requires precise control of information: what the reader knows, when they know it, and what they're encouraged to notice versus overlook.</p>
+    <h3>Subgenres: cosy, hardboiled, noir</h3>
+    <p>The tonal range in mystery fiction is wide. Cosy mysteries feature low-stakes settings (village fetes, bookshops, tea rooms), amateur detectives, and resolutions that restore order without too much darkness. Hardboiled mystery is urban, morally complex, and concerned with institutional corruption as much as individual crime. Noir is its darkest expression: a world where order is never quite restored and the detective is often complicit in the darkness they investigate.</p>
+
+  </div>
+</section>
+
+<script>
+
+const mysteryPrompts = {
+  plot: [
+    "A detective is called to investigate a death at a writers' retreat. The victim was working on a novel whose plot exactly describes a real murder that happened thirty years ago.",
+    "A small-town archivist discovers that a missing woman's handwriting appears in a forty-year-old newspaper clipping — as the journalist who reported her own disappearance.",
+    "A forensic accountant following a routine audit uncovers a pattern that suggests someone has been systematically stealing small amounts from hundreds of accounts for twenty years. The total is significant. No one has reported anything missing.",
+    "An art restorer discovers, beneath a minor Flemish painting, a hidden portrait of someone who shouldn't have existed at the time the painting was made.",
+    "Three people receive identical handwritten notes containing the date and location of a crime that hasn't happened yet. The note is postmarked from a town where none of them have ever been.",
+    "A retired detective is asked to revisit a closed case by the convicted man's daughter. The new evidence she presents is small and easy to explain away — except that the detective is the one who planted it.",
+    "A death is initially ruled an accident. The autopsy reveals the victim had been dead for six hours before the accident occurred.",
+    "A librarian cataloguing a donated estate finds a box of letters that appear to document a murder — except all the participants are still alive, and the letters are dated last year.",
+    "A crime scene investigator processes what appears to be an isolated murder. Three days later, a second scene. The only link: both victims had recently cancelled plans to attend the same event.",
+    "A cold case detective realises that the reason no one was ever charged is that the most likely suspect died in an unrelated accident one week after the crime — an accident that now looks less accidental.",
+    "A woman hires a private investigator to find out who is leaving flowers on her mother's grave. The mother died before the investigator was born. The flowers are always fresh.",
+    "During the renovation of a Victorian house, builders find a room that doesn't appear on any floor plan. Inside: furniture, personal belongings, and a calendar open to a date in 1987.",
+  ],
+  character: [
+    "A detective who solves every case through empathy rather than deduction — she simply understands why people do things, which makes her both extraordinary at her job and deeply exhausting to live with.",
+    "A defence lawyer who has never lost a case and has recently started to wonder whether some of the people she got acquitted were actually guilty.",
+    "A forensic psychologist who helped build the profile that caught a serial killer. Twenty years later, he receives a letter from someone claiming the wrong man is in prison — and the details are too specific to be a hoax.",
+    "A retired homicide detective who now writes true crime books. For the new book, she's chosen a case she was never able to close. She is two chapters in when she realises why she chose it.",
+    "A small-town sheriff in their twentieth year on the job who has never investigated anything more serious than petty theft — until a body appears in a field that shouldn't be there.",
+    "An insurance fraud investigator who stumbles into a genuine murder while trying to document a faked death.",
+    "A crime reporter who has been covering the same unsolved case for fifteen years. She knows more about this case than anyone alive. She's starting to think that's why she's received a threat.",
+    "A medical examiner who realises that a cause of death she certified three years ago was wrong — not through error, but because someone altered the body before she examined it.",
+  ],
+  setting: [
+    "A luxury cruise ship two days from the nearest port. Someone has died. The ship's doctor believes it was natural causes. The victim's travelling companion doesn't.",
+    "A private island accessible only by helicopter, currently hosting eight people who all claim not to know each other — except someone keeps leaving notes that suggest otherwise.",
+    "A university library closed for renovation. A skeleton is found in a wall cavity during the work. The skeleton has dental fillings from the 1990s.",
+    "A village that has been cut off by flooding for five days. One of the twelve people stranded is dead. The flood is not the cause.",
+    "A film set for a crime drama, mid-production. The lead actor's stunt double has been found dead in a position that exactly mirrors the final scene of the script.",
+    "An auction house the night before a major sale. A painting valued at eight million pounds has been replaced with a forgery. The original has been inside a locked and alarmed room.",
+    "A monastery that has been isolated by a snowstorm for a week. The oldest monk has died. His room was locked from the inside.",
+    "A technology company's annual retreat, held at a remote conference centre. The CEO is missing. His phone shows a text sent at 2am: 'I know what they did. Meeting them now.'",
+  ],
+  opening: [
+    "The body in the library was not the most unusual thing about that morning. The most unusual thing was that the library didn't have a library.",
+    "She had been a detective for twenty-two years. She had never before arrived at a crime scene to find her own fingerprints already logged in evidence.",
+    "The witness couldn't have seen what she said she saw. The problem was, she was right.",
+    "Three people had a motive. Two had an alibi. I was starting to think I was asking the wrong question.",
+    "The case was closed. The victim was buried. The killer was in prison. None of this explained why someone had been using the victim's library card three times a week for the past six months.",
+    "There were four suspects. By evening there were three. By morning I was beginning to wonder if I was one of them.",
+    "The ransom note arrived after we'd already found the body.",
+    "She'd been hired to find a missing person. She found her. The job got complicated when the missing person had no memory of going missing.",
+  ]
+};
+
+
+
+let currentCat = null;
+
+document.querySelectorAll('.pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    pill.closest('.pill-row').querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    currentCat = pill.dataset.value;
+  });
+});
+
+// Set first pill active on load
+const firstPill = document.querySelector('.pill');
+if (firstPill) { firstPill.classList.add('active'); currentCat = firstPill.dataset.value; }
+
+function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+function showPrompt(text, cat, tone) {
+  const output = document.getElementById('gen-output');
+  output.innerHTML = '';
+  output.dataset.current = text;
+  const meta = document.createElement('div');
+  meta.className = 'prompt-meta';
+  meta.innerHTML = `<span class="prompt-tag">${cat}</span><span class="prompt-tone">${tone}</span>`;
+  const p = document.createElement('p');
+  p.className = 'prompt-text';
+  p.textContent = text;
+  output.appendChild(meta);
+  output.appendChild(p);
+  document.getElementById('gen-actions').style.display = 'flex';
+}
+
+
+function generate() {
+  if (!currentCat) return;
+  const bank = mysteryPrompts[currentCat];
+  if (!bank) return;
+  const text = pick(bank);
+  showPrompt(text, currentCat.charAt(0).toUpperCase()+currentCat.slice(1), 'Mystery');
+}
+
+
+
+let savedPrompts = [];
+
+function renderSaved() {
+  const wrap = document.getElementById('saved-wrap');
+  const list = document.getElementById('saved-list');
+  if (!savedPrompts.length) { if(wrap) wrap.style.display='none'; return; }
+  if(wrap) wrap.style.display='block';
+  list.innerHTML = '';
+  savedPrompts.forEach((p, i) => {
+    const item = document.createElement('div');
+    item.className = 'saved-item';
+    const short = p.length > 90 ? p.substring(0,90)+'…' : p;
+    item.innerHTML = `<p>${short}</p><button onclick="navigator.clipboard.writeText(decodeURIComponent('${encodeURIComponent(p)}'))">Copy</button>`;
+    list.appendChild(item);
+  });
+}
+
+document.getElementById('btn-generate').addEventListener('click', generate);
+document.getElementById('btn-regen').addEventListener('click', generate);
+
+document.getElementById('btn-copy').addEventListener('click', () => {
+  const p = document.getElementById('gen-output').dataset.current;
+  if (!p) return;
+  navigator.clipboard.writeText(p).then(() => {
+    const btn = document.getElementById('btn-copy');
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy prompt', 1500);
+  });
+});
+
+document.getElementById('btn-save').addEventListener('click', () => {
+  const p = document.getElementById('gen-output').dataset.current;
+  if (!p || savedPrompts.includes(p)) return;
+  savedPrompts.unshift(p);
+  if (savedPrompts.length > 10) savedPrompts = savedPrompts.slice(0, 10);
+  renderSaved();
+  const btn = document.getElementById('btn-save');
+  btn.textContent = 'Saved ♥';
+  setTimeout(() => btn.textContent = 'Save ♡', 1500);
+});
+
+const clearBtn = document.getElementById('btn-clear-saved');
+if (clearBtn) clearBtn.addEventListener('click', () => { savedPrompts = []; renderSaved(); });
+
+generate();
+
+</script>

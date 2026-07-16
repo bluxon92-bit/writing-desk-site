@@ -1,0 +1,425 @@
+---
+layout: default
+title: "Fantasy Writing Prompt Generator — 80+ Prompts for Plot, Characters & Worldbuilding"
+description: "Free fantasy writing prompt generator. Generate prompts for plot, characters, magic systems, world-building, and opening lines — from cosy to grimdark."
+permalink: /tools/writing-prompts/fantasy/
+---
+
+<style>
+.tool-hero{max-width:1100px;margin:0 auto;padding:64px 40px 48px;border-bottom:1px solid var(--border)}
+.tool-hero-inner{max-width:640px}
+.tool-label{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--purple);margin-bottom:16px}
+.tool-label-line{width:24px;height:1.5px;background:var(--purple);display:block}
+.tool-hero h1{font-family:var(--serif);font-size:46px;font-weight:400;line-height:1.1;color:var(--ink);margin-bottom:16px}
+.tool-hero h1 em{color:var(--purple);font-style:italic}
+.tool-hero p{font-size:17px;color:var(--ink-muted);font-weight:300;line-height:1.7}
+.tool-body{max-width:1100px;margin:0 auto;padding:48px 40px}
+.tool-body-inner{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+/* Generator card */
+.gen-card{background:var(--white);border:1px solid var(--border-strong);border-radius:var(--radius-lg);overflow:hidden}
+.gen-card-head{background:var(--purple-faint);border-bottom:1px solid var(--border);padding:20px 24px;display:flex;align-items:center;gap:10px}
+.gen-card-head h2{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink)}
+.gen-card-head svg{width:18px;height:18px;fill:none;stroke:var(--purple);stroke-width:1.75;flex-shrink:0}
+/* Controls */
+.gen-controls{padding:20px 24px;display:flex;flex-direction:column;gap:18px;border-bottom:1px solid var(--border)}
+.ctrl-group{display:flex;flex-direction:column;gap:8px}
+.ctrl-group label{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint)}
+/* Pill buttons for category */
+.pill-row{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:var(--white);border:1px solid var(--border-strong);border-radius:20px;padding:6px 14px;cursor:pointer;transition:all .15s}
+.pill:hover{border-color:var(--purple);color:var(--purple)}
+.pill.active{background:var(--purple);border-color:var(--purple);color:white;font-weight:500}
+/* Tone slider */
+.tone-wrap{display:flex;align-items:center;gap:10px}
+.tone-wrap input[type=range]{flex:1;accent-color:var(--purple);cursor:pointer}
+.tone-end{font-size:12px;color:var(--ink-faint);white-space:nowrap}
+.tone-label{font-size:12px;color:var(--purple);font-weight:500;text-align:center;margin-top:4px;min-height:18px}
+/* Generate button */
+.btn-gen{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--purple);color:white;font-family:var(--sans);font-size:14px;font-weight:500;padding:11px 24px;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:opacity .15s;width:100%}
+.btn-gen:hover{opacity:.85}
+.btn-gen svg{width:14px;height:14px;fill:none;stroke:white;stroke-width:2}
+/* Output */
+.gen-output{padding:24px;min-height:180px}
+.gen-placeholder{font-size:14px;color:var(--ink-faint);font-style:italic;text-align:center;padding:32px 0}
+.prompt-meta{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.prompt-tag{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--purple);background:var(--purple-faint);padding:3px 10px;border-radius:12px}
+.prompt-tone{font-size:11px;color:var(--ink-faint);background:var(--bg);padding:3px 10px;border-radius:12px;border:1px solid var(--border)}
+.prompt-text{font-size:16px;color:var(--ink);line-height:1.75;font-family:var(--serif);font-weight:400}
+/* Actions */
+.gen-actions{padding:14px 24px;border-top:1px solid var(--border);display:flex;gap:8px;flex-wrap:wrap}
+.btn-secondary{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:transparent;border:1px solid var(--border-strong);padding:8px 16px;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s}
+.btn-secondary:hover{border-color:var(--purple);color:var(--purple)}
+.btn-save{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:transparent;border:1px solid var(--border-strong);padding:8px 16px;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s}
+.btn-save:hover{border-color:var(--purple);color:var(--purple)}
+/* Saved */
+.saved-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-bottom:0}
+.saved-card h4{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.saved-item{padding:10px 0;border-top:1px solid var(--border)}
+.saved-item:first-child{border-top:none;padding-top:0}
+.saved-item p{font-size:13px;color:var(--ink-muted);line-height:1.5;margin-bottom:6px}
+.saved-item button{font-size:11.5px;color:var(--purple);background:none;border:none;cursor:pointer;padding:0;font-family:var(--sans)}
+.btn-clear{font-size:11px;color:var(--ink-faint);background:none;border:none;cursor:pointer;padding:0;font-family:var(--sans)}
+.btn-clear:hover{color:var(--ink)}
+/* Sidebar */
+.tool-sidebar{display:flex;flex-direction:column;gap:20px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px}
+.sidebar-card h3{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:12px}
+.sidebar-card p{font-size:13.5px;color:var(--ink-muted);font-weight:300;line-height:1.65;margin-bottom:12px}
+.sidebar-card ul{list-style:none}
+.sidebar-card li{font-size:13.5px;color:var(--ink-muted);font-weight:300;padding:6px 0 6px 16px;position:relative;line-height:1.55;border-top:1px solid var(--border)}
+.sidebar-card li:first-child{border-top:none;padding-top:0}
+.sidebar-card li::before{content:"→";position:absolute;left:0;color:var(--purple-mid);font-size:10px;top:8px}
+.sidebar-link{display:block;font-size:13.5px;font-weight:500;color:var(--purple);text-decoration:none;padding:8px 0;border-top:1px solid var(--border);transition:opacity .15s}
+.sidebar-link:first-of-type{border-top:none}
+.sidebar-link:hover{opacity:.7}
+/* SEO */
+.tool-seo{max-width:1100px;margin:0 auto;padding:0 40px 72px;border-top:1px solid var(--border)}
+.seo-inner{max-width:720px;padding-top:48px}
+.seo-inner h2{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--ink);margin-bottom:14px;line-height:1.2}
+.seo-inner h3{font-family:var(--serif);font-size:21px;font-weight:400;color:var(--ink);margin:28px 0 10px}
+.seo-inner p{font-size:15.5px;color:var(--ink-muted);font-weight:300;line-height:1.8;margin-bottom:14px}
+.seo-inner ul{list-style:none;margin-bottom:20px}
+.seo-inner li{font-size:15px;color:var(--ink-muted);font-weight:300;padding:7px 0 7px 20px;position:relative;line-height:1.6;border-top:1px solid var(--border)}
+.seo-inner li:last-child{border-bottom:1px solid var(--border)}
+.seo-inner li::before{content:"→";position:absolute;left:0;color:var(--purple-mid);font-size:11px;top:9px}
+@media(max-width:900px){
+  .tool-hero{padding:40px 24px 32px}
+  .tool-hero h1{font-size:34px}
+  .tool-body{padding:32px 24px}
+  .tool-body-inner{grid-template-columns:1fr}
+  .tool-seo{padding:0 24px 48px}
+}
+</style>
+
+<div class="tool-hero">
+  <div class="tool-hero-inner">
+    <div class="tool-label"><span class="tool-label-line"></span><span>Free Writer's Tool</span></div>
+    <h1>Fantasy Writing <em>Prompt Generator</em></h1>
+    <p>Beat writer's block instantly. Generate prompts for plot, character, world-building, magic systems, and opening lines — from cosy and whimsical to full grimdark.</p>
+  </div>
+</div>
+
+<section class="tool-body">
+  <div class="tool-body-inner">
+
+    <div class="gen-card">
+      <div class="gen-card-head">
+        <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <h2>Generate a Writing Prompt</h2>
+      </div>
+      <div class="gen-controls">
+        
+        <div class="ctrl-group">
+          <label>Category</label>
+          <div class="pill-row" id="cat-pills">
+            <button class="pill" data-value="plot">Plot</button>
+            <button class="pill" data-value="character">Character</button>
+            <button class="pill" data-value="world">World</button>
+            <button class="pill" data-value="magic">Magic System</button>
+            <button class="pill" data-value="conflict">Conflict</button>
+            <button class="pill" data-value="opening">Opening Line</button>
+          </div>
+        </div>
+        
+        <div class="ctrl-group">
+          <label>Tone</label>
+          <div class="tone-wrap">
+            <span class="tone-end">☀️ Cosy</span>
+            <input type="range" id="tone-slider" min="0" max="2" step="1" value="1">
+            <span class="tone-end">🩸 Grimdark</span>
+          </div>
+          <div class="tone-label" id="tone-display">Mid-range</div>
+        </div>
+        <button class="btn-gen" id="btn-generate">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Generate Prompt
+        </button>
+      </div>
+      <div class="gen-output" id="gen-output">
+        <p class="gen-placeholder">Choose a category and click Generate — your prompt will appear here.</p>
+      </div>
+      <div class="gen-actions" id="gen-actions" style="display:none;">
+        <button class="btn-secondary" id="btn-copy">Copy prompt</button>
+        <button class="btn-save" id="btn-save">Save ♡</button>
+        <button class="btn-secondary" id="btn-regen">New prompt ↻</button>
+      </div>
+    </div>
+
+    <aside class="tool-sidebar">
+      <div class="saved-card" id="saved-wrap" style="display:none;">
+        <h4>Saved prompts <button class="btn-clear" id="btn-clear-saved">Clear</button></h4>
+        <div id="saved-list"></div>
+      </div>
+      <div class="sidebar-card">
+        <h3>How to use these prompts</h3>
+        <ul>
+          <li>Don't feel bound to the prompt literally — let it spark a direction and follow where it goes</li>
+          <li>Set a timer: 20 minutes, one prompt, no editing. The goal is forward motion</li>
+          <li>Use the tone slider to find the register that fits your current project</li>
+          <li>Character prompts work for side characters and antagonists, not just protagonists</li>
+          <li>World and magic prompts are excellent for lore documents and backstory</li>
+          <li>Save prompts you like — they're often most useful weeks later when you're stuck</li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h3>More prompt generators</h3>
+        <a href="/tools/writing-prompts/horror/" class="sidebar-link">Horror Writing Prompts →</a>
+        <a href="/tools/writing-prompts/romance/" class="sidebar-link">Romance Writing Prompts →</a>
+        <a href="/tools/writing-prompts/mystery/" class="sidebar-link">Mystery Writing Prompts →</a>
+        <a href="/tools/writing-prompts/sci-fi/" class="sidebar-link">Sci-Fi Writing Prompts →</a>
+        <a href="/tools/writing-prompt-generator/" class="sidebar-link">Random Prompt Generator →</a>
+        <a href="/tools/fantasy-name-generator/" class="sidebar-link">Fantasy Name Generator →</a>
+      </div>
+      <div class="sidebar-card">
+        <h3>Draft in Writing Desk</h3>
+        <p>When a prompt sparks something, open Writing Desk and write. Distraction-free, local-first, no AI writing for you.</p>
+        <a href="/" class="sidebar-link">Download Writing Desk →</a>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<section class="tool-seo">
+  <div class="seo-inner">
+    <h2>How to use fantasy writing prompts</h2>
+    <p>A writing prompt isn't a plot outline. It's a starting point — a spark that you follow wherever it leads, even if that's somewhere completely different from where the prompt itself points. The best prompts are generative rather than prescriptive: they give you something to react to, an image to build from, a question to sit with.</p>
+    <p>The prompts here are organised by function: plot prompts give you a situation with inherent conflict; character prompts give you a person with inherent tension; world and magic prompts give you rules and systems to explore; opening line prompts give you the hardest sentence — the first one — already written.</p>
+    <h3>Fantasy sub-genres and tone</h3>
+    <p>Fantasy spans an enormous tonal range — from cosy (low stakes, warm communities, magical problems with human-scale solutions) through epic (world-altering stakes, ancient evils, chosen heroes) to grimdark (morally complex characters, political realism, consequences that don't disappear). The tone slider here maps roughly across that range.</p>
+    <p>The same prompt can produce very different stories at different tonal registers. A village with a magical problem is a cosy prompt at one end and a tragedy at the other. Use the slider to find the right register for your project, then let the prompt grow in that direction.</p>
+    <h3>Writing Desk and fantasy worldbuilding</h3>
+    <p>When a prompt sparks a project, Writing Desk's Resource Centre is where the world-building lives — character profiles, magic system rules, maps, naming conventions, political structures. Keeping your world notes open alongside your draft means you're never context-switching between files when you need to check a detail.</p>
+
+  </div>
+</section>
+
+<script>
+const prompts = {
+  plot: {
+    0: [ // Cosy
+      "A travelling merchant arrives in a sleepy village carrying a map that shows a door that doesn't exist yet. The local cartographer's apprentice recognises the symbols — and knows they shouldn't.",
+      "A retired knight spends her days running a small bakery. When a child brings in a loaf of bread containing a prophecy baked into the crumb, she's pulled back into a world she left behind.",
+      "Every autumn, the village holds a harvest festival where the old stories are re-enacted. This year, one of the actors begins to notice that the story is changing — and it's changing around them.",
+      "A hedge witch discovers that her cottage has been slowly moving through the forest for years. It's been heading somewhere specific. She's almost arrived.",
+      "A young librarian cataloguing an estate sale finds a correspondence between two wizards spanning four hundred years — and realises the last letter was written yesterday.",
+      "A travelling theatre troupe accepts a commission to perform at a cursed manor. The family's wish: that their ancestor's ghost finally gets to see the play written for him — three hundred years too late.",
+      "The village baker accidentally bakes a wish into every loaf. The town's wishes are small and sweet, until one morning a child wishes for her father to come home from the war.",
+      "Two rival mapmakers discover they've both been independently mapping the same imaginary country — which turns out not to be imaginary at all.",
+    ],
+    1: [ // Mid
+      "A soldier returns from a decade-long war to find her homeland has been rebuilt without her. A stranger is living in her house. They know things about her only the dead would know.",
+      "A thief hired to steal an artifact discovers it was stolen from his own people three generations ago. Returning it means betraying his employer. Keeping it means betraying his bloodline.",
+      "An empire has maintained peace for a century by making one small sacrifice every year. The new empress discovers the sacrifice isn't as small as the histories claim.",
+      "A cartographer is commissioned to map the underworld. She sets out with one rule: never look back. She's already broken it twice.",
+      "A city is divided between those who remember the war and those who were born after it. A discovery beneath the city's foundations forces them to confront which version of history is true.",
+      "Two assassins from rival guilds are sent to kill the same target on the same night. The target is already dead when they arrive — and the body is still warm.",
+      "A forgotten deity wakes to find the world has moved on without them. Their temples are museums. Their priests are historians. They must decide whether to reclaim their power or disappear entirely.",
+      "A knight who swore an oath to a dead king finds that the oath has kept her alive far longer than she should be. She's still bound to serve — but the kingdom is long gone.",
+    ],
+    2: [ // Grimdark
+      "A general wins a war by making a deal no one else was willing to make. Ten years later, the other party comes to collect. The price is everything she spent the war protecting.",
+      "A healer who can absorb wounds discovers that the wounds don't disappear — they migrate. Someone else in the city is carrying what she takes. She doesn't know who.",
+      "A young prince is told that the kingdom's prosperity is tied to the suffering of its prisoners. He frees them. The crops fail. He must decide whether to re-imprison them or watch his people starve.",
+      "The prophecy has been fulfilled. The dark lord is dead. But the heroes return to a world that has spent twenty years preparing for the aftermath — and they are now the most dangerous people in it.",
+      "A rebellion succeeds. The tyrant is overthrown. The leader of the rebellion discovers, reading the tyrant's private journals, that the tyrant was right about everything.",
+      "A mercenary takes a contract to protect a village. She fulfils it. Then discovers the village's survival required something she didn't know about — something that will follow her.",
+      "The last dragon is dying. Its blood can power the kingdom's industry for a century. The character who raised it from an egg must decide whether to sell it or let it die in peace and watch the kingdom fall.",
+      "A prisoner who has been in gaol for thirty years is released and discovers the crime she confessed to — the one she didn't commit — has become foundational to the country's mythology.",
+    ]
+  },
+  character: {
+    0: [
+      "A gentle giant who speaks to plants and has spent forty years growing a garden that tells the story of everyone who ever visited. Write the first scene where a stranger arrives who the garden doesn't recognise.",
+      "A travelling merchant who collects not objects but memories — people pay her to take away their worst ones. She has been doing this for so long she has forgotten who she is.",
+      "An elderly wizard whose power has faded but whose reputation hasn't. She must bluff her way through a magical duel using nothing but confidence and a very convincing staff.",
+      "A half-faerie child who can see glamours — the disguises the fae use in the mortal world. He has never told anyone. He has been watching his whole life. Write the day someone finally notices him watching.",
+      "A royal food-taster who has slowly built up an immunity to every known poison. She has also become mildly addicted to several of them. Write her first day of retirement.",
+    ],
+    1: [
+      "A disgraced general offered a chance at redemption, but only if she leads an army she doesn't believe in, to a victory that would serve a cause she fought against her whole life.",
+      "A spy who has spent so long undercover they no longer remember their original name. A mission requires them to return to their childhood village. Someone there recognises them.",
+      "A healer who secretly hates the people she saves — the nobility who start the wars that fill her tent with broken soldiers. Write the day she saves someone she genuinely wants to let die.",
+      "A prince raised to be ruthless who falls in love with someone who only knows kindness. He must decide whether to let the kindness change him — or protect her from what he's becoming.",
+      "An archivist who has spent their life recording history discovers a room in the archive that records the future. The most recent entry is about them.",
+    ],
+    2: [
+      "A war criminal who is considered a hero by half the world and a monster by the other half. Neither side is wrong. Write the scene where they meet the one survivor who refuses to judge them.",
+      "A torturer who believes in the cause they serve — genuinely, completely. Write the day the cause fails and they must reckon with everything they did in its name.",
+      "A soldier who survived a massacre by hiding. They are the only witness. They have been asked to testify. Write the night before the trial, when they are alone with what they know.",
+      "A king who has done terrible things to keep his people alive, and it has worked. His people are alive. He is beloved. Write the day he meets someone from the country he sacrificed.",
+      "An assassin who discovers their most recent target was also an assassin — and the same person hired both of them.",
+    ]
+  },
+  world: [
+    "Magic in this world is inherited — but not by bloodline. It passes to whoever was present at a mage's death. The most powerful mages in the world are veteran battlefield surgeons.",
+    "The ocean in this world is not water but a vast, slow-moving creature. Nations have built their entire civilisations on its back. It has been asleep for three hundred years. It's beginning to stir.",
+    "Time moves differently in different parts of this world — a direct consequence of a magical catastrophe five centuries ago. Some regions experience a week per day. One island is still living through the catastrophe itself.",
+    "All cities in this world are built atop the ruins of older cities. Archaeologists know that this pattern goes deeper than anyone has excavated. The deepest layer found so far predates humanity.",
+    "In this world, death is not the end — the dead linger as echoes for a generation before fading. Society has been built around this: inheritance, justice, and relationships all function differently when the dead are still present.",
+    "Language in this world is magic. New words have to be invented carefully — once a word exists, the thing it describes becomes real. The linguists are the most feared people in the world.",
+    "The world has two suns. The gap between them — the Hours of Dark — lasts six minutes each day. Every living thing in the world evolved around those six minutes. Humans included.",
+    "The world's forests are a single organism. They communicate through the root system. The elves learned to speak their language three thousand years ago and have been translating ever since. The forests have strong opinions about recent events.",
+    "Every person in this world is born with a visible mark that shows their cause of death — not when, just how. Society has arranged itself entirely around these marks. A person born with a war-mark is treated very differently from one born with an age-mark.",
+    "Mountains in this world are sleeping giants. They have been sleeping since before recorded history. Three have woken in the last decade.",
+  ],
+  magic: [
+    "Magic is powered by sleep. The deeper and longer you sleep, the more power you accumulate. But magic use depletes your sleep — overuse leads to insomnia, then hallucinations, then something worse.",
+    "Magic works by trading. You can change anything, but only by swapping it with something of equal value. The most powerful mages spend years building up stores of tradeable material. The black market trades in human memories.",
+    "Spells have to be sung perfectly — pitch, rhythm, and intention all matter. Tone-deaf people can't use magic at all. The most powerful mages are the ones who can sustain a song under pressure. Battle-mages train in screaming.",
+    "Magic requires the caster to believe completely in what they're doing. Doubt kills a spell. The most powerful mages are therefore either extremely disciplined — or dangerously unquestioning.",
+    "Magic leaves a scar on the world — a visible mark where it was used. Old battlefields are maps of what happened there. Experienced trackers can read the land like a crime scene. Mages leave fingerprints.",
+    "In this world magic is democratic — anyone can use it, but it costs physical years of your life. The poor use it for survival and die young. The rich use it for luxury and do the same. The only long-lived people are those who refuse to use it.",
+    "Each mage can only ever learn one spell, perfectly. They spend their whole life mastering it. The diversity of what constitutes a 'spell' is staggering — some people can stop time for three seconds, others can make bread never go stale.",
+    "Magic is contagious. Spend too long near a mage and you start to develop abilities — but also their particular obsessions, fears, and patterns of thought. The most powerful mages are therefore the most isolated.",
+  ],
+  conflict: {
+    0: [
+      "Two neighbouring villages share a magic well that grants one wish per generation. It's this generation's turn. Both villages have a different wish — and the well can only grant one.",
+      "A wizard's tower has been protected by a forcefield for a hundred years. The wizard inside has just died. Their apprentices must work out how to bring it down without knowing what the wizard was keeping in.",
+      "A peace treaty between two kingdoms requires both royal heirs to marry. The heirs have met. They despise each other. They are also the only two people who know about the third faction that will destroy both kingdoms if the treaty fails.",
+      "An enchanted forest grants wishes — but only grants each one to a different person. The village at the forest's edge has been managing a waiting list for decades. Someone has jumped the queue.",
+    ],
+    1: [
+      "A rebellion has been building for twenty years. The moment the rebels are ready to strike, they discover their most trusted leader has been a spy — but their intelligence is also correct.",
+      "A city is divided between those who want to use a discovered ancient weapon to end a war quickly, and those who know what the weapon actually does. Both sides have good reasons.",
+      "Two factions claim the same prophecy. Both interpretations are internally consistent. The prophecy will be fulfilled in six months. The choice of interpretation will determine what it means when it is.",
+      "A plague has a cure — but the cure requires an ingredient that is also the only thing keeping a fragile peace between three nations. Using it will save thousands and start a war.",
+    ],
+    2: [
+      "A warlord has spent thirty years building a just society — through unjust means. The people prosper. The methods are monstrous. A new generation has grown up in the prosperity and discovered the methods.",
+      "The only way to defeat an invading army is to collapse the border — which will also destroy three towns on the wrong side of it. The commander has twelve hours and no other options.",
+      "Two sides in a civil war discover they share a common enemy. Working together will mean winning. It will also mean one side legitimises the other's claim. Both sides would rather lose to the enemy.",
+      "A hero discovers that the monster they've been hunting has been systematically destroyed an empire that committed genocide three hundred years ago. The monster is the last survivor of what was destroyed.",
+    ]
+  },
+  opening: {
+    0: [
+      "The map showed three roads. There were four.",
+      "She had been baking the same spell into her bread for forty years before she realised it was working.",
+      "The dragon had been living in the attic for twelve years and they'd only just noticed.",
+      "Every door in the village was painted red, except for the new one.",
+      "The apprentice had been told the library had one hundred thousand books. She had counted. There were one hundred thousand and one.",
+      "The old wizard died on a Tuesday, which was inconvenient for everyone who had been waiting for him to do it on a Wednesday.",
+    ],
+    1: [
+      "The letter was addressed to my grandfather, dated forty years after he died, and it was in his handwriting.",
+      "I was three hours into burying the body when I found another one underneath it.",
+      "The city had stood for a thousand years. The wall surrounding it had stood for longer — and it faced inward.",
+      "The treaty had held for sixty years. It took eleven words to break it.",
+      "She knew the signs of a haunting. She had been the one who taught people what to look for. This was different.",
+      "The prisoner in cell seven had predicted every major event for the past three years. Today she predicted nothing, which terrified the warden more than anything she'd said before.",
+    ],
+    2: [
+      "The revolution succeeded. That was the problem.",
+      "She'd been hired to find the missing girl. She found her. The job was simpler before she understood why the girl was hiding.",
+      "The last honest man in the kingdom died at dawn, and by noon three people had claimed the title.",
+      "The healer had saved ten thousand lives. She had also, by her own count, ended forty-seven — and she remembered every one of them with more clarity than she remembered the ten thousand.",
+      "The empire had lasted three hundred years. The emperor, alone in his study, knew exactly when it would end: in forty-six days, at roughly two in the afternoon.",
+      "I survived the war by being willing to do things the others weren't. I spent the peace trying to become the kind of person who didn't know how to do those things anymore. I failed.",
+    ]
+  }
+};
+
+
+const toneLabels = ['Cosy & Whimsical', 'Mid-range', 'Grimdark'];
+const toneSlider = document.getElementById('tone-slider');
+const toneDisplay = document.getElementById('tone-display');
+toneDisplay.textContent = toneLabels[1];
+toneSlider.addEventListener('input', e => { toneDisplay.textContent = toneLabels[e.target.value]; });
+
+
+let currentCat = null;
+
+document.querySelectorAll('.pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    pill.closest('.pill-row').querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    currentCat = pill.dataset.value;
+  });
+});
+
+// Set first pill active on load
+const firstPill = document.querySelector('.pill');
+if (firstPill) { firstPill.classList.add('active'); currentCat = firstPill.dataset.value; }
+
+function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+function showPrompt(text, cat, tone) {
+  const output = document.getElementById('gen-output');
+  output.innerHTML = '';
+  output.dataset.current = text;
+  const meta = document.createElement('div');
+  meta.className = 'prompt-meta';
+  meta.innerHTML = `<span class="prompt-tag">${cat}</span><span class="prompt-tone">${tone}</span>`;
+  const p = document.createElement('p');
+  p.className = 'prompt-text';
+  p.textContent = text;
+  output.appendChild(meta);
+  output.appendChild(p);
+  document.getElementById('gen-actions').style.display = 'flex';
+}
+
+
+function generate() {
+  if (!currentCat) return;
+  const tone = parseInt(document.getElementById('tone-slider').value);
+  const bank = prompts[currentCat];
+  if (!bank) return;
+  let pool;
+  if (Array.isArray(bank)) { pool = bank; }
+  else { pool = bank[tone] || bank[0]; }
+  const text = pick(pool);
+  const catLabel = currentCat.charAt(0).toUpperCase() + currentCat.slice(1).replace('-',' ');
+  showPrompt(text, catLabel, toneLabels[tone]);
+}
+
+
+
+let savedPrompts = [];
+
+function renderSaved() {
+  const wrap = document.getElementById('saved-wrap');
+  const list = document.getElementById('saved-list');
+  if (!savedPrompts.length) { if(wrap) wrap.style.display='none'; return; }
+  if(wrap) wrap.style.display='block';
+  list.innerHTML = '';
+  savedPrompts.forEach((p, i) => {
+    const item = document.createElement('div');
+    item.className = 'saved-item';
+    const short = p.length > 90 ? p.substring(0,90)+'…' : p;
+    item.innerHTML = `<p>${short}</p><button onclick="navigator.clipboard.writeText(decodeURIComponent('${encodeURIComponent(p)}'))">Copy</button>`;
+    list.appendChild(item);
+  });
+}
+
+document.getElementById('btn-generate').addEventListener('click', generate);
+document.getElementById('btn-regen').addEventListener('click', generate);
+
+document.getElementById('btn-copy').addEventListener('click', () => {
+  const p = document.getElementById('gen-output').dataset.current;
+  if (!p) return;
+  navigator.clipboard.writeText(p).then(() => {
+    const btn = document.getElementById('btn-copy');
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy prompt', 1500);
+  });
+});
+
+document.getElementById('btn-save').addEventListener('click', () => {
+  const p = document.getElementById('gen-output').dataset.current;
+  if (!p || savedPrompts.includes(p)) return;
+  savedPrompts.unshift(p);
+  if (savedPrompts.length > 10) savedPrompts = savedPrompts.slice(0, 10);
+  renderSaved();
+  const btn = document.getElementById('btn-save');
+  btn.textContent = 'Saved ♥';
+  setTimeout(() => btn.textContent = 'Save ♡', 1500);
+});
+
+const clearBtn = document.getElementById('btn-clear-saved');
+if (clearBtn) clearBtn.addEventListener('click', () => { savedPrompts = []; renderSaved(); });
+
+generate();
+
+</script>

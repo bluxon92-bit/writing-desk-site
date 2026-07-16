@@ -1,0 +1,200 @@
+---
+layout: default
+title: "French Name Generator — Authentic French Names for Fiction Writers"
+description: "Generate authentic French names for your characters — classical and contemporary given names with French surnames. Free tool."
+permalink: /tools/french-name-generator/
+---
+
+<style>
+.tool-hero{max-width:1100px;margin:0 auto;padding:64px 40px 48px;border-bottom:1px solid var(--border)}
+.tool-hero-inner{max-width:640px}
+.tool-label{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--purple);margin-bottom:16px}
+.tool-label-line{width:24px;height:1.5px;background:var(--purple);display:block}
+.tool-hero h1{font-family:var(--serif);font-size:46px;font-weight:400;line-height:1.1;color:var(--ink);margin-bottom:16px}
+.tool-hero h1 em{color:var(--purple);font-style:italic}
+.tool-hero p{font-size:17px;color:var(--ink-muted);font-weight:300;line-height:1.7}
+.tool-body{max-width:1100px;margin:0 auto;padding:48px 40px}
+.tool-body-inner{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+.gen-card{background:var(--white);border:1px solid var(--border-strong);border-radius:var(--radius-lg);overflow:hidden}
+.gen-card-head{background:var(--purple-faint);border-bottom:1px solid var(--border);padding:20px 24px;display:flex;align-items:center;gap:10px}
+.gen-card-head h2{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink)}
+.gen-card-head svg{width:18px;height:18px;fill:none;stroke:var(--purple);stroke-width:1.75;flex-shrink:0}
+.gen-controls{padding:20px 24px;display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;border-bottom:1px solid var(--border)}
+.ctrl-group{display:flex;flex-direction:column;gap:5px}
+.ctrl-group label{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint)}
+.ctrl-group select{font-family:var(--sans);font-size:14px;color:var(--ink);background:var(--white);border:1px solid var(--border-strong);border-radius:var(--radius-sm);padding:9px 32px 9px 12px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238888aa' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;cursor:pointer;transition:border-color .15s}
+.ctrl-group select:focus{outline:none;border-color:var(--purple)}
+.btn-gen{display:inline-flex;align-items:center;gap:8px;background:var(--purple);color:white;font-family:var(--sans);font-size:14px;font-weight:500;padding:10px 22px;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:opacity .15s;white-space:nowrap}
+.btn-gen:hover{opacity:.85}
+.btn-gen svg{width:14px;height:14px;fill:none;stroke:white;stroke-width:2}
+.gen-output{padding:24px;min-height:160px}
+.gen-placeholder{font-size:14px;color:var(--ink-faint);font-style:italic;text-align:center;padding:32px 0}
+.name-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.name-pill{background:var(--purple-faint);border:1px solid var(--border);border-radius:8px;padding:11px 16px;font-size:15px;color:var(--ink);cursor:pointer;transition:all .15s;user-select:none}
+.name-pill:hover,.name-pill.copied{border-color:var(--purple);background:var(--purple-light)}
+.copy-hint{font-size:10px;color:var(--ink-faint);display:block;margin-top:2px}
+.name-pill.copied .copy-hint{color:var(--purple)}
+.gen-actions{padding:14px 24px;border-top:1px solid var(--border);display:flex;gap:10px}
+.btn-secondary{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:transparent;border:1px solid var(--border-strong);padding:8px 16px;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s}
+.btn-secondary:hover{border-color:var(--purple);color:var(--purple)}
+.gen-history{padding:16px 24px;border-top:1px solid var(--border);background:var(--bg)}
+.gen-history h4{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.history-tags{display:flex;flex-wrap:wrap;gap:6px}
+.history-tag{font-size:12.5px;color:var(--ink-muted);background:var(--white);border:1px solid var(--border);border-radius:20px;padding:4px 11px;cursor:pointer;transition:all .12s}
+.history-tag:hover{border-color:var(--purple);color:var(--purple)}
+.btn-clear{font-size:11px;color:var(--ink-faint);background:none;border:none;cursor:pointer;padding:0}
+.tool-sidebar{display:flex;flex-direction:column;gap:20px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px}
+.sidebar-card h3{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:12px}
+.sidebar-card p{font-size:13.5px;color:var(--ink-muted);font-weight:300;line-height:1.65;margin-bottom:12px}
+.sidebar-link{display:block;font-size:13.5px;font-weight:500;color:var(--purple);text-decoration:none;padding:8px 0;border-top:1px solid var(--border);transition:opacity .15s}
+.sidebar-link:first-of-type{border-top:none}
+.sidebar-link:hover{opacity:.7}
+.sidebar-card ul{list-style:none}
+.sidebar-card li{font-size:13.5px;color:var(--ink-muted);font-weight:300;padding:6px 0 6px 16px;position:relative;line-height:1.55;border-top:1px solid var(--border)}
+.sidebar-card li:first-child{border-top:none;padding-top:0}
+.sidebar-card li::before{content:"→";position:absolute;left:0;color:var(--purple-mid);font-size:10px;top:8px}
+.tool-seo{max-width:1100px;margin:0 auto;padding:0 40px 72px;border-top:1px solid var(--border)}
+.seo-inner{max-width:720px;padding-top:48px}
+.seo-inner h2{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--ink);margin-bottom:14px;line-height:1.2}
+.seo-inner h3{font-family:var(--serif);font-size:21px;font-weight:400;color:var(--ink);margin:28px 0 10px}
+.seo-inner p{font-size:15.5px;color:var(--ink-muted);font-weight:300;line-height:1.8;margin-bottom:14px}
+.seo-inner ul{list-style:none;margin-bottom:20px}
+.seo-inner li{font-size:15px;color:var(--ink-muted);font-weight:300;padding:7px 0 7px 20px;position:relative;line-height:1.6;border-top:1px solid var(--border)}
+.seo-inner li:last-child{border-bottom:1px solid var(--border)}
+.seo-inner li::before{content:"→";position:absolute;left:0;color:var(--purple-mid);font-size:11px;top:9px}
+@media(max-width:900px){
+  .tool-hero{padding:40px 24px 32px}
+  .tool-hero h1{font-size:34px}
+  .tool-body{padding:32px 24px}
+  .tool-body-inner{grid-template-columns:1fr}
+  .tool-seo{padding:0 24px 48px}
+  .gen-controls{flex-direction:column;align-items:stretch}
+  .btn-gen{justify-content:center}
+}
+</style>
+
+<div class="tool-hero">
+  <div class="tool-hero-inner">
+    <div class="tool-label"><span class="tool-label-line"></span><span>Free Writer's Tool</span></div>
+    <h1>French Name <em>Generator</em></h1>
+    <p>Generate authentic French names for your fiction — from classical aristocratic names to contemporary French given names, with common French surnames.</p>
+  </div>
+</div>
+
+<section class="tool-body">
+  <div class="tool-body-inner">
+    <div class="gen-card">
+      <div class="gen-card-head">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <h2>Generate French Names</h2>
+      </div>
+      <div class="gen-controls">
+        <div class="ctrl-group">
+          <label for="gen-count">How many</label>
+          <select id="gen-count">
+            <option value="5">5 names</option>
+            <option value="10" selected>10 names</option>
+            <option value="20">20 names</option>
+          </select>
+        </div>
+        <button class="btn-gen" id="btn-generate">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Generate
+        </button>
+      </div>
+      <div class="gen-output" id="gen-output"><p class="gen-placeholder">Click Generate to get your names.</p></div>
+      <div class="gen-actions" id="gen-actions" style="display:none;">
+        <button class="btn-secondary" id="btn-copy-all">Copy all</button>
+        <button class="btn-secondary" id="btn-regen">Regenerate ↻</button>
+      </div>
+      <div class="gen-history" id="gen-history" style="display:none;">
+        <h4>Recent names <button class="btn-clear" id="btn-clear">Clear</button></h4>
+        <div class="history-tags" id="history-list"></div>
+      </div>
+    </div>
+    <aside class="tool-sidebar">
+      <div class="sidebar-card">
+        <h3>More name generators</h3>
+        <a href="/tools/german-name-generator/" class="sidebar-link">German Name Generator →</a>
+        <a href="/tools/medieval-name-generator/" class="sidebar-link">Medieval Name Generator →</a>
+        <a href="/tools/character-name-generator/" class="sidebar-link">All Character Names →</a>
+        <a href="/tools/russian-name-generator/" class="sidebar-link">Russian Name Generator →</a>
+      </div>
+      <div class="sidebar-card">
+        <h3>Building a character?</h3>
+        <p>Keep your names, backstory, and notes in Writing Desk's Resource Centre — local, private, always open alongside your draft.</p>
+        <a href="/" class="sidebar-link">Download Writing Desk →</a>
+        <a href="/tools/character-name-generator/" class="sidebar-link">All name generators →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="tool-seo">
+  <div class="seo-inner">
+    <h2>French names in fiction</h2>
+    <p>French names carry strong associations with culture, class, and era. Classical French names — Pierre, Marie, Jean, Marguerite — feel rooted in the Catholic naming tradition and carry a historical weight suited to historical fiction. Contemporary French names reflect the same internationalisation visible in other Western European countries, with names borrowed from English, Arabic, and other traditions becoming increasingly common.</p>
+    <p>French surnames often derive from occupations, places, physical descriptions, or family relationships. Many begin with de (indicating place of origin or aristocratic connection) — de Beaumont, de la Fontaine — while others are patronymics or descriptive: Dupont (of the bridge), Dubois (of the wood), Lefevre (the blacksmith).</p>
+    <h3>French names for historical fiction</h3>
+    <p>For fiction set in pre-Revolutionary France, aristocratic naming conventions are worth understanding. The full formal name of a French aristocrat could be extremely long, combining baptismal names, family names, and territorial titles. In narration, the character would typically be referred to by their title or a shortened form of their name. For revolutionary and post-revolutionary contexts, the renaming of streets, cities, and people was a live political act — worth considering if your story sits in that period.</p>
+
+  </div>
+</section>
+
+<script>
+const pick = a => a[Math.floor(Math.random()*a.length)];
+let history = [];
+const masc=["Adrien","Alexandre","Antoine","Armand","Auguste","Baptiste","Charles","Claude","Edouard","Etienne","François","Gabriel","Gaston","Henri","Jacques","Jean","Louis","Luc","Marcel","Nicolas","Philippe","Pierre","Raoul","René","Robert","Sylvain","Théodore","Victor","Vincent","Xavier","Alexis","Bertrand","Cédric","Denis","Emmanuel","Félix","Gilles","Hugues","Julien","Laurent"];
+const fem=["Adèle","Amélie","Anne","Brigitte","Camille","Cécile","Charlotte","Claire","Clémence","Elise","Émilie","Geneviève","Hélène","Isabelle","Jeanne","Joséphine","Juliette","Laure","Lucie","Marguerite","Marie","Mathilde","Nicole","Sophie","Thérèse","Véronique","Victoire","Virginie","Agnès","Béatrice","Colette","Delphine","Françoise","Inès","Léonie","Manon","Nathalie","Odile","Pauline","Sylvie"];
+const last=["Beaumont","Bertrand","Blanchard","Bourgeois","Chevalier","Dubois","Dumont","Dupont","Fontaine","Gauthier","Girard","Laurent","Leclerc","Lefebvre","Martin","Mercier","Moreau","Petit","Richard","Robert","Simon","Thomas","Vincent","Allard","Arnaud","Aubry","Barbier","Bertin","Blanc","Bouchard","Bourdin","Charpentier","Coulon","Deschamps","Durand","Fabien","Garnier","Henry","Joly","Lambert"];
+function getNames(count){
+  const names=[];
+  for(let i=0;i<count;i++){
+    const isMasc=Math.random()>0.5;
+    names.push(pick(isMasc?masc:fem)+' '+pick(last));
+  }
+  return names;
+}
+function generate(){
+  const count=parseInt(document.getElementById('gen-count').value);
+  const names=getNames(count);
+  const output=document.getElementById('gen-output');
+  output.innerHTML='<div class="name-grid"></div>';
+  const grid=output.querySelector('.name-grid');
+  names.forEach(name=>{
+    const pill=document.createElement('div');pill.className='name-pill';
+    pill.innerHTML=name+'<span class="copy-hint">Click to copy</span>';
+    pill.addEventListener('click',()=>{
+      const raw=pill.firstChild.textContent.trim();
+      navigator.clipboard.writeText(raw).then(()=>{
+        pill.classList.add('copied');pill.querySelector('.copy-hint').textContent='Copied!';
+        setTimeout(()=>{pill.classList.remove('copied');pill.querySelector('.copy-hint').textContent='Click to copy';},1500);
+      });
+    });
+    grid.appendChild(pill);history.unshift(name);
+  });
+  if(history.length>40)history=history.slice(0,40);
+  document.getElementById('gen-actions').style.display='flex';
+  renderHistory();
+}
+
+function renderHistory(){
+  const wrap=document.getElementById('gen-history');
+  const list=document.getElementById('history-list');
+  if(!history.length){wrap.style.display='none';return;}
+  wrap.style.display='block';list.innerHTML='';
+  history.forEach(name=>{
+    const tag=document.createElement('span');tag.className='history-tag';tag.textContent=name;
+    tag.addEventListener('click',()=>navigator.clipboard.writeText(name));list.appendChild(tag);
+  });
+}
+document.getElementById('btn-generate').addEventListener('click',generate);
+document.getElementById('btn-regen').addEventListener('click',generate);
+document.getElementById('btn-copy-all').addEventListener('click',()=>{
+  const names=[...document.querySelectorAll('.name-pill')].map(el=>el.firstChild.textContent.trim()).join('\n');
+  navigator.clipboard.writeText(names).then(()=>{const btn=document.getElementById('btn-copy-all');btn.textContent='Copied!';setTimeout(()=>btn.textContent='Copy all',1500);});
+});
+document.getElementById('btn-clear').addEventListener('click',()=>{history=[];renderHistory();});
+generate();
+</script>
