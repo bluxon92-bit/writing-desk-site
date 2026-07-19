@@ -18,6 +18,10 @@ description: "Export your manuscript as a professionally formatted PDF, EPUB, or
     <h1>Professional book formatting, <em>without the complexity.</em></h1>
     <p>You wrote the novel. Writing Desk formats it for wherever it's headed. Agent submissions, self-publishing exports, and everything in between.</p>
     <a href="#" class="btn btn-primary" data-waitlist-trigger>Join the waitlist</a>
+      <a href="{{ '/demo/' | relative_url }}" class="watch-demo-link">
+        <svg viewBox="0 0 12 12" fill="currentColor"><path d="M3.5 2.2v7.6a.6.6 0 0 0 .92.5l6-3.8a.6.6 0 0 0 0-1l-6-3.8a.6.6 0 0 0-.92.5z"/></svg>
+        Watch demo
+      </a>
   </div>
   <div class="feature-page-hero-visual"><img src="https://res.cloudinary.com/dnkddcxrt/image/upload/v1783702197/formatter_export_page_vrgaza.png" alt="Formatter export screen with EPUB and PDF options" /></div>
 </div>
@@ -139,6 +143,10 @@ description: "Export your manuscript as a professionally formatted PDF, EPUB, or
       <svg viewBox="0 0 15 15" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M3 7.5h9M8 4l3.5 3.5L8 11"/></svg>
       Join the waitlist
     </a>
+      <a href="{{ '/demo/' | relative_url }}" class="watch-demo-link">
+        <svg viewBox="0 0 12 12" fill="currentColor"><path d="M3.5 2.2v7.6a.6.6 0 0 0 .92.5l6-3.8a.6.6 0 0 0 0-1l-6-3.8a.6.6 0 0 0-.92.5z"/></svg>
+        Watch demo
+      </a>
     <a href="{{ '/pricing/' | relative_url }}" class="btn btn-ghost">See pricing</a>
   </div>
 </div>
@@ -175,4 +183,15 @@ description: "Export your manuscript as a professionally formatted PDF, EPUB, or
 @media (max-width:800px) {
   .feature-pair { grid-template-columns:1fr; }
 }
+
+/* ── Watch demo link — subordinate to the primary CTA ── */
+.watch-demo-link {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--sans); font-size: 14px; font-weight: 500;
+  color: var(--ink-muted); text-decoration: none;
+  padding: 0 4px; transition: color 0.15s;
+}
+.watch-demo-link svg { width: 11px; height: 11px; flex-shrink: 0; color: var(--purple-mid); transition: color 0.15s; }
+.watch-demo-link:hover { color: var(--purple); }
+.watch-demo-link:hover svg { color: var(--purple); }
 </style>
