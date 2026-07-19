@@ -54,11 +54,11 @@ function getCookieCurrency(request) {
 }
 
 function isPricingPage(pathname) {
+  const stripped = pathname.replace(/\/+$/, '') || '/';
   return (
-    pathname === '/pricing' ||
-    pathname === '/pricing/' ||
-    pathname === '/pricing.html' ||
-    pathname === '/pricing/index.html'
+    stripped === '/pricing' ||
+    stripped === '/pricing.html' ||
+    stripped === '/pricing/index.html'
   );
 }
 
@@ -99,20 +99,34 @@ export async function onRequest(context) {
     return response;
   }
 
-  const rewritten = new HTMLRewriter()
-    .on('[data-usd]', new AttributeSwap('data-usd'))
-    .on('#currency-note-text', new SetText('Prices shown in USD ($).'))
-    .on('#currency-toggle-usd', new HideElement())
-    .on('#currency-toggle-gbp', new ShowElement())
-    .transform(response);
+  // Anything unexpected here (a malformed selector match, an element
+  // handler throwing, etc.) falls back to the original GBP response
+  // rather than crashing the whole page with a 1101. Awaiting .text()
+  // here -- rather than streaming the body straight through -- is what
+  // makes this try/catch actually effective: HTMLRewriter normally
+  // transforms lazily as the response streams to the browser, which
+  // happens after this function would otherwise have already returned,
+  // so a plain try/catch around .transform() alone wouldn't catch
+  // errors thrown inside the element handlers above.
+  try {
+    const rewritten = new HTMLRewriter()
+      .on('[data-usd]', new AttributeSwap('data-usd'))
+      .on('#currency-note-text', new SetText('Prices shown in USD ($).'))
+      .on('#currency-toggle-usd', new HideElement())
+      .on('#currency-toggle-gbp', new ShowElement())
+      .transform(response.clone());
 
-  // Don't let CDN/browser caches serve the wrong currency to the wrong visitor.
-  const headers = new Headers(rewritten.headers);
-  headers.set('Cache-Control', 'private, no-store');
+    const html = await rewritten.text();
 
-  return new Response(rewritten.body, {
-    status: rewritten.status,
-    statusText: rewritten.statusText,
-    headers,
-  });
+    const headers = new Headers(rewritten.headers);
+    headers.set('Cache-Control', 'private, no-store');
+
+    return new Response(html, {
+      status: rewritten.status,
+      statusText: rewritten.statusText,
+      headers,
+    });
+  } catch (err) {
+    return response;
+  }
 }

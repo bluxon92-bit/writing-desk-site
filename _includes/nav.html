@@ -63,6 +63,8 @@
         </div>
       </div>
 
+      <a href="{{ '/demo/' | relative_url }}" class="nav-link {% if page.url contains '/demo' %}active{% endif %}">Demo</a>
+
       <a href="{{ '/pricing/' | relative_url }}" class="nav-link {% if page.url contains 'pricing' %}active{% endif %}">Pricing</a>
 
       <!-- Resources with dropdown: Tools, Blog, Downloads -->
@@ -195,6 +197,8 @@
           <a href="{{ '/features/book-formatting-tool/' | relative_url }}">Format</a>
         </div>
       </div>
+
+      <a href="{{ '/demo/' | relative_url }}" class="mobile-link {% if page.url contains '/demo' %}active{% endif %}">Demo</a>
 
       <a href="{{ '/pricing/' | relative_url }}" class="mobile-link {% if page.url contains 'pricing' %}active{% endif %}">Pricing</a>
 
