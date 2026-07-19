@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} — Writing Desk{% else %}Writing Desk — The writing app for novelists{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Writing Desk is a desktop app for macOS built for solo novelists. Private by design. Your manuscript never leaves your Mac.{% endif %}">
+
+  <!-- Open Graph / Twitter Card -->
+  <!-- Pages can override the shared image by setting `image:` in their front matter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Writing Desk">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} — Writing Desk{% else %}Writing Desk — The writing app for novelists{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Writing Desk is a desktop app for macOS built for solo novelists. Private by design. Your manuscript never leaves your Mac.{% endif %}">
+  <meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}https://res.cloudinary.com/dnkddcxrt/image/upload/v1784480204/Writing_Desk_Demo_Video_Open_Graph_1_lvzbnr.png{% endif %}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} — Writing Desk{% else %}Writing Desk — The writing app for novelists{% endif %}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}Writing Desk is a desktop app for macOS built for solo novelists. Private by design. Your manuscript never leaves your Mac.{% endif %}">
+  <meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}https://res.cloudinary.com/dnkddcxrt/image/upload/v1784480204/Writing_Desk_Demo_Video_Open_Graph_1_lvzbnr.png{% endif %}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
