@@ -96,23 +96,15 @@
 
     var existing = localStorage.getItem(STORAGE_KEY);
 
-    // Respect Do Not Track. If the browser signals DNT and the person hasn't
-    // made an explicit choice yet, treat it as a standing rejection rather
-    // than asking, then skip the banner. This is a courtesy, not a consent
-    // mechanism in itself, since UK GDPR requires an explicit affirmative
-    // act for analytics cookies and analytics_storage already defaults to
-    // 'denied' regardless of DNT.
-    var dntSignal = (window.doNotTrack === '1' ||
-      navigator.doNotTrack === 'yes' ||
-      navigator.doNotTrack === '1' ||
-      navigator.msDoNotTrack === '1');
-
-    if (!existing && dntSignal) {
-      localStorage.setItem(STORAGE_KEY, 'rejected');
-      existing = 'rejected';
-    }
-
-    // Only show the banner if no choice has been made yet
+    // Show the banner whenever no explicit choice has been made yet.
+    // We deliberately do NOT auto-decide based on Do Not Track / Global
+    // Privacy Control signals here. Those signals are inconsistently
+    // supported (Brave and some extensions send them by default, without
+    // the person actively choosing to), so treating DNT as an automatic
+    // rejection was silently skipping the opt-in prompt for a meaningful
+    // slice of visitors rather than letting them choose. We're already
+    // fully opt-in by default (analytics_storage denied until Accept is
+    // clicked), so nothing is lost by always asking explicitly.
     if (!existing) {
       banner.hidden = false;
     }
