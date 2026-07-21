@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} — Writing Desk{% else %}Writing Desk — The writing app for novelists{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }} {% else %}Writing Desk — The writing app for novelists{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Writing Desk is a desktop app for macOS built for solo novelists. Private by design. Your manuscript never leaves your Mac.{% endif %}">
 
   <!-- Open Graph / Twitter Card -->
@@ -11,11 +11,11 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Writing Desk">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} — Writing Desk{% else %}Writing Desk — The writing app for novelists{% endif %}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}Writing Desk — The writing app for novelists{% endif %}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Writing Desk is a desktop app for macOS built for solo novelists. Private by design. Your manuscript never leaves your Mac.{% endif %}">
   <meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}https://res.cloudinary.com/dnkddcxrt/image/upload/v1784480204/Writing_Desk_Demo_Video_Open_Graph_1_lvzbnr.png{% endif %}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} — Writing Desk{% else %}Writing Desk — The writing app for novelists{% endif %}">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}Writing Desk — The writing app for novelists{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}Writing Desk is a desktop app for macOS built for solo novelists. Private by design. Your manuscript never leaves your Mac.{% endif %}">
   <meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}https://res.cloudinary.com/dnkddcxrt/image/upload/v1784480204/Writing_Desk_Demo_Video_Open_Graph_1_lvzbnr.png{% endif %}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +27,27 @@
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/android-chrome-192x192.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  <!-- Google tag (gtag.js) with Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // Check for an existing consent choice before setting the default.
+    // This avoids a flash of "denied" for returning users who already accepted.
+    var storedConsent = localStorage.getItem('wd_cookie_consent');
+
+    gtag('consent', 'default', {
+      'analytics_storage': storedConsent === 'accepted' ? 'granted' : 'denied',
+      'ad_storage': 'denied'
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7PW3HRMV8"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-R7PW3HRMV8');
+  </script>
+
 </head>
 <body>
 
@@ -37,6 +58,8 @@
 </main>
 
 {% include footer.html %}
+
+{% include cookie-consent.html %}
 
 <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 

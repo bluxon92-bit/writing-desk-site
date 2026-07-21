@@ -1,0 +1,154 @@
+<div id="wd-cookie-banner" class="wd-cookie-banner" hidden>
+  <div class="wd-cookie-banner__inner">
+    <p class="wd-cookie-banner__text">
+      We use cookies to understand how people use Writing Desk, so we can improve it.
+      No manuscript content is ever tracked. See our
+      <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a> for details.
+    </p>
+    <div class="wd-cookie-banner__actions">
+      <button type="button" id="wd-cookie-reject" class="wd-cookie-btn wd-cookie-btn--secondary">Reject</button>
+      <button type="button" id="wd-cookie-accept" class="wd-cookie-btn wd-cookie-btn--primary">Accept</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .wd-cookie-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: var(--pure-white, #FFFFFF);
+    border-top: 1px solid var(--muted-lavender, #B8B2E8);
+    box-shadow: 0 -2px 12px rgba(26, 26, 46, 0.08);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .wd-cookie-banner__inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .wd-cookie-banner__text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--near-black, #1A1A2E);
+    flex: 1 1 400px;
+  }
+
+  .wd-cookie-banner__text a {
+    color: var(--accent, #534AB7);
+    text-decoration: underline;
+  }
+
+  .wd-cookie-banner__actions {
+    display: flex;
+    gap: 12px;
+    flex: 0 0 auto;
+  }
+
+  .wd-cookie-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+
+  .wd-cookie-btn--primary {
+    background: var(--accent, #534AB7);
+    color: #FFFFFF;
+  }
+
+  .wd-cookie-btn--secondary {
+    background: transparent;
+    color: var(--near-black, #1A1A2E);
+    border-color: var(--muted-lavender, #B8B2E8);
+  }
+
+  @media (max-width: 600px) {
+    .wd-cookie-banner__inner {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .wd-cookie-banner__actions {
+      justify-content: flex-end;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var STORAGE_KEY = 'wd_cookie_consent';
+    var banner = document.getElementById('wd-cookie-banner');
+    var acceptBtn = document.getElementById('wd-cookie-accept');
+    var rejectBtn = document.getElementById('wd-cookie-reject');
+
+    var existing = localStorage.getItem(STORAGE_KEY);
+
+    // Respect Do Not Track. If the browser signals DNT and the person hasn't
+    // made an explicit choice yet, treat it as a standing rejection rather
+    // than asking, then skip the banner. This is a courtesy, not a consent
+    // mechanism in itself, since UK GDPR requires an explicit affirmative
+    // act for analytics cookies and analytics_storage already defaults to
+    // 'denied' regardless of DNT.
+    var dntSignal = (window.doNotTrack === '1' ||
+      navigator.doNotTrack === 'yes' ||
+      navigator.doNotTrack === '1' ||
+      navigator.msDoNotTrack === '1');
+
+    if (!existing && dntSignal) {
+      localStorage.setItem(STORAGE_KEY, 'rejected');
+      existing = 'rejected';
+    }
+
+    // Only show the banner if no choice has been made yet
+    if (!existing) {
+      banner.hidden = false;
+    }
+
+    function setConsent(choice) {
+      localStorage.setItem(STORAGE_KEY, choice);
+      banner.hidden = true;
+
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', {
+          'analytics_storage': choice === 'accepted' ? 'granted' : 'denied'
+        });
+      }
+
+      // Let other components on the page (e.g. the cookie policy's
+      // "manage preferences" panel) react to a consent change without a
+      // full reload.
+      window.dispatchEvent(new CustomEvent('wd-cookie-consent-changed', {
+        detail: { choice: choice }
+      }));
+    }
+
+    acceptBtn.addEventListener('click', function () {
+      setConsent('accepted');
+    });
+
+    rejectBtn.addEventListener('click', function () {
+      setConsent('rejected');
+    });
+
+    // Exposed so the cookie policy page can re-open the banner without
+    // duplicating this logic.
+    window.wdReopenCookieBanner = function () {
+      localStorage.removeItem(STORAGE_KEY);
+      banner.hidden = false;
+      banner.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    };
+  })();
+</script>

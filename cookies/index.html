@@ -8,7 +8,7 @@ permalink: /cookies/
 <div class="legal-hero page-wrap">
   <p class="eyebrow">Legal</p>
   <h1>Cookie Policy</h1>
-  <p class="legal-subtitle">Last updated: June 2026</p>
+  <p class="legal-subtitle">Last updated: July 2026</p>
 </div>
 
 <section class="legal-body page-wrap">
@@ -29,14 +29,19 @@ permalink: /cookies/
 
       <p class="legal-intro">The short version: <strong>the Writing Desk app uses no cookies whatsoever</strong>. This policy covers the writingdeskapp.com website only, where we use a small number of cookies for analytics and to remember your preferences.</p>
 
+      <div class="wd-cookie-manage">
+        <p id="wd-cookie-status" class="wd-cookie-manage__status">Checking your current preference…</p>
+        <button type="button" id="wd-cookie-manage-btn" class="wd-cookie-btn wd-cookie-btn--primary">Manage cookie preferences</button>
+      </div>
+
       <h2 id="what">1. What are cookies</h2>
       <p>Cookies are small text files placed on your device by a website when you visit it. They are widely used to make websites work, remember your preferences, and provide anonymised information to site owners about how their sites are used.</p>
 
       <h2 id="app">2. The Writing Desk app</h2>
-      <p>The Writing Desk macOS application does not use cookies. It stores your preferences and settings locally on your machine using standard macOS application storage — not cookies, not cloud accounts, not any external service. Nothing about your in-app activity is tracked.</p>
+      <p>The Writing Desk macOS application does not use cookies. It stores your preferences and settings locally on your machine using standard macOS application storage — not cookies, not cloud accounts, not any external service. Nothing about your in-app activity is tracked this way — see our <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a> for how in-app usage analytics is handled separately from cookies.</p>
 
       <h2 id="website">3. This website</h2>
-      <p>The writingdeskapp.com website uses a small number of cookies. We ask for your consent on first visit via a cookie notice. You can change your preferences at any time.</p>
+      <p>The writingdeskapp.com website uses a small number of cookies. We ask for your consent on first visit via a cookie notice. You can change your preference at any time using the "Manage cookie preferences" button above.</p>
 
       <h2 id="types">4. Cookies we use</h2>
 
@@ -68,10 +73,10 @@ permalink: /cookies/
       <h2 id="control">5. Your control</h2>
       <p>You can control and manage cookies in several ways:</p>
       <ul>
-        <li><strong>Our cookie notice</strong> — decline non-essential cookies on first visit, or change your preference at any time by clicking "Cookie settings" in the site footer</li>
+        <li><strong>Manage cookie preferences</strong> — use the button at the top of this page to change your choice at any time</li>
         <li><strong>Browser settings</strong> — most browsers allow you to block or delete cookies. See your browser's help documentation for instructions</li>
         <li><strong>Google Analytics opt-out</strong> — install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a> to prevent your data being used across all sites</li>
-        <li><strong>Do Not Track</strong> — Writing Desk respects the Do Not Track browser signal. If enabled, analytics cookies will not be set</li>
+        <li><strong>Do Not Track</strong> — if your browser sends a Do Not Track signal, we treat that as a standing decision not to set analytics cookies and won't ask you again unless you change it yourself using the button above</li>
       </ul>
       <p>Please note that blocking essential cookies may affect the functionality of the website, particularly if you are signed in to a Writing Desk account.</p>
 
@@ -83,7 +88,7 @@ permalink: /cookies/
 
       <div class="legal-contact-card">
         <p><strong>Questions about cookies?</strong><br>
-        Email: <a href="mailto:hello@writingdeskapp.com">hello@writingdeskapp.com</a></p>
+        Email: <a href="mailto:help@writingdeskapp.com">help@writingdeskapp.com</a></p>
       </div>
 
     </div>
@@ -121,6 +126,39 @@ permalink: /cookies/
 .legal-contact-card { margin-top: 48px; padding: 24px 28px; background: var(--purple-faint); border-radius: var(--radius-lg); border: 1px solid var(--border); }
 .legal-contact-card p { font-size: 15px; color: var(--ink-muted); margin: 0; line-height: 1.7; }
 .legal-contact-card strong { color: var(--ink); font-weight: 500; }
+
+.wd-cookie-manage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: -12px 0 40px;
+  padding: 16px 20px;
+  background: var(--purple-faint, #EAE8F8);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.wd-cookie-manage__status {
+  font-size: 14px;
+  color: var(--ink-muted);
+  margin: 0;
+}
+.wd-cookie-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 9px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.wd-cookie-btn--primary {
+  background: var(--accent, #534AB7);
+  color: #FFFFFF;
+}
+
 @media (max-width: 900px) {
   .legal-hero { padding: 40px 24px 32px; }
   .legal-hero h1 { font-size: 32px; }
@@ -130,5 +168,35 @@ permalink: /cookies/
   .legal-toc a { padding: 4px 10px; border-left: none; border: 1px solid var(--border); border-radius: 20px; font-size: 12.5px; }
   .legal-toc a:hover { border-color: var(--purple); }
   .legal-toc-label { display: none; }
+  .wd-cookie-manage { flex-direction: column; align-items: stretch; text-align: left; }
 }
 </style>
+
+<script>
+  (function () {
+    var STORAGE_KEY = 'wd_cookie_consent';
+    var statusEl = document.getElementById('wd-cookie-status');
+    var manageBtn = document.getElementById('wd-cookie-manage-btn');
+
+    function renderStatus() {
+      var current = localStorage.getItem(STORAGE_KEY);
+      if (current === 'accepted') {
+        statusEl.textContent = 'You have accepted analytics cookies.';
+      } else if (current === 'rejected') {
+        statusEl.textContent = 'You have rejected analytics cookies.';
+      } else {
+        statusEl.textContent = 'You have not yet made a cookie choice.';
+      }
+    }
+
+    renderStatus();
+
+    manageBtn.addEventListener('click', function () {
+      if (typeof window.wdReopenCookieBanner === 'function') {
+        window.wdReopenCookieBanner();
+      }
+    });
+
+    window.addEventListener('wd-cookie-consent-changed', renderStatus);
+  })();
+</script>
