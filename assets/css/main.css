@@ -534,7 +534,9 @@ button { font-family: var(--sans); cursor: pointer; }
 .compare-header h2 { font-family: var(--serif); font-size: 32px; font-weight: 400; color: var(--ink); margin-bottom: 10px; }
 .compare-header p { font-size: 16px; color: var(--ink-muted); font-weight: 300; }
 
-.ftable { border: 1px solid var(--border-strong); border-radius: var(--radius-lg); overflow: hidden; background: var(--white); }
+.ftable { border: 1px solid var(--border-strong); border-radius: var(--radius-lg); background: var(--white); }
+.ftable > .frow:first-child { border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+.ftable > .frow:last-child { border-radius: 0 0 var(--radius-lg) var(--radius-lg); overflow: hidden; }
 .frow { display: grid; grid-template-columns: 2fr repeat(3,1fr); }
 .frow.fhead {
   background: var(--purple-light);
@@ -546,8 +548,8 @@ button { font-family: var(--sans); cursor: pointer; }
 .fcenter { text-align: center; font-size: 13px; color: var(--ink-muted); }
 .fhi { background: rgba(83,74,183,0.06); }
 .fplan-name { display: block; font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
-.fplan-price { font-family: var(--serif); font-size: 26px; font-weight: 400; color: var(--ink); }
-.fplan-price span { font-family: var(--sans); font-size: 13px; font-weight: 300; color: var(--ink-muted); }
+.fplan-price { display: block; font-family: var(--serif); font-size: 26px; font-weight: 400; color: var(--ink); margin-bottom: 2px; }
+.fplan-price .fplan-unit { font-family: var(--sans); font-size: 13px; font-weight: 300; color: var(--ink-muted); }
 .fplan-badge { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: white; background: var(--purple); padding: 2px 8px; border-radius: 10px; margin-bottom: 6px; }
 .frow.fsection { background: #f7f7f5; }
 .fsection-label { font-size: 10px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-faint); padding: 8px 24px 4px; grid-column: 1/-1; }
