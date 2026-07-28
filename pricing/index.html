@@ -571,3 +571,68 @@ body.annual .monthly-price { display: none !important; }
   .fhead-sticky .fplan-cta { padding: 6px 10px; font-size: 11px; }
 }
 </style>
+
+<script>
+(function () {
+  var CURRENCY_KEY = 'wd_currency';
+
+  function setBilling(period) {
+    document.getElementById('btn-monthly').classList.toggle('active', period === 'monthly');
+    document.getElementById('btn-annual').classList.toggle('active', period === 'annual');
+    document.querySelectorAll('.monthly-price').forEach(function (el) {
+      el.style.display = period === 'monthly' ? '' : 'none';
+    });
+    document.querySelectorAll('.annual-price').forEach(function (el) {
+      el.style.display = period === 'annual' ? '' : 'none';
+    });
+  }
+  window.setBilling = setBilling;
+
+  function applyCurrency(currency) {
+    var isUsd = currency === 'usd';
+
+    document.querySelectorAll('[data-usd]').forEach(function (el) {
+      if (!el.dataset.gbp) {
+        el.dataset.gbp = el.innerHTML;
+      }
+      el.innerHTML = isUsd ? el.getAttribute('data-usd') : el.dataset.gbp;
+    });
+
+    var noteText = document.getElementById('currency-note-text');
+    var toggleUsd = document.getElementById('currency-toggle-usd');
+    var toggleGbp = document.getElementById('currency-toggle-gbp');
+    if (noteText) noteText.textContent = isUsd ? 'Prices shown in USD ($).' : 'Prices shown in GBP (£).';
+    if (toggleUsd) toggleUsd.style.display = isUsd ? 'none' : '';
+    if (toggleGbp) toggleGbp.style.display = isUsd ? '' : 'none';
+
+    try { localStorage.setItem(CURRENCY_KEY, currency); } catch (e) {}
+  }
+  window.setCurrency = applyCurrency;
+
+  function initCurrency() {
+    var params = new URLSearchParams(window.location.search);
+    var fromUrl = params.get('currency');
+    var currency = fromUrl === 'usd' || fromUrl === 'gbp' ? fromUrl : null;
+
+    if (!currency) {
+      try { currency = localStorage.getItem(CURRENCY_KEY); } catch (e) {}
+    }
+    if (currency !== 'usd' && currency !== 'gbp') {
+      currency = 'gbp';
+    }
+    applyCurrency(currency);
+  }
+
+  document.getElementById('currency-toggle-usd').addEventListener('click', function (e) {
+    e.preventDefault();
+    applyCurrency('usd');
+  });
+  document.getElementById('currency-toggle-gbp').addEventListener('click', function (e) {
+    e.preventDefault();
+    applyCurrency('gbp');
+  });
+
+  initCurrency();
+  setBilling('monthly');
+})();
+</script>
