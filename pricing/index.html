@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "Pricing | Free Book Writing Software"
-description: "Simple pricing for serious writers. Start free, upgrade when you're ready. Writing app for novelistss."
+title: "Writing Desk Pricing | Book Writing Software"
+description: "Simple pricing for serious writers. Start free, upgrade when you're ready."
 permalink: /pricing/
 ---
   <div class="pricing-hero">
   <span class="eyebrow">Pricing</span>
   <h1>Simple pricing for<br><em>serious writers.</em></h1>
-  <p>Start free. Upgrade when you're ready. All plans include the core offline writing environment.</p>
+  <p>Start free. Upgrade when you're ready. All plans include the full offline writing environment.</p>
   <div class="billing-toggle">
     <div class="toggle-track">
       <button class="toggle-btn active" id="btn-monthly" onclick="setBilling('monthly')">Monthly</button>
@@ -131,18 +131,24 @@ permalink: /pricing/
       <div class="fcell flabel"></div>
       <div class="fcell fcenter">
         <span class="fplan-name">Free</span>
-        <span class="fplan-price"><span data-usd="$0">£0</span><span>/mo</span></span>
+        <span class="fplan-price"><span data-usd="$0">£0</span><span class="fplan-unit">/mo</span></span>
         <a href="#" class="fplan-cta cta-lined">Download free</a>
       </div>
       <div class="fcell fcenter fhi">
         <span class="fplan-badge">Popular</span>
         <span class="fplan-name" style="color:var(--purple)">Premium</span>
-        <span class="fplan-price"><span data-usd="$12">£10</span><span>/mo</span></span>
+        <span class="fplan-price">
+          <span class="monthly-price"><span data-usd="$12">£10</span><span class="fplan-unit">/mo</span></span>
+          <span class="annual-price" style="display:none"><span data-usd="$10">£8</span><span class="fplan-unit">/mo</span></span>
+        </span>
         <a href="#" class="fplan-cta cta-filled">Get Premium</a>
       </div>
       <div class="fcell fcenter">
         <span class="fplan-name">Pro</span>
-        <span class="fplan-price"><span data-usd="$22">£18</span><span>/mo</span></span>
+        <span class="fplan-price">
+          <span class="monthly-price"><span data-usd="$22">£18</span><span class="fplan-unit">/mo</span></span>
+          <span class="annual-price" style="display:none"><span data-usd="$18">£14</span><span class="fplan-unit">/mo</span></span>
+        </span>
         <a href="#" class="fplan-cta cta-lined">Get Pro</a>
       </div>
     </div>
@@ -549,7 +555,7 @@ body.annual .monthly-price { display: none !important; }
 
 .fhead-sticky {
   position: sticky;
-  top: 0;
+  top: 56px;
   z-index: 20;
   background: var(--color-background-primary, #fff);
   box-shadow: 0 1px 0 var(--color-border-secondary, #e3e0d8);
@@ -562,6 +568,7 @@ body.annual .monthly-price { display: none !important; }
   font-size: 12.5px;
   border-radius: 999px;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 @media (max-width: 720px) {
