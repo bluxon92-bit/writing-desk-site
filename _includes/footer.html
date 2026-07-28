@@ -214,5 +214,17 @@
       status.className = 'wd-modal-status';
     });
   });
+
+  // Auto-open when arriving via a link that can't fire an in-page click —
+  // e.g. the "Join the waitlist" card in the Formatter app, which lives on
+  // a different subdomain and has no [data-waitlist-trigger] element of its own.
+  // Usage: https://writingdeskapp.com/?waitlist=open
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('waitlist') === 'open') {
+    openModal();
+    params.delete('waitlist');
+    var cleanUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash;
+    window.history.replaceState(null, '', cleanUrl);
+  }
 })();
 </script>
