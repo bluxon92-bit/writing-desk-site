@@ -569,21 +569,32 @@ button { font-family: var(--sans); cursor: pointer; }
    ========================================= */
 
 .about-hero {
-  max-width: 760px; margin: 0 auto;
+  max-width: 860px; margin: 0 auto;
   padding: 80px 40px 60px;
 }
 .about-hero h1 {
   font-family: var(--serif); font-size: 46px; font-weight: 400;
-  line-height: 1.1; margin-bottom: 24px; color: var(--ink);
+  line-height: 1.1; margin-bottom: 28px; color: var(--ink);
 }
 .about-hero h1 em { color: var(--purple); font-style: italic; }
 .about-hero p {
   font-size: 18px; color: var(--ink-muted); font-weight: 300; line-height: 1.8;
 }
 .about-hero p + p { margin-top: 16px; }
+.about-hero-top {
+  display: grid; grid-template-columns: 200px 1fr;
+  gap: 32px; align-items: start;
+  margin-bottom: 20px;
+}
+.about-photo {
+  width: 100%; aspect-ratio: 1 / 1; object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-strong);
+}
+.about-hero-top + p { margin-top: 16px; }
 
 .about-section {
-  max-width: 760px; margin: 0 auto;
+  max-width: 860px; margin: 0 auto;
   padding: 48px 40px;
   border-top: 1px solid var(--border);
 }
@@ -605,6 +616,35 @@ button { font-family: var(--sans); cursor: pointer; }
 }
 .principle-card h3 { font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
 .principle-card p { font-size: 14px; color: var(--ink-muted); font-weight: 300; line-height: 1.65; }
+.principle-card a {
+  display: inline-block; margin-top: 8px;
+  font-size: 13px; color: var(--purple);
+  text-decoration: underline; text-underline-offset: 2px;
+}
+
+.step-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; margin-top: 24px;
+}
+.step-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 22px;
+}
+.step-number {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--purple-light); color: var(--purple);
+  font-weight: 500; font-size: 13px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 14px;
+}
+.step-card h3 { font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+.step-card p { font-size: 13.5px; color: var(--ink-muted); font-weight: 300; line-height: 1.6; margin: 0; }
+
+.finished-line {
+  font-size: 15px; color: var(--ink-muted); font-weight: 300;
+  line-height: 1.75; margin-top: 24px; max-width: 640px;
+}
+.how-it-works-cta { text-align: center; margin-top: 28px; }
 
 /* =========================================
    BLOG
@@ -684,15 +724,17 @@ button { font-family: var(--sans); cursor: pointer; }
    ========================================= */
 
 @media (max-width: 900px) {
-  .hero, .feature-block, .feature-content, .manifesto {
+  .hero, .feature-block, .feature-content, .manifesto, .about-hero-top {
     grid-template-columns: 1fr;
     gap: 40px; direction: ltr !important;
   }
+  .about-hero-top { gap: 20px; }
+  .about-photo { max-width: 200px; }
   .hero { padding: 48px 24px 40px; }
   .hero h1 { font-size: 36px; }
   .features { padding: 0 24px 60px; }
   .features-hero, .pricing-hero, .about-hero { padding: 48px 24px 36px; }
-  .pricing-grid, .principles-grid { grid-template-columns: 1fr; }
+  .pricing-grid, .principles-grid, .step-grid { grid-template-columns: 1fr; }
   .blog-grid { grid-template-columns: 1fr 1fr; }
   .nav { padding: 0 24px; }
   .page-wrap, .pricing-grid-wrap, .compare-section, .features, .feature-section { padding-left: 24px; padding-right: 24px; }
