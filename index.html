@@ -92,6 +92,12 @@ description: "Writing Desk is a local writing app for Mac. Plot, write, edit, tr
     <p>Characters, timelines, research. A dozen documents and spreadsheets, and somewhere between that first idea and "The End" is a file called <code>draft_final_final_3</code>.</p>
     <p class="brand-strip-turn">Your manuscript deserves better.</p>
     <p>Writing Desk brings everything together, giving you the space you need to get down to the business of writing.</p>
+    <div class="brand-strip-actions">
+      <a href="#" class="btn btn-primary" data-waitlist-trigger>
+        <svg viewBox="0 0 15 15" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M3 7.5h9M8 4l3.5 3.5L8 11"/></svg>
+        Join the waitlist
+      </a>
+    </div>
   </div>
 </section>
 
@@ -520,10 +526,12 @@ And when you're ready to publish, export in a format ready for agent submission,
 
 /* ── Brand statement ─────────────────────────── */
 .brand-strip {
-  max-width: 1100px; margin: 0 auto 8px;
-  padding: 40px 40px 64px;
+  max-width: 1080px; margin: 0 auto 20px;
+  padding: 56px 60px;
+  background: var(--purple-light);
+  border-radius: 20px;
   display: grid; grid-template-columns: 0.95fr 1.05fr;
-  gap: 64px; align-items: center;
+  gap: 56px; align-items: center;
 }
 .brand-strip-visual img {
   width: 100%; height: auto; display: block;
@@ -539,15 +547,16 @@ And when you're ready to publish, export in a format ready for agent submission,
 }
 .brand-strip-text p code {
   font-family: var(--sans); font-size: 13.5px;
-  background: var(--purple-faint); border: 1px solid var(--border);
+  background: rgba(255,255,255,0.6); border: 1px solid var(--border-strong);
   border-radius: 4px; padding: 1px 6px; color: var(--ink-muted);
 }
 .brand-strip-turn {
   font-weight: 500 !important; color: var(--ink) !important;
 }
+.brand-strip-actions { margin-top: 24px; }
 
 @media (max-width: 900px) {
-  .brand-strip { grid-template-columns: 1fr; gap: 32px; padding: 8px 24px 48px; }
+  .brand-strip { grid-template-columns: 1fr; gap: 32px; padding: 40px 32px; margin: 0 24px 20px; }
   .brand-strip-visual { max-width: 360px; margin: 0 auto; }
 }
 
