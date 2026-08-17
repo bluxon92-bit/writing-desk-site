@@ -569,7 +569,7 @@ button { font-family: var(--sans); cursor: pointer; }
    ========================================= */
 
 .about-hero {
-  max-width: 860px; margin: 0 auto;
+  max-width: 980px; margin: 0 auto;
   padding: 80px 40px 60px;
 }
 .about-hero h1 {
@@ -582,8 +582,8 @@ button { font-family: var(--sans); cursor: pointer; }
 }
 .about-hero p + p { margin-top: 16px; }
 .about-hero-top {
-  display: grid; grid-template-columns: 200px 1fr;
-  gap: 32px; align-items: start;
+  display: grid; grid-template-columns: 240px 1fr;
+  gap: 40px; align-items: start;
   margin-bottom: 20px;
 }
 .about-photo {
@@ -594,7 +594,7 @@ button { font-family: var(--sans); cursor: pointer; }
 .about-hero-top + p { margin-top: 16px; }
 
 .about-section {
-  max-width: 860px; margin: 0 auto;
+  max-width: 980px; margin: 0 auto;
   padding: 48px 40px;
   border-top: 1px solid var(--border);
 }
@@ -645,6 +645,16 @@ button { font-family: var(--sans); cursor: pointer; }
   line-height: 1.75; margin-top: 24px; max-width: 640px;
 }
 .how-it-works-cta { text-align: center; margin-top: 28px; }
+
+.about-final-cta {
+  max-width: 980px; margin: 0 auto;
+  padding: 40px; text-align: center;
+  border-top: 1px solid var(--border);
+}
+.about-final-cta p {
+  font-size: 16px; color: var(--ink-muted); font-weight: 300;
+  margin-bottom: 24px;
+}
 
 /* =========================================
    BLOG
@@ -729,7 +739,7 @@ button { font-family: var(--sans); cursor: pointer; }
     gap: 40px; direction: ltr !important;
   }
   .about-hero-top { gap: 20px; }
-  .about-photo { max-width: 200px; }
+  .about-photo { max-width: 240px; }
   .hero { padding: 48px 24px 40px; }
   .hero h1 { font-size: 36px; }
   .features { padding: 0 24px 60px; }
