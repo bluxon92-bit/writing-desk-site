@@ -36,9 +36,94 @@ layout: default
   </div>
   {% endif %}
 
+  {% comment %}
+    Sidebar product pitch and two related-tool links, tailored by
+    category rather than per post — keeps this to one place to
+    maintain as new posts get tagged with an existing category.
+    Craft has no dedicated case below; it (and any future unmapped
+    category) uses the default values assigned right above the case
+    block.
+  {% endcomment %}
+  {% assign sidebar_title = "Give your story somewhere to live." %}
+  {% assign sidebar_text = "Plot, draft, edit, and export your manuscript, formatted and ready to publish, all in one place." %}
+  {% assign sidebar_tool1_url = "/tools/book-title-generator/" %}
+  {% assign sidebar_tool1_label = "Book Title Generator" %}
+  {% assign sidebar_tool2_url = "/tools/writing-prompt-generator/" %}
+  {% assign sidebar_tool2_label = "Writing Prompt Generator" %}
+  {% case page.category %}
+    {% when "Structure" %}
+      {% assign sidebar_title = "Plot your novel." %}
+      {% assign sidebar_text = "Map your acts, scenes, and turning points all in one place. Then start writing." %}
+      {% assign sidebar_tool1_url = "/tools/writing-prompt-generator/" %}
+      {% assign sidebar_tool1_label = "Writing Prompt Generator" %}
+      {% assign sidebar_tool2_url = "/tools/book-title-generator/" %}
+      {% assign sidebar_tool2_label = "Book Title Generator" %}
+    {% when "Character" %}
+      {% assign sidebar_title = "Keep your characters straight." %}
+      {% assign sidebar_text = "Character profiles, backstory, and notes live in the Resource Hub, right alongside your draft." %}
+      {% assign sidebar_tool1_url = "/tools/character-name-generator/" %}
+      {% assign sidebar_tool1_label = "Character Name Generator" %}
+      {% assign sidebar_tool2_url = "/tools/villain-name-generator/" %}
+      {% assign sidebar_tool2_label = "Villain Name Generator" %}
+    {% when "Dialogue" %}
+      {% assign sidebar_title = "Write realistic dialogue." %}
+      {% assign sidebar_text = "Character sheets, related resources, and editorial tools that will flag clunky dialogue and exposition." %}
+      {% assign sidebar_tool1_url = "/tools/character-name-generator/" %}
+      {% assign sidebar_tool1_label = "Character Name Generator" %}
+      {% assign sidebar_tool2_url = "/tools/writing-prompt-generator/" %}
+      {% assign sidebar_tool2_label = "Writing Prompt Generator" %}
+    {% when "Process" %}
+      {% assign sidebar_title = "Your focused writing zone." %}
+      {% assign sidebar_text = "A clean, distraction-free zone built for Mac, with everything you need within reach." %}
+      {% assign sidebar_tool1_url = "/tools/writing-prompt-generator/" %}
+      {% assign sidebar_tool1_label = "Writing Prompt Generator" %}
+      {% assign sidebar_tool2_url = "/tools/book-title-generator/" %}
+      {% assign sidebar_tool2_label = "Book Title Generator" %}
+  {% endcase %}
+
   <div class="post-body">
-    <div class="post-content">
-      {{ content }}
+    <div class="post-body-inner">
+      <div class="post-content">
+        {{ content }}
+      </div>
+
+      <aside class="post-sidebar">
+
+        <div class="sidebar-card" id="post-toc-card" style="display:none">
+          <h3>On this page</h3>
+          <div id="post-toc-list" class="post-toc-list"></div>
+        </div>
+
+        <div class="post-sidebar-sticky-group">
+
+          <div class="post-sidebar-cta">
+            <img src="https://res.cloudinary.com/dnkddcxrt/image/upload/v1784480204/Writing_Desk_Demo_Video_Open_Graph_1_lvzbnr.png" alt="" class="post-sidebar-cta-img">
+            <div class="post-sidebar-cta-body">
+              <span class="post-sidebar-cta-eyebrow">Writing Desk</span>
+              <p class="post-sidebar-cta-title">{{ sidebar_title }}</p>
+              <p class="post-sidebar-cta-text">{{ sidebar_text }}</p>
+              <a href="{{ '/download/' | relative_url }}" class="post-sidebar-cta-btn">
+                <svg viewBox="0 0 15 15" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round"><path d="M7.5 2v9M4 8l3.5 3.5L11 8M2 13h11"/></svg>
+                Download for Mac
+              </a>
+            </div>
+          </div>
+
+          {% if sidebar_tool1_url != "" or sidebar_tool2_url != "" %}
+          <div class="sidebar-card">
+            <h3>Related tools</h3>
+            {% if sidebar_tool1_url != "" %}
+            <a href="{{ sidebar_tool1_url | relative_url }}" class="sidebar-link">{{ sidebar_tool1_label }} &rarr;</a>
+            {% endif %}
+            {% if sidebar_tool2_url != "" %}
+            <a href="{{ sidebar_tool2_url | relative_url }}" class="sidebar-link">{{ sidebar_tool2_label }} &rarr;</a>
+            {% endif %}
+          </div>
+          {% endif %}
+
+        </div>
+
+      </aside>
     </div>
 
     <!-- Author bio -->
@@ -53,8 +138,8 @@ layout: default
           <p>Plot, draft, edit, and format your manuscript in one private, local app for Mac. Free to download. Your writing never leaves your machine.</p>
         </div>
         <div class="post-cta-action">
-          <a href="#" class="btn btn-primary">
-            <svg viewBox="0 0 15 15" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M7.5 2v9M4 8l3.5 3.5L11 8M2 13h11"/></svg>
+          <a href="{{ '/download/' | relative_url }}" class="btn-white-outline">
+            <svg viewBox="0 0 15 15" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round"><path d="M7.5 2v9M4 8l3.5 3.5L11 8M2 13h11"/></svg>
             Download for Mac — free
           </a>
           <p class="post-cta-micro">macOS 13 Ventura or later · No account required</p>
@@ -92,7 +177,7 @@ layout: default
   padding: 64px 40px 48px;
   background: var(--white);
 }
-.post-header-inner { max-width: 900px; margin: 0 auto; }
+.post-header-inner { max-width: 1100px; margin: 0 auto; }
 .post-header-meta { display: flex; gap: 8px; align-items: center; margin-bottom: 16px; }
 .post-header h1 {
   font-family: var(--serif); font-size: 40px; font-weight: 400;
@@ -102,7 +187,7 @@ layout: default
 
 /* ── Hero image ───────────────────────────── */
 .post-hero-image {
-  max-width: 900px; margin: 0 auto;
+  max-width: 1100px; margin: 0 auto;
   padding: 32px 40px 0;
 }
 .post-hero-image img {
@@ -112,7 +197,40 @@ layout: default
 }
 
 /* ── Post body ────────────────────────────── */
-.post-body { max-width: 900px; margin: 0 auto; padding: 48px 40px 80px; }
+.post-body { max-width: 1100px; margin: 0 auto; padding: 48px 40px 80px; }
+
+.post-body-inner {
+  display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 48px;
+  margin-bottom: 40px;
+}
+
+.post-sidebar { display: flex; flex-direction: column; gap: 20px; }
+.post-sidebar-sticky-group { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 20px; }
+.post-sidebar-cta { background: var(--purple); border-radius: var(--radius-lg); overflow: hidden; }
+
+.sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; }
+.sidebar-card h3 { font-family: var(--serif); font-size: 16px; font-weight: 400; color: var(--ink); margin-bottom: 12px; }
+.sidebar-link { display: block; font-size: 13px; font-weight: 500; color: var(--purple); text-decoration: none; padding: 8px 0; border-top: 1px solid var(--border); transition: opacity 0.15s; }
+.sidebar-link:first-of-type { border-top: none; }
+.sidebar-link:hover { opacity: 0.7; }
+
+.post-toc-list a { display: block; font-size: 13px; color: var(--ink-muted); text-decoration: none; padding: 5px 0; line-height: 1.4; transition: color 0.15s; }
+.post-toc-list a:hover { color: var(--purple); }
+.post-toc-list a.post-toc-sub { padding-left: 14px; font-size: 12.5px; color: var(--ink-faint); }
+
+.post-sidebar-cta-img { width: 100%; height: auto; display: block; }
+.post-sidebar-cta-body { padding: 18px 20px 20px; }
+.post-sidebar-cta-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--purple-mid); }
+.post-sidebar-cta-title { font-family: var(--serif); font-size: 16px; font-weight: 400; color: white; margin: 8px 0 8px; line-height: 1.3; }
+.post-sidebar-cta-text { font-size: 12.5px; color: rgba(255,255,255,0.75); font-weight: 300; line-height: 1.6; margin-bottom: 16px; }
+.post-sidebar-cta-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: white; color: var(--purple); font-weight: 500; font-size: 12.5px;
+  padding: 9px 14px; border-radius: var(--radius); text-decoration: none;
+  transition: opacity 0.15s;
+}
+.post-sidebar-cta-btn:hover { opacity: 0.9; }
+.post-sidebar-cta-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
 
 /* ── Post content typography ──────────────── */
 .post-content { font-size: 17px; color: var(--ink-muted); font-weight: 300; line-height: 1.85; }
@@ -215,6 +333,7 @@ layout: default
   font-size: 14px; transition: opacity 0.15s;
 }
 .btn-white-outline:hover { opacity: 0.9; }
+.btn-white-outline svg { width: 15px; height: 15px; flex-shrink: 0; }
 .post-cta-micro {
   font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 8px; text-align: center;
 }
@@ -244,6 +363,8 @@ layout: default
   .post-header h1 { font-size: 30px; }
   .post-body { padding: 36px 24px 60px; }
   .post-hero-image { padding: 24px 24px 0; }
+  .post-body-inner { grid-template-columns: 1fr; }
+  .post-sidebar-sticky-group { position: static; }
   .post-cta-inner { flex-direction: column; }
   .related-grid { grid-template-columns: 1fr; }
 }

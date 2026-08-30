@@ -16,7 +16,7 @@
           <a href="{{ '/features/' | relative_url }}">Features</a>
           <a href="{{ '/demo/' | relative_url }}">Watch Demo</a>
           <a href="{{ '/pricing/' | relative_url }}">Pricing</a>
-          <a href="#">Download</a>
+          <a href="{{ '/download/' | relative_url }}">Download</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
@@ -46,185 +46,20 @@
   </div>
 </footer>
 
-<!-- ═══════════════════════ WAITLIST MODAL ═══════════════════════ -->
-<!-- Triggered by any element carrying [data-waitlist-trigger] anywhere on the site -->
-<div class="wd-modal-overlay" id="wd-waitlist-overlay" aria-hidden="true">
-  <div class="wd-modal" role="dialog" aria-modal="true" aria-labelledby="wd-waitlist-title">
-    <button type="button" class="wd-modal-close" id="wd-waitlist-close" aria-label="Close">
-      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></svg>
-    </button>
-    <div class="wd-modal-body" id="wd-waitlist-form-wrap">
-      <span class="eyebrow">Coming soon</span>
-      <h2 class="wd-modal-title" id="wd-waitlist-title">Join the waitlist.</h2>
-      <p class="wd-modal-sub">We're a couple of weeks from launch. Leave your details and we'll email you the moment Writing Desk is ready to download.</p>
-      <form id="wd-waitlist-form" novalidate>
-        <label class="wd-modal-label" for="wd-waitlist-name">Name</label>
-        <input class="wd-modal-input" type="text" id="wd-waitlist-name" name="name" placeholder="Your name" autocomplete="name">
-        <label class="wd-modal-label" for="wd-waitlist-email">Email</label>
-        <input class="wd-modal-input" type="email" id="wd-waitlist-email" name="email" placeholder="you@example.com" required autocomplete="email">
-        <button type="submit" class="btn btn-primary wd-modal-submit" id="wd-waitlist-submit">Join the waitlist</button>
-      </form>
-      <div class="wd-modal-status" id="wd-waitlist-status" role="status" aria-live="polite"></div>
-      <p class="wd-modal-micro">No spam. One-click unsubscribe any time.</p>
-    </div>
-  </div>
-</div>
-
-<style>
-.wd-modal-overlay {
-  position: fixed; inset: 0; background: rgba(26,26,46,0.5);
-  display: flex; align-items: center; justify-content: center;
-  padding: 20px; z-index: 1000;
-  opacity: 0; visibility: hidden; transition: opacity 0.2s ease, visibility 0.2s ease;
-}
-.wd-modal-overlay.open { opacity: 1; visibility: visible; }
-.wd-modal {
-  background: var(--white); border-radius: var(--radius-lg);
-  max-width: 440px; width: 100%; padding: 40px 36px;
-  position: relative; box-shadow: 0 24px 64px rgba(26,26,46,0.25);
-  transform: translateY(12px) scale(0.98); transition: transform 0.2s ease;
-}
-.wd-modal-overlay.open .wd-modal { transform: translateY(0) scale(1); }
-.wd-modal-close {
-  position: absolute; top: 16px; right: 16px;
-  width: 32px; height: 32px; border-radius: 50%;
-  background: var(--purple-faint); border: none; cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  color: var(--ink-faint); transition: background 0.15s, color 0.15s;
-}
-.wd-modal-close:hover { background: var(--purple-light); color: var(--purple); }
-.wd-modal-close svg { width: 14px; height: 14px; }
-.wd-modal-title {
-  font-family: var(--serif); font-size: 26px; font-weight: 400;
-  color: var(--ink); margin: 8px 0 12px; line-height: 1.25;
-}
-.wd-modal-sub {
-  font-size: 14.5px; color: var(--ink-muted); font-weight: 300;
-  line-height: 1.65; margin-bottom: 24px;
-}
-.wd-modal-label {
-  display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px;
-}
-.wd-modal-input {
-  width: 100%; box-sizing: border-box; padding: 11px 14px; margin-bottom: 16px;
-  border: 1px solid var(--border-strong); border-radius: var(--radius);
-  font-family: var(--sans); font-size: 14.5px; color: var(--ink);
-  outline: none; transition: border-color 0.15s;
-}
-.wd-modal-input:focus { border-color: var(--purple); }
-.wd-modal-submit { width: 100%; justify-content: center; margin-top: 4px; border: none; cursor: pointer; }
-.wd-modal-status { font-size: 13px; margin-top: 14px; min-height: 18px; text-align: center; }
-.wd-modal-status.success { color: #2A8A5C; }
-.wd-modal-status.error { color: #C0392B; }
-.wd-modal-micro { font-size: 11.5px; color: var(--ink-faint); text-align: center; margin-top: 16px; }
-@media (max-width: 480px) {
-  .wd-modal { padding: 32px 24px; }
-}
-</style>
-
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- The waitlist modal that used to live here is retired — every  -->
+<!-- CTA on the site now links straight to /download/. This script -->
+<!-- stays only to catch ?waitlist=open, since the Formatter app's  -->
+<!-- own "Join the waitlist" card still points at that URL and      -->
+<!-- lives in a separate repo not updated in this pass. Redirects   -->
+<!-- straight to /download/ instead of opening a modal that no      -->
+<!-- longer exists. Safe to delete once Formatter's card is         -->
+<!-- repointed directly at /download/.                               -->
 <script>
 (function() {
-  var overlay    = document.getElementById('wd-waitlist-overlay');
-  var closeBtn   = document.getElementById('wd-waitlist-close');
-  var form       = document.getElementById('wd-waitlist-form');
-  var formWrap   = document.getElementById('wd-waitlist-form-wrap');
-  var status     = document.getElementById('wd-waitlist-status');
-  var submitBtn  = document.getElementById('wd-waitlist-submit');
-  var lastFocused = null;
-
-  if (!overlay) return;
-
-  function openModal(e) {
-    if (e) e.preventDefault();
-    lastFocused = document.activeElement;
-    overlay.classList.add('open');
-    overlay.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    var emailInput = document.getElementById('wd-waitlist-email');
-    if (emailInput) setTimeout(function() { emailInput.focus(); }, 100);
-  }
-
-  function closeModal() {
-    overlay.classList.remove('open');
-    overlay.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    if (lastFocused && lastFocused.focus) lastFocused.focus();
-  }
-
-  document.querySelectorAll('[data-waitlist-trigger]').forEach(function(trigger) {
-    trigger.addEventListener('click', openModal);
-  });
-
-  closeBtn.addEventListener('click', closeModal);
-  overlay.addEventListener('click', function(e) {
-    if (e.target === overlay) closeModal();
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
-  });
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var email = document.getElementById('wd-waitlist-email').value.trim();
-    var name  = document.getElementById('wd-waitlist-name').value.trim();
-
-    if (!email || !email.includes('@')) {
-      status.textContent = 'Please enter a valid email address.';
-      status.className = 'wd-modal-status error';
-      return;
-    }
-
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Joining…';
-    status.textContent = '';
-    status.className = 'wd-modal-status';
-
-    fetch('/api/subscribe', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email, firstName: name, listId: 'waitlist' })
-    })
-    .then(function(res) { return res.json().then(function(data) { return { ok: res.ok, data: data }; }); })
-    .then(function(result) {
-      if (result.data.success) {
-        status.textContent = "✓ You're on the list. We'll email you the moment it's ready.";
-        status.className = 'wd-modal-status success';
-        form.style.display = 'none';
-      } else {
-        throw new Error(result.data.message || 'Something went wrong. Please try again.');
-      }
-    })
-    .catch(function(err) {
-      status.textContent = err.message || 'Something went wrong. Please try again.';
-      status.className = 'wd-modal-status error';
-    })
-    .finally(function() {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Join the waitlist';
-    });
-  });
-
-  // Reset form state each time the modal is reopened
-  document.querySelectorAll('[data-waitlist-trigger]').forEach(function(trigger) {
-    trigger.addEventListener('click', function() {
-      form.reset();
-      form.style.display = '';
-      status.textContent = '';
-      status.className = 'wd-modal-status';
-    });
-  });
-
-  // Auto-open when arriving via a link that can't fire an in-page click —
-  // e.g. the "Join the waitlist" card in the Formatter app, which lives on
-  // a different subdomain and has no [data-waitlist-trigger] element of its own.
-  // Usage: https://writingdeskapp.com/?waitlist=open
   var params = new URLSearchParams(window.location.search);
   if (params.get('waitlist') === 'open') {
-    openModal();
-    params.delete('waitlist');
-    var cleanUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash;
-    window.history.replaceState(null, '', cleanUrl);
+    window.location.replace('{{ "/download/" | relative_url }}');
   }
 })();
 </script>

@@ -153,6 +153,58 @@ function setBilling(mode) {
   }
 }
 
+// ── Blog post table of contents ──────────────────
+// Builds the sidebar's "On this page" list from whatever h2/h3s
+// actually exist in the post — nothing to maintain per post. The
+// card stays hidden (see post.html) until this confirms there's
+// something to show, so short posts with no subheadings don't get
+// an empty box.
+(function() {
+  var content = document.querySelector('.post-content');
+  var tocCard = document.getElementById('post-toc-card');
+  var tocList = document.getElementById('post-toc-list');
+  if (!content || !tocCard || !tocList) return;
+
+  var headings = content.querySelectorAll('h2, h3');
+  if (headings.length === 0) return;
+
+  var usedIds = {};
+  headings.forEach(function(h) {
+    if (!h.id) {
+      var slug = h.textContent.toLowerCase().trim()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-');
+      var id = slug || 'section';
+      var i = 2;
+      while (usedIds[id]) { id = slug + '-' + i; i++; }
+      usedIds[id] = true;
+      h.id = id;
+    }
+    var link = document.createElement('a');
+    link.href = '#' + h.id;
+    link.textContent = h.textContent;
+    if (h.tagName === 'H3') link.className = 'post-toc-sub';
+    tocList.appendChild(link);
+  });
+
+  tocCard.style.display = '';
+})();
+
+// ── Download page tabs ───────────────────────────
+function setDownloadTab(tab) {
+  var btnDesktop   = document.getElementById('dl-tab-btn-desktop');
+  var btnFormatter = document.getElementById('dl-tab-btn-formatter');
+  var panelDesktop   = document.getElementById('dl-tab-desktop-panel');
+  var panelFormatter = document.getElementById('dl-tab-formatter-panel');
+  if (!btnDesktop) return;
+
+  var showDesktop = tab !== 'formatter';
+  btnDesktop.classList.toggle('active', showDesktop);
+  btnFormatter.classList.toggle('active', !showDesktop);
+  panelDesktop.style.display   = showDesktop ? '' : 'none';
+  panelFormatter.style.display = showDesktop ? 'none' : '';
+}
+
 // ── Annual pricing visibility ────────────────────
 // Show/hide annual vs monthly price spans
 (function() {
