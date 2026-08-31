@@ -4,161 +4,119 @@ title: "How to Create a Character Profile: A Writer's Guide"
 date: 2026-07-13
 category: Character
 type: Guide
-image: "https://images.squarespace-cdn.com/content/v1/61dd3a4e102f883537ae2f1d/b2e2f05f-1b03-492f-867f-b80030a70933/Character+profile+%281%29.jpg"
-excerpt: "How to create a character profile — a writer's guide to building deep, convincing characters with motivation, arc, and personality."
+image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181029/character_profile_ds1zfn.jpg"
+excerpt: "How to create a character profile: what to include, a free template, and how to use it without losing spontaneity on the page."
 permalink: /blog/how-to-create-a-character-profile/
 ---
 
-At the centre of every great story is a cast of characters that convince you to read on, that almost become your friends. They have motivations, arcs, development and personalities that are understandable, deep and unique. However, as a writer creating these kinds of characters isn't easy. You need to know them inside and out, understand what makes them tick and how they will respond to events and overcome the obstacles that you throw their way.
+Most writers have a rough sense of their characters before they start writing. What they look like, maybe. How they speak. Their name.
 
-Creating a character profile isn't for everyone — we all have to find what works for us after all — but for those writers struggling to answer questions such as "do my characters have depth?", working through the steps to create a character profile can help fill and round out your characters, bringing them to life.
+But a rough sense isn't enough. Characters who only exist in your head tend to behave inconsistently on the page. They'll say things that don't fit their [backstory](/blog/backstory/), make decisions that undermine their established motivation, or shift personality between chapters without any internal logic.
 
-In this article, we take a look at what a character profile is, what makes a good one, and the steps to take to create one that's actually useful.
+A character profile fixes that. Not by boxing your character in, but by giving you a reference point solid enough to push against.
 
-> **Writing Desk tip:** Once you've built your character profiles, store them in the Resource Hub inside Writing Desk. Your AI editorial tools can reference them directly — so when you run a world consistency check, your characters' details are already in the room.
+## What Is a Character Profile?
 
-## What is a character profile and why should you create one?
+A character profile is a document where you record everything you know about a character. It's a working resource, something you return to during drafting, not something you write once and file away.
 
-In short, a character profile is a detailed biography of a fictional character. It should cover everything from the person's age and physical appearance to their likes, dislikes and even their relationships.
+The depth you go to depends on the character. Your protagonist probably needs a full profile. Secondary characters might need just a page. Background characters might not need one at all.
 
-While filling out a character template may feel like a waste of time — especially for less important characters — it's essential for authors to have a complete grasp of who their characters are and why they are behaving in the way they do.
+The goal isn't comprehensiveness for its own sake. It's clarity about who this person is, specifically the things that drive their behaviour and shape their choices.
 
-For example, a villain that is evil simply because the plot needs a villain is going to be weak and two-dimensional. But a villain who has suffered a loss and will do anything in their power to right their past — even if they're misguided — becomes understandable.
+> **Writing Desk tip:** Store profiles in the character notes area in the Resource Hub, kept alongside your outline and scene-by-scene draft, so you can reference a character's core traits while you're actively writing their scenes without flipping between documents.
 
-By working through and answering the questions in a character profile, authors can better understand how their characters will react in certain scenarios, their overall motivations, and their function within the story. This will help you create unique, engaging characters and avoid common tropes.
+## What to Include in a Character Profile
 
-Authors need to understand their characters like the back of their hands, even if they're not going to reveal a lot of the details. In fact, you shouldn't try to pack in every detail — doing so will likely result in an "info dump". However, having the details there, referencing them, and revealing them when they are relevant to the story is essential if you want your characters to feel well-drawn, flawed and real.
+### Basic Information
 
-## What makes a good character profile?
-
-A good character profile is one that helps you gain a complete understanding of a character — their past, motivations, likes and dislikes as is relevant to the context of the story.
-
-As such, the character profile should have three parts to it: the surface, the body, and the core. Not all of your characters will need each of these sections built out to minute detail. As we mentioned above though, you do need to fill out what is relevant to the story.
-
-### The surface
-
-These are the features that are immediately obvious. Things like their physical appearance, the way they speak, and how they interact with those around them.
-
-### The body
-
-Characters don't exist in a vacuum. They are shaped by their past experiences, by the people and events of their lives. The body is about the formative influences and relationships that have made them who they are today.
-
-### The core
-
-Who is your character in their heart? Who do they want to be? The core is all about how the character perceives themselves, their strengths and weaknesses, goals and motivations. This will form a central pillar, informing how your character will navigate and interact with the story you're creating.
-
----
-
-## Part 1: The Surface
-
-### The Basics
-
-- Name
+- Full name, including names they go by, names they've been called, names they've changed
 - Age
-- Place of birth
-- Current location
-- Nationality
-- Education
-- Occupation
-- Income
+- Physical description, kept specific to what actually matters: hair colour is fine, but what would stand out in a crowd is more useful
+- Occupation or role in the story
+- Where they live and grew up
 
-### Physical Appearance
+### Backstory
 
-- Eye colour
-- Hairstyle
-- Build
-- Distinguishing features (tattoos, scars, etc.)
-- Clothes and fashion
-- Accessories
-- Grooming
-- Obvious mannerisms
-- Current health
-- Their walk
-
-### Speech and Communication
-
-**Posture** — Stiff and military? Slouched? Casual and relaxed?
-
-**Gestures** — Never? Only when agitated? Compulsive hand-talker?
-
-**Speech** — Accents? How much do they talk? What's their style — educated, slang?
-
-**Mannerisms** — Confident or anxious? What's their laughter like?
-
-**How emotive are they?** — Do they wear their emotions on their sleeve? Do they get visibly upset or angry easily?
-
----
-
-## Part 2: The Body
-
-### The Past
-
-**Growing up**
-
-- Their hometown, their favourite place growing up
-- What type of childhood did they have?
-- Describe their education and experience at school
-- Describe their childhood friends and ambitions
-
-**The memories that shaped them**
-
-- Their greatest regret
-- Their earliest, saddest, happiest, and most vivid memories
-- What were the major turning points in their childhood?
-- What bad things (if any) have they done in the past?
-
-### Family
-
-Cover parents, siblings, children (if applicable), extended family, and the family's wealth and how often they see each other.
-
-### Other Relationships
-
-- Who are their closest friends and enemies?
-- How are they perceived by strangers, colleagues, authority figures, children?
-- What's their role in a group dynamic — leader, joker, parent?
-- Who do they depend on for practical advice, emotional support, mentoring?
-
----
-
-## Part 3: The Core
+- Key childhood experiences: what shaped them? Not a complete biography, just the specific moments that made them who they are
+- Defining trauma or loss: most compelling characters have something they're still carrying
+- Relationships that formed them: parents, siblings, early friendships, formative romantic relationships
+- The moment things changed: the turning point in their life before the story begins
 
 ### Psychology
 
-**Are they:** Street-smart or book-smart? Optimist or pessimist? Introverted or extroverted?
+- Core belief: what do they believe about the world, and about themselves? This is their worldview, often formed in response to their backstory
+- Core fear: specific, not "failure" but "becoming my father"; not "loneliness" but "discovering that no one would notice if they disappeared"
+- Desire: what do they want more than anything? The general version ("they want love") is less useful than the particular one ("they want the person who hurt them to admit they were wrong")
+- Need: what do they actually need, as opposed to what they want? These are often in tension, and that tension is often the story
+- Contradictions: where does this person surprise you? What do they believe that sits awkwardly alongside something else they believe?
 
-**Personal facts**
+### Personality and Behaviour
 
-- What kind of music do they like?
-- What are their flaws and strengths?
-- What are they afraid of?
-- What makes them angry? What makes them sad?
-- What is their greatest accomplishment to date?
+- Core traits (see [the character traits list](/blog/character-traits/) for a full working reference)
+- Core flaw: the quality that creates the most trouble for them and others
+- How they speak: word choice, rhythm, what they say and what they don't
+- What they do under pressure: people reveal themselves in crisis
+- What they want others to think of them, and how that differs from who they actually are
 
-**How do they approach:** power, ambition, love, change, flattery?
+### Story Role
 
-**Morality**
+- Their arc: how do they change across the story, and who do they come out as?
+- Their relationship to the protagonist, if they're not the protagonist: what do they want from or for them, and how does their presence complicate things?
+- Their secrets: what do they know that others don't, and what don't they know about themselves?
 
-- What are their concepts of good and evil?
-- What would they refuse to compromise on?
-- When are they willing to bend their own rules?
+## The Character Profile Template
 
-### Goals and Motivations
+![A character profile filled out in Writing Desk's Resource Hub](https://res.cloudinary.com/dnkddcxrt/image/upload/v1786801933/email_3_-_character_sheet_1_erxykj.png)
 
-Understanding your character's motivation and key goals is essential. Ask yourself: what does your character want, why do they want it, and how far are they willing to go to achieve it?
+A stripped-down version you can adapt directly:
 
-- What is their story goal? (answer in a single paragraph)
-- What is motivating them? (answer in a single paragraph)
+**Character name:** / **Age:** / **Role in story:**
 
----
+**Physical description:**
+
+**Where they're from:** / **Occupation:**
+
+**Backstory:**
+- Formative experience 1:
+- Formative experience 2:
+- The wound they're still carrying:
+
+**Psychology:**
+- Core belief:
+- Core fear:
+- What they want:
+- What they need:
+- Key contradiction:
+
+**Personality:**
+- Defining traits (2 to 3):
+- Core flaw:
+- Voice and speech patterns:
+- Under pressure, they:
+
+**Story arc:**
+- Where they start:
+- What they go through:
+- Who they become:
+
+**Secrets:**
+
+**Key relationships:**
+
+## Using a Profile Without Losing Spontaneity
+
+The most common worry about character profiles is that they'll kill the feeling of discovery, that knowing a character too well means never finding anything out while writing them.
+
+In practice, the opposite tends to be true. Characters with well-developed profiles feel more alive on the page, not less, because the writer knows their history and psychology well enough that the character's reactions to events feel grounded. Surprising, but earned.
+
+The profile isn't a script. It's a map. And having a map doesn't stop you from wandering off the path, it just means you know where you are when you do.
 
 ## Final Words
 
-If an author wants to make their stories irresistible, they need to make their characters believable — and that means fully understanding what drives them, how they will react in particular situations and what their motivations are.
-
-Not having answers to these questions, or worse, ignoring them, often results in characters acting out of, well, character. It makes it harder for readers to connect and can result in a jarring reading experience where the character appears to be doing what they're doing simply because the plot requires it.
+If you want your characters to feel irresistible, you need to fully understand what drives them, how they react in particular situations, and what they're afraid of. Not having answers to these questions, or ignoring them, often results in characters acting out of character. It makes it harder for readers to connect, and can produce a jarring reading experience where a character seems to be doing something simply because the plot requires it.
 
 **Related reading:**
 
+- [Character Traits: A Master List for Fiction Writers](/blog/character-traits/)
+- [Character Arc: The Complete Guide for Novelists](/blog/character-arc/)
 - [How to Write Believable Characters: Character Motivation](/blog/character-motivation/)
-- [Character Development Exercises: How to Create Unforgettable Characters](/blog/character-development-exercises/)
-- [Static vs Dynamic Characters: What They Are and Why They Matter](/blog/static-vs-dynamic-characters/)

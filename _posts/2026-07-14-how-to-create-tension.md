@@ -4,8 +4,8 @@ title: "How to Create Tension in Your Writing"
 date: 2026-07-13
 category: Craft
 type: Guide
-image: "https://images.squarespace-cdn.com/content/v1/61dd3a4e102f883537ae2f1d/1d0940b9-211d-40ee-b6a3-014e965ca455/writing+tension+%281%29.jpg"
-excerpt: "How to create tension in your story — 10 techniques to keep readers hooked, from the inciting incident to the final page."
+image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181031/how_to_create_tension_uqnxfm.jpg"
+excerpt: "How to create tension in your story, 10 techniques to keep readers hooked, from the inciting incident to the final page."
 permalink: /blog/how-to-create-tension/
 ---
 
@@ -21,17 +21,17 @@ The ticking clock is a classic device used in thrillers, but it works in any gen
 
 ## 3. Tease the reader with withheld information
 
-Sometimes, the best way to create tension is by holding back information. Instead of revealing everything at once, tease the reader with incomplete descriptions and hints. By gradually revealing information, you keep the reader guessing. Done well, your readers will slowly piece together the clues just as your protagonist does — so when the reveal comes, everything falls into place.
+Sometimes, the best way to create tension is by holding back information. Instead of revealing everything at once, tease the reader with incomplete descriptions and hints. By gradually revealing information, you keep the reader guessing. Done well, your readers will slowly piece together the clues just as your protagonist does, so when the reveal comes, everything falls into place.
 
 ## 4. Create an unexpected plot twist
 
-A plot twist is a sudden and unexpected turn of events that upends the story. When writing a plot twist, make sure it doesn't come out of nowhere — you'll want to carefully foreshadow it, otherwise it can feel like lazy writing. That said, the actual reveal should come as a surprise. The twist should challenge the characters and force them to adapt to new circumstances.
+A plot twist is a sudden and unexpected turn of events that upends the story. When writing a plot twist, make sure it doesn't come out of nowhere, you'll want to carefully foreshadow it, otherwise it can feel like lazy writing. That said, the actual reveal should come as a surprise. The twist should challenge the characters and force them to adapt to new circumstances.
 
 > **Writing Desk tip:** Run the AI Editor's developmental review after you've planted a major twist. It will flag whether the foreshadowing reads clearly to a fresh eye, or whether the setup needs strengthening.
 
 ## 5. Add internal and external conflict
 
-Conflict is the driving force of any story. By introducing new problems and obstacles, you create tension and move the story forward. Don't make things easy for your characters — make them work for their goals. Conflict can take many forms, from internal struggles to external challenges, but it should always increase as the story progresses.
+Conflict is the driving force of any story. By introducing new problems and obstacles, you create tension and move the story forward. Don't make things easy for your characters, make them work for their goals. Conflict can take many forms, from internal struggles to external challenges, but it should always increase as the story progresses.
 
 ## 6. Develop your character's backstory
 
@@ -43,11 +43,11 @@ A cliffhanger is a powerful way to keep readers engaged. By posing big questions
 
 ## 8. Introduce secondary characters with opposing goals
 
-By introducing a character with their own goals and motivations that conflict with your protagonist's, you set up an inevitable clash — and as you get closer to that clash, tension naturally builds. Done well, it creates dynamic character relationships that will keep your readers invested. Remember that characters don't have to be likeable to be interesting.
+By introducing a character with their own goals and motivations that conflict with your protagonist's, you set up an inevitable clash, and as you get closer to that clash, tension naturally builds. Done well, it creates dynamic character relationships that will keep your readers invested. Remember that characters don't have to be likeable to be interesting.
 
 ## 9. Raise the stakes
 
-Your protagonist needs to fail — and they should fail multiple times before succeeding, or face adverse consequences even when they do succeed. You also need to make sure it's clear what happens if they fail. Will their relationship be over? Will they lose their job? Will someone die?
+Your protagonist needs to fail, and they should fail multiple times before succeeding, or face adverse consequences even when they do succeed. You also need to make sure it's clear what happens if they fail. Will their relationship be over? Will they lose their job? Will someone die?
 
 Hard-won success is always the most interesting.
 
