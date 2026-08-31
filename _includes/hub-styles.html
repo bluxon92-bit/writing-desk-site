@@ -1,0 +1,172 @@
+<style>
+/* ===================================================
+   WRITING DESK — Hub pages (Story Structure, How to
+   Write a Novel, Character Craft)
+   Extends main.css tokens. Include once per hub page:
+   {% include hub-styles.html %}
+   =================================================== */
+
+/* ── Hub hero ───────────────────────────────────────── */
+.hub-hero {
+  max-width: 780px; margin: 0 auto;
+  padding: 64px 40px 40px; text-align: center;
+}
+.hub-hero h1 {
+  font-family: var(--serif); font-size: 44px; font-weight: 400;
+  line-height: 1.12; color: var(--ink); margin-bottom: 18px;
+}
+.hub-hero h1 em { color: var(--purple); font-style: italic; }
+.hub-hero p {
+  font-size: 17px; color: var(--ink-muted); font-weight: 300; line-height: 1.75;
+  max-width: 560px; margin: 0 auto;
+}
+
+/* ── Jump nav — reuses .feature-nav visual language ── */
+.hub-jumpnav {
+  border-bottom: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+  padding: 0 40px;
+  max-width: 1100px; margin: 0 auto;
+  display: flex; gap: 4px; overflow-x: auto; overflow-y: hidden;
+  justify-content: center;
+}
+.hub-jumpnav a {
+  padding: 14px 18px; font-size: 13.5px; font-weight: 400;
+  color: var(--ink-muted); text-decoration: none; white-space: nowrap;
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.hub-jumpnav a:hover { color: var(--purple); border-color: var(--purple-mid); }
+
+/* ── Hub section shell ──────────────────────────────── */
+.hub-section {
+  max-width: 1100px; margin: 0 auto;
+  padding: 64px 40px;
+  border-bottom: 1px solid var(--border);
+}
+.hub-section:last-of-type { border-bottom: none; }
+.hub-section-header { max-width: 640px; margin: 0 auto 40px; text-align: center; }
+.hub-section-header h2 {
+  font-family: var(--serif); font-size: 32px; font-weight: 400;
+  color: var(--ink); margin-bottom: 12px; line-height: 1.2;
+}
+.hub-section-header p {
+  font-size: 15.5px; color: var(--ink-muted); font-weight: 300; line-height: 1.7;
+}
+
+/* ── Prose sections — reuses .post-content typography
+   since a hub reads as an article, not just a directory ── */
+.hub-prose { max-width: 700px; margin: 0 auto; }
+.hub-prose p {
+  font-size: 17px; color: var(--ink-muted); font-weight: 300; line-height: 1.85;
+  margin-bottom: 22px;
+}
+.hub-prose p:last-child { margin-bottom: 0; }
+.hub-prose strong { font-weight: 500; color: var(--ink); }
+.hub-prose a { color: var(--purple); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ── Framework / topic card grid — built on the same
+   visual language as .post-card, with a thumbnail pulled
+   from each article's real hero image ────────────────── */
+.hub-card-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+.hub-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden; text-decoration: none;
+  display: flex; flex-direction: column; transition: box-shadow 0.2s, transform 0.2s;
+}
+.hub-card:hover { box-shadow: 0 4px 20px rgba(83,74,183,0.09); transform: translateY(-2px); }
+.hub-card-thumb { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; background: var(--purple-faint); }
+.hub-card-body { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+.hub-card-tag { font-size: 10.5px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--purple); margin-bottom: 10px; }
+.hub-card h3 { font-family: var(--serif); font-size: 18px; font-weight: 400; color: var(--ink); line-height: 1.3; margin-bottom: 8px; }
+.hub-card p { font-size: 13.5px; color: var(--ink-muted); font-weight: 300; line-height: 1.6; flex: 1; margin-bottom: 14px; }
+.hub-card-link { font-size: 12.5px; font-weight: 500; color: var(--purple); display: flex; align-items: center; gap: 5px; }
+.hub-card-link svg { width: 11px; height: 11px; }
+
+/* ── Show-more toggle ───────────────────────────────── */
+.hub-card-grid-more { display: none; }
+.hub-card-grid-more.open { display: grid; }
+.hub-showmore-wrap { text-align: center; margin-top: 28px; }
+.hub-showmore-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--sans); font-size: 13.5px; font-weight: 500; color: var(--purple);
+  background: var(--purple-light); border: none; border-radius: var(--radius);
+  padding: 11px 20px; cursor: pointer; transition: opacity 0.15s;
+}
+.hub-showmore-btn:hover { opacity: 0.8; }
+.hub-showmore-btn svg { width: 11px; height: 11px; transition: transform 0.2s var(--ease-out); }
+.hub-showmore-btn.open svg { transform: rotate(180deg); }
+
+/* ── Numbered step list — adapted from help-guide.html's
+   .help-guide-step pattern for sequential guide content ── */
+.hub-steps { list-style: none; display: flex; flex-direction: column; gap: 40px; max-width: 760px; margin: 0 auto; }
+.hub-step { display: flex; gap: 20px; }
+.hub-step-num {
+  width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+  background: var(--purple); color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 500; margin-top: 4px;
+}
+.hub-step-body { flex: 1; }
+.hub-step-body h3 {
+  font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--ink); margin-bottom: 10px;
+}
+.hub-step-body p {
+  font-size: 15.5px; color: var(--ink-muted); font-weight: 300; line-height: 1.8; margin-bottom: 14px;
+}
+.hub-step-links { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.hub-step-links li {
+  font-size: 13.5px; color: var(--ink-muted); font-weight: 300; line-height: 1.5;
+  padding-left: 16px; position: relative;
+}
+.hub-step-links li::before { content: "→"; position: absolute; left: 0; color: var(--purple-mid); font-size: 11px; top: 2px; }
+.hub-step-links a { color: var(--purple); text-decoration: underline; text-underline-offset: 2px; font-weight: 400; }
+
+/* ═══════════════════════════════════════════════════
+   NOTE: .post-cta / .btn-white-outline are defined in
+   post.html's own <style> block, not main.css, so hub
+   pages (layout: default) need their own copy here.
+   Recommend moving these into main.css globally since
+   both posts and hubs now depend on them — see chat notes.
+   ═══════════════════════════════════════════════════ */
+.post-cta {
+  background: var(--purple); border-radius: var(--radius-lg);
+  padding: 36px; margin: 40px 0;
+}
+.post-cta-inner {
+  display: flex; justify-content: space-between;
+  align-items: center; gap: 32px; flex-wrap: wrap;
+}
+.post-cta-text h2 {
+  font-family: var(--serif); font-size: 24px; font-weight: 400;
+  color: white; line-height: 1.25; margin-bottom: 10px;
+}
+.post-cta-text p { font-size: 14px; color: rgba(255,255,255,0.75); font-weight: 300; line-height: 1.65; max-width: 440px; }
+.post-cta-action { flex-shrink: 0; text-align: center; }
+.btn-white-outline {
+  background: white; color: var(--purple); font-weight: 500;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 22px; border-radius: var(--radius); text-decoration: none;
+  font-size: 14px; transition: opacity 0.15s;
+}
+.btn-white-outline:hover { opacity: 0.9; }
+.btn-white-outline svg { width: 15px; height: 15px; flex-shrink: 0; }
+.post-cta-micro {
+  font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 8px; text-align: center;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hub-hero { padding: 48px 24px 32px; }
+  .hub-hero h1 { font-size: 32px; }
+  .hub-jumpnav { padding: 0 24px; }
+  .hub-section { padding: 48px 24px; }
+  .hub-card-grid { grid-template-columns: 1fr 1fr; }
+  .post-cta-inner { flex-direction: column; }
+}
+@media (max-width: 600px) {
+  .hub-card-grid { grid-template-columns: 1fr; }
+}
+</style>
