@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kishotenketsu: The Japanese Four-Act Structure With No Villain Required"
+title: "Kishotenketsu: The Four-Act Structure Without a Villain"
 date: 2026-08-31
 category: Structure
 type: Guide

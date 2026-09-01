@@ -87,5 +87,5 @@ For some writers, character motivation comes easy, their instinct is to think ab
 **Related reading:**
 
 - [How to Create a Character Profile: A Writer's Guide](/blog/how-to-create-a-character-profile/)
-- [Character Development Exercises: How to Create Unforgettable Characters](/blog/character-development-exercises/)
+- [Character Development Exercises for Fiction Writers](/blog/character-development-exercises/)
 - [Static vs Dynamic Characters: What They Are and Why They Matter](/blog/static-vs-dynamic-characters/)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Character Development Exercises: How to Create Unforgettable Characters"
+title: "Character Development Exercises for Fiction Writers"
 date: 2026-07-11
 category: Character
 type: Guide
