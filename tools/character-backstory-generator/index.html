@@ -1,0 +1,414 @@
+---
+layout: default
+title: "Character Backstory Generator — Free Writer's Tool"
+description: "Free character backstory generator for novelists. Get a formative event, a core wound, a lie they believe, and a secret to write from, not AI-written prose."
+permalink: /tools/character-backstory-generator/
+---
+
+<style>
+.tool-hero{max-width:1100px;margin:0 auto;padding:64px 40px 48px;border-bottom:1px solid var(--border)}
+.tool-hero-inner{max-width:640px}
+.tool-label{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--purple);margin-bottom:16px}
+.tool-label-line{width:24px;height:1.5px;background:var(--purple);display:block}
+.tool-hero h1{font-family:var(--serif);font-size:46px;font-weight:400;line-height:1.1;color:var(--ink);margin-bottom:16px}
+.tool-hero h1 em{color:var(--purple);font-style:italic}
+.tool-hero p{font-size:17px;color:var(--ink-muted);font-weight:300;line-height:1.7}
+.tool-body{max-width:1100px;margin:0 auto;padding:48px 40px}
+.tool-body-inner{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+.gen-card{background:var(--white);border:1px solid var(--border-strong);border-radius:var(--radius-lg);overflow:hidden}
+.gen-card-head{background:var(--purple-faint);border-bottom:1px solid var(--border);padding:20px 24px;display:flex;align-items:center;gap:10px}
+.gen-card-head h2{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink)}
+.gen-card-head svg{width:18px;height:18px;fill:none;stroke:var(--purple);stroke-width:1.75;flex-shrink:0}
+.gen-controls{padding:20px 24px;display:flex;flex-direction:column;gap:18px;border-bottom:1px solid var(--border)}
+.ctrl-group{display:flex;flex-direction:column;gap:8px}
+.ctrl-group label{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint)}
+.pill-row{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:var(--white);border:1px solid var(--border-strong);border-radius:20px;padding:6px 14px;cursor:pointer;transition:all .15s}
+.pill:hover{border-color:var(--purple);color:var(--purple)}
+.pill.active{background:var(--purple);border-color:var(--purple);color:white;font-weight:500}
+.btn-gen{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--purple);color:white;font-family:var(--sans);font-size:14px;font-weight:500;padding:11px 24px;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:opacity .15s;width:100%}
+.btn-gen:hover{opacity:.85}
+.btn-gen svg{width:14px;height:14px;fill:none;stroke:white;stroke-width:2}
+.gen-output{padding:24px;min-height:180px}
+.gen-placeholder{font-size:14px;color:var(--ink-faint);font-style:italic;text-align:center;padding:32px 0}
+.bs-meta{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.prompt-tag{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--purple);background:var(--purple-faint);padding:3px 10px;border-radius:12px}
+.prompt-tone{font-size:11px;color:var(--ink-faint);background:var(--bg);padding:3px 10px;border-radius:12px;border:1px solid var(--border)}
+.bs-block{padding:14px 0;border-top:1px solid var(--border)}
+.bs-block:first-of-type{border-top:none;padding-top:0}
+.bs-block h4{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--purple-mid);margin-bottom:6px}
+.bs-block p{font-size:15.5px;color:var(--ink);line-height:1.7;font-family:var(--serif);font-weight:400}
+.gen-actions{padding:14px 24px;border-top:1px solid var(--border);display:flex;gap:8px;flex-wrap:wrap}
+.btn-secondary{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:transparent;border:1px solid var(--border-strong);padding:8px 16px;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s}
+.btn-secondary:hover{border-color:var(--purple);color:var(--purple)}
+.btn-save{font-family:var(--sans);font-size:13px;color:var(--ink-muted);background:transparent;border:1px solid var(--border-strong);padding:8px 16px;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s}
+.btn-save:hover{border-color:var(--purple);color:var(--purple)}
+.saved-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-bottom:0}
+.saved-card h4{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.saved-item{padding:10px 0;border-top:1px solid var(--border)}
+.saved-item:first-child{border-top:none;padding-top:0}
+.saved-item p{font-size:13px;color:var(--ink-muted);line-height:1.5;margin-bottom:6px}
+.saved-item button{font-size:11.5px;color:var(--purple);background:none;border:none;cursor:pointer;padding:0;font-family:var(--sans)}
+.btn-clear{font-size:11px;color:var(--ink-faint);background:none;border:none;cursor:pointer;padding:0;font-family:var(--sans)}
+.btn-clear:hover{color:var(--ink)}
+.tool-sidebar{display:flex;flex-direction:column;gap:20px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px}
+.sidebar-card h3{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:12px}
+.sidebar-card p{font-size:13.5px;color:var(--ink-muted);font-weight:300;line-height:1.65;margin-bottom:12px}
+.sidebar-card ul{list-style:none}
+.sidebar-card li{font-size:13.5px;color:var(--ink-muted);font-weight:300;padding:6px 0 6px 16px;position:relative;line-height:1.55;border-top:1px solid var(--border)}
+.sidebar-card li:first-child{border-top:none;padding-top:0}
+.sidebar-card li::before{content:"→";position:absolute;left:0;color:var(--purple-mid);font-size:10px;top:8px}
+.sidebar-link{display:block;font-size:13.5px;font-weight:500;color:var(--purple);text-decoration:none;padding:8px 0;border-top:1px solid var(--border);transition:opacity .15s}
+.sidebar-link:first-of-type{border-top:none}
+.sidebar-link:hover{opacity:.7}
+.tool-seo{max-width:1100px;margin:0 auto;padding:0 40px 72px;border-top:1px solid var(--border)}
+.seo-inner{max-width:720px;padding-top:48px}
+.seo-inner h2{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--ink);margin-bottom:14px;line-height:1.2}
+.seo-inner h3{font-family:var(--serif);font-size:21px;font-weight:400;color:var(--ink);margin:28px 0 10px}
+.seo-inner p{font-size:15.5px;color:var(--ink-muted);font-weight:300;line-height:1.8;margin-bottom:14px}
+.seo-inner ul{list-style:none;margin-bottom:20px}
+.seo-inner li{font-size:15px;color:var(--ink-muted);font-weight:300;padding:7px 0 7px 20px;position:relative;line-height:1.6;border-top:1px solid var(--border)}
+.seo-inner li:last-child{border-bottom:1px solid var(--border)}
+.seo-inner li::before{content:"→";position:absolute;left:0;color:var(--purple-mid);font-size:11px;top:9px}
+@media(max-width:900px){
+  .tool-hero{padding:40px 24px 32px}
+  .tool-hero h1{font-size:34px}
+  .tool-body{padding:32px 24px}
+  .tool-body-inner{grid-template-columns:1fr}
+  .tool-seo{padding:0 24px 48px}
+}
+</style>
+
+<div class="tool-hero">
+  <div class="tool-hero-inner">
+    <div class="tool-label"><span class="tool-label-line"></span><span>Free Writer's Tool</span></div>
+    <h1>Character Backstory <em>Generator</em></h1>
+    <p>Not a paragraph an AI wrote for you. Four building blocks, mixed and matched, for you to write from: a formative event, a core wound, the lie they believe, and a secret. Generate, then do the actual writing yourself.</p>
+  </div>
+</div>
+
+<section class="tool-body">
+  <div class="tool-body-inner">
+
+    <div class="gen-card">
+      <div class="gen-card-head">
+        <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <h2>Generate a Backstory</h2>
+      </div>
+      <div class="gen-controls">
+        <div class="ctrl-group">
+          <label>Genre — or leave unselected for random</label>
+          <div class="pill-row" id="genre-pills">
+            <button class="pill" data-value="fantasy">Fantasy</button>
+            <button class="pill" data-value="horror">Horror</button>
+            <button class="pill" data-value="romance">Romance</button>
+            <button class="pill" data-value="scifi">Sci-Fi</button>
+            <button class="pill" data-value="mystery">Mystery</button>
+            <button class="pill" data-value="thriller">Thriller</button>
+            <button class="pill" data-value="contemporary">Contemporary</button>
+          </div>
+        </div>
+        <div class="ctrl-group">
+          <label>Role</label>
+          <div class="pill-row" id="role-pills">
+            <button class="pill active" data-value="protagonist">Protagonist</button>
+            <button class="pill" data-value="antagonist">Antagonist</button>
+          </div>
+        </div>
+        <button class="btn-gen" id="btn-generate">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Generate Backstory
+        </button>
+      </div>
+      <div class="gen-output" id="gen-output">
+        <p class="gen-placeholder">Pick a genre and a role, or leave genre open, then click Generate.</p>
+      </div>
+      <div class="gen-actions" id="gen-actions" style="display:none;">
+        <button class="btn-secondary" id="btn-copy">Copy backstory</button>
+        <button class="btn-save" id="btn-save">Save ♡</button>
+        <button class="btn-secondary" id="btn-regen">New backstory ↻</button>
+      </div>
+    </div>
+
+    <aside class="tool-sidebar">
+      <div class="saved-card" id="saved-wrap" style="display:none;">
+        <h4>Saved backstories <button class="btn-clear" id="btn-clear-saved">Clear</button></h4>
+        <div id="saved-list"></div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Related tools</h3>
+        <a href="/tools/character-name-generator/" class="sidebar-link">Character Name Generator →</a>
+        <a href="/tools/villain-name-generator/" class="sidebar-link">Villain Name Generator →</a>
+        <a href="/tools/writing-prompt-generator/" class="sidebar-link">Writing Prompt Generator →</a>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>How to use this</h3>
+        <ul>
+          <li>Treat every line as a question, not an answer — the generator gives you the shape, you supply the specifics</li>
+          <li>You don't need all four elements to agree neatly. Contradiction between them is often where the character gets interesting</li>
+          <li>The secret doesn't have to appear on the page. Characters act differently when they're carrying one, even unstated</li>
+          <li>Regenerate individual elements as many times as you like — there's no "correct" combination</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Write the actual character in Writing Desk</h3>
+        <p>Once you've got a combination that clicks, Writing Desk's Resource Centre is where the character profile lives, alongside your manuscript, entirely on your machine.</p>
+        <a href="/download/" class="sidebar-link">Download Writing Desk →</a>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<section class="tool-seo">
+  <div class="seo-inner">
+    <h2>Why this generator doesn't write your character for you</h2>
+    <p>Most backstory generators take a name and a genre and hand back a paragraph of AI-written prose: a finished little biography you could paste straight into your notes. It reads fine and it means nothing, because none of it came from you. The character doesn't feel like yours because they aren't.</p>
+    <p>This one works differently. It gives you four separate building blocks, a formative event, a core wound, a lie the character believes about themselves or the world, and a secret they're keeping, each pulled independently so the combination is genuinely unexpected. Then it stops. Writing the character from those four pieces is the part that actually matters, and it's the part no generator can do for you.</p>
+
+    <h3>The four building blocks</h3>
+    <p><strong>Formative event</strong> is the thing that happened before your story starts, the one your character has organised their life around whether they realise it or not.</p>
+    <p><strong>Core wound</strong> is the belief that event left behind, the quiet rule the character lives by that they'd probably deny having if you asked them directly.</p>
+    <p><strong>The lie they believe</strong> is the wound's logical conclusion, the sentence the character would say if they were being honest with themselves, which they mostly aren't.</p>
+    <p><strong>A secret</strong> is what the character is actively managing right now, in the present of your story, separate from their history. It's the thing that makes them tense in a specific scene for a reason the reader doesn't have yet.</p>
+
+    <h3>Why contradiction is useful</h3>
+    <p>Don't discard a combination just because the pieces don't obviously fit together. A wound about needing to be needed and a secret about wanting to disappear aren't a mismatch, they're a person. Real people are inconsistent under pressure. If a generated combination surprises you, that's usually the one worth keeping.</p>
+
+    <h3>Antagonists get their own lie</h3>
+    <p>Switch the role toggle to antagonist and the lie they believe changes register, from self-limiting to self-justifying. A convincing antagonist doesn't think of themselves as the villain. They think the rules are for other people, or that they're owed something, or that someone worse would do it if they didn't. Give them a lie they'd defend at a dinner party, and they stop being a plot device.</p>
+  </div>
+</section>
+
+<script>
+const formativeEvent = {
+  fantasy: [
+    "They were the one who survived the fire that killed everyone else in the village. No one has ever asked them how.",
+    "At twelve they were apprenticed to a master who turned out to be exactly as ruthless as the stories said.",
+    "They made a promise to someone dying, in a language they didn't speak yet, and have spent years learning what they agreed to.",
+    "The first time they used their power, someone got hurt. They've never told anyone who."
+  ],
+  horror: [
+    "They were the only one in the family who noticed something was wrong with the house, and no one believed them.",
+    "As a child they made a deal they didn't understand the terms of. They're still finding out what it cost.",
+    "They watched something happen that has no rational explanation, and spent the next ten years building one anyway.",
+    "They were left alone in a place for one night as a punishment. They came back different, and never said why."
+  ],
+  romance: [
+    "Their parents' marriage ended badly enough that they decided early never to need anyone that much.",
+    "They were left at the altar, or close enough to it, and rebuilt their whole personality around not being surprised again.",
+    "The first person they loved left without an explanation. They've been waiting for one ever since.",
+    "They watched a grandparent care for a dying partner for six years and decided that kind of love wasn't for them, or was exactly what they wanted. They still don't know which."
+  ],
+  scifi: [
+    "They were on the last shuttle out before the colony went dark, and have never stopped feeling like they took someone else's seat.",
+    "A childhood illness was cured by technology nobody fully understood, including the doctors. They've felt slightly borrowed ever since.",
+    "They grew up in a family that didn't believe the official story about the war, and learned early which questions got you in trouble.",
+    "Their first verifiable memory is age seven. Everything before that is according to other people."
+  ],
+  mystery: [
+    "A parent disappeared when they were young, officially unresolved. They've been quietly investigating their own life ever since.",
+    "They found something in a relative's belongings after a death that changed what they thought they knew about that person.",
+    "They witnessed something as a child that the adults around them insisted they hadn't seen.",
+    "They grew up next door to a house everyone had a theory about. They found out which theory was true, and it wasn't the one people wanted."
+  ],
+  thriller: [
+    "They did one thing, under pressure, that they've never told anyone about, and it worked out fine. They've been waiting for it not to.",
+    "They were trained for something they didn't choose, by people who didn't ask, and left before finishing.",
+    "Someone they trusted completely turned out to be lying about who they were. They've never fully trusted their own judgment since.",
+    "They survived something that killed people around them, through luck rather than skill, and have never been sure they deserved to."
+  ],
+  contemporary: [
+    "They took on responsibility for a parent or sibling far too young, and never quite finished being a child.",
+    "They left home at eighteen and didn't go back for a decade. Something happened in the gap they've never fully explained.",
+    "A teacher or mentor said something offhand that reorganised their entire sense of what they were capable of.",
+    "They were the one who found out the family secret first, and had to decide, alone, what to do with it."
+  ]
+};
+
+const coreWound = [
+  "They believe that needing help is a form of weakness, because the one time they asked for it, no one came.",
+  "They've never forgiven themselves for something that wasn't their fault, and won't be talked out of the guilt.",
+  "They learned as a child that being impressive was safer than being loved, and have optimised for impressive ever since.",
+  "Somewhere along the way they decided that if they didn't want things too much, it couldn't hurt when they didn't get them.",
+  "They were the reliable one for so long that they've forgotten how to be anything else, including in front of themselves.",
+  "They mistake being needed for being wanted, and have built a life that makes it hard to tell the difference.",
+  "They learned early that anger got results and grief got nothing, so it's the only register they trust.",
+  "They were praised for being easy as a child. They've spent their adult life being easy at considerable cost.",
+  "They walked away from someone who needed them once, for good reasons, and have never stopped re-litigating whether the reasons were good enough.",
+  "They believe, underneath everything, that they're the exception to whatever rule made everyone else turn out fine.",
+  "They keep score in relationships without meaning to, a running total of who has given more.",
+  "They've built an identity around being the one who leaves first, so it never happens to them again.",
+  "They apologise for things that aren't their fault as a way of controlling situations they can't actually control.",
+  "They believe love has to be earned continuously, because it once was, and then it stopped."
+];
+
+const theLie = {
+  protagonist: [
+    "If I'm useful enough, I'll be safe.",
+    "Wanting things is what gets you hurt, so I'll want less.",
+    "I have to do this alone, because the last time I didn't, it went wrong.",
+    "If I'm never the one who needs anything, no one can leave.",
+    "I'm responsible for how everyone around me feels.",
+    "Being right matters more than being close to anyone.",
+    "If I stay small enough, nothing bad will notice me.",
+    "I don't get to want a different life than the one I was given."
+  ],
+  antagonist: [
+    "The world only respects people who take what they need.",
+    "Anyone who had the chance would do exactly what I'm doing.",
+    "I'm owed this, given everything it cost me to get here.",
+    "The rules exist for people who can't do better than the rules.",
+    "If I don't control this, someone worse will.",
+    "Mercy is just a slower way of losing.",
+    "Everyone who says they wouldn't do this has just never been tested.",
+    "I'm the only one who sees clearly what actually needs to happen."
+  ]
+};
+
+const theSecret = {
+  fantasy: [
+    "They know the real reason the kingdom fell, and it isn't the reason in the histories.",
+    "They aren't who their bloodline says they are, and exactly one other living person knows it.",
+    "The spell that saved their life came at a cost someone else is still paying, and doesn't know it.",
+    "They made a bargain to get here that they haven't told their closest ally about, on purpose."
+  ],
+  horror: [
+    "They know what's actually in the basement, and have been managing who goes down there for years.",
+    "They caused the thing everyone else is afraid of, without meaning to, a long time ago.",
+    "They've seen it happen before, somewhere else, to someone else, and said nothing.",
+    "The ritual that's supposed to fix everything only works because of something they did that no one can find out about."
+  ],
+  romance: [
+    "They're still in contact with the person everyone believes they've cut off completely.",
+    "The reason the last relationship ended wasn't the reason they told people.",
+    "They know something about their partner's past that changes everything, and haven't decided whether it's their secret to share.",
+    "They've been quietly comparing everyone since to someone they've never mentioned."
+  ],
+  scifi: [
+    "They know what's actually powering the ship, and it isn't in any of the official documentation.",
+    "They're not entirely human, or not entirely anything, and the paperwork has been handled by someone who owes them a favour.",
+    "They sabotaged something once, for good reasons at the time, and the consequences are about to surface.",
+    "They know the mission's real objective, which isn't the one the rest of the crew signed up for."
+  ],
+  mystery: [
+    "They know who actually did it, and have a reason good enough that they've kept quiet this long.",
+    "They tampered with evidence once, early in their career, and it's never come back to bite them. Yet.",
+    "They're related to the prime suspect in a way that hasn't come up in any of the paperwork.",
+    "They've been protecting someone this whole investigation, and it isn't who anyone would guess."
+  ],
+  thriller: [
+    "They're the reason the original operation failed, and everyone still thinks it was bad luck.",
+    "They've been passing information for reasons that started out justified and stopped being justified a while ago.",
+    "They know the location everyone's searching for, and have their own reasons for not saying so yet.",
+    "The person they're protecting isn't who they've told their handlers it is."
+  ],
+  contemporary: [
+    "They know the real reason the marriage ended, and it isn't the version either side tells at dinner parties.",
+    "They've been quietly paying for something no one in the family knows about.",
+    "They know what actually happened the night everyone stopped speaking, and have let the wrong person take the blame for it.",
+    "They're not where they say they are on the nights they say they're somewhere else, for reasons that have nothing to do with what everyone assumes."
+  ]
+};
+
+const genreLabels = {
+  fantasy:'Fantasy', horror:'Horror', romance:'Romance',
+  scifi:'Sci-Fi', mystery:'Mystery', contemporary:'Contemporary',
+  thriller:'Thriller'
+};
+
+let currentGenre = null;
+let currentRole = 'protagonist';
+
+document.querySelectorAll('#genre-pills .pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    if (pill.classList.contains('active')) {
+      pill.classList.remove('active');
+      currentGenre = null;
+    } else {
+      document.querySelectorAll('#genre-pills .pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      currentGenre = pill.dataset.value;
+    }
+  });
+});
+
+document.querySelectorAll('#role-pills .pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('#role-pills .pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    currentRole = pill.dataset.value;
+  });
+});
+
+function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+function showBackstory(data) {
+  const o = document.getElementById('gen-output');
+  o.innerHTML = '';
+  o.dataset.current = `Formative event: ${data.event}\n\nCore wound: ${data.wound}\n\nThe lie they believe: "${data.lie}"\n\nA secret: ${data.secret}`;
+
+  const m = document.createElement('div'); m.className = 'bs-meta';
+  m.innerHTML = `<span class="prompt-tag">${data.genreLabel}</span><span class="prompt-tone">${data.roleLabel}</span>`;
+  o.appendChild(m);
+
+  const blocks = [
+    ['Formative event', data.event],
+    ['Core wound', data.wound],
+    ['The lie they believe', `"${data.lie}"`],
+    ['A secret', data.secret]
+  ];
+  blocks.forEach(([label, text]) => {
+    const b = document.createElement('div'); b.className = 'bs-block';
+    b.innerHTML = `<h4>${label}</h4><p>${text}</p>`;
+    o.appendChild(b);
+  });
+
+  document.getElementById('gen-actions').style.display = 'flex';
+}
+
+function generate() {
+  const genre = currentGenre || pick(Object.keys(formativeEvent));
+  const role = currentRole;
+  const data = {
+    event: pick(formativeEvent[genre]),
+    wound: pick(coreWound),
+    lie: pick(theLie[role]),
+    secret: pick(theSecret[genre]),
+    genreLabel: genreLabels[genre] || genre,
+    roleLabel: role === 'antagonist' ? 'Antagonist' : 'Protagonist'
+  };
+  showBackstory(data);
+}
+
+let savedBackstories = [];
+function renderSaved() {
+  const wrap=document.getElementById('saved-wrap');const list=document.getElementById('saved-list');
+  if(!savedBackstories.length){if(wrap)wrap.style.display='none';return;}
+  if(wrap)wrap.style.display='block';list.innerHTML='';
+  savedBackstories.forEach(p=>{
+    const item=document.createElement('div');item.className='saved-item';
+    const short=p.length>90?p.substring(0,90)+'…':p;
+    item.innerHTML=`<p>${short}</p><button onclick="navigator.clipboard.writeText(decodeURIComponent('${encodeURIComponent(p)}'))">Copy</button>`;
+    list.appendChild(item);
+  });
+}
+
+document.getElementById('btn-generate').addEventListener('click',generate);
+document.getElementById('btn-regen').addEventListener('click',generate);
+document.getElementById('btn-copy').addEventListener('click',()=>{
+  const p=document.getElementById('gen-output').dataset.current;if(!p)return;
+  navigator.clipboard.writeText(p).then(()=>{const b=document.getElementById('btn-copy');b.textContent='Copied!';setTimeout(()=>b.textContent='Copy backstory',1500);});
+});
+document.getElementById('btn-save').addEventListener('click',()=>{
+  const p=document.getElementById('gen-output').dataset.current;if(!p||savedBackstories.includes(p))return;
+  savedBackstories.unshift(p);if(savedBackstories.length>10)savedBackstories=savedBackstories.slice(0,10);renderSaved();
+  const b=document.getElementById('btn-save');b.textContent='Saved ♥';setTimeout(()=>b.textContent='Save ♡',1500);
+});
+const cb=document.getElementById('btn-clear-saved');if(cb)cb.addEventListener('click',()=>{savedBackstories=[];renderSaved();});
+generate();
+</script>

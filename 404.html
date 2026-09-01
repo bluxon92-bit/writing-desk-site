@@ -1,25 +1,70 @@
 ---
+layout: default
+title: "Page Not Found — Writing Desk"
+description: "This page doesn't exist. Every good story loses its way sometimes — here's how to find yours again."
 permalink: /404.html
-layout: page
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+<style>
+.notfound {
+  max-width: 640px; margin: 0 auto;
+  padding: 100px 40px 96px;
+  text-align: center;
+}
+.notfound-mark {
+  font-family: var(--serif); font-size: 15px; font-weight: 400; font-style: italic;
+  color: var(--purple-mid); letter-spacing: 0.02em; margin-bottom: 22px;
+}
+.notfound h1 {
+  font-family: var(--serif); font-size: 42px; font-weight: 400;
+  line-height: 1.2; color: var(--ink); margin-bottom: 16px;
+}
+.notfound h1 em { color: var(--purple); font-style: italic; }
+.notfound p {
+  font-size: 16.5px; color: var(--ink-muted); font-weight: 300; line-height: 1.75;
+  max-width: 460px; margin: 0 auto 40px;
+}
+.notfound-actions {
+  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+.notfound-links {
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+  display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;
+}
+.notfound-links a {
+  font-size: 13.5px; color: var(--ink-muted); text-decoration: none;
+  padding: 6px 4px; transition: color 0.15s;
+}
+.notfound-links a:hover { color: var(--purple); }
+.notfound-links span { color: var(--border-strong); }
+@media (max-width: 600px) {
+  .notfound { padding: 64px 24px 64px; }
+  .notfound h1 { font-size: 30px; }
+}
 </style>
 
-<div class="container">
-  <h1>404</h1>
+<div class="notfound">
+  <div class="notfound-mark">404</div>
+  <h1>Every good story loses <em>its way</em> sometimes.</h1>
+  <p>This page isn't where it's supposed to be. No inciting incident, no dramatic reason, just a broken link or a page that moved. Let's get you back on the outline.</p>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <div class="notfound-actions">
+    <a href="{{ '/' | relative_url }}" class="btn btn-primary">Back to Home</a>
+    <a href="{{ '/hubs/' | relative_url }}" class="btn btn-ghost">Browse the Guides</a>
+    <a href="{{ '/download/' | relative_url }}" class="btn btn-ghost">Download Writing Desk</a>
+  </div>
+
+  <div class="notfound-links">
+    <a href="{{ '/hubs/story-structure/' | relative_url }}">Story Structure</a>
+    <span>·</span>
+    <a href="{{ '/hubs/how-to-write-a-novel/' | relative_url }}">How to Write a Novel</a>
+    <span>·</span>
+    <a href="{{ '/hubs/characters/' | relative_url }}">Character Craft</a>
+    <span>·</span>
+    <a href="{{ '/tools/' | relative_url }}">Free Tools</a>
+    <span>·</span>
+    <a href="{{ '/help/' | relative_url }}">Help Centre</a>
+  </div>
 </div>

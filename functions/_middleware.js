@@ -113,9 +113,29 @@ function isMacUserAgent(request) {
   return /Macintosh/i.test(ua);
 }
 
+// SEO: writingdeskapp.com (apex) and www.writingdeskapp.com were both
+// serving the same content with no redirect between them, so every
+// page on the site was being crawled and indexed twice — this was the
+// single largest source of "duplicate page without canonical" issues
+// in Ahrefs. site.url in _config.yml (and the sitemap it generates)
+// treats www as canonical, so apex requests get a permanent redirect
+// to the matching www URL, preserving path and query string.
+function redirectToWww(request, url) {
+  if (url.hostname === 'writingdeskapp.com') {
+    url.hostname = 'www.writingdeskapp.com';
+    return Response.redirect(url.toString(), 301);
+  }
+  return null;
+}
+
 export async function onRequest(context) {
   const { request, next } = context;
   const url = new URL(request.url);
+
+  const hostRedirect = redirectToWww(request, url);
+  if (hostRedirect) {
+    return hostRedirect;
+  }
 
   if (isPricingPage(url.pathname)) {
     return handlePricingPage(context, url);
