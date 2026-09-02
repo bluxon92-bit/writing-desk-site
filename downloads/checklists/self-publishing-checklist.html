@@ -1,0 +1,214 @@
+---
+layout: default
+title: "Self-Publishing Launch Checklist | Free Download | Writing Desk"
+description: "A free, interactive self-publishing launch checklist: fifty checkpoints from eight weeks out to your first thirty days on sale. Track progress or download the PDF."
+permalink: /downloads/checklists/self-publishing-checklist/
+---
+
+<style>
+  .cl-hero-wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  .cl-overall { display: flex; align-items: center; gap: 16px; background: var(--white); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); padding: 16px 20px; margin: 28px 0 32px; box-shadow: 0 2px 0 var(--border); }
+  .cl-overall-track { flex: 1; height: 8px; background: var(--purple-faint); border-radius: 99px; overflow: hidden; }
+  .cl-overall-fill { height: 100%; width: 0%; background: var(--purple); border-radius: 99px; transition: width .35s ease; }
+  .cl-overall-label { font-size: 13px; font-weight: 600; color: var(--purple); white-space: nowrap; min-width: 60px; text-align: right; }
+
+  .cl-top-actions { text-align: center; margin: 8px 0 36px; }
+  .cl-bookmark-note { font-size: 12.5px; color: var(--ink-muted); font-weight: 300; margin: 10px 0 0; }
+
+  .cl-phase { margin-bottom: 36px; }
+  .cl-phase-when { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--purple-mid); background: var(--purple-faint); border-radius: 99px; padding: 3px 10px; margin-bottom: 8px; }
+  .cl-phase-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
+  .cl-phase-title { font-family: var(--serif); font-size: 20px; font-weight: 600; color: var(--ink); margin: 0; }
+  .cl-phase-count { font-size: 13px; color: var(--ink-muted); white-space: nowrap; }
+  .cl-phase-desc { color: var(--ink-muted); font-size: 14px; font-weight: 300; margin: 0 0 16px; }
+
+  .cl-items { display: flex; flex-direction: column; gap: 10px; }
+  .cl-item { display: flex; align-items: flex-start; gap: 12px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 14px 16px; cursor: pointer; transition: border-color .15s, background .15s; }
+  .cl-item:hover { border-color: var(--purple-light); }
+  .cl-item.is-checked { background: var(--purple-faint); border-color: var(--purple-light); }
+  .cl-item input { appearance: none; -webkit-appearance: none; width: 20px; height: 20px; min-width: 20px; margin-top: 1px; border-radius: 6px; border: 1.5px solid var(--purple-light); background: var(--white); display: grid; place-content: center; cursor: pointer; }
+  .cl-item input:checked { background: var(--purple); border-color: var(--purple); }
+  .cl-item input:checked::after { content: ""; width: 5px; height: 9px; border: solid white; border-width: 0 2px 2px 0; transform: rotate(45deg) translate(-1px, -1px); }
+  .cl-item-title { font-size: 14.5px; font-weight: 500; color: var(--ink); line-height: 1.4; }
+  .cl-item.is-checked .cl-item-title { color: var(--ink-muted); text-decoration: line-through; text-decoration-color: var(--purple-light); }
+  .cl-item-note { font-size: 13px; color: var(--ink-muted); font-weight: 300; margin-top: 2px; line-height: 1.5; }
+
+  .cl-tip { font-family: var(--serif); font-style: italic; font-size: 15.5px; line-height: 1.6; color: var(--ink); background: var(--purple-faint); border-left: 3px solid var(--purple); border-radius: 8px; padding: 18px 22px; margin: 8px 0 40px; }
+  .cl-tip strong { font-family: var(--sans); font-style: normal; font-weight: 700; color: var(--purple-mid); display: block; font-size: 11px; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 6px; }
+
+  .cl-actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 8px 0 8px; }
+  .cl-btn { font-family: var(--sans); font-weight: 600; font-size: 13.5px; padding: 11px 20px; border-radius: 10px; border: 1px solid var(--border-strong); background: var(--white); color: var(--ink); cursor: pointer; }
+  .cl-btn:hover { background: var(--purple-faint); }
+  .cl-btn-reset { color: var(--ink-faint); }
+
+  @media print {
+    .cl-actions, .cl-overall, .cl-top-actions, .footer-cta { display: none; }
+  }
+</style>
+
+<div class="features-hero">
+  <span class="eyebrow">Free Download</span>
+  <h1>Self-Publishing Launch <em>Checklist.</em></h1>
+  <p>Fifty checkpoints from eight weeks out to your first thirty days on sale, in the order that actually works. Tick items off below, or grab the printable PDF.</p>
+</div>
+
+<div class="cl-hero-wrap" id="wd-launch" data-storage-key="wd_checklist_launch_v1">
+
+  <div class="cl-overall">
+    <div class="cl-overall-track"><div class="cl-overall-fill" id="wd-overall-fill"></div></div>
+    <div class="cl-overall-label" id="wd-overall-label">0%</div>
+  </div>
+
+  <!--
+    Download button: fires the print dialog for now (save-as-PDF).
+    TODO: swap onclick="window.print()" for a popup email-capture modal
+    once that's ready — do this on all three checklist pages together.
+    (This page previously had an inline EmailOctopus embed here; pulled
+    for now in favour of the popup approach, kept simple until that's built.)
+  -->
+  <div class="cl-top-actions">
+    <button class="btn btn-primary" onclick="window.print()" type="button">
+      <svg viewBox="0 0 15 15" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M7.5 2v9M4 8l3.5 3.5L11 8M2 13h11"/></svg>
+      Download checklist
+    </button>
+    <p class="cl-bookmark-note">Bookmark this page to keep your progress. It saves automatically in this browser, no account needed.</p>
+  </div>
+
+  <div class="cl-phase" data-phase="foundations">
+    <span class="cl-phase-when">8&ndash;6 weeks before</span>
+    <div class="cl-phase-head"><h2 class="cl-phase-title">1. Foundations</h2><span class="cl-phase-count" data-count></span></div>
+    <div class="cl-items">
+      <label class="cl-item"><input type="checkbox" data-id="f1"><span><span class="cl-item-title">Manuscript fully edited and proofread</span><br><span class="cl-item-note">Finished, not "mostly done". Beta feedback incorporated.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="f2"><span><span class="cl-item-title">Cover design commissioned or finalised</span><br><span class="cl-item-note">Briefed against top-selling covers in your category, not designed under time pressure.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="f3"><span><span class="cl-item-title">ISBN(s) obtained, if you need them</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="f4"><span><span class="cl-item-title">Categories and keyword research complete</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="f5"><span><span class="cl-item-title">Book description / blurb drafted</span></span></label>
+    </div>
+  </div>
+
+  <div class="cl-phase" data-phase="production">
+    <span class="cl-phase-when">6&ndash;4 weeks before</span>
+    <div class="cl-phase-head"><h2 class="cl-phase-title">2. Production</h2><span class="cl-phase-count" data-count></span></div>
+    <div class="cl-items">
+      <label class="cl-item"><input type="checkbox" data-id="p1"><span><span class="cl-item-title">Interior formatted for print and ebook</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="p2"><span><span class="cl-item-title">Front and back matter finalised</span><br><span class="cl-item-note">Title page, copyright, dedication, author bio, links to other books.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="p3"><span><span class="cl-item-title">Print proof copy ordered and reviewed</span><br><span class="cl-item-note">Build in 7&ndash;14 days for delivery and a review pass.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="p4"><span><span class="cl-item-title">Publishing platform account set up and verified</span><br><span class="cl-item-note">KDP or otherwise: tax information, banking details, author profile.</span></span></label>
+    </div>
+  </div>
+
+  <div class="cl-tip">
+    <strong>Writing Desk tip</strong>
+    Export your finished manuscript straight to a typeset, submission-ready EPUB and PDF from the Formatter. No separate formatting software, and no risk of the interior drifting from the manuscript you actually finished.
+  </div>
+
+  <div class="cl-phase" data-phase="pipeline">
+    <span class="cl-phase-when">4&ndash;2 weeks before</span>
+    <div class="cl-phase-head"><h2 class="cl-phase-title">3. Reader pipeline</h2><span class="cl-phase-count" data-count></span></div>
+    <p class="cl-phase-desc">The single most-skipped phase, and the one with the biggest impact on launch day.</p>
+    <div class="cl-items">
+      <label class="cl-item"><input type="checkbox" data-id="r1"><span><span class="cl-item-title">ARC readers recruited and files sent</span><br><span class="cl-item-note">Aim for 15&ndash;30 readers who match your genre, given enough time to actually finish it.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="r2"><span><span class="cl-item-title">Pre-order set up</span><br><span class="cl-item-note">Optional, but useful for building early momentum.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="r3"><span><span class="cl-item-title">Author website or landing page live</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="r4"><span><span class="cl-item-title">Email list warmed up, launch date announced</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="r5"><span><span class="cl-item-title">Launch day social content prepared</span></span></label>
+    </div>
+  </div>
+
+  <div class="cl-phase" data-phase="launch">
+    <span class="cl-phase-when">Launch week</span>
+    <div class="cl-phase-head"><h2 class="cl-phase-title">4. Launch week</h2><span class="cl-phase-count" data-count></span></div>
+    <div class="cl-items">
+      <label class="cl-item"><input type="checkbox" data-id="l1"><span><span class="cl-item-title">Book published and live</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="l2"><span><span class="cl-item-title">Launch email sent</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="l3"><span><span class="cl-item-title">ARC reviews requested to go live on day one</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="l4"><span><span class="cl-item-title">Social posts published</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="l5"><span><span class="cl-item-title">Personal network contacted directly</span></span></label>
+    </div>
+  </div>
+
+  <div class="cl-phase" data-phase="postlaunch">
+    <span class="cl-phase-when">First 30 days</span>
+    <div class="cl-phase-head"><h2 class="cl-phase-title">5. Post-launch</h2><span class="cl-phase-count" data-count></span></div>
+    <div class="cl-items">
+      <label class="cl-item"><input type="checkbox" data-id="pl1"><span><span class="cl-item-title">Sales and ranking tracked</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="pl2"><span><span class="cl-item-title">Reviews monitored and thanked where appropriate</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="pl3"><span><span class="cl-item-title">Any promo scheduled</span><br><span class="cl-item-note">Countdown deal or price drop, roughly 7&ndash;14 days post-launch.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="pl4"><span><span class="cl-item-title">Reader feedback logged for the next book or edition</span></span></label>
+    </div>
+  </div>
+
+  <div class="cl-actions">
+    <button class="cl-btn" onclick="window.print()">Print / save as PDF</button>
+    <button class="cl-btn cl-btn-reset" id="wd-reset">Reset progress</button>
+  </div>
+
+</div>
+
+<!-- ── FOOTER CTA ─────────────────────────────── -->
+<div class="footer-cta scroll-fade">
+  <h2>Start writing.<br><em>Nothing to set up.</em></h2>
+  <p>Get started for free. No card required.</p>
+  <div class="hero-actions" style="justify-content:center">
+    <a href="{{ '/download/' | relative_url }}" class="btn btn-primary">
+      <svg viewBox="0 0 15 15" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M7.5 2v9M4 8l3.5 3.5L11 8M2 13h11"/></svg>
+      Download for Mac | free
+    </a>
+    <a href="{{ '/pricing/' | relative_url }}" class="btn btn-ghost">See pricing</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var root = document.getElementById('wd-launch');
+  var STORAGE_KEY = root.dataset.storageKey;
+  var boxes = root.querySelectorAll('.cl-item input[type="checkbox"]');
+  var overallFill = document.getElementById('wd-overall-fill');
+  var overallLabel = document.getElementById('wd-overall-label');
+
+  function loadState(){ try{ return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }catch(e){ return {}; } }
+  function saveState(state){ try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){} }
+
+  function render(){
+    var state = loadState();
+    var totalChecked = 0;
+    boxes.forEach(function(box){
+      var checked = !!state[box.dataset.id];
+      box.checked = checked;
+      box.closest('.cl-item').classList.toggle('is-checked', checked);
+      if(checked) totalChecked++;
+    });
+    var pct = boxes.length ? Math.round((totalChecked / boxes.length) * 100) : 0;
+    overallFill.style.width = pct + '%';
+    overallLabel.textContent = pct + '%';
+
+    root.querySelectorAll('.cl-phase').forEach(function(phase){
+      var phaseBoxes = phase.querySelectorAll('input[type="checkbox"]');
+      if(!phaseBoxes.length) return;
+      var checkedCount = 0;
+      phaseBoxes.forEach(function(b){ if(b.checked) checkedCount++; });
+      var countEl = phase.querySelector('[data-count]');
+      if(countEl) countEl.textContent = checkedCount + ' / ' + phaseBoxes.length;
+    });
+  }
+
+  boxes.forEach(function(box){
+    box.addEventListener('change', function(){
+      var state = loadState();
+      state[box.dataset.id] = box.checked;
+      saveState(state);
+      render();
+    });
+  });
+
+  document.getElementById('wd-reset').addEventListener('click', function(){
+    if(confirm('Reset all progress on this checklist?')){
+      saveState({});
+      render();
+    }
+  });
+
+  render();
+})();
+</script>

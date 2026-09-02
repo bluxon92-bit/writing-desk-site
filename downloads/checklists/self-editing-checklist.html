@@ -1,0 +1,203 @@
+---
+layout: default
+title: "Self-Editing Checklist for Novelists | Free Download | Writing Desk"
+description: "A free, interactive self-editing checklist for novelists: structural pass, line pass, and technical pass, in the order that actually works. Track progress or print it."
+permalink: /downloads/checklists/self-editing-checklist/
+---
+
+<style>
+  .cl-hero-wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  .cl-overall { display: flex; align-items: center; gap: 16px; background: var(--white); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); padding: 16px 20px; margin: 28px 0 40px; box-shadow: 0 2px 0 var(--border); }
+  .cl-overall-track { flex: 1; height: 8px; background: var(--purple-faint); border-radius: 99px; overflow: hidden; }
+  .cl-overall-fill { height: 100%; width: 0%; background: var(--purple); border-radius: 99px; transition: width .35s ease; }
+  .cl-overall-label { font-size: 13px; font-weight: 600; color: var(--purple); white-space: nowrap; min-width: 60px; text-align: right; }
+
+  .cl-phase { margin-bottom: 36px; }
+  .cl-phase-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
+  .cl-phase-title { font-family: var(--serif); font-size: 20px; font-weight: 600; color: var(--ink); margin: 0; }
+  .cl-phase-count { font-size: 13px; color: var(--ink-muted); white-space: nowrap; }
+  .cl-phase-desc { color: var(--ink-muted); font-size: 14px; font-weight: 300; margin: 0 0 16px; }
+
+  .cl-items { display: flex; flex-direction: column; gap: 10px; }
+  .cl-item { display: flex; align-items: flex-start; gap: 12px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 14px 16px; cursor: pointer; transition: border-color .15s, background .15s; }
+  .cl-item:hover { border-color: var(--purple-light); }
+  .cl-item.is-checked { background: var(--purple-faint); border-color: var(--purple-light); }
+  .cl-item input { appearance: none; -webkit-appearance: none; width: 20px; height: 20px; min-width: 20px; margin-top: 1px; border-radius: 6px; border: 1.5px solid var(--purple-light); background: var(--white); display: grid; place-content: center; cursor: pointer; }
+  .cl-item input:checked { background: var(--purple); border-color: var(--purple); }
+  .cl-item input:checked::after { content: ""; width: 5px; height: 9px; border: solid white; border-width: 0 2px 2px 0; transform: rotate(45deg) translate(-1px, -1px); }
+  .cl-item-title { font-size: 14.5px; font-weight: 500; color: var(--ink); line-height: 1.4; }
+  .cl-item.is-checked .cl-item-title { color: var(--ink-muted); text-decoration: line-through; text-decoration-color: var(--purple-light); }
+  .cl-item-note { font-size: 13px; color: var(--ink-muted); font-weight: 300; margin-top: 2px; line-height: 1.5; }
+
+  .cl-tip { font-family: var(--serif); font-style: italic; font-size: 15.5px; line-height: 1.6; color: var(--ink); background: var(--purple-faint); border-left: 3px solid var(--purple); border-radius: 8px; padding: 18px 22px; margin: 8px 0 40px; }
+  .cl-tip strong { font-family: var(--sans); font-style: normal; font-weight: 700; color: var(--purple-mid); display: block; font-size: 11px; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 6px; }
+
+  .cl-actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 8px 0 8px; }
+  .cl-btn { font-family: var(--sans); font-weight: 600; font-size: 13.5px; padding: 11px 20px; border-radius: 10px; border: 1px solid var(--border-strong); background: var(--white); color: var(--ink); cursor: pointer; }
+  .cl-btn:hover { background: var(--purple-faint); }
+  .cl-btn-reset { color: var(--ink-faint); }
+
+  .cl-top-actions { text-align: center; margin: 8px 0 36px; }
+  .cl-bookmark-note { font-size: 12.5px; color: var(--ink-muted); font-weight: 300; margin: 10px 0 0; }
+
+  @media print {
+    .cl-actions, .cl-overall, .cl-top-actions, .footer-cta { display: none; }
+  }
+</style>
+
+<div class="features-hero">
+  <span class="eyebrow">Free Download</span>
+  <h1>Self-Editing <em>Checklist.</em></h1>
+  <p>Three passes, in order. Fix the story before you polish the sentences, and don't proofread until both are done. Tick items off below, or print it for later.</p>
+</div>
+
+<div class="cl-hero-wrap" id="wd-self-editing" data-storage-key="wd_checklist_self_editing_v1">
+
+  <!--
+    Download button: fires the print dialog for now (save-as-PDF).
+    TODO: swap onclick="window.print()" for a popup email-capture modal
+    once that's ready — do this on all three checklist pages together.
+  -->
+  <div class="cl-top-actions">
+    <button class="btn btn-primary" onclick="window.print()" type="button">
+      <svg viewBox="0 0 15 15" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M7.5 2v9M4 8l3.5 3.5L11 8M2 13h11"/></svg>
+      Download checklist
+    </button>
+    <p class="cl-bookmark-note">Bookmark this page to keep your progress. It saves automatically in this browser, no account needed.</p>
+  </div>
+
+  <div class="cl-overall">
+    <div class="cl-overall-track"><div class="cl-overall-fill" id="wd-overall-fill"></div></div>
+    <div class="cl-overall-label" id="wd-overall-label">0%</div>
+  </div>
+
+  <div class="cl-phase" data-phase="structural">
+    <div class="cl-phase-head"><h2 class="cl-phase-title">1. Structural pass</h2><span class="cl-phase-count" data-count></span></div>
+    <p class="cl-phase-desc">Story and character first. Prose fixed now might get cut later.</p>
+    <div class="cl-items">
+      <label class="cl-item"><input type="checkbox" data-id="s1"><span><span class="cl-item-title">Protagonist's want and need are both clear</span><br><span class="cl-item-note">What they're chasing on the surface, and what they actually need to learn.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="s2"><span><span class="cl-item-title">Every scene earns its place</span><br><span class="cl-item-note">It moves the plot, changes a relationship, or reveals character. Cut or merge the ones that don't.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="s3"><span><span class="cl-item-title">Pacing checked across the whole manuscript</span><br><span class="cl-item-note">No section drags, and the climax isn't rushed to make a deadline.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="s4"><span><span class="cl-item-title">Character arcs hold together start to finish</span><br><span class="cl-item-note">Change is earned, not sudden. No arc that quietly resets between chapters.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="s5"><span><span class="cl-item-title">Point of view is consistent</span><br><span class="cl-item-note">No accidental head-hopping within a scene.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="s6"><span><span class="cl-item-title">Every plot thread resolves</span><br><span class="cl-item-note">Or is deliberately left open, not forgotten.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="s7"><span><span class="cl-item-title">Timeline and continuity checked</span><br><span class="cl-item-note">Ages, seasons, travel time, and who knows what and when.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="s8"><span><span class="cl-item-title">Chapter endings pull the reader forward</span><br><span class="cl-item-note">A question, a turn, or a reason to keep going.</span></span></label>
+    </div>
+  </div>
+
+  <div class="cl-tip">
+    <strong>Writing Desk tip</strong>
+    Before a big structural change, branch the chapter with Chapter Iterations. Compare the new version against the original side by side, and roll back if the cut didn't work.
+  </div>
+
+  <div class="cl-phase" data-phase="line">
+    <div class="cl-phase-head"><h2 class="cl-phase-title">2. Line pass</h2><span class="cl-phase-count" data-count></span></div>
+    <p class="cl-phase-desc">Sentence-level craft, once the structure is settled.</p>
+    <div class="cl-items">
+      <label class="cl-item"><input type="checkbox" data-id="l1"><span><span class="cl-item-title">Read every chapter aloud</span><br><span class="cl-item-note">Mark anything that snags, repeats, or trips your tongue.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="l2"><span><span class="cl-item-title">Cut filler words and redundant phrases</span><br><span class="cl-item-note">"Just", "really", "very", "started to", "began to".</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="l3"><span><span class="cl-item-title">Sentence rhythm varied</span><br><span class="cl-item-note">Watch for strings of same-length sentences or the same opening word.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="l4"><span><span class="cl-item-title">Clich&eacute;s replaced with something specific to this story</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="l5"><span><span class="cl-item-title">Dialogue sounds distinct per character</span><br><span class="cl-item-note">Cover the names and check you can still tell who's speaking.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="l6"><span><span class="cl-item-title">Key emotional beats are shown, not told</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="l7"><span><span class="cl-item-title">Filter words checked</span><br><span class="cl-item-note">"Felt", "saw", "realised", "noticed": cut where they distance the reader.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="l8"><span><span class="cl-item-title">Distinctive words not repeated too close together</span><br><span class="cl-item-note">Same unusual word twice on a page tends to jump out.</span></span></label>
+    </div>
+  </div>
+
+  <div class="cl-phase" data-phase="technical">
+    <div class="cl-phase-head"><h2 class="cl-phase-title">3. Technical pass</h2><span class="cl-phase-count" data-count></span></div>
+    <p class="cl-phase-desc">Last, so you're not polishing prose you'll cut later.</p>
+    <div class="cl-items">
+      <label class="cl-item"><input type="checkbox" data-id="t1"><span><span class="cl-item-title">Full grammar and spelling pass</span><br><span class="cl-item-note">Tool-assisted first, then a manual read.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="t2"><span><span class="cl-item-title">Names, spellings, and details consistent throughout</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="t3"><span><span class="cl-item-title">Formatting consistent</span><br><span class="cl-item-note">Dialogue punctuation, scene breaks, chapter headings.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="t4"><span><span class="cl-item-title">Tense consistent throughout</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="t5"><span><span class="cl-item-title">Style sheet created or updated</span><br><span class="cl-item-note">Names, places, invented terms, key dates, for you or an editor to reference.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="t6"><span><span class="cl-item-title">Final proofread in a different format</span><br><span class="cl-item-note">Printed, or on an e-reader, not the screen you wrote it on.</span></span></label>
+    </div>
+  </div>
+
+  <div class="cl-phase" data-phase="ready">
+    <div class="cl-phase-head"><h2 class="cl-phase-title">Ready for beta readers</h2><span class="cl-phase-count" data-count></span></div>
+    <div class="cl-items">
+      <label class="cl-item"><input type="checkbox" data-id="r1"><span><span class="cl-item-title">Beta reader questions prepared</span><br><span class="cl-item-note">Specific questions get specific feedback.</span></span></label>
+      <label class="cl-item"><input type="checkbox" data-id="r2"><span><span class="cl-item-title">Feedback deadline agreed with each reader</span></span></label>
+    </div>
+  </div>
+
+  <div class="cl-actions">
+    <button class="cl-btn" onclick="window.print()">Print / save as PDF</button>
+    <button class="cl-btn cl-btn-reset" id="wd-reset">Reset progress</button>
+  </div>
+
+</div>
+
+<!-- ── FOOTER CTA ─────────────────────────────── -->
+<div class="footer-cta scroll-fade">
+  <h2>Start writing.<br><em>Nothing to set up.</em></h2>
+  <p>Get started for free. No card required.</p>
+  <div class="hero-actions" style="justify-content:center">
+    <a href="{{ '/download/' | relative_url }}" class="btn btn-primary">
+      <svg viewBox="0 0 15 15" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M7.5 2v9M4 8l3.5 3.5L11 8M2 13h11"/></svg>
+      Download for Mac | free
+    </a>
+    <a href="{{ '/pricing/' | relative_url }}" class="btn btn-ghost">See pricing</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var root = document.getElementById('wd-self-editing');
+  var STORAGE_KEY = root.dataset.storageKey;
+  var boxes = root.querySelectorAll('.cl-item input[type="checkbox"]');
+  var overallFill = document.getElementById('wd-overall-fill');
+  var overallLabel = document.getElementById('wd-overall-label');
+
+  function loadState(){ try{ return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }catch(e){ return {}; } }
+  function saveState(state){ try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){} }
+
+  function render(){
+    var state = loadState();
+    var totalChecked = 0;
+    boxes.forEach(function(box){
+      var checked = !!state[box.dataset.id];
+      box.checked = checked;
+      box.closest('.cl-item').classList.toggle('is-checked', checked);
+      if(checked) totalChecked++;
+    });
+    var pct = boxes.length ? Math.round((totalChecked / boxes.length) * 100) : 0;
+    overallFill.style.width = pct + '%';
+    overallLabel.textContent = pct + '%';
+
+    root.querySelectorAll('.cl-phase').forEach(function(phase){
+      var phaseBoxes = phase.querySelectorAll('input[type="checkbox"]');
+      if(!phaseBoxes.length) return;
+      var checkedCount = 0;
+      phaseBoxes.forEach(function(b){ if(b.checked) checkedCount++; });
+      var countEl = phase.querySelector('[data-count]');
+      if(countEl) countEl.textContent = checkedCount + ' / ' + phaseBoxes.length;
+    });
+  }
+
+  boxes.forEach(function(box){
+    box.addEventListener('change', function(){
+      var state = loadState();
+      state[box.dataset.id] = box.checked;
+      saveState(state);
+      render();
+    });
+  });
+
+  document.getElementById('wd-reset').addEventListener('click', function(){
+    if(confirm('Reset all progress on this checklist?')){
+      saveState({});
+      render();
+    }
+  });
+
+  render();
+})();
+</script>
