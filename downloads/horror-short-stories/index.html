@@ -43,14 +43,14 @@ permalink: /downloads/horror-short-stories/
   .dl-bc-badge { position: absolute; bottom: 0.38em; right: 0.38em; width: 2em; height: 2em; border-radius: 50%; background: var(--purple); display: flex; flex-direction: column; align-items: center; justify-content: center; }
   .dl-bc-badge span { font-size: 0.5em; font-weight: 700; color: white; letter-spacing: 0.03em; line-height: 1.3; text-transform: uppercase; text-align: center; }
 
-  .dl-hero { background: var(--ink); color: white; padding: 4rem 0 4.5rem; position: relative; overflow: hidden; }
-  .dl-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(83,74,183,0.55) 0%, transparent 60%); pointer-events: none; }
+  .dl-story-hero { background: var(--ink); color: white; padding: 4rem 0 4.5rem; position: relative; overflow: hidden; }
+  .dl-story-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(83,74,183,0.55) 0%, transparent 60%); pointer-events: none; }
   .dl-hero-inner { max-width: 1160px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 230px; gap: 3rem; align-items: center; position: relative; z-index: 1; }
   @media (max-width: 700px) { .dl-hero-inner { grid-template-columns: 1fr; padding: 0 24px; } .dl-hero-books { display: none; } }
   .dl-hero-eyebrow { display: flex; align-items: center; gap: 0.6rem; font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--purple-mid); font-weight: 600; margin-bottom: 1.1rem; }
   .dl-hero-eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--purple-mid); border-radius: 2px; flex-shrink: 0; }
-  .dl-hero h1 { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3rem); line-height: 1.1; margin: 0 0 1.1rem; font-weight: 400; color: white; }
-  .dl-hero h1 em { font-style: italic; color: var(--purple-mid); }
+  .dl-story-hero h1 { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3rem); line-height: 1.1; margin: 0 0 1.1rem; font-weight: 400; color: white; }
+  .dl-story-hero h1 em { font-style: italic; color: var(--purple-mid); }
   .dl-hero-copy > p { font-family: var(--sans); font-size: 1.0625rem; line-height: 1.65; color: rgba(255,255,255,0.72); margin: 0 0 1.75rem; max-width: 540px; font-weight: 300; }
   .dl-hero-prompt-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--sans); font-size: 0.85rem; color: var(--purple-mid); text-decoration: none; margin-bottom: 1.75rem; border-bottom: 1px solid rgba(175,169,236,0.35); padding-bottom: 2px; transition: color 0.15s, border-color 0.15s; }
   .dl-hero-prompt-link:hover { color: white; border-color: white; }
@@ -135,7 +135,7 @@ permalink: /downloads/horror-short-stories/
 
 
 <!-- ═══════════════════════ HERO ═══════════════════════ -->
-<div class="dl-hero">
+<div class="dl-story-hero">
   <div class="dl-hero-inner">
 
     <div class="dl-hero-copy">

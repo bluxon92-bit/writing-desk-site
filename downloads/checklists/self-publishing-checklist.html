@@ -44,6 +44,9 @@ permalink: /downloads/checklists/self-publishing-checklist/
 
   @media print {
     .cl-actions, .cl-overall, .cl-top-actions, .footer-cta { display: none; }
+    /* Hide the site chrome so the printed/saved PDF is just the checklist.
+       Swap the selector below for your real footer class if it differs. */
+    footer, .site-footer { display: none !important; }
   }
 </style>
 
