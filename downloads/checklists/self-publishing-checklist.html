@@ -16,6 +16,31 @@ permalink: /downloads/checklists/self-publishing-checklist/
   .cl-top-actions { text-align: center; margin: 8px 0 36px; }
   .cl-bookmark-note { font-size: 12.5px; color: var(--ink-muted); font-weight: 300; margin: 10px 0 0; }
 
+  /* Download email-capture modal */
+  .cl-modal-overlay {
+    position: fixed; inset: 0; background: rgba(26,26,46,.55);
+    display: flex; align-items: center; justify-content: center; padding: 24px;
+    z-index: 999; opacity: 0; visibility: hidden; transition: opacity .2s ease;
+  }
+  .cl-modal-overlay.is-open { opacity: 1; visibility: visible; }
+  .cl-modal {
+    background: var(--white); border-radius: var(--radius-lg); max-width: 420px;
+    width: 100%; padding: 32px 28px 28px; position: relative;
+    box-shadow: 0 20px 60px rgba(26,26,46,.25); transform: translateY(8px);
+    transition: transform .2s ease;
+  }
+  .cl-modal-overlay.is-open .cl-modal { transform: translateY(0); }
+  .cl-modal-close {
+    position: absolute; top: 14px; right: 14px; width: 28px; height: 28px;
+    border-radius: 50%; border: none; background: var(--purple-faint);
+    color: var(--ink-muted); font-size: 18px; line-height: 1; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .cl-modal-close:hover { background: var(--purple-light); color: var(--white); }
+  .cl-modal h3 { font-family: var(--serif); font-size: 21px; font-weight: 600; color: var(--ink); margin: 0 0 8px; }
+  .cl-modal p { font-size: 13.5px; color: var(--ink-muted); font-weight: 300; line-height: 1.6; margin: 0 0 18px; }
+  .cl-modal-form { min-height: 46px; }
+
   .cl-phase { margin-bottom: 36px; }
   .cl-phase-when { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--purple-mid); background: var(--purple-faint); border-radius: 99px; padding: 3px 10px; margin-bottom: 8px; }
   .cl-phase-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
@@ -43,7 +68,7 @@ permalink: /downloads/checklists/self-publishing-checklist/
   .cl-btn-reset { color: var(--ink-faint); }
 
   @media print {
-    .cl-actions, .cl-overall, .cl-top-actions, .footer-cta { display: none; }
+    .cl-actions, .cl-overall, .cl-top-actions, .footer-cta, .cl-modal-overlay { display: none !important; }
     /* Hide the site chrome so the printed/saved PDF is just the checklist.
        Swap the selector below for your real footer class if it differs. */
     footer, .site-footer { display: none !important; }
@@ -63,20 +88,50 @@ permalink: /downloads/checklists/self-publishing-checklist/
     <div class="cl-overall-label" id="wd-overall-label">0%</div>
   </div>
 
-  <!--
-    Download button: fires the print dialog for now (save-as-PDF).
-    TODO: swap onclick="window.print()" for a popup email-capture modal
-    once that's ready — do this on all three checklist pages together.
-    (This page previously had an inline EmailOctopus embed here; pulled
-    for now in favour of the popup approach, kept simple until that's built.)
-  -->
+  <!-- Download button opens the email-capture modal below. -->
   <div class="cl-top-actions">
-    <button class="btn btn-primary" onclick="window.print()" type="button">
+    <button class="btn btn-primary" id="wd-download-trigger" type="button">
       <svg viewBox="0 0 15 15" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M7.5 2v9M4 8l3.5 3.5L11 8M2 13h11"/></svg>
       Download checklist
     </button>
     <p class="cl-bookmark-note">Bookmark this page to keep your progress. It saves automatically in this browser, no account needed.</p>
   </div>
+
+  <div class="cl-modal-overlay" id="wd-download-modal" aria-hidden="true">
+    <div class="cl-modal" role="dialog" aria-modal="true" aria-labelledby="wd-modal-title">
+      <button class="cl-modal-close" id="wd-modal-close" type="button" aria-label="Close">&times;</button>
+      <h3 id="wd-modal-title">Get the checklist</h3>
+      <p>Enter your email and we'll send the Self-Publishing Launch Checklist straight to your inbox.</p>
+      <div class="cl-modal-form">
+        <script async src="https://eocampaign1.com/form/dd1bdcda-a9fd-11f1-a2fd-0724f32b4dee.js" data-form="dd1bdcda-a9fd-11f1-a2fd-0724f32b4dee"></script>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var trigger = document.getElementById('wd-download-trigger');
+    var modal = document.getElementById('wd-download-modal');
+    var closeBtn = document.getElementById('wd-modal-close');
+    if(!trigger || !modal) return;
+
+    function openModal(){
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(){
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    trigger.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+  })();
+  </script>
 
   <div class="cl-phase" data-phase="foundations">
     <span class="cl-phase-when">8&ndash;6 weeks before</span>

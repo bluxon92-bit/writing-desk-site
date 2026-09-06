@@ -148,7 +148,7 @@ layout: default
     </div>
 
     <!-- Related posts -->
-    {% assign related = site.posts | where: "category", page.category | where_exp: "p", "p.url != page.url" | limit: 3 %}
+    {% assign related = site.posts | where: "category", page.category | where_exp: "p", "p.url != page.url" | slice: 0, 3 %}
     {% if related.size > 0 %}
     <div class="post-related">
       <h3>You might also like</h3>
