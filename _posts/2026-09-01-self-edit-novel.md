@@ -4,7 +4,7 @@ title: "How to Self-Edit Your Novel Before Sending to a Beta Reader"
 date: 2026-09-01
 category: Editing
 type: Guide
-image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788771738/adverbs_-_drafting_by_hand_1_wyvo6v.jpg"
+image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788771738/self-editing_-_red_pen_1_cgyvnn.jpg"
 excerpt: "How to self-edit your novel before it goes to beta readers: the three passes that matter, in the order that works, and how to know when you're done."
 permalink: /blog/self-edit-novel/
 ---
