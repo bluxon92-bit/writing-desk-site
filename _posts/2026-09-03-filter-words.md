@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Filter Words in Fiction: What They Are and How to Cut Them"
-date: 2026-08-05
+date: 2026-09-03
 category: Editing
 type: Guide
-image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/filter_words_PLACEHOLDER.jpg"
+image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788771738/filter_words_-_almost_1_jta5qw.jpg"
 excerpt: "Filter words explained: what they are, why they distance the reader, and how to find and cut them from your manuscript without losing your narrator's voice entirely."
 permalink: /blog/filter-words/
 ---

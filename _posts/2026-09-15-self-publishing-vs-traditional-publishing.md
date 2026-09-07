@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Self-Publishing vs Traditional Publishing"
-date: 2026-08-19
+date: 2026-09-15
 category: Publishing
 type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/self_publishing_vs_traditional_PLACEHOLDER.jpg"

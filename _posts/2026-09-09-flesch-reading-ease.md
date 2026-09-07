@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Flesch Reading Ease: What Novelists Need to Know"
-date: 2026-08-12
+date: 2026-09-09
 category: Editing
 type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/flesch_reading_ease_PLACEHOLDER.jpg"

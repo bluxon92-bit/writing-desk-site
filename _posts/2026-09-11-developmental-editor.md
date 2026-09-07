@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What Does a Developmental Editor Do? (And Do You Need One?)"
-date: 2026-08-14
+date: 2026-09-11
 category: Editing
 type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/developmental_editor_PLACEHOLDER.jpg"

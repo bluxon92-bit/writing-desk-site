@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Passive Voice in Fiction: When to Use It and When to Cut It"
-date: 2026-08-17
+date: 2026-09-14
 category: Editing
 type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/passive_voice_fiction_PLACEHOLDER.jpg"

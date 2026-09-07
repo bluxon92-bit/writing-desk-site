@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Adverbs in Fiction: Why Less Is Usually More"
-date: 2026-08-10
+date: 2026-09-07
 category: Editing
 type: Guide
-image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/adverbs_in_fiction_PLACEHOLDER.jpg"
+image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788771738/adverbs_-_drafting_by_hand_1_wyvo6v.jpg"
 excerpt: "Adverbs in fiction: why they usually signal a weak verb underneath, when they're the right choice anyway, and how to find the ones worth cutting."
 permalink: /blog/adverbs-in-fiction/
 ---

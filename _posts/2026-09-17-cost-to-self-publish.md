@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cost of Self-Publishing: What It Takes to Budget For"
-date: 2026-08-21
+date: 2026-09-17
 category: Publishing
 type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/cost_to_self_publish_PLACEHOLDER.jpg"

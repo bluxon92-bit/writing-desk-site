@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Weak Words in Fiction: A Complete List to Cut From Your Draft"
-date: 2026-08-07
+date: 2026-09-05
 category: Editing
 type: Guide
-image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/weak_words_PLACEHOLDER.jpg"
+image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788771738/weak_words_-_megaphone_1_lddtjv.jpg"
 excerpt: "Weak words in fiction, the full list to search your draft for, why they dilute a sentence, and when a few of them earn their place anyway."
 permalink: /blog/weak-words-fiction/
 ---

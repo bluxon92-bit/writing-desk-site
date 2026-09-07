@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What Is a Deus Ex Machina? Definition and How to Avoid It"
-date: 2026-08-31
+date: 2026-09-29
 category: Craft
 type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/deus_ex_machina_hidden_oor_ytagai.jpg"

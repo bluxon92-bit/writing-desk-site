@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Self-Publish on Amazon KDP"
-date: 2026-08-24
+date: 2026-09-19
 category: Publishing
 type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/how_to_publish_on_kdp_PLACEHOLDER.jpg"
