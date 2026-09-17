@@ -4,7 +4,7 @@ title: "Cost of Self-Publishing: What It Takes to Budget For"
 date: 2026-09-17
 category: Publishing
 type: Guide
-image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/cost_to_self_publish_PLACEHOLDER.jpg"
+image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1789677809/book_formatting_1_pax16n.jpg"
 excerpt: "The real cost to self-publish a book: editing, cover design, formatting, ISBNs, and marketing, with realistic budgets at three different price points."
 permalink: /blog/cost-to-self-publish/
 ---
@@ -67,7 +67,7 @@ A thorough [self-edit](/blog/self-edit-novel/), followed by honest beta reader f
 
 **Spend on editing and the cover.** These are the two things readers judge before they've read a single sentence of your actual prose, the cover decides whether they click, and editing decides whether they finish and leave a review.
 
-**Save on formatting.** This is the line item most easily reduced to zero without any quality loss, if your writing tool exports cleanly to a professional standard, there's no reason to pay for a separate formatting pass.
+**Save on formatting.** This is the line item most easily reduced to zero without any quality loss, if your writing tool exports cleanly to a professional standard, there's no reason to pay for a separate formatting pass. The easiest way to save on formatting is to use a tool like [Writing Desk's formatter](https://www.writingdeskapp.com/features/book-formatting-tool/).
 
 **Save on ISBNs if you're KDP-only.** The free KDP ISBN is fine unless you specifically need to publish under your own imprint or distribute beyond Amazon.
 
