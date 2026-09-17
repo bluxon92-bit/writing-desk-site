@@ -4,7 +4,7 @@ title: "Self-Publishing vs Traditional Publishing"
 date: 2026-09-15
 category: Publishing
 type: Guide
-image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/self_publishing_vs_traditional_PLACEHOLDER.jpg"
+image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1789678233/self_publish_1_v00fhh.jpg"
 excerpt: "Self-publishing vs traditional publishing: the real trade-offs across timeline, royalties, control, and cost, and how to decide between them."
 permalink: /blog/self-publishing-vs-traditional-publishing/
 ---

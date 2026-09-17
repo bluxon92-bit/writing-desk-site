@@ -4,7 +4,7 @@ title: "Flesch Reading Ease: What Novelists Need to Know"
 date: 2026-09-09
 category: Editing
 type: Guide
-image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/flesch_reading_ease_PLACEHOLDER.jpg"
+image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1789678233/flesh_reading_score_1_lsjqoj.jpg"
 excerpt: "Flesch Reading Ease explained for novelists: what the score measures, what it doesn't, and how to use it as a diagnostic rather than a target."
 permalink: /blog/flesch-reading-ease/
 ---

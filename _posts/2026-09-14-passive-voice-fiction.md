@@ -4,7 +4,7 @@ title: "Passive Voice in Fiction: When to Use It and When to Cut It"
 date: 2026-09-14
 category: Editing
 type: Guide
-image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/passive_voice_fiction_PLACEHOLDER.jpg"
+image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1789678233/passive_voice_1_f7ebmu.jpg"
 excerpt: "Passive voice in fiction: what it is, why grammar checkers get it wrong more often than you'd expect, and the specific situations where it's the right choice."
 permalink: /blog/passive-voice-fiction/
 ---
