@@ -4,7 +4,7 @@ title: "How to Self-Publish on Amazon KDP"
 date: 2026-09-19
 category: Publishing
 type: Guide
-image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/how_to_publish_on_kdp_PLACEHOLDER.jpg"
+image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1789893656/kindle_direct_publishing_1_rqowxa.jpg"
 excerpt: "How to self-publish on Amazon KDP, from account setup through file requirements, royalty tiers, and the upload process itself, step by step."
 permalink: /blog/how-to-publish-on-kdp/
 ---

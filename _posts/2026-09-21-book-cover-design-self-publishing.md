@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Designing Your Book Cover for Self-Publishing"
-date: 2026-09-21
+date: 2026-09-20
 category: Publishing
 type: Guide
-image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/book_cover_design_self_publishing_PLACEHOLDER.jpg"
-excerpt: "Book cover design for self-publishing: the thumbnail test, genre conventions that matter, typography rules, and DIY versus custom design."
+image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1789893656/book_cover_design_table_1_n0pb68.jpg"
+excerpt: "Book cover design for self-publishing: the thumbnail test, genre conventions that matter, typography rules, and DIY versus professional design."
 permalink: /blog/book-cover-design-self-publishing/
 ---
 
