@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Designing Your Book Cover for Self-Publishing"
-date: 2026-09-20
+date: 2026-09-21
 category: Publishing
 type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1789893656/book_cover_design_table_1_n0pb68.jpg"
