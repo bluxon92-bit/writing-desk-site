@@ -65,7 +65,7 @@ button { font-family: var(--sans); cursor: pointer; }
   text-decoration: none;
 }
 .logo-mark {
-  width: 28px; height: 28px;
+  width: 37px; height: 20px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }

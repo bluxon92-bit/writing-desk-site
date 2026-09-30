@@ -102,7 +102,6 @@ Most problems in a draft are structural problems wearing prose-level disguises. 
 
 > **Writing Desk tip:** The Story Plotter includes a Three-Act Structure template, the six major beats placed for you on the board, with room to build your scene list around them. Switch to doc view to write the outline in prose if you prefer; both live in the same plan.
 
-
 **Related reading:**
 
 - [Four-Act Structure: A Practical Guide for Novelists](/blog/four-act-structure/)
