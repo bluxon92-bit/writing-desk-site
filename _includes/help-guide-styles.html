@@ -1,0 +1,68 @@
+<style>
+  /* Text guides (_help_guides collection): category cards and article pages */
+  .help-section-title {
+    margin: 36px 0 14px;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--purple);
+  }
+  .help-guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+  }
+  .help-guide-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--white);
+    text-decoration: none;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .help-guide-card:hover { border-color: var(--purple-mid); background: var(--purple-faint); }
+  .help-guide-card-title { font-family: var(--sans); font-weight: 600; font-size: 15px; color: var(--ink); line-height: 1.35; }
+  .help-guide-card-summary { font-size: 13.5px; line-height: 1.5; color: var(--ink-muted); }
+
+  .help-article { max-width: 720px; }
+  .help-article-body { font-size: 16px; line-height: 1.7; color: var(--ink); }
+  .help-article-body h2 { margin: 36px 0 10px; font-family: var(--serif); font-size: 22px; line-height: 1.3; color: var(--ink); }
+  .help-article-body h3 { margin: 24px 0 8px; font-family: var(--sans); font-size: 16px; font-weight: 600; color: var(--ink); }
+  .help-article-body p { margin: 0 0 14px; }
+  .help-article-body ol, .help-article-body ul { margin: 0 0 16px; padding-left: 22px; }
+  .help-article-body li { margin-bottom: 6px; }
+  .help-article-body a { color: var(--purple); }
+  .help-article-body code {
+    padding: 1px 6px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--purple-faint);
+    font-size: 0.88em;
+    white-space: pre;
+  }
+  .help-article-body table { width: 100%; margin: 0 0 20px; border-collapse: collapse; font-size: 14.5px; }
+  .help-article-body th { text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--border-strong); font-family: var(--sans); font-weight: 600; }
+  .help-article-body td { padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .help-article-body td:last-child { white-space: nowrap; }
+  .help-article-body blockquote {
+    margin: 0 0 18px;
+    padding: 12px 16px;
+    border-left: 3px solid var(--purple);
+    border-radius: 0 8px 8px 0;
+    background: var(--purple-faint);
+  }
+  .help-article-body blockquote p:last-child { margin-bottom: 0; }
+
+  .help-related { margin-top: 44px; }
+  .help-related-item { border-bottom: 1px solid var(--border); }
+  .help-related-item summary { padding: 12px 0; cursor: pointer; font-weight: 600; color: var(--ink); }
+  .help-related-item p { margin: 0 0 14px; color: var(--ink-muted); line-height: 1.6; }
+  .help-related-guides { list-style: none; margin: 0; padding: 0; }
+  .help-related-guides li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .help-related-guides a { color: var(--purple); text-decoration: none; font-weight: 500; }
+</style>

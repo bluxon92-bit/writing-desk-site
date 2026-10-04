@@ -7,7 +7,7 @@
 categories:
   - slug: getting-started
     name: Getting Started
-    description: What Writing Desk is, what platforms it runs on, and the basics of how it works.
+    description: "What Writing Desk is, what you can write in it, and finding your way around."
     icon: door
     videos:
       - slug: writing-tools
@@ -74,18 +74,22 @@ categories:
         q: >-
           What is Writing Desk?
         a: >-
-          Writing Desk is a desktop writing app for creative writers. It brings
-          together story planning, distraction-free drafting, editorial review,
-          and manuscript typesetting in one place, so you can go from a blank
-          page to a submission-ready manuscript without leaving the app.
+          Writing Desk is a Mac writing app for novels and everyday
+          writing alike. Plan, draft and edit long-form projects with
+          chapters, Story Plotter and editorial review, or write essays,
+          blog posts and notes as markdown documents. When your book is
+          finished, the Formatter typesets it for print and ebook.
 
       - id: who-is-it-for
         q: >-
           Who is Writing Desk for?
         a: >-
-          Writers at any stage. Whether you want a distraction-free space to
-          get a first draft down, or you're polishing a finished manuscript
-          ahead of publishing, Writing Desk is built around your process.
+          Writers at any stage, working on anything. Novelists get a
+          full project workspace with chapters, planning tools and
+          typesetting. Essayists, bloggers and anyone writing shorter
+          pieces get lightweight markdown documents, with an outline,
+          pinned references and editorial feedback built for
+          non-fiction.
 
       - id: platforms
         q: >-
@@ -113,9 +117,13 @@ categories:
         q: >-
           What do I see when I first open Writing Desk?
         a: >-
-          Three options: open an existing project, create a new file, or
-          open a file already on your device. If this is your first time,
-          Create a New File or setting up a project is the place to start.
+          The home screen has three buttons, with your recently opened
+          files listed underneath. Projects opens a window with two
+          tabs: Projects for your long-form work and Documents for your
+          shorter writing. New File creates a new markdown document, and
+          Open File opens any .wddoc, .docx or .md file on your Mac.
+        link: /help/getting-started/tour-of-writing-desk/
+        link_text: Take the tour
 
       - id: quick-start-project
         q: >-
@@ -126,33 +134,43 @@ categories:
           Create. Writing Desk sets up a folder for your manuscript and
           takes you straight into the editor.
         link: /help/projects-organization/
-        link_text: More on creating and organizing projects
+        link_text: More on creating and organising projects
 
       - id: open-existing-manuscript
         q: >-
           How do I open a manuscript I've already started?
         a: >-
-          From the start screen, select Projects to see your existing
-          projects, or Open a File to browse for a manuscript on your
-          device. Opening a project takes you straight into the editor,
-          with your manuscript front and centre.
+          Click Open File on the home screen, or Open existing in the
+          Projects window, and choose your file. Writing Desk opens
+          Writing Desk documents (.wddoc), Word files (.docx) and
+          markdown files (.md) as they are, and lists recently opened
+          files on the home screen so you can pick up where you left
+          off.
+        link: /help/getting-started/bring-in-existing-writing/
+        link_text: Bring in writing you've already started
 
       - id: editor-tour
         q: >-
           What am I looking at once I'm in the editor?
         a: >-
-          Your manuscript sits front and centre. The left-hand sidebar
-          connects your resources, lets you navigate chapters, and holds
-          The Pad for chapter notes, Story Plotter lives there too. Top
-          right shows your Writing Tracker. Analysis opens the editorial
-          tools, and the hamburger menu, top left, has your export options.
+          Your writing sits in the centre, with the toolbar floating
+          above it. In a project, the left sidebar holds your chapters,
+          The Pad and Story Plotter, with the Resource Hub at the
+          bottom. In a document, it shows an outline of your headings
+          and the files, folders and links you've pinned. Analysis, in
+          the toolbar, opens the proofreading and editorial tools. The
+          menu at the left of the toolbar holds export and Send to
+          Formatter, and the Writing Tracker sits at the top right.
+        link: /help/getting-started/tour-of-writing-desk/
+        link_text: Take the tour
 
       - id: start-writing-first-chapter
         q: >-
           How do I start writing my first chapter?
         a: >-
-          New chapters are created with an H2 heading, or the shortcut
-          Cmd+Opt+2. Just start typing, Writing Desk autosaves as you go.
+          Chapters start with a Heading 2. Press ⌥⌘2, or type ## and a
+          space at the start of a line, then add your chapter title and
+          start writing. Writing Desk saves as you go.
 
       - id: plan-before-write
         q: >-
@@ -168,12 +186,13 @@ categories:
         q: >-
           How do I get straight into a distraction-free writing session?
         a: >-
-          Hit Focus Mode to hide the sidebars and get down to writing
-          immediately. One click to enter, Esc to exit.
+          Press ⇧⌘F to enter Focus Mode, which hides the sidebars and
+          everything except your writing. Press ⇧⌘F again, or Esc, to
+          come back.
 
   - slug: projects-organization
-    name: Projects, Notes & Organization
-    description: Setting up projects, organizing files, and where things live on your Mac.
+    name: Projects & Documents
+    description: "Projects, Writing Desk documents and documents: setting them up, organising them, and where they live on your Mac."
     icon: folder
     videos:
       - slug: projects
@@ -261,57 +280,121 @@ categories:
         q: >-
           How do I start a new project?
         a: >-
-          There are two ways to get going, depending on where your manuscript
-          already lives.
+          Starting fresh: click Projects on the home screen, then create
+          a new project and give it a name. Writing Desk sets up a
+          folder for it on your Mac.
 
-          Starting fresh:
-
-          1. Click Projects, then Create New Project.
-
-          2. Give your project a name. Writing Desk sets up a folder for it
-          on your device.
-
-          Bringing in an existing manuscript:
-
-          1. Save your manuscript as a .docx file if it isn't already.
-
-          2. Click Projects, then + Existing Project.
-
-          3. Select your .docx file to link it as a project.
-
-          Either way, we recommend keeping each project in its own folder on
-          your device, so all its related files stay organized together.
+          Bringing in a manuscript you've already started: open the
+          .docx or .md in Writing Desk, click the project control at the
+          bottom of the sidebar, choose Convert to Writing Desk project,
+          then Set up project. Your original file stays where it is,
+          unchanged.
+        link: /help/projects-organization/turn-a-document-into-a-project/
+        link_text: Turn a document into a project
 
       - id: project-types
         q: >-
           What's the difference between project types (Novel, Short Story,
           Poem, etc.)?
         a: >-
-          Project types are labels only. They help you organize and identify
+          Project types are labels only. They help you organise and identify
           your work, but they don't change how the app behaves, whatever type
           you choose, you get the same full set of features.
 
       - id: project-vs-note
         q: >-
-          What's the difference between a project and a Note (unlinked file)?
+          What's the difference between a project, a Writing Desk
+          document and a document?
         a: >-
-          A Note is a simple one-off file that isn't linked to a project.
-          It's a good fit for story ideas, quick notes, or anything you don't
-          need a full project folder for.
+          A document is an ordinary markdown (.md) or Word (.docx) file,
+          ideal for essays, posts and notes. A project is the full
+          workspace for long-form writing, with chapters, The Pad, Story
+          Plotter, comments and version history. A Writing Desk document
+          (.wddoc) is the format a project's manuscript is saved in, and
+          it can also stand on its own, outside a project.
+        link: /help/projects-organization/projects-and-documents/
+        link_text: Which should I use?
+
+      - id: standalone-wddoc
+        q: >-
+          What does "Convert without a project" do?
+        a: >-
+          It turns your document into a Writing Desk document (.wddoc)
+          on its own, with comments, chapters and version history,
+          without setting up a project folder. You can make it a full
+          project at any time with the Set up project badge beside its
+          title.
+
+      - id: convert-original
+        q: >-
+          What happens to my original file when I convert it?
+        a: >-
+          It's copied, never moved or changed, so you'll find it exactly
+          where it was. The one exception is a Writing Desk document
+          that's already on its own: setting it up as a project moves it
+          into the new project as its manuscript.
 
       - id: multiple-documents
         q: >-
           Can I add more than one document to a single project?
         a: >-
-          Yes. If you're working on a poetry or short story collection, you
-          can link multiple files together within the same project.
+          Yes. A project can hold more than one file, which suits a
+          short story or poetry collection. To add a document you're
+          working on, click the project control at the bottom of its
+          sidebar and choose Add to project. The file stays where it is
+          and is linked into the project.
 
       - id: where-files-stored
         q: >-
           Where are my files actually stored?
         a: >-
-          On your own machine. Writing Desk saves a .docx file plus a
-          .wdjson sidecar file alongside it in your project folder.
+          On your Mac. A project's manuscript is saved as a Writing Desk
+          document (.wddoc), which Finder shows as a single file with
+          the Kind "Writing Desk Document". It holds your text,
+          chapters, variants and comments. Documents are ordinary .md or
+          .docx files. New documents from the Documents tab are saved in
+          your Writing Desk Documents folder.
+
+      - id: documents-tab
+        q: >-
+          What is the Documents tab?
+        a: >-
+          Your home for shorter writing, in the Projects window.
+          Favourites lists the documents you've opened recently or
+          marked as favourites. Below it, Documents shows your Writing
+          Desk Documents folder: Add folder and Add file create new
+          folders and documents there, and you can drag them to
+          reorganise.
+        link: /help/getting-started/write-your-first-document/
+        link_text: Write your first essay or blog post
+
+      - id: markdown-support
+        q: >-
+          Can I write in markdown?
+        a: >-
+          Yes. New documents are markdown files (.md), and Writing Desk
+          opens any markdown file on your Mac. You write with the usual
+          toolbar and shortcuts, and Writing Desk saves your formatting
+          as markdown, so the file opens cleanly in any other app.
+
+      - id: markdown-images
+        q: >-
+          Do images in my markdown files show in Writing Desk?
+        a: >-
+          Yes. Images already in a markdown file show in the editor,
+          found relative to the file's folder or by their full path.
+          Images with a website path, such as /assets/cover.png, show as
+          a placeholder. Adding new images from inside Writing Desk is
+          on the roadmap.
+
+      - id: frontmatter
+        q: >-
+          What happens to frontmatter in my markdown files?
+        a: >-
+          It's kept exactly as written. Writing Desk shows it as its own
+          block at the top of the document and saves it back unchanged,
+          so posts for blogging platforms keep their title, date and
+          tags.
 
       - id: move-project-files
         q: >-
@@ -327,8 +410,11 @@ categories:
           What is the Reference Folder?
         a: >-
           A single folder for all your story-related notes, screenshots,
-          images, and PDFs. Link it from the Resource section and you'll
-          have quick access to everything in it from the writing zone.
+          images and PDFs. Link it from the Resource section of a
+          project and you'll have quick access to everything in it as
+          you write. In a document, the References section at the bottom
+          of the sidebar does the same job: pin any files, folders or
+          links you're drawing on.
 
       - id: the-pad
         q: >-
@@ -367,21 +453,29 @@ categories:
         q: >-
           Can I import a manuscript from Word or Google Docs?
         a: >-
-          Yes. Save your file as a .docx from Word or Google Docs, then open
-          it with Writing Desk.
+          Yes. Open the .docx in Writing Desk and you can edit and save
+          it as a Word file straight away. From Google Docs, choose
+          File, Download, Microsoft Word (.docx) first. To use chapters,
+          Story Plotter and the other project tools, convert it into a
+          project from the project control at the bottom of the sidebar.
+          Your original file stays unchanged.
+        link: /help/getting-started/bring-in-existing-writing/
+        link_text: Bring in writing you've already started
 
       - id: heading-style-import
         q: >-
           What happens if my manuscript uses a different chapter-heading
           style than Writing Desk expects?
         a: >-
-          Writing Desk will import most standard formatting from your file,
-          but unusual or non-standard heading styles may not carry across
-          perfectly. It's worth checking your chapter breaks after import.
+          Writing Desk recognises headings by Word's Heading 1, 2 and 3
+          styles. Headings made by enlarging or bolding ordinary text,
+          and headings below level 3, arrive as body text. To fix them,
+          put the cursor in each heading and press ⌥⌘1, ⌥⌘2 or ⌥⌘3. In a
+          project, Heading 2 marks the start of each chapter.
 
   - slug: writing-editing
     name: Writing & Editing
-    description: The editor itself, formatting, autosave, version history, and export.
+    description: "The editor, formatting, shortcuts, Word and markdown files, autosave and version history."
     icon: pencil
     videos:
       - slug: editor-tools
@@ -460,30 +554,55 @@ categories:
           What formatting options are available in the editor?
         a: >-
           Headings, bold, italic, underline, strikethrough, highlight,
-          alignment, first-line indent, bullet and numbered lists, links,
-          tables, blockquotes, line spacing, and adjustable font size.
+          alignment, first-line indent, bulleted and numbered lists,
+          links, tables, quotes, line spacing and adjustable text size.
+          Most have keyboard shortcuts, and you can also format as you
+          type with markdown, such as ## for a chapter heading.
+
+      - id: keyboard-shortcuts
+        q: >-
+          Is there a list of keyboard shortcuts?
+        a: >-
+          Yes. Press ⌘/ in Writing Desk, or choose Help, Keyboard
+          Shortcuts from the menu bar, for a searchable list of every
+          shortcut.
+        link: /help/writing-editing/keyboard-shortcuts/
+        link_text: See all keyboard shortcuts
+
+      - id: markdown-typing
+        q: >-
+          Can I format by typing markdown?
+        a: >-
+          Yes, in every kind of document. Type ## and a space for a
+          chapter heading, wrap a word in ** for bold, or start a line
+          with - for a list. Choose Help, Markdown Reference from the
+          menu bar for the full list.
+        link: /help/writing-editing/format-as-you-type/
+        link_text: Format as you type
 
       - id: new-chapter
         q: >-
           How do I create a new chapter?
         a: >-
-          New chapters are defined by H2 headings. Insert an H2 directly, or
-          select some text and use Cmd+Opt+2.
+          Chapters are defined by Heading 2. Press ⌥⌘2, choose Heading 2
+          from the paragraph style menu in the toolbar, or type ## and a
+          space at the start of a line.
 
       - id: autosave
         q: >-
           Does Writing Desk autosave?
         a: >-
-          Yes, Writing Desk autosaves your work every few seconds, and saves
-          a new version at the end of each session that you can find in
-          Version History.
+          Yes. Writing Desk autosaves every document every few seconds,
+          whatever its format. Projects also save a new version at the
+          end of each session, which you'll find in Version History.
 
       - id: version-history
         q: >-
           Can I see the version history of my manuscript?
         a: >-
-          Yes. Open Settings, click Version History, then select any dated
-          version from the list to open it.
+          Yes, for projects and Writing Desk documents. Choose Version
+          History from the menu bar, then select any dated version from
+          the list to open it.
 
       - id: finish-draft
         q: >-
@@ -496,25 +615,28 @@ categories:
 
       - id: chapter-iterations
         q: >-
-          What are "chapter variations"?
+          What are chapter variants?
         a: >-
-          Chapter Iterations let you create alternate versions of a chapter
-          while keeping the original fully intact, and switch between them
-          whenever you like. Edit boldly, without ever losing anything.
+          Chapter variants let you create alternate versions of a
+          chapter while keeping the original intact, and switch between
+          them whenever you like, so you can edit boldly without losing
+          anything. Variants need a Writing Desk document (.wddoc) and
+          are part of Premium.
 
       - id: find-replace
         q: >-
           Does Writing Desk support Find & Replace?
         a: >-
-          Yes, and you can scope it to the current chapter or the whole
-          manuscript.
+          Yes. Press ⌘F, and scope it to the current chapter or the
+          whole manuscript.
 
       - id: focus-mode
         q: >-
           What is Focus Mode?
         a: >-
-          A distraction-free writing view that hides all side panels. Press
-          Esc to exit.
+          A distraction-free writing view that hides everything except
+          your writing. Press ⇧⌘F to enter it, and ⇧⌘F again or Esc to
+          leave.
 
       - id: font-text-size
         q: >-
@@ -526,15 +648,61 @@ categories:
         q: >-
           Does Writing Desk support dark mode?
         a: >-
-          Not yet. It's on the roadmap, but there's no launch date yet.
+          Yes.
 
       - id: insert-images
         q: >-
           Can I insert images into my manuscript?
         a: >-
-          Not into the manuscript text itself. You can open image files as
-          reference tabs while you write, and add them to character and
-          location entries in the Resource Centre.
+          Images already in a markdown file show in the editor. Adding
+          images from inside Writing Desk is on the roadmap. In the
+          meantime, you can open image files as reference tabs while you
+          write, pin them to a document, and add them to character and
+          location entries in the Resource Hub.
+
+      - id: edit-word-files
+        q: >-
+          Can I edit Word files in Writing Desk?
+        a: >-
+          Yes. Writing Desk opens .docx files as they are and saves your
+          changes back as Word files. Headings that use Word's heading
+          styles, bold, italic, underline, strikethrough, lists, links
+          and tables all carry across.
+        link: /help/writing-editing/edit-word-files/
+        link_text: Edit Word files in Writing Desk
+
+      - id: merge-word-edits
+        q: >-
+          How do I bring edits made in Word back into my project?
+        a: >-
+          Export your Writing Desk document to Word, share it, and when
+          the edited file comes back, open it in Writing Desk. A bar
+          above the text offers to merge the changes into your document,
+          and Writing Desk saves a copy of your previous version first.
+        link: /help/writing-editing/merge-word-edits/
+        link_text: Send your manuscript out in Word and merge the edits back
+
+      - id: merge-what-carries-over
+        q: >-
+          What carries over when I merge a Word file back?
+        a: >-
+          All text changes, headings that use Word heading styles, bold,
+          italic, underline, strikethrough, lists, links and tables.
+          Alignment, indents and font sizes stay as Writing Desk has
+          them. Your comments stay with the document but lose their
+          place in the text, and chapter variants stay with any chapter
+          whose heading hasn't changed.
+
+      - id: merge-offer-missing
+        q: >-
+          Why didn't Writing Desk offer to merge my Word file?
+        a: >-
+          The offer appears when an opened .docx matches one of your
+          Writing Desk documents and its text has changed. If nothing
+          has changed, there's nothing to merge. If the file has been
+          renamed and its link to Writing Desk was lost along the way,
+          merge it by hand: click the project control at the bottom of
+          the sidebar and choose Merge into a Writing Desk document.
 
       - id: export-vs-submission-vs-print
         q: >-
@@ -553,9 +721,9 @@ categories:
     videos:
       - slug: plotter
         embed_url: https://embed.app.guidde.com/playbooks/51ZYBXJLtkpdvahUpHKJrD?mode=videoOnly
-        title: "Organize and Map Your Novel Using Writing Desk's Story Plotter"
+        title: "Organise and Map Your Novel Using Writing Desk's Story Plotter"
         transcript: |-
-          0:00 Use Writing Desk's Story Plotter to organize and map your novel's chapters and narrative threads.
+          0:00 Use Writing Desk's Story Plotter to organise and map your novel's chapters and narrative threads.
           0:05 To get started, open your manuscript, then expand the left-hand sidebar and click Story Plotter at the bottom.
           0:13 Here you can add chapter summaries and scene-by-scene breakdowns for each of your chapters, with as little or as much detail and structure as you like.
           0:22 Match the chapter title in Story Plotter to the title in your manuscript to import chapter notes into your Pad for each chapter with a click, so your chapter notes are always there when you need them, but never in the way.
@@ -646,10 +814,10 @@ categories:
         q: >-
           What's the difference between the Board and Timeline views?
         a: >-
-          The Board organizes chapters into acts and structure using
+          The Board organises chapters into acts and structure using
           story-structure templates. The Timeline tracks narrative threads
           across chapters as a causality audit tool, it never generates
-          content, only visualizes what you've already written.
+          content, only visualises what you've already written.
 
       - id: structure-templates
         q: >-
@@ -678,7 +846,7 @@ categories:
         q: >-
           Can I create or delete chapters from the Timeline view?
         a: >-
-          No. Timeline can only reorganize and visualize existing chapters.
+          No. Timeline can only reorganise and visualise existing chapters.
           Creating or deleting chapters happens in the Doc or Board views.
 
       - id: seed-develop-complication-payoff
@@ -775,7 +943,34 @@ categories:
         a: >-
           A companion web app for professional book typesetting. It turns
           your manuscript into a properly designed, print- and e-book-ready
-          file, with a range of customizable design options.
+          file, with a range of customisable design options.
+
+      - id: send-to-formatter
+        q: >-
+          How do I send my manuscript to the Formatter?
+        a: >-
+          Open your project, then open the menu at the left of the
+          toolbar and choose Send to Formatter. Your browser opens with
+          your manuscript ready in the Formatter.
+
+      - id: formatter-phone
+        q: >-
+          Can I use the Formatter on my phone?
+        a: >-
+          Yes, for reading your manuscript, leaving comments and
+          suggesting edits. Add it to your phone's home screen and it
+          opens like an app. Typesetting and export need room to see
+          your pages, so use the Formatter on a computer for those.
+        link: /help/export-formatter/review-on-your-phone/
+        link_text: Review your manuscript on your phone
+
+      - id: formatter-suggestions
+        q: >-
+          Where do comments and suggestions from the Formatter appear?
+        a: >-
+          In Writing Desk, automatically, the next time you open your
+          project. Click the comments icon in the toolbar to review
+          them, then accept and apply each suggestion or reject it.
 
       - id: formatter-separate-account
         q: >-
@@ -787,8 +982,10 @@ categories:
         q: >-
           Can I edit my chapter text inside the Formatter?
         a: >-
-          No, chapter body text is read-only in the Formatter by design. Fix
-          typos back in Writing Desk, then re-upload to the Formatter.
+          Chapter text stays read-only in the Formatter, so Writing Desk
+          remains the one place your writing changes. You can leave
+          comments and suggest edits in the Formatter, including from
+          your phone, and accept them back in Writing Desk.
 
       - id: why-read-only
         q: >-
@@ -828,7 +1025,7 @@ categories:
 
   - slug: editorial-ai
     name: Editorial AI Suite
-    description: Proofreader, Chapter Review, Prose Analysis, Manuscript Review, and the AI Editor chat.
+    description: "Proofreader, Editorial Review for fiction and non-fiction, Prose Analysis, Manuscript Review and the AI Editor chat."
     icon: sparkle
     videos:
       - slug: ai-editor
@@ -917,9 +1114,10 @@ categories:
         q: >-
           What editorial AI tools does Writing Desk offer?
         a: >-
-          Four options from the Analysis menu: Proofreader for spelling and
-          grammar, Editor for AI Chapter Review, Prose for client-side prose
-          analysis, and Manuscript for full-novel review.
+          From the Analysis menu: Proofreader for spelling and grammar,
+          AI Editor for Editorial Review, Prose for local prose
+          analysis, and Manuscript for full-novel review. The AI Editor
+          chat and the Research Assistant sit alongside them.
 
       - id: proofreader-vs-prose-analysis
         q: >-
@@ -942,21 +1140,49 @@ categories:
 
       - id: four-chapter-review-modes
         q: >-
-          What are the four Chapter Review modes?
+          What are the Editorial Review lenses?
         a: >-
-          Developmental, covering structure, pacing, arcs, and scene
-          purpose. Line Editor, covering repetition, crutch words, dialogue,
-          and clarity. Beta Reader, covering emotional response, engagement,
-          and confusion. And World Editor, covering lore consistency,
-          worldbuilding, and magic logic.
+          For fiction: Developmental, covering structure, pacing, arcs
+          and scene purpose; Prose, covering repetition, crutch words,
+          dialogue and clarity; Beta Reader, covering emotional
+          response, engagement and confusion; and World Editor, covering
+          lore consistency, worldbuilding and magic logic. For
+          non-fiction documents: Argument, Clarity, Evidence and Voice.
+
+      - id: document-lenses
+        q: >-
+          Can I get editorial feedback on non-fiction?
+        a: >-
+          Yes. Editorial Review on a document uses four lenses built for
+          non-fiction: Argument, Clarity, Evidence and Voice. Tell it
+          who the piece is for, and every lens reads it with that reader
+          in mind. It reviews the whole document in one go.
+        link: /help/editorial-ai/non-fiction-feedback/
+        link_text: Get editorial feedback on non-fiction
+
+      - id: review-word-limit
+        q: >-
+          Is there a length limit for reviewing a document?
+        a: >-
+          Each document review covers up to 10,000 words. The review
+          panel tells you if a document is longer, before anything is
+          charged.
+
+      - id: standalone-wddoc-lenses
+        q: >-
+          Which lenses does a Writing Desk document outside a project
+          get?
+        a: >-
+          The fiction lenses, for now. Documents (.md and .docx) get the
+          non-fiction lenses.
 
       - id: chapter-review-charged-separately
         q: >-
-          Do I get charged separately for each of the four Chapter Review
-          modes?
+          Do I get charged separately for each Editorial Review lens?
         a: >-
-          No, all four run from a single combined request and a single
-          credit charge.
+          Running all four lenses together is one review and one charge,
+          and gives the best value. You can also run a single lens for a
+          focused pass, which costs less than running all four.
 
       - id: chapter-review-cost
         q: >-
@@ -1267,7 +1493,7 @@ categories:
 
   - slug: technical-troubleshooting
     name: Technical & Troubleshooting
-    description: Offline behaviour, manuscript limits, and getting help.
+    description: "File types, updates, offline use and getting help."
     icon: wrench
     questions:
       - id: grammar-offline
@@ -1281,6 +1507,32 @@ categories:
           Is there a maximum manuscript length Writing Desk can handle?
         a: >-
           No.
+
+      - id: file-types
+        q: >-
+          Which file types does Writing Desk open?
+        a: >-
+          Writing Desk documents (.wddoc), Word files (.docx) and
+          markdown files (.md). Each saves back in its own format.
+          Writing Desk documents show as "Writing Desk Document" in
+          Finder's Kind column.
+
+      - id: default-app
+        q: >-
+          How do I make Word or markdown files open in Writing Desk?
+        a: >-
+          Select a .docx or .md file in Finder and press ⌘I. Under Open
+          with, choose Writing Desk, then click Change All.
+        link: /help/technical-troubleshooting/default-app/
+        link_text: Open files in Writing Desk by default
+
+      - id: app-updates
+        q: >-
+          How do I update Writing Desk?
+        a: >-
+          Writing Desk checks for updates when it opens and lets you
+          know when a new version is ready to install. The Formatter
+          updates automatically.
 
       - id: report-bug
         q: >-

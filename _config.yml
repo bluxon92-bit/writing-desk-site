@@ -50,3 +50,8 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+collections:
+  help_guides:
+    output: true
+    permalink: /help/:path/

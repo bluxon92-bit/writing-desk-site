@@ -1,0 +1,77 @@
+---
+layout: default
+---
+{% include help-styles.html %}
+{% include help-guide-styles.html %}
+{% assign cat = site.data.help_faqs.categories | where: "slug", page.category | first %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.summary | jsonify }},
+  "about": "Writing Desk",
+  "publisher": { "@type": "Organization", "name": "Writing Desk" }
+}
+</script>
+
+<div class="help-guide-wrap page-wrap">
+  <div class="help-crumb">
+    <a href="{{ '/help/' | relative_url }}">Help Centre</a>
+    <span>/</span>
+    <a href="{{ '/help/' | append: cat.slug | append: '/' | relative_url }}">{{ cat.name }}</a>
+    <span>/</span>
+    <span>{{ page.title }}</span>
+  </div>
+
+  <article class="help-article">
+    <div class="help-guide-header">
+      <span class="eyebrow">{{ cat.name }}</span>
+      <h1>{{ page.title }}</h1>
+      <p>{{ page.summary }}</p>
+    </div>
+
+    <div class="help-article-body">
+      {{ content }}
+    </div>
+
+    {% if page.related_faqs %}
+    <section class="help-related">
+      <h2 class="help-section-title">Related questions</h2>
+      {% for id in page.related_faqs %}
+        {% for c in site.data.help_faqs.categories %}
+          {% for item in c.questions %}
+            {% if item.id == id %}
+            <details class="help-related-item">
+              <summary>{{ item.q }}</summary>
+              <p>{{ item.a }} <a href="{{ '/help/' | append: c.slug | append: '/#' | append: item.id | relative_url }}">More in {{ c.name }}</a></p>
+            </details>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% assign siblings = site.help_guides | where: "category", page.category | sort: "order" %}
+    {% if siblings.size > 1 %}
+    <section class="help-related">
+      <h2 class="help-section-title">More {{ cat.name }} guides</h2>
+      <ul class="help-related-guides">
+        {% for g in siblings %}{% if g.url != page.url %}
+        <li><a href="{{ g.url | relative_url }}">{{ g.title }}</a></li>
+        {% endif %}{% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+  </article>
+
+  <div class="help-still-stuck">
+    <div>
+      <h3>Still stuck?</h3>
+      <p>Send us a message and we'll help you out.</p>
+    </div>
+    <a href="{{ '/help/contact/' | relative_url }}?topic={{ cat.name | url_encode }}" class="btn btn-ghost">Contact us</a>
+  </div>
+</div>

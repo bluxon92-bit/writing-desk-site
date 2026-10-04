@@ -3,8 +3,10 @@ layout: null
 permalink: /help/search-index.json
 ---
 [
+  {% assign first = true %}
   {% for cat in site.data.help_faqs.categories %}
     {% for item in cat.questions %}
+    {% unless first %},{% endunless %}{% assign first = false %}
     {
       "id": {{ item.id | jsonify }},
       "category_slug": {{ cat.slug | jsonify }},
@@ -12,7 +14,19 @@ permalink: /help/search-index.json
       "q": {{ item.q | strip | jsonify }},
       "a": {{ item.a | strip | jsonify }},
       "url": {{ "/help/" | append: cat.slug | append: "/#" | append: item.id | relative_url | jsonify }}
-    }{% unless forloop.last %},{% endunless %}
-    {% endfor %}{% unless forloop.last %},{% endunless %}
+    }
+    {% endfor %}
+  {% endfor %}
+  {% for g in site.help_guides %}
+    {% assign gcat = site.data.help_faqs.categories | where: "slug", g.category | first %}
+    {% unless first %},{% endunless %}{% assign first = false %}
+    {
+      "id": {{ "guide-" | append: g.slug | jsonify }},
+      "category_slug": {{ g.category | jsonify }},
+      "category_name": {{ gcat.name | append: " guide" | jsonify }},
+      "q": {{ g.title | jsonify }},
+      "a": {{ g.summary | append: " " | append: g.content | strip_html | strip_newlines | truncatewords: 150 | jsonify }},
+      "url": {{ g.url | relative_url | jsonify }}
+    }
   {% endfor %}
 ]
