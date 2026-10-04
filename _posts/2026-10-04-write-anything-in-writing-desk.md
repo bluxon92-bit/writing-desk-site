@@ -157,6 +157,6 @@ You'll also spot our new logo, a purple "WD" monogram, across the app, the Forma
 
 Writing Desk will prompt you to update the next time you open it. The Formatter updates automatically.
 
-New to Writing Desk? [Download it for free](/downloads/) and start with our guide to [writing your first essay or blog post](/help/getting-started/write-your-first-document/).
+New to Writing Desk? [Download it for free](/download/) and start with our guide to [writing your first essay or blog post](/help/getting-started/write-your-first-document/).
 
 We'd love to hear what you write with it. [Get in touch](/help/contact/) and tell us what you're working on.
