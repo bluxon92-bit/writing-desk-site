@@ -48,18 +48,16 @@ Your draft belongs to you. Check that you can get it out as a Word file or Markd
 | Ulysses | Clean Markdown writing across Apple devices | Mac, iPad, iPhone | $5.99/month |
 | iA Writer | Pure, minimal drafting | Mac, Windows, iOS, Android | $49.99 one-time (Mac) |
 | Bear | Notes and short writing | Mac, iPhone, iPad | Free; Pro $2.99/month |
-| Plottr | Visual plotting and timelines | Mac, Windows, web | Around $60/year |
+| Plottr | Visual plotting and timelines | Mac, Windows, web | Three pricing tiers $60/year, $99/year, $129/year |
 | Vellum | Formatting a finished book | Mac | Free to try; $199.99 to export |
 | Reedsy Studio | Free writing and formatting in a browser | Browser | Free |
 | Dabble | Plotting and goals in one place | Browser, desktop, iOS, Android | $19/month |
 | Atticus | Writing and formatting a book in one app | Browser, desktop | $147 one-time |
 | Novelcrafter | Writers who want AI woven into their process | Browser | $4/month |
-| Obsidian | Building your own Markdown notes and writing system | Mac, Windows, Linux, iOS, Android | Free |
+| Obsidian | Building your own Markdown notes and writing system | Mac, Windows, Linux, iOS, Android | Free. Sync plan starts from $4 per month. |
 | Google Docs | Free, shareable drafting | Browser | Free |
 
 Prices are shown in the currency each company lists and were checked in October 2026.
-
-<!-- VERIFY Plottr: "Around $60/year" comes from a third-party listing of the annual desktop plan. Confirm on plottr.com/pricing before publishing. -->
 
 ## The 13 best writing software options for NaNoWriMo
 
@@ -67,38 +65,28 @@ Prices are shown in the currency each company lists and were checked in October 
 
 ![Writing Desk on a Mac with a novel project open in a clean light-mode window](https://res.cloudinary.com/dnkddcxrt/image/upload/w_1600,f_auto,q_auto/v1791321571/distraction_free_editor_clean_design_d6wyhh.png)
 
-Writing Desk is a native Mac app for novelists, built so you can start drafting the minute you open it. Here is how it answers the four criteria above.
+Writing Desk is a native Mac app for novelists, built so you can start drafting the minute you open it. Open a Word (.docx) or Markdown (.md) file and start typing, with no project to set up. Press Shift + Cmd + F and focus mode hides everything except the page.
 
-**A distraction-free page.** Press Shift + Cmd + F and [focus mode](/features/distraction-free-writing-app/) hides everything except the page. Comprehensive [keyboard shortcuts](/help/writing-editing/keyboard-shortcuts/) and [Markdown typing shortcuts](/help/writing-editing/format-as-you-type/) keep your hands on the keys.
+The **core writing environment is free** and stays free, and every new install includes 30 days of the full program. When those 30 days end, the Pro and Premium features pause, and you can keep writing without limits.
 
-**Ease of use from the first minute.** Open a [Word (.docx)](/help/writing-editing/edit-word-files/) or Markdown (.md) file and start typing. There is no project to set up and nothing to configure. When you want the full novel toolkit, [turn the document into a Writing Desk project](/help/projects-organization/turn-a-document-into-a-project/) in a couple of clicks. Your original file stays exactly as it was.
-
-<!-- IMAGE 03 | writing-desk-open-docx-md.jpg | STILL NEEDED: a .docx or .md file just opened with no project set up -->
-
-**A free plan that lasts beyond November.** The core writing environment is free and stays free. Every new install also includes 30 days of the full program, so you can download Writing Desk before November starts and try everything. When the 30 days end, the Pro and Premium features pause and the core writing environment carries on, so you can keep writing without limits whether or not you upgrade.
-
-**Exports that get your novel out.** Export to .docx, .md, .txt, .pdf and .epub, plus [print-ready files](/features/book-formatting-tool/). Your manuscripts are [stored locally on your Mac](/help/privacy-ai/), so the app works offline too.
-
-![The Writing Desk Formatter in a desktop browser, typesetting a manuscript for export](https://res.cloudinary.com/dnkddcxrt/image/upload/w_1600,f_auto,q_auto/v1786801933/email_6_-_formatter_1_qlklep.png)
+When you're ready to revise, convert your draft into a full Writing Desk project in a couple of clicks.
 
 **Core features**
 
-- **Zero setup.** Open a Word or Markdown file and write. No project to build, nothing to configure. Here's how to [bring in existing writing](/help/getting-started/bring-in-existing-writing/).
-- **[Distraction-free writing](/features/distraction-free-writing-app/).** Focus mode, comprehensive keyboard shortcuts, Markdown typing shortcuts and dark mode.
-- **Write in the format you prefer.** Work in .md, .docx or .wddoc, the Writing Desk project format. More on this in [write anything in Writing Desk](/blog/write-anything-in-writing-desk/).
-- **[Story Plotter](/features/plot-your-novel/).** Eleven structure templates, including [Three-Act](/blog/three-act-structure/), [Five-Act](/blog/5-act-structure/), [Hero's Journey](/blog/heros-journey/), [Save the Cat](/blog/save-the-cat-beat-sheet/) and [Seven-Point](/blog/seven-point-story-structure/), plus genre arcs for romance, mystery, thriller, fantasy, horror and young adult. Plot on a board or a timeline.
-- **Structured resource templates.** Keep [characters](/hubs/characters/) and world-building notes beside your draft.
-- **Built-in spell and grammar checker.** Powered by LanguageTool, which runs on your Mac. See the [editor tools guide](/help/writing-editing/guide/editor-tools/).
-- **[Editing tools for revision](/features/novel-editing-software/).** Chapter variants, version history and prose analysis, plus an optional [AI editorial review](/help/editorial-ai/) that suggests changes you accept or reject. AI assists editorially and [never writes your prose](/our-philosophy/).
-- **[Writing tracker](/features/writing-tracker-app/).** Measure your progress day by day through the month.
+- [**Story Plotter**](/features/plot-your-novel/)**.** Eleven structure templates, including Three-Act, Hero's Journey and Save the Cat, plus genre arcs for romance, mystery, thriller, fantasy, horror and young adult.
+- **Character and world-building templates.** Keep your notes beside your draft.
+- **Built-in spell and grammar checker.** Powered by LanguageTool, which runs on your Mac.
+- [**Editing tools**](/features/novel-editing-software/)**.** Chapter variants, version history and prose analysis, plus an optional AI editorial review that suggests changes for you to accept or reject. AI never writes your prose.
+- **Writing tracker.** Measure your progress day by day through the month.
+- [**Exports**](/features/book-formatting-tool/)**.** .docx, .md, .txt, .pdf, .epub and print-ready files, with your manuscripts stored locally so the app works offline.
 
-**Pricing:** The core writing environment is free, with 30 days of the full program included. [Paid plans](/pricing/) start from £8 per month.
+**Pricing:** Free for the core writing environment, with 30 days of the full program included. [Paid plans](/pricing/) start from £8 per month.
 
 **Choose Writing Desk if** you write on a Mac, want to open a file and start typing today, and want a full novel toolkit ready for the day you begin revising.
 
-Writing Desk runs on Mac only. If you write on Windows, Linux or a Chromebook, one of the options below may be a better fit.
-
 [Download Writing Desk free](/download/){: .btn .btn-primary }
+
+*Writing Desk runs on Mac only. If you write on Windows, Linux or a Chromebook, one of the options below may be a better fit.*
 
 ### #2 ![](https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1791373378/scrivener_logo_rk0oez.png){: .app-logo } Scrivener
 
@@ -130,8 +118,6 @@ Ulysses is a polished Markdown writing app with a calm interface and a library t
 - Export to PDF, Word, ePub and HTML
 
 **Pricing:** Subscription only, from $5.99 per month, with a discounted annual plan. There is a free trial and no free plan.
-
-<!-- VERIFY Ulysses annual price: sources show both $39.99 and $49.99 a year. Check ulysses.app/pricing. -->
 
 **Choose Ulysses if** you live in the Apple ecosystem and like Markdown.
 
@@ -250,7 +236,7 @@ Atticus lets you write and format a book in the same app, which makes the step f
 
 ### #11 ![](https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1791373378/novel_crafter_logo_mi0tud.png){: .app-logo } Novelcrafter
 
-Novelcrafter is built around planning and AI-assisted drafting, with a codex for characters and world details. It is a good fit for writers who want AI as a drafting partner. Writing Desk takes the opposite approach: AI assists editorially and [never writes your prose](/our-philosophy/).
+Novelcrafter is built around planning and AI-assisted drafting, with a codex for characters and world details. It is a good fit for writers who want AI as a drafting partner. Writing Desk takes the opposite approach: AI assists editorially and [never writes for you](/our-philosophy/).
 
 **Core features**
 
@@ -260,9 +246,7 @@ Novelcrafter is built around planning and AI-assisted drafting, with a codex for
 - Review tools for tracking scenes and characters
 - A Scribe plan without AI
 
-**Pricing:** Subscription only. Scribe (no AI) is $4 per month, Hobbyist $8, Artisan $14 and Specialist $20. There is a free trial.
-
-<!-- VERIFY Novelcrafter trial length: its pricing page says 14 days, one 2026 listing says 21. Confirm on novelcrafter.com/pricing. -->
+**Pricing:** Free 21 day trial. After trial it is subscription only. Scribe (no AI) is $4 per month, Hobbyist $8, Artisan $14 and Specialist $20. There is a free trial.
 
 **Choose Novelcrafter if** you want AI involved in generating text as you write.
 
@@ -323,6 +307,8 @@ I'd also check how each app handles trials, and what happens when the trial expi
 
 **Writing Desk is designed for this moment:** a free plan, 30 days of the full program, and nothing to set up before you write. If the trial ends mid-month, the Pro and Premium features pause and the core writing environment stays free, so you never have to switch software halfway through your draft. Add it to your shortlist, give it a writing test, and see how it feels.
 
+![Writing Desk in dark mode with a project open](https://res.cloudinary.com/dnkddcxrt/image/upload/w_1600,f_auto,q_auto/v1791130988/dark_mode_screen_cyqqhg.png)
+
 > **Writing Desk tip:** Open a blank Markdown file (the [first-document guide](/help/getting-started/write-your-first-document/) shows how), press Shift + Cmd + F to hide everything except the page, and write your first 1,667 words. That is a full NaNoWriMo day, and you will know within an hour whether the app suits you.
 
 [Try Writing Desk free](/download/){: .btn .btn-primary }
@@ -349,6 +335,11 @@ The original NaNoWriMo nonprofit has closed, and its community has found new hom
 - **Discord writing servers.** Several run sprints and word wars all month. Reedsy's server has a channel for the Novel Sprint, and World Anvil's server has a #NovelEmber channel. ProWritingAid also hosts a Novel November chat space inside its community.
 - **[Shut Up & Write](https://www.shutupwrite.com).** A global community that hosts in-person and online writing sessions, which suit writers who like company while they type.
 - **Local write-ins.** Libraries, coffee shops and Meetup groups host in-person sessions in November. Search your town's library events page or Meetup for "write-in" or "writing group".
+
+<!-- VERIFY Reddit: r/nanowrimo existed as of mid-2026 per a third-party tracker. Open it and confirm it is active and that the link works. -->
+<!-- VERIFY Shut Up & Write: confirm the shutupwrite.com link and that sessions are running this autumn. -->
+<!-- ADD Discord invite links for the Reedsy and World Anvil servers (invites are on their challenge pages). Add two or three named, active writing servers if you have ones you trust. -->
+<!-- OPTIONAL Order of the Written Word runs a November challenge with a 30,000-word novel option, a poetry and short story option, and a revision option. Add it with a link if you want a lower-pressure choice. -->
 
 Writing Desk works alongside any of them. The built-in writing tracker lets you measure your progress through the month, and Novel November lets you log your word count by hand, so your totals sit side by side.
 
