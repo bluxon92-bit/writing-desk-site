@@ -239,12 +239,20 @@
             </a>
           </div>
 
-          <!-- Blog strip: spans all three columns -->
+          <!-- Blog strip: full-width band along the bottom of the mega -->
           {% assign latest_post = site.posts | first %}
           <div class="dropdown-footer">
-            <span class="dropdown-footer-label">From the blog</span>
-            {% if latest_post %}<a href="{{ latest_post.url | relative_url }}" class="dropdown-footer-title">{{ latest_post.title | escape }}</a>{% endif %}
-            <a href="{{ '/blog/' | relative_url }}" class="dropdown-footer-all">Read all articles &rarr;</a>
+            <span class="dropdown-footer-icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2.5" width="12" height="11" rx="1.5"/><path d="M5 6h6M5 9h6M5 11.5h3"/></svg>
+            </span>
+            <div class="dropdown-footer-text">
+              <span class="dropdown-footer-label">Latest from the blog</span>
+              {% if latest_post %}<a href="{{ latest_post.url | relative_url }}" class="dropdown-footer-title">{{ latest_post.title | escape }}</a>{% else %}<span class="dropdown-footer-title">Craft advice, writing guides and product news</span>{% endif %}
+            </div>
+            <a href="{{ '/blog/' | relative_url }}" class="dropdown-footer-all">
+              Read all articles
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
           </div>
 
         </div>
@@ -377,30 +385,53 @@
 .dropdown-demo-text strong { font-size: 14px; font-weight: 600; color: var(--ink); }
 .dropdown-demo-cta { margin-top: 4px; font-size: 13px; font-weight: 500; color: var(--purple); }
 
-/* ── Resources mega: blog strip ──────────────── */
+/* ── Resources mega: blog band ───────────────── */
+/* Negative margins run the band to the dropdown's edges (it has 8px padding) */
 .nav-dropdown-mega .dropdown-footer {
   grid-column: 1 / -1;
-  display: flex; align-items: center; gap: 16px;
+  display: flex; align-items: center; gap: 14px;
   min-width: 0;
-  margin-top: 4px; padding: 12px 12px 4px;
+  margin: 8px -8px -8px;
+  padding: 14px 20px;
+  background: var(--purple-faint);
   border-top: 1px solid var(--border);
+  border-radius: 0 0 13px 13px;
 }
+.dropdown-footer-icon {
+  width: 36px; height: 36px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--purple);
+}
+.dropdown-footer-icon svg { width: 16px; height: 16px; }
+.dropdown-footer-text { flex: 1; min-width: 0; }
 .dropdown-footer-label {
-  flex-shrink: 0;
+  display: block;
   font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--ink-faint);
+  color: var(--purple);
 }
 .nav-dropdown-mega .dropdown-footer-title {
-  flex: 1; min-width: 0;
-  font-size: 13.5px; font-weight: 500; color: var(--ink); text-decoration: none;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-top: 2px;
+  font-size: 14px; font-weight: 500; line-height: 1.35;
+  color: var(--ink); text-decoration: none;
 }
-.nav-dropdown-mega .dropdown-footer-title:hover { color: var(--purple); }
+.nav-dropdown-mega a.dropdown-footer-title:hover { color: var(--purple); }
 .nav-dropdown-mega .dropdown-footer-all {
-  flex-shrink: 0; margin-left: auto;
-  font-size: 13px; font-weight: 500; color: var(--purple); text-decoration: none;
+  display: inline-flex; align-items: center; gap: 6px;
+  flex-shrink: 0;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--purple-light);
+  color: var(--purple-dark);
+  font-size: 13px; font-weight: 500; text-decoration: none; white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
 }
-.nav-dropdown-mega .dropdown-footer-all:hover { color: var(--purple-dark); text-decoration: underline; }
+.nav-dropdown-mega .dropdown-footer-all svg { width: 14px; height: 14px; }
+.nav-dropdown-mega .dropdown-footer-all:hover { background: var(--purple); color: var(--white); }
 
 /* ── Mobile Resources section labels ─────────── */
 .mobile-submenu-label {
