@@ -1,0 +1,59 @@
+---
+layout: default
+title: "Writing Desk Comparisons: How It Stacks Up Against Other Writing Apps"
+description: "Honest side-by-side comparisons of Writing Desk with Scrivener, Ulysses, iA Writer, Obsidian, Novelcrafter, Dabble, Sudowrite, Atticus, ProWritingAid and Reedsy Studio."
+permalink: /compare/
+---
+{% include hub-styles.html %}
+{% include compare-styles.html %}
+{% assign dl_icon = '<svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7.5 2v9M4 8l3.5 3.5L11 8M2 13h11"/></svg>' %}
+
+<!-- ═══════════════════ COMPARE INDEX HERO ═══════════════════ -->
+<section class="hub-hero">
+  <span class="eyebrow">Compare</span>
+  <h1>Writing Desk <em>side by side</em></h1>
+  <p>Honest comparisons with the writing apps novelists ask about most: what each does well, where Writing Desk differs, and which one suits the way you write.</p>
+  <div class="compare-hero-cta">
+    <a href="{{ '/download/' | relative_url }}" class="compare-btn">{{ dl_icon }} Download for Mac, free</a>
+    <p class="compare-micro">macOS 13 Ventura or later · No account required</p>
+  </div>
+</section>
+
+<!-- ═══════════════════ COMPARISON GRID ═══════════════════ -->
+{% assign compare_pages = site.pages | where: "layout", "compare" | sort_natural: "competitor" %}
+{% assign thumb = site.data.compare_images.app_window_light %}
+<section class="hub-section" style="border-bottom:none;">
+  <div class="hub-card-grid">
+    {% for p in compare_pages %}
+    <a href="{{ p.url | relative_url }}" class="hub-card">
+      {% if thumb.url %}<img class="hub-card-thumb" src="{{ thumb.url | replace: '/upload/', '/upload/f_auto,q_auto,w_700,h_438,c_fill,g_north_west/' }}" alt="Writing Desk vs {{ p.competitor }}">{% endif %}
+      <div class="hub-card-body">
+        <span class="hub-card-tag">Writing Desk vs</span>
+        <h3>{{ p.competitor }}</h3>
+        <p>{{ p.card_summary }}</p>
+        <span class="hub-card-link">Read the comparison <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ═══════════════════ PRODUCT CTA ═══════════════════ -->
+<div class="page-wrap" style="padding-top:0;padding-bottom:64px;">
+  <div class="post-cta">
+    <div class="post-cta-inner">
+      <div class="post-cta-text">
+        <span class="eyebrow" style="color:var(--purple-mid)">Writing Desk</span>
+        <h2>See how it feels with your own pages.</h2>
+        <p>Plan, draft, revise and typeset in one private, local app for Mac. Open a .docx or .md and carry on writing.</p>
+      </div>
+      <div class="post-cta-action">
+        <a href="{{ '/download/' | relative_url }}" class="btn-white-outline">
+          <svg viewBox="0 0 15 15" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round"><path d="M7.5 2v9M4 8l3.5 3.5L11 8M2 13h11"/></svg>
+          Download for Mac, free
+        </a>
+        <p class="post-cta-micro">macOS 13 Ventura or later · No account required</p>
+      </div>
+    </div>
+  </div>
+</div>

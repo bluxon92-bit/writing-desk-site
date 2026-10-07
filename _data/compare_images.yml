@@ -1,0 +1,116 @@
+# Product images for /compare/ pages. Keys are referenced from each page's front matter.
+# The layout adds Cloudinary f_auto,q_auto and a width. Add w/h (pixel dimensions of the
+# original) to stop layout shift. Leave a url blank to hide an image until it exists.
+
+app_window_light:
+  url: https://res.cloudinary.com/dnkddcxrt/image/upload/v1791321571/distraction_free_editor_clean_design_d6wyhh.png
+  alt: Writing Desk with a novel project open in light mode, showing the clean manuscript editor
+  title: A clean place to write
+  caption: A distraction-free editor with your project one click away.
+  w:
+  h:
+
+app_window_dark:
+  url: https://res.cloudinary.com/dnkddcxrt/image/upload/v1791130988/dark_mode_screen_cyqqhg.png
+  alt: Writing Desk with a novel project open in dark mode
+  title: Light or dark mode
+  caption: The same editor, with a dark mode for late sessions.
+  w:
+  h:
+
+editor_panels:
+  url: https://res.cloudinary.com/dnkddcxrt/image/upload/v1791130988/writing_desk_new_layout_vnblpe.png
+  alt: A chapter open in Writing Desk with plot notes and resources in the left panel and an Editorial Review in the right panel
+  title: Everything beside your chapter
+  caption: Plot notes, resources and editorial review open next to the page you are writing.
+  w:
+  h:
+
+formatter_mobile:
+  url: https://res.cloudinary.com/dnkddcxrt/image/upload/v1791130988/writing_desk_formatter_g09b2u.png
+  alt: Formatter on a phone showing comments and suggested edits next to the desktop app
+  title: Review on your phone
+  caption: Read your manuscript and handle comments and suggested edits on the go.
+  w:
+  h:
+
+formatter_web:
+  url: https://res.cloudinary.com/dnkddcxrt/image/upload/v1786801933/email_6_-_formatter_1_qlklep.png
+  alt: Formatter in the browser with a manuscript typeset for EPUB and print PDF
+  title: Typeset your book in Formatter
+  caption: Choose fonts, headings, drop caps and scene breaks, then export an EPUB and print PDF.
+  w:
+  h:
+
+character_sheet:
+  url: https://res.cloudinary.com/dnkddcxrt/image/upload/v1786801933/email_3_-_character_sheet_1_erxykj.png
+  alt: A character sheet in Writing Desk with profile fields and notes
+  title: Character sheets
+  caption: Keep every character's details in one place, beside the manuscript.
+  w:
+  h:
+
+chapter_variants:
+  url: https://res.cloudinary.com/dnkddcxrt/image/upload/v1786801933/email_5_-_chapter_variants_1_czpula.png
+  alt: Chapter variants in Writing Desk comparing two versions of the same chapter
+  title: Chapter variants
+  caption: Try a different version of a chapter without losing the first.
+  w:
+  h:
+
+timeline:
+  url: https://res.cloudinary.com/dnkddcxrt/image/upload/v1785271716/story_ploter_timeline_view_slhz9r.png
+  alt: The Story Plotter timeline view in Writing Desk showing scenes placed along a timeline
+  title: See the story on a timeline
+  caption: Place scenes along a timeline and spot gaps in the plot.
+  w:
+  h:
+
+proofreader:
+  url: https://res.cloudinary.com/dnkddcxrt/image/upload/v1785271716/spelling_and_grammar_clca6u.png
+  alt: The spelling and grammar side panel in Writing Desk listing suggestions
+  title: Spelling and grammar as you write
+  caption: Proofreading suggestions in a side panel, beside your draft.
+  w:
+  h:
+
+prose_analysis:
+  url: https://res.cloudinary.com/dnkddcxrt/image/upload/v1785271715/prose_analysis_cadwum.png
+  alt: The Prose Analysis side panel in Writing Desk with sentence and word statistics
+  title: Prose Analysis
+  caption: See sentence length, passive voice and other patterns in your own prose.
+  w:
+  h:
+
+# Not yet captured (phase 2). Add a url and reference the key from a page's gallery.
+story_plotter:
+  url:
+  alt: The Story Plotter in Writing Desk with a Save the Cat template placed on the board
+  title: Plan with a proven structure
+  caption: Start from one of eleven templates and see the beats laid out for you.
+  w:
+  h:
+
+story_board:
+  url:
+  alt: The Story Board view in Writing Desk with scene cards arranged by act
+  title: Rearrange scenes on the Story Board
+  caption: Move scenes between acts and see the shape of the book.
+  w:
+  h:
+
+document_open:
+  url:
+  alt: A Markdown document open in Writing Desk
+  title: Open a document and carry on
+  caption: .md and .docx files open and save as they are.
+  w:
+  h:
+
+set_up_project:
+  url:
+  alt: The Set up project action on an open document in Writing Desk
+  title: Set it up as a project any time
+  caption: Convert a document to a .wddoc project for comments, the Resource Hub, Pad and more.
+  w:
+  h:

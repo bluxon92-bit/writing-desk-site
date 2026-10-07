@@ -1,0 +1,251 @@
+---
+layout: default
+---
+{% include hub-styles.html %}
+{% include compare-styles.html %}
+
+{% assign dl_icon = '<svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7.5 2v9M4 8l3.5 3.5L11 8M2 13h11"/></svg>' %}
+{% assign hero_key = page.hero_image | default: 'app_window_light' %}
+{% assign hero_img = site.data.compare_images[hero_key] %}
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hub-hero">
+  <span class="eyebrow">Compare</span>
+  <h1>Writing Desk vs <em>{{ page.competitor }}</em></h1>
+  <p>{{ page.hero_intro }}</p>
+  <div class="compare-hero-cta">
+    <a href="{{ '/download/' | relative_url }}" class="compare-btn">{{ dl_icon }} Download for Mac, free</a>
+    <p class="compare-micro">macOS 13 Ventura or later · No account required</p>
+  </div>
+</section>
+
+{% if hero_img.url %}
+<div class="compare-shot-wrap">
+  <img class="compare-shot"
+       src="{{ hero_img.url | replace: '/upload/', '/upload/f_auto,q_auto,w_1400/' }}"
+       alt="{{ hero_img.alt | escape }}"
+       {% if hero_img.w %}width="{{ hero_img.w }}" height="{{ hero_img.h }}"{% endif %}
+       fetchpriority="high">
+</div>
+{% endif %}
+
+<!-- ═══════════════════ JUMP NAV ═══════════════════ -->
+<nav class="hub-jumpnav">
+  <a href="#differences">Key differences</a>
+  <a href="#glance">At a glance</a>
+  <a href="#strengths">Strengths</a>
+  <a href="#choose">Which to choose</a>
+  <a href="#together">Using both</a>
+  <a href="#faq">Questions</a>
+</nav>
+
+<!-- ═══════════════════ DIFFERENTIATORS ═══════════════════ -->
+<section class="hub-section" id="differences">
+  <div class="hub-section-header">
+    <h2>{{ page.differentiators.headline }}</h2>
+    <p>{{ page.differentiators.intro }}</p>
+  </div>
+  <div class="compare-diff">
+    {% for row in page.differentiators.rows %}
+    <div>
+      <div class="compare-diff-topic">{{ row.topic }}</div>
+      <div class="compare-diff-row">
+        <div class="compare-diff-card them">
+          <span class="compare-diff-label">With {{ page.competitor }}</span>
+          <p>{{ row.problem }}</p>
+        </div>
+        <div class="compare-diff-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </div>
+        <div class="compare-diff-card wd">
+          <span class="compare-diff-label">With Writing Desk</span>
+          <p>{{ row.solution }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    <p class="compare-diff-note">Converting a .docx or .md document to a .wddoc project makes a copy and leaves your original file as it is. <a href="{{ '/help/projects-organization/turn-a-document-into-a-project/' | relative_url }}">How it works</a></p>
+  </div>
+</section>
+
+<!-- ═══════════════════ AT A GLANCE ═══════════════════ -->
+<section class="hub-section" id="glance">
+  <div class="hub-section-header">
+    <h2>At a glance</h2>
+    <p>Writing Desk and {{ page.competitor }} side by side.</p>
+  </div>
+  <div class="compare-table-wrap">
+    <table class="compare-table">
+      <thead>
+        <tr><th scope="col"><span style="position:absolute;left:-9999px;">Feature</span></th><th scope="col">{{ page.competitor }}</th><th scope="col" class="wd">Writing Desk</th></tr>
+      </thead>
+      <tbody>
+        {% for row in page.glance %}
+        <tr><th scope="row">{{ row.label }}</th><td>{{ row.them }}</td><td class="wd">{{ row.wd }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="compare-footnote">Details about {{ page.competitor }} are accurate as of {{ page.last_verified | date: "%-d %B %Y" }}, based on published reviews. Check <a href="{{ page.competitor_url }}" rel="nofollow noopener" target="_blank">{{ page.competitor_url | remove: 'https://' | remove: 'www.' | split: '/' | first }}</a> for current prices and features.</p>
+</section>
+
+<div class="hub-section" style="padding-top:0; padding-bottom:56px; border-bottom:none;">
+  <div class="compare-cta-bar">
+    <div>
+      <h3>Ready to see your own pages in Writing Desk?</h3>
+      <p>Download it free and open a draft in a minute.</p>
+    </div>
+    <div>
+      <a href="{{ '/download/' | relative_url }}" class="compare-btn">{{ dl_icon }} Download Writing Desk</a>
+      <p class="compare-micro">macOS 13 Ventura or later · No account required</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ PRODUCT IMAGES ═══════════════════ -->
+{% if page.gallery %}
+<section class="hub-section" id="product" style="border-top:1px solid var(--border);">
+  <div class="hub-section-header">
+    <h2>See Writing Desk at work</h2>
+  </div>
+  <div class="compare-gallery">
+    {% for key in page.gallery %}
+    {% assign img = site.data.compare_images[key] %}
+    {% if img.url %}
+    <figure class="compare-figure">
+      <img src="{{ img.url | replace: '/upload/', '/upload/f_auto,q_auto,w_900/' }}" alt="{{ img.alt | escape }}" loading="lazy" {% if img.w %}width="{{ img.w }}" height="{{ img.h }}"{% endif %}>
+      <figcaption>
+        <h3>{{ img.title }}</h3>
+        <p>{{ img.caption }}</p>
+      </figcaption>
+    </figure>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<!-- ═══════════════════ STRENGTHS ═══════════════════ -->
+<section class="hub-section" id="strengths">
+  <div class="hub-section-header">
+    <h2>What each does well</h2>
+  </div>
+  <div class="compare-split">
+    <div class="compare-card">
+      <h3>What does {{ page.competitor }} do well?</h3>
+      <ul class="compare-list">{% for item in page.them_strengths %}<li>{{ item }}</li>{% endfor %}</ul>
+    </div>
+    <div class="compare-card wd">
+      <h3>What does Writing Desk add?</h3>
+      <ul class="compare-list">{% for item in page.wd_strengths %}<li>{{ item }}</li>{% endfor %}</ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ WHICH TO CHOOSE ═══════════════════ -->
+<section class="hub-section" id="choose">
+  <div class="hub-section-header">
+    <h2>Which one should you choose?</h2>
+  </div>
+  <div class="compare-split">
+    <div class="compare-card">
+      <h3>Choose {{ page.competitor }} if you:</h3>
+      <ul class="compare-list">{% for item in page.choose_them %}<li>{{ item }}</li>{% endfor %}</ul>
+    </div>
+    <div class="compare-card choose-wd">
+      <h3>Choose Writing Desk if you:</h3>
+      <ul class="compare-list">{% for item in page.choose_wd %}<li>{{ item }}</li>{% endfor %}</ul>
+      <a href="{{ '/download/' | relative_url }}" class="compare-btn">{{ dl_icon }} Download Writing Desk</a>
+      <p class="compare-micro" style="margin-top:0;">macOS 13 Ventura or later · No account required</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ USING BOTH (Markdown body) ═══════════════════ -->
+<section class="hub-section" id="together">
+  <div class="hub-prose">
+    <h2>Can you use {{ page.competitor }} and Writing Desk together?</h2>
+    {{ content }}
+  </div>
+</section>
+
+<!-- ═══════════════════ FAQ ═══════════════════ -->
+<section class="hub-section" id="faq">
+  <div class="hub-section-header">
+    <h2>Common questions</h2>
+  </div>
+  <div class="compare-faq">
+    {% for item in page.faq %}
+    <details>
+      <summary>{{ item.q }} <svg viewBox="0 0 12 12" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4.5l4 4 4-4"/></svg></summary>
+      <div class="answer">{{ item.a | markdownify }}</div>
+    </details>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ═══════════════════ RELATED + MORE COMPARISONS ═══════════════════ -->
+<section class="hub-section" style="padding-top:32px; border-bottom:none;">
+  {% if page.related %}
+  <div class="compare-related" style="margin-bottom:36px;">
+    <h3>Related guides</h3>
+    <div class="compare-chips">
+      {% for link in page.related %}<a href="{{ link.url | relative_url }}">{{ link.title }}</a>{% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  <div class="compare-related">
+    <h3>More comparisons</h3>
+    <div class="compare-chips">
+      {% assign compare_pages = site.pages | where: "layout", "compare" | sort_natural: "competitor" %}
+      {% for p in compare_pages %}{% unless p.url == page.url %}<a href="{{ p.url | relative_url }}">Writing Desk vs {{ p.competitor }}</a>{% endunless %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ PRODUCT CTA ═══════════════════ -->
+<div class="page-wrap" style="padding-top:0;padding-bottom:64px;">
+  <div class="post-cta">
+    <div class="post-cta-inner">
+      <div class="post-cta-text">
+        <span class="eyebrow" style="color:var(--purple-mid)">Writing Desk</span>
+        <h2>Try Writing Desk on your own manuscript.</h2>
+        <p>{{ page.cta_text }}</p>
+      </div>
+      <div class="post-cta-action">
+        <a href="{{ '/download/' | relative_url }}" class="btn-white-outline">
+          <svg viewBox="0 0 15 15" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round"><path d="M7.5 2v9M4 8l3.5 3.5L11 8M2 13h11"/></svg>
+          Download for Mac, free
+        </a>
+        <p class="post-cta-micro">macOS 13 Ventura or later · No account required</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ STRUCTURED DATA ═══════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for item in page.faq %}{
+          "@type": "Question",
+          "name": {{ item.q | jsonify }},
+          "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | markdownify | strip_html | strip_newlines | jsonify }} }
+        }{% unless forloop.last %},{% endunless %}{% endfor %}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": {{ '/' | absolute_url | jsonify }} },
+        { "@type": "ListItem", "position": 2, "name": "Compare", "item": {{ '/compare/' | absolute_url | jsonify }} },
+        { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }} }
+      ]
+    }
+  ]
+}
+</script>

@@ -38,6 +38,14 @@
           <a href="{{ '/downloads/' | relative_url }}">Free Downloads</a>
           <a href="{{ '/help/' | relative_url }}">Help Centre</a>
         </div>
+        <div class="footer-col">
+          <h4>Writing Desk vs</h4>
+            {% assign compare_pages = site.pages | where: "layout", "compare" | sort_natural: "competitor" %}
+            {% for p in compare_pages %}
+         <a href="{{ p.url | relative_url }}">{{ p.competitor }}</a>
+            {% endfor %}
+        <a href="{{ '/compare/' | relative_url }}">All comparisons</a>
+      </div>
       </nav>
     </div>
     <div class="footer-bottom">

@@ -1,0 +1,156 @@
+<style>
+/* ===================================================
+   WRITING DESK — Comparison pages (/compare/)
+   Extends main.css tokens and hub-styles.html.
+   Include after hub-styles.html. Used by
+   _layouts/compare.html and compare/index.html
+   =================================================== */
+
+/* ── Primary download button (purple on white) ─────────
+   Swap for your existing primary button class if you have one */
+.compare-btn {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: var(--purple); color: #fff; font-family: var(--sans);
+  font-size: 15px; font-weight: 500; text-decoration: none;
+  padding: 13px 26px; border-radius: var(--radius);
+  transition: opacity 0.15s, transform 0.15s;
+}
+.compare-btn:hover { opacity: 0.92; transform: translateY(-1px); }
+.compare-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+.compare-micro { font-size: 12px; color: var(--ink-muted); margin-top: 10px; font-weight: 300; }
+
+/* ── Hero extras ───────────────────────────────────── */
+.compare-hero-cta { display: flex; flex-direction: column; align-items: center; margin-top: 28px; }
+.compare-shot-wrap { max-width: 1000px; margin: 8px auto 48px; padding: 0 40px; }
+.compare-shot {
+  width: 100%; height: auto; display: block;
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  box-shadow: 0 12px 40px rgba(83,74,183,0.12); background: var(--purple-faint);
+}
+
+/* ── Differentiator rows (competitor problem → Writing Desk answer) ── */
+.compare-diff { display: flex; flex-direction: column; gap: 32px; max-width: 980px; margin: 0 auto; }
+.compare-diff-topic {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink-muted); margin-bottom: 12px;
+}
+.compare-diff-row {
+  display: grid; grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1.25fr);
+  gap: 16px; align-items: stretch;
+}
+.compare-diff-card {
+  border-radius: var(--radius-lg); padding: 26px 28px;
+  display: flex; flex-direction: column; justify-content: center; gap: 8px;
+}
+.compare-diff-card.them { background: var(--white); border: 1px solid var(--border); }
+.compare-diff-card.wd { background: var(--purple-faint); border: 1px solid var(--purple-light); }
+.compare-diff-label { font-size: 12px; font-weight: 500; color: var(--ink-muted); }
+.compare-diff-card.wd .compare-diff-label { color: var(--purple); }
+.compare-diff-card p { font-size: 16px; line-height: 1.65; font-weight: 300; color: var(--ink-muted); margin: 0; }
+.compare-diff-card.wd p { color: var(--ink); }
+.compare-diff-arrow { display: flex; align-items: center; justify-content: center; }
+.compare-diff-arrow svg { width: 26px; height: 26px; stroke: var(--purple); }
+.compare-diff-note { font-size: 13px; font-weight: 300; color: var(--ink-muted); text-align: center; margin-top: 8px; }
+.compare-diff-note a { color: var(--purple); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ── At a glance table ─────────────────────────────── */
+.compare-table-wrap {
+  max-width: 980px; margin: 0 auto; overflow-x: auto;
+  border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--white);
+}
+.compare-table { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 14.5px; }
+.compare-table th, .compare-table td { padding: 16px 20px; text-align: left; vertical-align: top; line-height: 1.55; }
+.compare-table thead th { font-weight: 500; color: var(--ink); background: var(--white); border-bottom: 1px solid var(--border); }
+.compare-table thead th.wd { background: var(--purple); color: #fff; }
+.compare-table tbody th { width: 150px; font-weight: 500; color: var(--ink); }
+.compare-table tbody td { font-weight: 300; color: var(--ink-muted); border-left: 1px solid var(--border); }
+.compare-table tbody td.wd { background: var(--purple-faint); color: var(--ink); }
+.compare-table tbody tr + tr th, .compare-table tbody tr + tr td { border-top: 1px solid var(--border); }
+.compare-footnote { max-width: 980px; margin: 14px auto 0; font-size: 12.5px; color: var(--ink-muted); font-weight: 300; }
+.compare-footnote a { color: var(--purple); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ── Inline CTA bar ────────────────────────────────── */
+.compare-cta-bar {
+  max-width: 980px; margin: 0 auto; background: var(--purple-faint);
+  border-radius: var(--radius-lg); padding: 26px 32px;
+  display: flex; justify-content: space-between; align-items: center; gap: 28px; flex-wrap: wrap;
+}
+.compare-cta-bar h3 { font-family: var(--serif); font-size: 21px; font-weight: 400; color: var(--ink); margin-bottom: 4px; }
+.compare-cta-bar p { font-size: 14px; color: var(--ink-muted); font-weight: 300; margin: 0; }
+.compare-cta-bar .compare-micro { text-align: center; margin-top: 8px; }
+
+/* ── Product image gallery ─────────────────────────── */
+.compare-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.compare-figure { margin: 0; display: flex; flex-direction: column; gap: 12px; }
+.compare-figure img {
+  width: 100%; height: auto; display: block; border: 1px solid var(--border);
+  border-radius: var(--radius-lg); background: var(--purple-faint);
+}
+.compare-figure h3 { font-family: var(--serif); font-size: 18px; font-weight: 400; color: var(--ink); line-height: 1.3; }
+.compare-figure figcaption p { font-size: 13.5px; color: var(--ink-muted); font-weight: 300; line-height: 1.6; margin: 4px 0 0; }
+
+/* ── Strengths and choose cards ────────────────────── */
+.compare-split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 980px; margin: 0 auto; }
+.compare-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  padding: 32px; display: flex; flex-direction: column; gap: 14px;
+}
+.compare-card.wd { background: var(--purple-faint); border-color: var(--purple-light); }
+.compare-card.choose-wd { background: var(--white); border: 2px solid var(--purple); }
+.compare-card h3 { font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--ink); line-height: 1.25; }
+.compare-card.choose-wd h3 { color: var(--purple); }
+.compare-list { list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 0; margin: 0; }
+.compare-list li {
+  position: relative; padding-left: 28px; font-size: 15px; line-height: 1.65;
+  color: var(--ink-muted); font-weight: 300;
+}
+.compare-card.wd .compare-list li, .compare-card.choose-wd .compare-list li { color: var(--ink); }
+.compare-list li::before {
+  content: ""; position: absolute; left: 0; top: 4px; width: 16px; height: 16px;
+  background: no-repeat center / 16px 16px
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23534AB7' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E");
+}
+.compare-card .compare-btn { align-self: flex-start; margin-top: 8px; }
+
+/* ── Prose heading (together section) ──────────────── */
+.hub-prose h2 { font-family: var(--serif); font-size: 28px; font-weight: 400; color: var(--ink); margin-bottom: 18px; line-height: 1.25; }
+
+/* ── FAQ ───────────────────────────────────────────── */
+.compare-faq { max-width: 760px; margin: 0 auto; border-top: 1px solid var(--border); }
+.compare-faq details { border-bottom: 1px solid var(--border); }
+.compare-faq summary {
+  list-style: none; cursor: pointer; padding: 20px 4px; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  font-family: var(--serif); font-size: 18px; font-weight: 400; color: var(--ink);
+}
+.compare-faq summary::-webkit-details-marker { display: none; }
+.compare-faq summary svg { width: 14px; height: 14px; flex-shrink: 0; stroke: var(--purple); transition: transform 0.2s; }
+.compare-faq details[open] summary svg { transform: rotate(180deg); }
+.compare-faq .answer { padding: 0 4px 22px; }
+.compare-faq .answer p { font-size: 15.5px; color: var(--ink-muted); font-weight: 300; line-height: 1.75; margin: 0; }
+.compare-faq .answer a { color: var(--purple); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ── Related guides + more comparisons ─────────────── */
+.compare-related { max-width: 760px; margin: 0 auto; }
+.compare-related h3 { font-family: var(--serif); font-size: 20px; font-weight: 400; color: var(--ink); margin-bottom: 14px; }
+.compare-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.compare-chips a {
+  font-size: 13.5px; font-weight: 400; color: var(--purple); text-decoration: none;
+  background: var(--white); border: 1px solid var(--purple-light); border-radius: 999px; padding: 9px 16px;
+  transition: background 0.15s;
+}
+.compare-chips a:hover { background: var(--purple-faint); }
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 900px) {
+  .compare-shot-wrap { padding: 0 24px; margin-bottom: 32px; }
+  .compare-diff-row { grid-template-columns: 1fr; gap: 10px; }
+  .compare-diff-arrow { transform: rotate(90deg); height: 28px; }
+  .compare-gallery { grid-template-columns: 1fr 1fr; }
+  .compare-split { grid-template-columns: 1fr; }
+  .compare-cta-bar { padding: 24px; }
+}
+@media (max-width: 600px) {
+  .compare-gallery { grid-template-columns: 1fr; }
+  .compare-card { padding: 24px; }
+}
+</style>
