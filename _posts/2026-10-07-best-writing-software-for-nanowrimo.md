@@ -37,9 +37,9 @@ Some tools give you a 30-day trial and then lock your project. Look for a free p
 
 Your draft belongs to you. Check that you can get it out as a Word file or Markdown without a fight, whether it is going to a beta reader, an editor or another app.
 
-## Quick comparison: the best NaNoWriMo writing apps
-
 ![Graphic showing that 50,000 words in 30 days is about 1,667 words a day](https://res.cloudinary.com/dnkddcxrt/image/upload/w_1600,f_auto,q_auto/v1791373682/nanowrimo-1667-words-a-day_k0fvkg.jpg)
+
+## Quick comparison: the best NaNoWriMo writing apps
 
 | App | Best for | Platform | Price from |
 |---|---|---|---|
