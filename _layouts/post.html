@@ -279,6 +279,33 @@ layout: default
   width: 100%; border-radius: var(--radius);
   border: 1px solid var(--border-strong); margin: 28px 0;
 }
+
+/* In-content app icons, sat inline beside headings (overrides the full-width img rule above) */
+.post-content img.app-logo {
+  display: inline-block; width: 1.1em; height: 1.1em;
+  margin: 0 0.3em 0 0; border: none; border-radius: 4px;
+  vertical-align: -0.12em; object-fit: contain;
+}
+
+/* Buttons inside post content (stops the plain link style overriding .btn) */
+.post-content a.btn { text-decoration: none; }
+.post-content a.btn-primary { color: #fff; }
+
+/* Tables */
+.post-content table {
+  display: block; overflow-x: auto; max-width: 100%;
+  border-collapse: collapse; margin: 28px 0; font-size: 14.5px;
+}
+.post-content th, .post-content td {
+  text-align: left; vertical-align: top; padding: 10px 14px;
+  border-bottom: 1px solid var(--border); line-height: 1.5;
+}
+.post-content th {
+  font-weight: 500; color: var(--ink); background: var(--purple-faint);
+  border-bottom: 1px solid var(--border-strong); white-space: nowrap;
+}
+.post-content td { color: var(--ink-muted); }
+.post-content tbody tr:first-child td:first-child { font-weight: 500; color: var(--ink); }
 .post-content hr {
   border: none; border-top: 1px solid var(--border); margin: 40px 0;
 }
