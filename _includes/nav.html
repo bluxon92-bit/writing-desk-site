@@ -10,66 +10,78 @@
 
       <!-- Features with dropdown -->
       <div class="nav-item has-dropdown">
-        <a href="{{ '/features/' | relative_url }}" class="nav-link {% if page.url contains 'features' %}active{% endif %}">
+        <a href="{{ '/features/' | relative_url }}" class="nav-link {% if page.url contains 'features' or page.url contains '/demo' %}active{% endif %}">
           Features
           <svg class="nav-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <div class="nav-dropdown">
-          <a href="{{ '/features/plot-your-novel/' | relative_url }}" class="dropdown-item">
-            <span class="dropdown-icon">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 14l3-6 3 4 2-3 2 5"/></svg>
+        <div class="nav-dropdown nav-dropdown-split">
+          <div class="dropdown-list">
+            <a href="{{ '/features/plot-your-novel/' | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 14l3-6 3 4 2-3 2 5"/></svg>
+              </span>
+              <span>
+                <strong>Plot</strong>
+                Story Plotter &amp; structure templates
+              </span>
+            </a>
+            <a href="{{ '/features/distraction-free-writing-app/' | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="11" height="13" rx="1.5"/><path d="M5 6h6M5 9h4"/></svg>
+              </span>
+              <span>
+                <strong>Write</strong>
+                Editor, Pad, Research &amp; Resource Hub
+              </span>
+            </a>
+            <a href="{{ '/features/novel-editing-software/' | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M11.5 2.5l2 2-8 8H3.5v-2l8-8zM9.5 4.5l2 2"/></svg>
+              </span>
+              <span>
+                <strong>Edit</strong>
+                Proofreader, Prose Analysis &amp; AI Editor
+              </span>
+            </a>
+            <a href="{{ '/features/writing-tracker-app/' | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="10" width="3" height="4" rx="0.5"/><rect x="6.5" y="7" width="3" height="7" rx="0.5"/><rect x="11" y="4" width="3" height="10" rx="0.5"/></svg>
+              </span>
+              <span>
+                <strong>Track</strong>
+                Writing Tracker &amp; milestones
+              </span>
+            </a>
+            <a href="{{ '/features/book-formatting-tool/' | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 2v9M5 8l3 3 3-3M2 13h12"/></svg>
+              </span>
+              <span>
+                <strong>Format</strong>
+                Export, typesetting &amp; agent templates
+              </span>
+            </a>
+          </div>
+          <a href="{{ '/demo/' | relative_url }}" class="dropdown-demo-card">
+            <span class="dropdown-demo-poster">
+              <img src="https://res.cloudinary.com/dnkddcxrt/image/upload/w_480,q_auto,f_auto/v1784478600/Writing_Desk_Demo_Intro_desn2o.png" alt="" width="480" height="270" loading="lazy" fetchpriority="low" decoding="async" />
+              <span class="dropdown-demo-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span class="dropdown-demo-badge">6:10</span>
             </span>
-            <span>
-              <strong>Plot</strong>
-              Story Plotter &amp; structure templates
-            </span>
-          </a>
-          <a href="{{ '/features/distraction-free-writing-app/' | relative_url }}" class="dropdown-item">
-            <span class="dropdown-icon">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="11" height="13" rx="1.5"/><path d="M5 6h6M5 9h4"/></svg>
-            </span>
-            <span>
-              <strong>Write</strong>
-              Editor, Pad, Research &amp; Resource Hub
-            </span>
-          </a>
-          <a href="{{ '/features/novel-editing-software/' | relative_url }}" class="dropdown-item">
-            <span class="dropdown-icon">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M11.5 2.5l2 2-8 8H3.5v-2l8-8zM9.5 4.5l2 2"/></svg>
-            </span>
-            <span>
-              <strong>Edit</strong>
-              Proofreader, Prose Analysis &amp; AI Editor
-            </span>
-          </a>
-          <a href="{{ '/features/writing-tracker-app/' | relative_url }}" class="dropdown-item">
-            <span class="dropdown-icon">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="10" width="3" height="4" rx="0.5"/><rect x="6.5" y="7" width="3" height="7" rx="0.5"/><rect x="11" y="4" width="3" height="10" rx="0.5"/></svg>
-            </span>
-            <span>
-              <strong>Track</strong>
-              Writing Tracker &amp; milestones
-            </span>
-          </a>
-          <a href="{{ '/features/book-formatting-tool/' | relative_url }}" class="dropdown-item">
-            <span class="dropdown-icon">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 2v9M5 8l3 3 3-3M2 13h12"/></svg>
-            </span>
-            <span>
-              <strong>Format</strong>
-              Export, typesetting &amp; agent templates
+            <span class="dropdown-demo-text">
+              <strong>See Writing Desk in action</strong>
+              Every feature in 6 minutes
+              <span class="dropdown-demo-cta">Watch the demo &rarr;</span>
             </span>
           </a>
         </div>
       </div>
 
-      <a href="{{ '/demo/' | relative_url }}" class="nav-link {% if page.url contains '/demo' %}active{% endif %}">Demo</a>
-
       <a href="{{ '/pricing/' | relative_url }}" class="nav-link {% if page.url contains 'pricing' %}active{% endif %}">Pricing</a>
 
-      <a href="{{ '/blog/' | relative_url }}" class="nav-link {% if page.url contains 'blog' %}active{% endif %}">Blog</a>
-
-      <!-- Resources with dropdown: Tools, Downloads, Guides -->
+      <!-- Resources with dropdown: Tools, Downloads, Guides, plus blog strip -->
       <div class="nav-item has-dropdown">
         <a href="{{ '/tools/' | relative_url }}" class="nav-link {% if page.url contains '/tools/' or page.url contains '/blog' or page.url contains '/downloads/' or page.url contains '/hubs/' %}active{% endif %}">
           Resources
@@ -227,6 +239,14 @@
             </a>
           </div>
 
+          <!-- Blog strip: spans all three columns -->
+          {% assign latest_post = site.posts | first %}
+          <div class="dropdown-footer">
+            <span class="dropdown-footer-label">From the blog</span>
+            {% if latest_post %}<a href="{{ latest_post.url | relative_url }}" class="dropdown-footer-title">{{ latest_post.title | escape }}</a>{% endif %}
+            <a href="{{ '/blog/' | relative_url }}" class="dropdown-footer-all">Read all articles &rarr;</a>
+          </div>
+
         </div>
       </div>
 
@@ -266,22 +286,10 @@
           <svg class="mobile-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="mobile-submenu" id="mobile-resources">
-          <span class="mobile-submenu-label">Tools</span>
-          <a href="{{ '/tools/character-name-generator/' | relative_url }}">Name Generators</a>
-          <a href="{{ '/tools/writing-prompt-generator/' | relative_url }}">Writing Prompts</a>
-          <a href="{{ '/tools/book-title-generator/' | relative_url }}">Book Title Generator</a>
-          <a href="{{ '/tools/character-backstory-generator/' | relative_url }}">Character Backstory Generator</a>
-          <a href="{{ '/tools/' | relative_url }}">All Tools</a>
-          <span class="mobile-submenu-label">Downloads</span>
-          <a href="{{ '/downloads/' | relative_url }}">All Downloads</a>
-          <a href="{{ '/downloads/sci-fi-short-stories/' | relative_url }}">Sci-Fi Short Stories</a>
-          <a href="{{ '/downloads/horror-short-stories/' | relative_url }}">Horror Short Stories</a>
-          <span class="mobile-submenu-label">Guides</span>
-          <a href="{{ '/blog/' | relative_url }}">Articles</a>
-          <a href="{{ '/hubs/story-structure/' | relative_url }}">Story Structure</a>
-          <a href="{{ '/hubs/how-to-write-a-novel/' | relative_url }}">How to Write a Novel</a>
-          <a href="{{ '/hubs/characters/' | relative_url }}">Character Craft</a>
-          <a href="{{ '/hubs/' | relative_url }}">All Guides</a>
+          <a href="{{ '/tools/' | relative_url }}">Tools</a>
+          <a href="{{ '/downloads/' | relative_url }}">Downloads</a>
+          <a href="{{ '/hubs/' | relative_url }}">Guides</a>
+          <a href="{{ '/blog/' | relative_url }}">Blog</a>
         </div>
       </div>
 
@@ -315,6 +323,84 @@
   .nav-dropdown-mega { min-width: 520px; }
   .nav-dropdown-mega .dropdown-item span:last-child { font-size: 12px; }
 }
+
+/* ── Features split dropdown (list + demo card) ─ */
+/* Centred under Features by the base .nav-dropdown rules in main.css */
+.nav-dropdown-split {
+  width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 248px;
+  gap: 8px;
+}
+.dropdown-list { display: flex; flex-direction: column; }
+
+.nav-dropdown-split .dropdown-demo-card {
+  display: flex; flex-direction: column; gap: 10px;
+  padding: 10px;
+  border-radius: var(--radius-lg, 12px);
+  background: var(--purple-faint);
+  color: var(--ink);
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+.nav-dropdown-split .dropdown-demo-card:hover { background: var(--purple-light); }
+.dropdown-demo-poster {
+  position: relative; display: block;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px; overflow: hidden;
+  background: var(--ink);
+}
+.dropdown-demo-poster img {
+  display: block; width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.25s ease;
+}
+.dropdown-demo-card:hover .dropdown-demo-poster img { transform: scale(1.03); }
+.dropdown-demo-play {
+  position: absolute; top: 50%; left: 50%;
+  width: 40px; height: 40px; margin: -20px 0 0 -20px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+}
+.dropdown-demo-play svg { width: 18px; height: 18px; margin-left: 2px; }
+.dropdown-demo-badge {
+  position: absolute; right: 6px; bottom: 6px;
+  padding: 2px 6px; border-radius: 4px;
+  font-size: 11px; font-weight: 500; color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+}
+.dropdown-demo-text {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 0 4px 4px;
+  font-size: 12.5px; line-height: 1.4; color: var(--ink-muted);
+}
+.dropdown-demo-text strong { font-size: 14px; font-weight: 600; color: var(--ink); }
+.dropdown-demo-cta { margin-top: 4px; font-size: 13px; font-weight: 500; color: var(--purple); }
+
+/* ── Resources mega: blog strip ──────────────── */
+.nav-dropdown-mega .dropdown-footer {
+  grid-column: 1 / -1;
+  display: flex; align-items: center; gap: 16px;
+  min-width: 0;
+  margin-top: 4px; padding: 12px 12px 4px;
+  border-top: 1px solid var(--border);
+}
+.dropdown-footer-label {
+  flex-shrink: 0;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.nav-dropdown-mega .dropdown-footer-title {
+  flex: 1; min-width: 0;
+  font-size: 13.5px; font-weight: 500; color: var(--ink); text-decoration: none;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.nav-dropdown-mega .dropdown-footer-title:hover { color: var(--purple); }
+.nav-dropdown-mega .dropdown-footer-all {
+  flex-shrink: 0; margin-left: auto;
+  font-size: 13px; font-weight: 500; color: var(--purple); text-decoration: none;
+}
+.nav-dropdown-mega .dropdown-footer-all:hover { color: var(--purple-dark); text-decoration: underline; }
 
 /* ── Mobile Resources section labels ─────────── */
 .mobile-submenu-label {
