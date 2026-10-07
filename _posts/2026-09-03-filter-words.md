@@ -5,7 +5,7 @@ date: 2026-09-03
 category: Editing
 type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788771738/filter_words_-_almost_1_jta5qw.jpg"
-excerpt: "Filter words explained: what they are, why they distance the reader, and how to find and cut them from your manuscript without losing your narrator's voice entirely."
+excerpt: "What are filter words? Learn why they distance the reader, and how do you find and cut them from your manuscript without losing your narrator's voice."
 permalink: /blog/filter-words/
 ---
 

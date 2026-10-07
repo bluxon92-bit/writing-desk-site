@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Dan Harmon's Story Circle: A Practical Guide for Novelists"
+title: "Dan Harmon's Story Circle: Guide for Novelists"
 date: 2026-07-07
 category: Structure
 type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/harmons_story_circle_eo6oep.jpg"
-excerpt: "Dan Harmon's Story Circle explained: the eight-step framework behind Community and Rick and Morty, with real examples from The Road, Jane Eyre, and The Great Gatsby."
+excerpt: "Dan Harmon's Story Circle. The eight-step framework behind Community and Rick and Morty, with real examples from Jane Eyre, and The Great Gatsby."
 permalink: /blog/dan-harmon-story-circle/
 ---
 

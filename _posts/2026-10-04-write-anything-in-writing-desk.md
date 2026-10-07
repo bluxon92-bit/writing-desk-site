@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Write Anything in Writing Desk: Markdown, Word Files and a Whole New Look"
+title: "Write Anything in Writing Desk: Markdown, Word Files and More"
 date: 2026-10-04
 category: Product
 type: Product Update
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1791130988/writing_desk_formatter_g09b2u.png"
-excerpt: "Writing Desk's biggest update yet: Markdown and Word editing, a Documents view for shorter writing, non-fiction editorial feedback, merging Word edits back, keyboard shortcuts and a redesigned interface."
+excerpt: "Writing Desk's biggest update yet: Markdown and Word editing, non-fiction editorial feedback, keyboard shortcuts and a redesigned interface."
 permalink: /blog/write-anything-in-writing-desk/
 ---
 
