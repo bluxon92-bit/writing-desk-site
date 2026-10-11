@@ -1,0 +1,13 @@
+{%- comment -%} Compact row. Usage: include hub-row.html app=a mac=true {%- endcomment -%}
+{%- assign a = include.app -%}
+{%- assign s = site.data.hub.settings -%}
+<div class="happ-row" id="{{ a.slug }}">
+  {% include hub-logo.html app=a %}
+  <div>
+    <h3>{{ a.name }}</h3>
+    <p class="happ-tagline">{{ a.tags | first }}</p>
+    {% include hub-badges.html app=a mac=include.mac %}
+  </div>
+  <p class="happ-row-best">{{ a.best_for }}{% if include.mac and a.mac_note %}<br><small>{{ a.mac_note }}</small>{% endif %}{% if a.comparison %}<br><a href="{{ a.comparison | relative_url }}" style="color:var(--purple);font-size:12.5px">Full comparison →</a>{% endif %}</p>
+  <p class="happ-row-price">{% if a.price_line %}{{ a.price_line }}{% else %}{{ s.price_fallback }}{% endif %}<small>{% if a.price_checked %}Checked {{ a.price_checked | date: "%-d %b %Y" }}{% else %}Price not yet checked{% endif %}</small></p>
+</div>

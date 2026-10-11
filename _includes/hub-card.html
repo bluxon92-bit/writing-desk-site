@@ -1,0 +1,51 @@
+{%- comment -%} Full card. Usage: include hub-card.html app=a mac=true {%- endcomment -%}
+{%- assign a = include.app -%}
+{%- assign s = site.data.hub.settings -%}
+<article class="happ-card{% if a.slug == 'writing-desk' %} is-wd{% endif %}" id="{{ a.slug }}">
+  <header class="happ-card-head">
+    {% include hub-logo.html app=a %}
+    <div>
+      <h3>{{ a.name }}{% if a.slug == 'writing-desk' %}<span class="happ-pill">Made by us</span>{% endif %}</h3>
+      <p class="happ-tags">{{ a.tags | join: ' · ' }}</p>
+    </div>
+  </header>
+
+  <p class="happ-overview">{{ a.overview }}</p>
+  <p class="happ-best"><strong>Best for:</strong> {{ a.best_for }}</p>
+  {%- if include.mac and a.mac_note %}<p class="happ-macnote">{{ a.mac_note }}</p>{% endif %}
+
+  {% include hub-badges.html app=a mac=include.mac %}
+
+  <div class="happ-facts">
+    <div class="happ-fact">
+      <span class="happ-fact-label">Pricing</span>
+      <span class="happ-fact-value">{% if a.price_line %}{{ a.price_line }}{% else %}{{ s.price_fallback }}{% endif %}</span>
+      <span class="happ-fact-sub">{% if a.price_checked %}Checked {{ a.price_checked | date: "%-d %b %Y" }}{% else %}Price not yet checked{% endif %}{% if a.free_tier %} · {{ a.free_tier }}{% endif %}</span>
+    </div>
+    {%- if a.rating %}
+    <div class="happ-fact">
+      <span class="happ-fact-label">Rating</span>
+      <span class="happ-fact-value">{{ a.rating.source }} {{ a.rating.value }} / 5</span>
+      <span class="happ-fact-sub">{{ s.ratings_note | replace: '{source}', a.rating.source | replace: '{date}', a.rating.checked }}</span>
+    </div>
+    {%- else %}
+    <div class="happ-fact">
+      <span class="happ-fact-label">Model</span>
+      <span class="happ-fact-value">{{ a.pricing_model }}</span>
+    </div>
+    {%- endif %}
+  </div>
+
+  {%- if a.features.size > 0 %}
+  <ul class="happ-ticks">{% for f in a.features %}<li>{{ f }}</li>{% endfor %}</ul>
+  {%- endif %}
+
+  <div class="happ-verdict">
+    <div class="yes"><h4>Choose it if</h4><p>{{ a.choose }}</p></div>
+    <div class="no"><h4>Skip it if</h4><p>{{ a.skip }}</p></div>
+  </div>
+
+  {%- if a.comparison %}
+  <p class="happ-links"><a href="{{ a.comparison | relative_url }}">Read the full comparison with Writing Desk →</a></p>
+  {%- endif %}
+</article>

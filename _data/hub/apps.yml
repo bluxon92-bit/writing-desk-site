@@ -1,0 +1,1227 @@
+writing-desk:
+  name: Writing Desk
+  slug: writing-desk
+  status: Verified
+  category: Novel writing
+  tags:
+  - Novel writing
+  - Documents
+  - Markdown
+  - Editing and analysis
+  - Formatting and publishing
+  overview: A native Mac app for writing a novel from first idea to finished book, with planning, editing and book formatting in one project. Markdown and Word files open and save as they are.
+  best_for: Mac novelists who want planning, editing and formatting in one app
+  choose: you write on a Mac, want the plan, the draft and the editing tools in one project, and want AI that gives feedback and leaves the prose to you
+  skip: you need Windows, Linux or a browser version, want real-time co-authoring, or want AI to draft prose for you
+  platforms:
+  - name: Mac
+  mac_first: true
+  pricing_model: Freemium + subscription (credit-metered AI)
+  price_line: Free plan; Premium from £8/mo billed annually (£10 monthly) or $10/mo USD billed annually ($12 monthly)
+  price_checked: '2026-10-06'
+  free_tier: Free plan, plus a 30-day Premium trial
+  features:
+  - Plotting and outlining
+  - Worldbuilding
+  - Markdown
+  - Export to EPUB, PDF or DOCX
+  - Grammar and style checks
+  - Collaboration (partial)
+  - Works offline
+  ai_chip: 'AI: assistive'
+  rating: null
+  comparison: null
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1790767006/wd-logo-gradient-512w_dmwzj2.png
+  mac_note: Native Mac app, macOS 13 Ventura or later.
+apple-pages:
+  name: Apple Pages
+  slug: apple-pages
+  status: Needs verify
+  category: Essays and long-form non-fiction
+  tags:
+  - Word replacement
+  - Documents
+  overview: Apple's free word processor for Mac, iPhone and iPad, with a browser version through iCloud.
+  best_for: Free drafting and essays across Apple devices
+  choose: you work across Mac, iPhone and iPad and want a free, polished word processor with real-time collaboration through iCloud
+  skip: you need a native Windows or Android app, or planning tools for a long manuscript
+  platforms:
+  - name: Mac
+  - name: Browser
+  - name: iOS
+  mac_first: true
+  pricing_model: Free with Apple devices
+  price_line: Free
+  price_checked: null
+  free_tier: 'Yes'
+  features:
+  - Export to EPUB, PDF or DOCX
+  - Collaboration
+  ai_chip: null
+  rating: null
+  comparison: null
+  mac_note: Mac, iPhone, iPad, plus a browser version through iCloud.
+atticus:
+  name: Atticus
+  slug: atticus
+  status: Verified
+  category: Novel writing
+  tags:
+  - Formatting and publishing
+  overview: A writing and formatting app for self-publishers, with print and EPUB templates and a lighter writing toolkit.
+  best_for: Self-publishers who want writing and formatting in one tool
+  choose: you write on Windows, Mac or Linux, want a one-off lifetime purchase, or need layout options beyond a single trim size
+  skip: you want built-in planning, editorial feedback or AI, because the formatting is stronger than the writing tools
+  platforms:
+  - name: Mac
+  - name: Browser
+  - name: Windows
+  - name: Linux
+  mac_first: false
+  pricing_model: One-time licence
+  price_line: From $147 one-time (USD)
+  price_checked: '2026-10-06'
+  free_tier: No (30-day money-back guarantee)
+  features:
+  - Export to EPUB, PDF or DOCX
+  ai_chip: No AI
+  rating: null
+  comparison: /compare/writing-desk-vs-atticus/
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1791373379/atticus_logo_johp1i.png
+  mac_note: Mac, Windows, Linux, Chromebook and browser.
+autocrit:
+  name: AutoCrit
+  slug: autocrit
+  status: Verified
+  category: Editing and proofreading
+  tags:
+  - Editing and analysis
+  overview: Manuscript analysis software that compares your fiction against published books in your genre.
+  best_for: Fiction authors who want data-led self-editing
+  choose: you want pacing, dialogue and word-choice reports with genre benchmarking
+  skip: you want to draft and plan your book in the same app
+  platforms:
+  - name: Browser
+  mac_first: false
+  pricing_model: Freemium + subscription
+  price_line: Free; paid plans up to $30/mo (USD)
+  price_checked: '2026-10-10'
+  free_tier: Yes (free plan)
+  features: []
+  ai_chip: 'AI: analysis only'
+  rating: null
+  comparison: null
+bear:
+  name: Bear
+  slug: bear
+  status: Verified
+  category: Markdown and minimal
+  tags:
+  - General writing
+  overview: A fast Markdown notes app for Mac, iPhone and iPad.
+  best_for: Notes and short pieces on Apple devices
+  choose: you want quick Markdown notes that sync through iCloud on your Apple devices
+  skip: you need Windows or Android, or structure tools for a long manuscript
+  platforms:
+  - name: Mac
+  - name: iOS
+  mac_first: true
+  pricing_model: Freemium + subscription
+  price_line: From $2.99/mo (USD)
+  price_checked: '2026-10-10'
+  free_tier: Yes (free core app; Pro 7-day trial)
+  features:
+  - Markdown
+  - Export to EPUB, PDF or DOCX
+  ai_chip: No AI
+  rating: null
+  comparison: null
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1791373379/bear_write_app_logo_lsvnpm.png
+  mac_note: Mac, iPhone and iPad; iCloud sync is a Pro feature.
+bibisco:
+  name: bibisco
+  slug: bibisco
+  status: Verified
+  category: Novel writing
+  tags:
+  - Free / open source
+  overview: A free novel-writing tool built around characters, scenes and storylines.
+  best_for: Planners who like to build characters and structure first
+  choose: you want a free desktop app for tracking characters, scenes and storylines
+  skip: you want AI assistance or collaboration built in
+  platforms:
+  - name: Mac
+  - name: Windows
+  - name: Linux
+  - name: iOS
+    note: limited
+  - name: Android
+    note: limited
+  mac_first: false
+  pricing_model: Free + one-time edition + separate mobile/cloud subscription
+  price_line: Free; paid plans up to $69 one-time (USD)
+  price_checked: '2026-10-10'
+  free_tier: Trial (30 days)
+  features: []
+  ai_chip: No AI
+  rating: null
+  comparison: null
+  mac_note: null
+campfire:
+  name: Campfire
+  slug: campfire
+  status: Needs verify
+  category: Novel writing
+  tags:
+  - Plotting
+  - Worldbuilding
+  overview: A modular worldbuilding and writing app with separate tools for characters, maps, timelines, species, cultures and magic.
+  best_for: Fantasy and sci-fi writers who build detailed worlds
+  choose: you want deep worldbuilding modules and collaborators on one platform, and want to start on a free tier
+  skip: you want one simple price, because modules and tiers add complexity and the free tier caps the manuscript at 25,000 words
+  platforms:
+  - name: Mac
+  - name: Browser
+  - name: Windows
+  mac_first: false
+  pricing_model: Freemium + subscription + lifetime
+  price_line: Free; paid plans up to $12/mo (USD)
+  price_checked: '2026-10-10'
+  free_tier: Yes (free tier; 25,000-word manuscript cap)
+  features:
+  - Plotting and outlining (partial)
+  - Worldbuilding
+  - Export to EPUB, PDF or DOCX (partial)
+  - Collaboration
+  ai_chip: No AI
+  rating: null
+  comparison: null
+  mac_note: null
+dabble:
+  name: Dabble
+  slug: dabble
+  status: Verified
+  category: Novel writing
+  tags:
+  - Novel writing
+  overview: A cloud writing app for novelists with a Plot Grid, goals and a friendly interface.
+  best_for: Beginners and plotters who want a simple, finish-the-draft tool
+  choose: you write on Windows as well as Mac, prefer a grid view of plot threads, or want to co-author in the same project
+  skip: you want a one-off purchase, a free plan or local storage, because Dabble is subscription-only and cloud-based
+  platforms:
+  - name: Mac
+  - name: Browser
+  - name: Windows
+  - name: iOS
+  - name: Android
+  mac_first: false
+  pricing_model: Subscription
+  price_line: From $19/mo (USD); up to $49/mo
+  price_checked: '2026-10-06'
+  free_tier: Trial (14 days)
+  features:
+  - Plotting and outlining
+  - Worldbuilding (partial)
+  - Export to EPUB, PDF or DOCX (partial)
+  - Grammar and style checks
+  - Collaboration
+  ai_chip: No AI
+  rating: null
+  comparison: /compare/writing-desk-vs-dabble/
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1791373379/dabble_writer_logo_a9jxuj.png
+  mac_note: null
+devonthink:
+  name: DEVONthink
+  slug: devonthink
+  status: Verified
+  category: Essays and long-form non-fiction
+  tags:
+  - Research companion
+  - Mac-only
+  overview: A document and information manager for Mac and iOS that holds PDFs, web pages, notes and Office files.
+  best_for: Researchers who manage large source libraries
+  choose: you keep a large library of sources on a Mac and want powerful search and AI-assisted organisation
+  skip: you want somewhere to write, because it organises research rather than editing manuscripts
+  platforms:
+  - name: Mac
+  - name: iOS
+  mac_first: true
+  pricing_model: One-time licence + optional paid updates
+  price_line: From $99 one-time (USD)
+  price_checked: '2026-10-10'
+  free_tier: Trial (30 days or 150 hours of runtime)
+  features:
+  - Markdown
+  - Collaboration
+  ai_chip: 'AI: general assistant'
+  rating: null
+  comparison: null
+  mac_note: Mac and iOS; requires macOS Ventura or later.
+ellipsus:
+  name: Ellipsus
+  slug: ellipsus
+  status: Needs verify
+  category: Novel writing
+  tags:
+  - Collaborative + anti-AI
+  overview: A free, browser-based writing space built around collaboration and branching drafts, with no generative AI.
+  best_for: Collaborative writers who want an AI-free space
+  choose: you want to draft and edit with others in one place, with comments and compare-and-merge drafts
+  skip: you want a desktop or mobile app, or planning tools
+  platforms:
+  - name: Browser
+  mac_first: false
+  pricing_model: Free + optional paid tier
+  price_line: Free
+  price_checked: null
+  free_tier: Yes (full features)
+  features:
+  - Export to EPUB, PDF or DOCX
+  ai_chip: No AI
+  rating: null
+  comparison: null
+fictionary-storyteller:
+  name: Fictionary StoryTeller
+  slug: fictionary-storyteller
+  status: Needs verify
+  category: Editing and proofreading
+  tags:
+  - Editing and analysis
+  overview: Story-structure analysis software that maps scene purpose, character arcs and plot beats.
+  best_for: Self-editors working on developmental edits
+  choose: you want a visual story map and structural feedback on a finished draft
+  skip: you want to draft in the same app, or want to avoid a subscription
+  platforms:
+  - name: Browser
+  mac_first: false
+  pricing_model: Subscription
+  price_line: From $168/yr (USD); up to $348/yr
+  price_checked: '2026-10-10'
+  free_tier: Trial (7 days, no card)
+  features: []
+  ai_chip: 'AI: analysis only'
+  rating: null
+  comparison: null
+google-docs:
+  name: Google Docs
+  slug: google-docs
+  status: Needs verify
+  category: Essays and long-form non-fiction
+  tags:
+  - General writing
+  overview: Google's free browser-based word processor with real-time collaboration and version history.
+  best_for: Collaborative drafting and sharing
+  choose: you want free, instant sharing and real-time co-editing with an editor or collaborators
+  skip: you are writing a book-length manuscript, because there are no novel tools or book formatting
+  platforms:
+  - name: Browser
+  - name: iOS
+  - name: Android
+  mac_first: false
+  pricing_model: Free + Workspace
+  price_line: Free; paid plans up to $6/mo (USD)
+  price_checked: null
+  free_tier: 'Yes'
+  features:
+  - Export to EPUB, PDF or DOCX
+  - Collaboration
+  - Works offline
+  ai_chip: 'AI: general assistant'
+  rating: null
+  comparison: null
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1791373379/google_docs_logo_wlr8ak.png
+grammarly:
+  name: Grammarly
+  slug: grammarly
+  status: Needs verify
+  category: Editing and proofreading
+  tags:
+  - Editing and analysis
+  overview: A grammar, style and tone checker with generative AI features that runs in browsers, desktop apps and documents.
+  best_for: General proofreading across apps
+  choose: you want one checker that works in your browser, email and documents
+  skip: you want fiction-aware feedback on structure and pacing
+  platforms:
+  - name: Mac
+  - name: Browser
+  - name: Windows
+  - name: iOS
+  - name: Android
+  mac_first: false
+  pricing_model: Freemium + subscription
+  price_line: Free; paid plans up to $12/mo (USD)
+  price_checked: '2026-10-10'
+  free_tier: Yes (free plan; Pro 7-day trial)
+  features:
+  - Citations
+  - Grammar and style checks
+  ai_chip: 'AI: assistive'
+  rating: null
+  comparison: null
+hemingway-editor:
+  name: Hemingway Editor
+  slug: hemingway-editor
+  status: Needs verify
+  category: Editing and proofreading
+  tags:
+  - Editing and analysis
+  overview: A readability checker that highlights long sentences, adverbs and passive voice.
+  best_for: Tightening short pieces and drafts
+  choose: you want a quick check on clarity and readability
+  skip: you want deeper manuscript analysis or fiction-aware feedback
+  platforms:
+  - name: Browser
+  mac_first: false
+  pricing_model: Freemium + subscription
+  price_line: Free; paid plans up to $10/mo (USD)
+  price_checked: null
+  free_tier: 'Yes'
+  features:
+  - Grammar and style checks (partial)
+  ai_chip: 'AI: assistive'
+  rating: null
+  comparison: null
+ia-writer:
+  name: iA Writer
+  slug: ia-writer
+  status: Verified
+  category: Markdown and minimal
+  tags:
+  - General writing
+  overview: A minimal Markdown writing app for Mac, iPhone, iPad and Windows with a focus mode and strong typography.
+  best_for: Plain-text and Markdown writers who want few features
+  choose: you write on Windows as well as Mac, want the leanest possible app, or keep plain-text files across tools
+  skip: you want planning tools, built-in editorial feedback or book formatting
+  platforms:
+  - name: Mac
+  - name: Windows
+  - name: iOS
+  mac_first: false
+  pricing_model: One-time per platform
+  price_line: From £34.99 one-time
+  price_checked: '2026-10-06'
+  free_tier: Trial (7 days)
+  features:
+  - Markdown
+  - Export to EPUB, PDF or DOCX
+  ai_chip: 'AI: assistive'
+  rating: null
+  comparison: /compare/writing-desk-vs-ia-writer/
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1791373378/ia_writer_logo_oybycu.png
+  mac_note: Mac, iPhone, iPad and Windows.
+languagetool:
+  name: LanguageTool
+  slug: languagetool
+  status: Needs verify
+  category: Editing and proofreading
+  tags:
+  - Editing and analysis
+  overview: A multilingual grammar and style checker with browser add-ons, desktop apps and Office integrations.
+  best_for: Proofreading in many languages
+  choose: you write in more than one language or want a checker that works across Word, Google Docs and your browser
+  skip: you want fiction-specific analysis of pacing and structure
+  platforms:
+  - name: Mac
+  - name: Browser
+  - name: Windows
+  - name: iOS
+  mac_first: false
+  pricing_model: Freemium + subscription
+  price_line: Free; paid plans up to $59.90/yr (USD)
+  price_checked: null
+  free_tier: 'Yes'
+  features:
+  - Grammar and style checks
+  ai_chip: 'AI: assistive'
+  rating: null
+  comparison: null
+libreoffice-writer:
+  name: LibreOffice Writer
+  slug: libreoffice-writer
+  status: Needs verify
+  category: Essays and long-form non-fiction
+  tags:
+  - Word replacement
+  - Free / open source
+  overview: A free, open-source word processor for desktop computers.
+  best_for: Free Word-style document writing on any desktop
+  choose: you want a free word processor with no subscription
+  skip: you want novel planning tools or a distraction-free writing surface
+  platforms:
+  - name: Mac
+  - name: Windows
+  - name: Linux
+  mac_first: false
+  pricing_model: Free (open source)
+  price_line: Free
+  price_checked: null
+  free_tier: 'Yes'
+  features: []
+  ai_chip: null
+  rating: null
+  comparison: null
+  mac_note: null
+livingwriter:
+  name: LivingWriter
+  slug: livingwriter
+  status: Verified
+  category: Novel writing
+  tags:
+  - Novel writing
+  overview: A novel writing app with story-structure templates, outline boards and auto-linked story elements, with optional AI.
+  best_for: Plotters who like beat-sheet templates
+  choose: you want structure templates such as the Hero's Journey and linked story elements in one place
+  skip: you want a one-off purchase, because it is subscription-based
+  platforms:
+  - name: Browser
+  - name: iOS
+  - name: Android
+  mac_first: false
+  pricing_model: Freemium + subscription
+  price_line: Free; paid plans up to $29.99/mo (USD)
+  price_checked: '2026-10-10'
+  free_tier: Yes (free plan)
+  features:
+  - Plotting and outlining
+  - Worldbuilding (partial)
+  - Export to EPUB, PDF or DOCX
+  - Collaboration
+  ai_chip: 'AI: assistive'
+  rating: null
+  comparison: null
+manuskript:
+  name: Manuskript
+  slug: manuskript
+  status: Needs verify
+  category: Novel writing
+  tags:
+  - Free / open source
+  overview: A free, open-source desktop app with an outliner, character sheets and a world encyclopedia.
+  best_for: Open-source fans who want free planning tools
+  choose: you want a free planning and writing tool and are comfortable with some rough edges
+  skip: you want polish and support, because it can be buggy on some platforms
+  platforms:
+  - name: Mac
+  - name: Windows
+  - name: Linux
+  mac_first: false
+  pricing_model: Free (open source)
+  price_line: Free
+  price_checked: null
+  free_tier: 'Yes'
+  features:
+  - Plotting and outlining
+  - Worldbuilding
+  ai_chip: No AI
+  rating: null
+  comparison: null
+  mac_note: null
+marlowe:
+  name: Marlowe
+  slug: marlowe
+  status: Verified
+  category: Editing and proofreading
+  tags:
+  - Editing and analysis
+  overview: An analysis tool that reads a whole manuscript and reports on plot, pacing, character and theme against published novels.
+  best_for: Authors who want fast critique before an edit
+  choose: you want a report on a finished draft in minutes, with analysis only and no generated prose
+  skip: you want a writing environment, or a human editor's judgement
+  platforms:
+  - name: Browser
+  mac_first: false
+  pricing_model: Credits (report-based)
+  price_line: From $19.95/mo (USD)
+  price_checked: '2026-10-10'
+  free_tier: Yes (Basic)
+  features: []
+  ai_chip: 'AI: analysis only'
+  rating: null
+  comparison: null
+microsoft-word:
+  name: Microsoft Word
+  slug: microsoft-word
+  status: Verified
+  category: Essays and long-form non-fiction
+  tags:
+  - General writing
+  overview: The industry-standard word processor, with Track Changes, comments and a free web version.
+  best_for: Submissions and working with editors
+  choose: your agent, editor or publisher expects Word files
+  skip: you want to organise a novel, because Word has no novel planning tools
+  platforms:
+  - name: Mac
+  - name: Browser
+  - name: Windows
+  - name: iOS
+  - name: Android
+  mac_first: false
+  pricing_model: Subscription / licence (free web version)
+  price_line: From £8.49/mo; up to £18.99/mo
+  price_checked: '2026-10-10'
+  free_tier: Yes (Word for the web is free)
+  features:
+  - Export to EPUB, PDF or DOCX
+  - Collaboration
+  - Works offline
+  ai_chip: 'AI: general assistant'
+  rating:
+    source: Capterra
+    value: 4.7
+    checked: '2026-10-02'
+  comparison: null
+  mac_note: null
+milanote:
+  name: Milanote
+  slug: milanote
+  status: Needs verify
+  category: Novel writing
+  tags:
+  - Visual planning board
+  overview: A visual board for collecting ideas, notes and references.
+  best_for: Visual brainstorming before drafting
+  choose: you plan with images, notes and character webs on a freeform board
+  skip: you want to draft chapters or export a manuscript
+  platforms:
+  - name: Browser
+  - name: iOS
+  - name: Android
+  mac_first: false
+  pricing_model: Freemium
+  price_line: Free; paid plans up to $7.99/mo (USD)
+  price_checked: null
+  free_tier: Yes (generous)
+  features:
+  - Plotting and outlining
+  - Worldbuilding
+  ai_chip: No AI
+  rating: null
+  comparison: null
+notion:
+  name: Notion
+  slug: notion
+  status: Needs verify
+  category: Essays and long-form non-fiction
+  tags:
+  - General writing
+  overview: A flexible workspace for notes, databases and wikis, with AI on higher plans.
+  best_for: Planning and research notes
+  choose: you already run your notes and projects in Notion
+  skip: you want a focused manuscript editor
+  platforms:
+  - name: Browser
+  mac_first: false
+  pricing_model: Freemium + per-seat subscription
+  price_line: Free; paid plans up to $20/mo (USD)
+  price_checked: '2026-10-10'
+  free_tier: 'Yes'
+  features:
+  - Works offline (partial)
+  ai_chip: 'AI: general assistant'
+  rating: null
+  comparison: null
+novelai:
+  name: NovelAI
+  slug: novelai
+  status: Needs verify
+  category: Novel writing
+  tags:
+  - AI writes prose
+  overview: A subscription AI storytelling service with a story generator and image generation.
+  best_for: Genre and fan-fiction writers who want AI to generate prose
+  choose: you want AI-driven story generation with a lorebook and a privacy emphasis
+  skip: you want to write every line yourself, or a manuscript-management tool
+  platforms:
+  - name: Browser
+  mac_first: false
+  pricing_model: Subscription (tiered)
+  price_line: From $10/mo (USD)
+  price_checked: '2026-10-10'
+  free_tier: Trial
+  features: []
+  ai_chip: 'AI: generative'
+  rating: null
+  comparison: null
+novelcrafter:
+  name: Novelcrafter
+  slug: novelcrafter
+  status: Verified
+  category: Novel writing
+  tags:
+  - AI-assisted
+  overview: A browser-based writing studio with a wiki-style Codex, scene beats and a choice of AI models.
+  best_for: Plotters who want AI drafting under their control
+  choose: you plan scene by scene, want a Codex that links as you write, and like choosing your own AI models
+  skip: you want a Mac app that keeps your manuscript on your own machine, or one predictable price, because AI usage is billed by your provider
+  platforms:
+  - name: Browser
+  mac_first: false
+  pricing_model: Subscription + bring-your-own AI key
+  price_line: From $4/mo (USD); up to $20/mo
+  price_checked: '2026-10-06'
+  free_tier: Trial (21 days)
+  features:
+  - Plotting and outlining
+  - Worldbuilding
+  - Export to EPUB, PDF or DOCX (partial)
+  - Collaboration (partial)
+  ai_chip: 'AI: generative'
+  rating: null
+  comparison: /compare/writing-desk-vs-novelcrafter/
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1791373378/novel_crafter_logo_mi0tud.png
+noveling:
+  name: Noveling
+  slug: noveling
+  status: Verified
+  category: Novel writing
+  tags:
+  - AI-assisted
+  overview: A free desktop novel-writing app with characters, plots and worldbuilding, and optional AI through prepaid credits.
+  best_for: Novelists who want a free editor with optional AI
+  choose: you want a free, local-first editor with pay-as-you-go AI
+  skip: you want AI-free software or independent reviews, because most claims come from its own site
+  platforms:
+  - name: Mac
+  - name: Windows
+  - name: Linux
+  - name: iOS
+  - name: Android
+    note: limited
+  mac_first: false
+  pricing_model: Free app + prepaid AI credits
+  price_line: Free
+  price_checked: '2026-10-10'
+  free_tier: Yes (free app; USD 0.50 AI credit)
+  features:
+  - Export to EPUB, PDF or DOCX
+  ai_chip: 'AI: generative'
+  rating: null
+  comparison: null
+  mac_note: null
+novelist:
+  name: Novelist
+  slug: novelist
+  status: Needs verify
+  category: Novel writing
+  tags:
+  - Mobile-first planning
+  overview: A free iPhone and iPad app for planning and drafting a novel on a story board.
+  best_for: Planning a novel on a phone or tablet
+  choose: you want a free, mobile-first planner with plot boards and EPUB export
+  skip: you want automatic cloud sync or a Mac desktop app
+  platforms:
+  - name: Browser
+  - name: iOS
+  - name: Android
+  mac_first: false
+  pricing_model: Free
+  price_line: Free
+  price_checked: '2026-10-10'
+  free_tier: Yes (free)
+  features:
+  - Plotting and outlining
+  - Worldbuilding (partial)
+  - Export to EPUB, PDF or DOCX (partial)
+  - Works offline (partial)
+  ai_chip: No AI
+  rating: null
+  comparison: null
+novelwriter:
+  name: novelWriter
+  slug: novelwriter
+  status: Needs verify
+  category: Novel writing
+  tags:
+  - Free / open source
+  overview: A free, open-source plain-text project manager for novels, using a Markdown-like format.
+  best_for: Plain-text writers who want project structure
+  choose: you like plain-text files and want notes, tags and cross-references around them
+  skip: you want a mobile app or an easy Mac install, because macOS needs a Python setup
+  platforms:
+  - name: Mac
+    note: limited
+  - name: Windows
+  - name: Linux
+  mac_first: false
+  pricing_model: Free (open source)
+  price_line: Free
+  price_checked: null
+  free_tier: 'Yes'
+  features:
+  - Markdown (partial)
+  ai_chip: No AI
+  rating: null
+  comparison: null
+novlr:
+  name: Novlr
+  slug: novlr
+  status: Needs verify
+  category: Novel writing
+  tags:
+  - Novel writing
+  overview: A calm, distraction-free drafting app with goals and revision history.
+  best_for: Drafting with minimal fuss
+  choose: you want a clean, quiet editor with writing goals and a free plan to start
+  skip: you want dedicated plotting or worldbuilding modules
+  platforms:
+  - name: Browser
+  mac_first: false
+  pricing_model: Freemium + subscription + lifetime
+  price_line: Free; paid plans up to $499 one-time (USD)
+  price_checked: '2026-10-10'
+  free_tier: Yes (free plan, 2 projects)
+  features:
+  - Export to EPUB, PDF or DOCX
+  ai_chip: null
+  rating: null
+  comparison: null
+obsidian:
+  name: Obsidian
+  slug: obsidian
+  status: Verified
+  category: Markdown and minimal
+  tags:
+  - General writing
+  overview: A free, local-first Markdown knowledge base with backlinks and a large plugin ecosystem.
+  best_for: Researchers and writers who like building their own system
+  choose: you enjoy assembling plugins, keep research across many projects, or write on Windows, Linux or mobile
+  skip: you want a ready-made novel environment, because planning and manuscripts come from plugins you add
+  platforms:
+  - name: Mac
+  - name: Windows
+  - name: Linux
+  - name: iOS
+  - name: Android
+  mac_first: false
+  pricing_model: Free + paid services
+  price_line: Free; paid plans up to $8/mo (USD)
+  price_checked: '2026-10-06'
+  free_tier: Yes (free)
+  features:
+  - Plotting and outlining (partial)
+  - Worldbuilding (partial)
+  - Markdown
+  - Export to EPUB, PDF or DOCX
+  - Works offline
+  ai_chip: No AI
+  rating: null
+  comparison: /compare/writing-desk-vs-obsidian/
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1791373378/Obsidian_cbp9ig.png
+  mac_note: null
+plotten:
+  name: Plotten
+  slug: plotten
+  status: Verified
+  category: Novel writing
+  tags:
+  - Native app (under-marketed)
+  overview: A native Apple app for novels, screenplays and other manuscripts, with a cover designer and ebook preview.
+  best_for: Apple users who want one app from plot to export
+  choose: you want broad export, including Final Draft (FDX), on iPhone, iPad and Mac
+  skip: you want a large community and track record, because it has little marketing and few ratings
+  platforms:
+  - name: Mac
+  - name: iOS
+  mac_first: true
+  pricing_model: Free + in-app purchase
+  price_line: From $1.99/mo (USD) or $17.99/yr
+  price_checked: '2026-10-10'
+  free_tier: Free download (50 words a day until subscribed)
+  features:
+  - Plotting and outlining (partial)
+  - Export to EPUB, PDF or DOCX
+  - Works offline
+  ai_chip: No AI
+  rating: null
+  comparison: null
+  mac_note: Universal Apple app (iPhone, iPad, Mac, Vision).
+plottr:
+  name: Plottr
+  slug: plottr
+  status: Verified
+  category: Novel writing
+  tags:
+  - Plotting
+  - Worldbuilding
+  overview: A visual planning tool for plotting novels and series, with timelines and a template library.
+  best_for: Plotters and series planners
+  choose: you want visual timelines and series planning alongside Scrivener or Word
+  skip: you want to write in the same app, because it is a planning tool
+  platforms:
+  - name: Mac
+  - name: Browser
+  - name: Windows
+  - name: iOS
+    note: limited
+  - name: Android
+    note: limited
+  mac_first: false
+  pricing_model: Annual subscription or lifetime licence
+  price_line: From $60/yr (USD) or $649 one-time
+  price_checked: '2026-10-10'
+  free_tier: Trial (30 days)
+  features:
+  - Plotting and outlining
+  - Worldbuilding (partial)
+  - Collaboration (partial)
+  - Works offline (partial)
+  ai_chip: No AI
+  rating: null
+  comparison: null
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1791373378/plottr_logo_rx5vkz.png
+  mac_note: null
+prowritingaid:
+  name: ProWritingAid
+  slug: prowritingaid
+  status: Verified
+  category: Editing and proofreading
+  tags:
+  - Editing and analysis
+  overview: A grammar and style checker with in-depth writing reports and integrations for Word, Google Docs and Scrivener.
+  best_for: Sentence-level editing inside your existing tools
+  choose: you write in Word or Google Docs, work on Windows, or want the widest set of style reports
+  skip: you want a place to draft and plan, because it works as a checker alongside other tools
+  platforms:
+  - name: Browser
+  - name: Windows
+  mac_first: false
+  pricing_model: Freemium + subscription / lifetime
+  price_line: Free; paid plans up to $36/mo (USD)
+  price_checked: '2026-10-06'
+  free_tier: Yes (500 words per document)
+  features:
+  - Grammar and style checks
+  ai_chip: 'AI: assistive'
+  rating: null
+  comparison: /compare/writing-desk-vs-prowritingaid/
+reedsy-studio:
+  name: Reedsy Studio
+  slug: reedsy-studio
+  status: Verified
+  category: Novel writing
+  tags:
+  - Formatting and publishing
+  overview: A free browser-based editor with typeset-quality EPUB and print PDF export, plus a marketplace for hiring editors and designers.
+  best_for: First-time authors who want free formatting
+  choose: you write on Windows or a Chromebook, want free exports with no limit, or plan to hire professionals
+  skip: you need to work offline, because it is web-only
+  platforms:
+  - name: Browser
+  mac_first: false
+  pricing_model: Free (marketplace funded)
+  price_line: Free; paid plans up to $10.99/mo (USD)
+  price_checked: '2026-10-06'
+  free_tier: 'Yes'
+  features:
+  - Plotting and outlining
+  - Export to EPUB, PDF or DOCX
+  - Collaboration
+  ai_chip: No AI
+  rating: null
+  comparison: /compare/writing-desk-vs-reedsy-studio/
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1791373378/reedsy_logo_a9gvf9.png
+scrivener:
+  name: Scrivener
+  slug: scrivener
+  status: Verified
+  category: Novel writing
+  tags:
+  - Novel writing
+  overview: The long-standing manuscript tool with a binder, corkboard, outliner and a powerful Compile export.
+  best_for: Long, research-heavy manuscripts
+  choose: you write on Windows as well as Mac, want a one-off purchase, or enjoy tuning every compile setting
+  skip: you want to start writing straight away, because setup takes time and deeper prose feedback means another tool
+  platforms:
+  - name: Mac
+  - name: Windows
+  - name: iOS
+  mac_first: false
+  pricing_model: One-time licence
+  price_line: £55 one-time per desktop platform; £88 multi-device bundle; iOS $23.99 (USD)
+  price_checked: '2026-10-06'
+  free_tier: Trial (30 days)
+  features:
+  - Plotting and outlining
+  - Worldbuilding (partial)
+  - Export to EPUB, PDF or DOCX
+  - Works offline
+  ai_chip: No AI
+  rating: null
+  comparison: /compare/writing-desk-vs-scrivener/
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1791373378/scrivener_logo_rk0oez.png
+  mac_note: Mac, Windows and iOS; one-time purchase per platform.
+squibler:
+  name: Squibler
+  slug: squibler
+  status: Needs verify
+  category: Novel writing
+  tags:
+  - AI writes prose
+  overview: An AI writing tool that generates outlines, drafts and screenplays, with a free tier.
+  best_for: Writers who want AI to do the heavy drafting
+  choose: you want AI to produce outlines and drafts, including screenplays
+  skip: you want to write the prose yourself, or a low price
+  platforms:
+  - name: Browser
+  mac_first: false
+  pricing_model: Subscription
+  price_line: From $16/mo (USD); up to $49/mo
+  price_checked: '2026-10-10'
+  free_tier: Trial
+  features: []
+  ai_chip: 'AI: generative'
+  rating: null
+  comparison: null
+sudowrite:
+  name: Sudowrite
+  slug: sudowrite
+  status: Verified
+  category: Novel writing
+  tags:
+  - AI writes prose
+  overview: A browser-based AI writing partner for fiction that drafts, rewrites and expands prose.
+  best_for: Writers who want AI to propose prose
+  choose: you want AI to draft and rewrite alongside you, or you write on Windows or Linux
+  skip: you want to write every line yourself, work offline, or avoid credit-metered pricing
+  platforms:
+  - name: Browser
+  mac_first: false
+  pricing_model: Subscription with credits
+  price_line: From $10/mo (USD); up to $59/mo
+  price_checked: '2026-10-06'
+  free_tier: Small trial (length not stated)
+  features:
+  - Plotting and outlining
+  - Worldbuilding
+  - Export to EPUB, PDF or DOCX (partial)
+  ai_chip: 'AI: generative'
+  rating: null
+  comparison: /compare/writing-desk-vs-sudowrite/
+the-novel-factory:
+  name: The Novel Factory
+  slug: the-novel-factory
+  status: Verified
+  category: Novel writing
+  tags:
+  - Novel writing
+  overview: Novel-writing software with a step-by-step roadmap, a plot manager and character, location and item sections, with no AI.
+  best_for: Beginners who want a guided process
+  choose: you want a guided roadmap from first idea to publishing, and no AI
+  skip: you want collaboration or book formatting tools
+  platforms:
+  - name: Browser
+  mac_first: false
+  pricing_model: Subscription + lifetime
+  price_line: From $8.25/mo (USD) or $649 one-time
+  price_checked: '2026-10-10'
+  free_tier: Trial (30 days)
+  features:
+  - Plotting and outlining
+  - Worldbuilding (partial)
+  ai_chip: No AI
+  rating: null
+  comparison: null
+typora:
+  name: Typora
+  slug: typora
+  status: Verified
+  category: Markdown and minimal
+  tags:
+  - General writing
+  overview: A Markdown editor that renders as you type, with themes and export to PDF and other formats.
+  best_for: Markdown writers who want a clean, live-rendered editor
+  choose: you want a one-off purchase for a minimal Markdown editor on Mac, Windows or Linux
+  skip: you want planning or editorial tools, or phone apps
+  platforms:
+  - name: Mac
+  - name: Windows
+  - name: Linux
+  mac_first: false
+  pricing_model: One-time licence
+  price_line: From $14.99 one-time (USD)
+  price_checked: '2026-10-10'
+  free_tier: Trial (15 days, up to 3 devices)
+  features:
+  - Markdown
+  - Export to EPUB, PDF or DOCX
+  ai_chip: No AI
+  rating: null
+  comparison: null
+  mac_note: Mac, Windows and Linux.
+ulysses:
+  name: Ulysses
+  slug: ulysses
+  status: Verified
+  category: Markdown and minimal
+  tags:
+  - General writing
+  overview: A Markdown writing app for Apple devices with a library, iCloud sync and writing goals.
+  best_for: Bloggers and article writers on Apple devices
+  choose: you write on iPad and iPhone as well as Mac, keep a large library of articles, or want the simplest writing surface
+  skip: you want a one-off purchase or story structure tools, because it is subscription-only
+  platforms:
+  - name: Mac
+  - name: iOS
+  mac_first: true
+  pricing_model: Subscription
+  price_line: From $5.99/mo (USD) or $39.99/yr
+  price_checked: '2026-10-06'
+  free_tier: Trial (14 days)
+  features:
+  - Markdown
+  - Export to EPUB, PDF or DOCX
+  - Grammar and style checks
+  - Works offline (partial)
+  ai_chip: 'AI: assistive'
+  rating: null
+  comparison: /compare/writing-desk-vs-ulysses/
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1791373378/ulysses_logo_ggqwvd.png
+  mac_note: Mac, iPad and iPhone with iCloud sync; subscription only.
+vellum:
+  name: Vellum
+  slug: vellum
+  status: Verified
+  category: Novel writing
+  tags:
+  - Formatting and publishing
+  overview: A Mac app that formats ebooks and print books with polished book styles.
+  best_for: Mac-based self-publishers
+  choose: you want polished ebook and print interiors from a finished manuscript
+  skip: you need Windows or an app to write in, because it formats rather than drafts
+  platforms:
+  - name: Mac
+  mac_first: true
+  pricing_model: One-time licence
+  price_line: From $199.99 one-time (USD)
+  price_checked: '2026-10-10'
+  free_tier: Free to download and preview; pay when ready to publish
+  features:
+  - Export to EPUB, PDF or DOCX
+  ai_chip: No AI
+  rating: null
+  comparison: null
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1791373378/vellum_icon_logo_pbzy9s.png
+  mac_note: Mac only, macOS 13 or newer.
+world-anvil:
+  name: World Anvil
+  slug: world-anvil
+  status: Needs verify
+  category: Novel writing
+  tags:
+  - Worldbuilding+RPG
+  overview: A worldbuilding platform with a wiki, interactive maps and timelines.
+  best_for: Worldbuilders who want a deep wiki
+  choose: you want detailed articles, maps and timelines for a large world
+  skip: you want a simple drafting app, because the learning curve is steep
+  platforms:
+  - name: Browser
+  mac_first: false
+  pricing_model: Freemium subscription
+  price_line: Free; paid plans up to $650 one-time (USD)
+  price_checked: null
+  free_tier: 'Yes'
+  features:
+  - Plotting and outlining (partial)
+  - Worldbuilding
+  - Export to EPUB, PDF or DOCX (partial)
+  ai_chip: No AI
+  rating: null
+  comparison: null
+ywriter:
+  name: yWriter
+  slug: ywriter
+  status: Verified
+  category: Novel writing
+  tags:
+  - Free / open source
+  overview: A free Windows app that breaks a novel into chapters and scenes, with character and location databases.
+  best_for: Windows writers who want free scene-based organisation
+  choose: you use Windows and want free scene-level planning and progress tracking
+  skip: you write on a Mac, where the version is a separate paid app from another developer
+  platforms:
+  - name: Mac
+    note: limited
+  - name: Windows
+  - name: Linux
+    note: limited
+  - name: iOS
+    note: limited
+  - name: Android
+    note: limited
+  mac_first: false
+  pricing_model: Free
+  price_line: Free
+  price_checked: null
+  free_tier: 'Yes'
+  features:
+  - Plotting and outlining
+  - Worldbuilding (partial)
+  - Export to EPUB, PDF or DOCX (partial)
+  - Works offline
+  ai_chip: No AI
+  rating: null
+  comparison: null
+zettlr:
+  name: Zettlr
+  slug: zettlr
+  status: Needs verify
+  category: Essays and long-form non-fiction
+  tags:
+  - Markdown
+  - Citations
+  - Free / open source
+  - Research
+  overview: A free, open-source Markdown editor with citation support and Pandoc export.
+  best_for: Academics and writers who cite sources
+  choose: you write in Markdown, use Zotero or JabRef, and want flexible export
+  skip: you want planning tools for a novel, or a phone app
+  platforms:
+  - name: Mac
+  - name: Windows
+  - name: Linux
+  mac_first: false
+  pricing_model: Free (open source)
+  price_line: Free
+  price_checked: null
+  free_tier: Yes (fully free)
+  features:
+  - Markdown
+  - Export to EPUB, PDF or DOCX
+  - Citations
+  - Grammar and style checks
+  - Works offline
+  ai_chip: null
+  rating: null
+  comparison: null
+  mac_note: Mac, Windows and Linux; built with Electron.
+zotero:
+  name: Zotero
+  slug: zotero
+  status: Needs verify
+  category: Essays and long-form non-fiction
+  tags:
+  - Research companion
+  - Citations
+  - Free / open source
+  overview: A free reference manager that collects sources and inserts citations into Word, Google Docs and LibreOffice.
+  best_for: Research and citations
+  choose: you cite sources regularly and want them managed in one library
+  skip: you want a writing app, because it organises sources rather than editing documents
+  platforms:
+  - name: Mac
+  - name: Browser
+  - name: Windows
+  - name: Linux
+  - name: iOS
+  - name: Android
+  mac_first: false
+  pricing_model: Free (open source) + paid cloud storage
+  price_line: Free; paid plans up to $120/yr (USD)
+  price_checked: null
+  free_tier: 'Yes'
+  features:
+  - Citations
+  ai_chip: null
+  rating: null
+  comparison: null
+  mac_note: null

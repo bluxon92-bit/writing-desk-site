@@ -1,0 +1,185 @@
+---
+layout: default
+---
+{% comment %}
+  Best writing apps hub. One layout for the index, the five category pages and the Mac list.
+  Data: _data/hub/apps.yml, categories.yml, settings.yml (generated from the master workbook).
+  Front matter needs: hub_key (index | novels | essays | markdown | editing | blogging | mac).
+  settings.verified_only = true hides any app whose Status is not Verified. Set it to false to show every Include = Y app.
+{% endcomment %}
+{% include hub-styles.html %}
+{% include hub-apps-styles.html %}
+
+{% assign s = site.data.hub.settings %}
+{% assign apps = site.data.hub.apps %}
+{% assign cat = site.data.hub.categories[page.hub_key] %}
+{% assign order = "novels,essays,markdown,editing,blogging" | split: "," %}
+
+{%- comment -%} Work out which apps this page shows, in display order {%- endcomment -%}
+{% assign featured = "" | split: "" %}
+{% assign listed = "" | split: "" %}
+{% if page.hub_key == 'index' %}
+  {% assign all = "" | split: "" %}
+  {% for k in order %}
+    {% assign c = site.data.hub.categories[k] %}
+    {% for slug in c.featured %}{% assign all = all | push: slug %}{% endfor %}
+    {% for slug in c.listed %}{% assign all = all | push: slug %}{% endfor %}
+  {% endfor %}
+  {% assign all = all | uniq %}
+  {% for slug in all %}
+    {% assign a = apps[slug] %}
+    {% if s.verified_only and a.status != 'Verified' %}{% continue %}{% endif %}
+    {% assign listed = listed | push: slug %}
+  {% endfor %}
+{% else %}
+  {% for slug in cat.featured %}
+    {% assign a = apps[slug] %}
+    {% if s.verified_only and a.status != 'Verified' %}{% continue %}{% endif %}
+    {% assign featured = featured | push: slug %}
+  {% endfor %}
+  {% for slug in cat.listed %}
+    {% assign a = apps[slug] %}
+    {% if s.verified_only and a.status != 'Verified' %}{% continue %}{% endif %}
+    {% assign listed = listed | push: slug %}
+  {% endfor %}
+{% endif %}
+{% assign shown = featured | concat: listed %}
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hub-hero">
+  <span class="eyebrow">{% if page.hub_key == 'index' %}Writing app guides{% elsif page.hub_key == 'mac' %}Mac list{% else %}Best writing apps{% endif %}</span>
+  <h1>{{ cat.h1 }}</h1>
+  <p>{{ cat.meta }}</p>
+  <div class="happ-chips" aria-label="Categories">
+    {%- if page.hub_key != 'index' %}<a class="happ-chip" href="{{ '/best-writing-apps/' | relative_url }}">All apps</a>{% endif -%}
+    {%- for k in order %}{% assign c = site.data.hub.categories[k] %}
+    <a class="happ-chip{% if page.hub_key == k %} active{% endif %}" href="{{ c.url | relative_url }}"{% if page.hub_key == k %} aria-current="page"{% endif %}>{{ c.page }}</a>
+    {%- endfor %}
+    <a class="happ-chip{% if page.hub_key == 'mac' %} active{% endif %}" href="{{ '/best-writing-apps-for-mac/' | relative_url }}"{% if page.hub_key == 'mac' %} aria-current="page"{% endif %}>Mac list</a>
+  </div>
+</section>
+
+<section class="hub-section" style="padding-top:32px;padding-bottom:32px;border-bottom:none">
+  <div class="happ-note">
+    <strong>Disclosure.</strong> {% if page.hub_key == 'index' %}{{ s.disclosure_hub }}{% else %}{{ s.disclosure_category }}{% endif %}
+  </div>
+  <p class="happ-updated">Last updated {{ s.last_updated | date: "%-d %B %Y" }}. Prices and verdicts reviewed quarterly.</p>
+</section>
+
+{%- if page.hub_key == 'index' %}
+<!-- ═══════════════════ HUB: CATEGORIES ═══════════════════ -->
+<section class="hub-section" id="categories">
+  <div class="hub-section-header">
+    <h2>Start with what you are writing</h2>
+    <p>Each guide ranks the apps for one job, with the same card and the same checks for every app.</p>
+  </div>
+  <div class="happ-cats">
+    {%- for k in order %}{% assign c = site.data.hub.categories[k] %}
+    <a class="happ-cat" href="{{ c.url | relative_url }}">
+      <h3>{{ c.page }}</h3>
+      <p>{{ c.for_whom }}</p>
+      <span>See the list →</span>
+    </a>
+    {%- endfor %}
+    <a class="happ-cat" href="{{ '/best-writing-apps-for-mac/' | relative_url }}">
+      <h3>Writing apps for Mac</h3>
+      <p>{{ site.data.hub.categories.mac.for_whom }}</p>
+      <span>See the Mac list →</span>
+    </a>
+  </div>
+</section>
+
+<section class="hub-section" id="how-we-chose">
+  <div class="hub-section-header">
+    <h2>How I chose these apps</h2>
+  </div>
+  <div class="hub-prose"><p>{{ s.how_we_chose }}</p></div>
+</section>
+
+<section class="hub-section" id="all-apps">
+  <div class="hub-section-header">
+    <h2>Every app, side by side</h2>
+    <p>{{ listed.size }} apps with platforms, entry price and the date each price was checked.</p>
+  </div>
+  <div class="happ-list">
+    {%- for slug in listed %}{% assign a = apps[slug] %}{% include hub-row.html app=a %}{% endfor %}
+  </div>
+</section>
+
+{%- else %}
+<!-- ═══════════════════ CATEGORY / MAC: OPINION ═══════════════════ -->
+<section class="hub-section" id="pick">
+  <div class="happ-pick">
+    <span class="happ-pick-label">My pick</span>
+    <h2>{{ cat.pick }}</h2>
+    {{ cat.why | markdownify }}
+    {%- if cat.method %}<p class="happ-method">{{ cat.method }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="hub-section" id="apps">
+  <div class="hub-section-header">
+    <h2>{% if page.hub_key == 'mac' %}Writing apps for Mac{% else %}The apps{% endif %}</h2>
+    <p>{{ cat.for_whom }}</p>
+  </div>
+  <div class="happ-grid">
+    {%- for slug in featured %}{% assign a = apps[slug] %}{% include hub-card.html app=a mac=page.mac %}{% endfor %}
+  </div>
+  {%- if listed.size > 0 %}
+  <div class="hub-section-header" style="margin-top:56px">
+    <h2>Also worth a look</h2>
+  </div>
+  <div class="happ-list">
+    {%- for slug in listed %}{% assign a = apps[slug] %}{% include hub-row.html app=a mac=page.mac %}{% endfor %}
+  </div>
+  {%- endif %}
+</section>
+
+<section class="hub-section" id="related">
+  <div class="hub-section-header"><h2>Keep exploring</h2></div>
+  <ul class="happ-related">
+    <li><a href="{{ '/best-writing-apps/' | relative_url }}">All writing apps</a></li>
+    {%- for k in order %}{% if k != page.hub_key %}{% assign c = site.data.hub.categories[k] %}
+    <li><a href="{{ c.url | relative_url }}">{{ c.h1 }}</a></li>
+    {%- endif %}{% endfor %}
+    {%- if page.hub_key != 'mac' %}<li><a href="{{ '/best-writing-apps-for-mac/' | relative_url }}">Best writing apps for Mac</a></li>{% endif %}
+    {%- if s.documents_page_live and page.hub_key != 'novels' and page.hub_key != 'editing' %}<li><a href="{{ '/features/documents/' | relative_url }}">Write anything in Writing Desk</a></li>{% endif %}
+    {%- for slug in shown %}{% assign a = apps[slug] %}{% if a.comparison and slug != 'writing-desk' %}
+    <li><a href="{{ a.comparison | relative_url }}">Writing Desk vs {{ a.name }}</a></li>
+    {%- endif %}{% endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- if page.hub_key == 'index' %}
+<section class="hub-section" id="related">
+  <div class="hub-section-header"><h2>Compare Writing Desk directly</h2></div>
+  <ul class="happ-related">
+    {%- for slug in shown %}{% assign a = apps[slug] %}{% if a.comparison and slug != 'writing-desk' %}
+    <li><a href="{{ a.comparison | relative_url }}">Writing Desk vs {{ a.name }}</a></li>
+    {%- endif %}{% endfor %}
+    {%- if s.documents_page_live %}<li><a href="{{ '/features/documents/' | relative_url }}">Write anything in Writing Desk</a></li>{% endif %}
+  </ul>
+</section>
+{%- endif %}
+
+<!-- ═══════════════════ SCHEMA: ItemList only. No ratings schema. ═══════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": {{ cat.h1 | jsonify }},
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "numberOfItems": {{ shown.size }},
+  "itemListElement": [
+    {%- for slug in shown %}{% assign a = apps[slug] %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "name": {{ a.name | jsonify }}{% if a.comparison %},
+      "url": {{ a.comparison | absolute_url | jsonify }}{% endif %}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>

@@ -1,0 +1,6 @@
+{%- assign a = include.app -%}
+<div class="happ-badges" aria-label="Platforms">
+  {%- if a.mac_first and include.mac -%}<span class="happ-badge mac-first" title="{{ site.data.hub.settings.mac_first_tooltip | escape }}">Mac-first</span>{%- endif -%}
+  {%- for p in a.platforms -%}<span class="happ-badge">{{ p.name }}{% if p.note %}<small>({{ p.note }})</small>{% endif %}</span>{%- endfor -%}
+  {%- if a.ai_chip -%}<span class="happ-badge ai{% if a.ai_chip == 'No AI' %} none{% endif %}">{{ a.ai_chip }}</span>{%- endif -%}
+</div>

@@ -1,0 +1,7 @@
+{%- comment -%} Small logo tile. Logos are images from our own Cloudinary account, never linked. Falls back to the first letter. {%- endcomment -%}
+{%- assign a = include.app -%}
+{%- if a.logo -%}
+<span class="happ-logo"><img src="{{ a.logo }}" alt="" width="30" height="30" loading="lazy"></span>
+{%- else -%}
+<span class="happ-logo is-letter" aria-hidden="true">{{ a.name | slice: 0 }}</span>
+{%- endif -%}
