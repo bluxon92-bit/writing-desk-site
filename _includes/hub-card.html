@@ -26,7 +26,7 @@
     <div class="happ-fact">
       <span class="happ-fact-label">Rating</span>
       <span class="happ-fact-value">{{ a.rating.source }} {{ a.rating.value }} / 5</span>
-      <span class="happ-fact-sub">{{ s.ratings_note | replace: '{source}', a.rating.source | replace: '{date}', a.rating.checked }}</span>
+      <span class="happ-fact-sub">{{ s.ratings_note | replace: '[source]', a.rating.source | replace: '[date]', a.rating.checked }}</span>
     </div>
     {%- else %}
     <div class="happ-fact">
