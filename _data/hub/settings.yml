@@ -1,9 +1,24 @@
 verified_only: true
 documents_page_live: false
 last_updated: '2026-10-11'
-disclosure_hub: I'm Ben Luxon, and I make Writing Desk, so it is listed first on every page here. I wrote my own novels in Google Docs, Word, Scrivener, Ulysses and Obsidian, and none of them did everything I needed, which is why I built Writing Desk. Every other app gets the same card, the same checks and a real reason to skip it.
-disclosure_category: I make Writing Desk, so it is listed first. Every other app here gets the same card and the same checks, including a reason to skip it.
-how_we_chose: An app is here if you can use it to write, plan or edit a book, essay or article. I leave out SEO tools and anything I could not verify. Platforms, prices and AI stance come from each app's own pages, and every price shows the date I checked it. Ratings appear only when a first-party store publishes one, with the source named, and they are never blended. I review prices and verdicts every quarter, and each page shows when it was last updated.
+disclosure_hub: |-
+  I have used numerous writing software over the years for my writing, Google Docs, Word, Scrivener, Ulysses, Obsidian, and more. But when it came to finishing my novels, none of them did everything I needed or worked the way I do. Which is why I built Writing Desk.
+
+  Some writing apps are better at some things than others and whilst I obviously think Writing Desk is the best of the best, I have tried to be impartial in my assessments.
+disclosure_category: |-
+  I built Writing Desk because I was frustrated with apps that were too complicated, too busy, or without the features I needed entirely. I built it for novels, but now use it for everything.
+
+  That said, some writing apps are better at certain jobs than others, and whilst I obviously think Writing Desk is the best of the best, I have tried to be impartial in my assessments.
+how_we_chose: |-
+  A good writing app gets out of your way and still holds your whole project together. For a novel that means planning and structure and all your notes and research at hand when you need them, it also means a calm place to draft, and a clean route out to a finished manuscript. For an essay or an article it matters less, and a simple, fast editor (maybe with tabs and research) may be all you need.
+
+  Writing apps differ because not all writing serves the same purpose and not all people have the same processes.
+
+  The apps we've curated for our best writing app lists have been selected because each one does one or more of the following, plotting, editing, writing or formatting a book, essay, or article. This is not a complete list, but I have tried to be comprehensive.
+
+  For every app I checked four things, what kind of writing it is best for, which platforms it runs on, what it costs today, and where it stands on AI.
+
+  I recommend testing a couple of the apps from this list, most offer free trials and/or free tiers including Writing Desk, and seeing which one works the way you do. 
 ratings_note: Rating from [source], checked [date]. Not combined with other scores.
 price_fallback: Check site for pricing
 mac_first_tooltip: Built for Apple platforms and not available on Windows, Linux or Android.

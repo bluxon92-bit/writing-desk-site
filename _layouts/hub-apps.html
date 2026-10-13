@@ -61,7 +61,8 @@ layout: default
 
 <section class="hub-section" style="padding-top:32px;padding-bottom:32px;border-bottom:none">
   <div class="happ-note">
-    <strong>Disclosure.</strong> {% if page.hub_key == 'index' %}{{ s.disclosure_hub }}{% else %}{{ s.disclosure_category }}{% endif %}
+       <strong>Disclosure.</strong>
+   {% if page.hub_key == 'index' %}{{ s.disclosure_hub | markdownify }}{% else %}{{ s.disclosure_category | markdownify }}{% endif %}
   </div>
   <p class="happ-updated">Last updated {{ s.last_updated | date: "%-d %B %Y" }}. Prices and verdicts reviewed quarterly.</p>
 </section>
@@ -93,7 +94,7 @@ layout: default
   <div class="hub-section-header">
     <h2>How I chose these apps</h2>
   </div>
-  <div class="hub-prose"><p>{{ s.how_we_chose }}</p></div>
+  <div class="hub-prose">{{ s.how_we_chose | markdownify }}</div>
 </section>
 
 <section class="hub-section" id="all-apps">
