@@ -180,7 +180,6 @@ A plot diagram helps you plan a story's shape and diagnose a draft. Plot your sc
 
 **Related reading:**
 
-- [Story Structure: The Ultimate Guide for Fiction Writers](/blog/story-structure/)
 - [Story Structure Hub](/hubs/story-structure/)
 - [Freytag's Pyramid: The Five-Act Structure Explained for Novelists](/blog/5-act-structure/)
 - [Three-Act Structure: How to Use It to Plan Your Novel](/blog/three-act-structure/)
