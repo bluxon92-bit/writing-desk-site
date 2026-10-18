@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rising Action and Falling Action Explained for Novelists"
-date: 2026-10-18
+date: 2026-10-17
 category: Structure
 type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1792328456/rising_and_falling_action_1_erg9zf.jpg"
