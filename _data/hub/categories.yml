@@ -68,8 +68,6 @@ novels:
   - bibisco
   - novelwriter
   - ywriter
-  - novelai
-  - squibler
 essays:
   page: Essays and long-form non-fiction
   url: /best-writing-apps/essays/
@@ -121,7 +119,7 @@ markdown:
   meta: 'Markdown and minimal writing apps compared: platforms, prices, export options and who each one suits.'
   for_whom: Writers who want plain-text files, a quiet editor and files they own.
   pick: Writing Desk (Mac, if you also write long projects); iA Writer for the leanest option
-    why: |-
+  why: |-
     If Markdown is all you need, iA Writer is the leanest choice. My pick on a Mac is Writing Desk, which I built, so weigh that. Your .md files open, edit and autosave back to Markdown, and the same app handles Word files and full novel projects.
  
     * .md files that open, edit and autosave as Markdown
@@ -248,112 +246,6 @@ mac:
     * An app that also runs on Windows: Scrivener or Atticus
     * Free and cross-platform: Obsidian or Zettlr
     * What comes with the machine: Pages
-  method: Each app is checked against its own pages for platforms, price and AI stance, and prices carry the date I checked them. I have used Google Docs, Word, Scrivener, Ulysses and Obsidian for my own writing; the rest are assessed from vendor pages and published reviews.
-  runner_ups:
-  - Ulysses
-  - Scrivener
-  - iA Writer
-  primary_keyword: best writing software for mac
-  featured:
-  - writing-desk
-  - apple-pages
-  - bear
-  - devonthink
-  - plotten
-  - ulysses
-  - vellum
-  - atticus
-  - dabble
-  - ia-writer
-  - obsidian
-  - scrivener
-  listed:
-  - bibisco
-  - campfire
-  - libreoffice-writer
-  - manuskript
-  - microsoft-word
-  - noveling
-  - plottr
-  - typora
-  - zettlr
-  - zotero
-  runner_ups:
-  - iA Writer
-  - Ulysses
-  - Obsidian
-  primary_keyword: null
-  featured:
-  - writing-desk
-  - ia-writer
-  - ulysses
-  - bear
-  - typora
-  - obsidian
-  - zettlr
-  listed:
-  - novelwriter
-  - notion
-editing:
-  page: Editing and proofreading
-  url: /best-writing-apps/editing/
-  h1: Best Editing and Proofreading Software for Writers
-  title: Best Editing and Proofreading Software for Writers (2026)
-  meta: Grammar checkers, style tools and manuscript analysis compared, with prices, platforms and how each one uses AI.
-  for_whom: Writers revising a draft who want feedback on grammar, style, pacing and structure.
-  pick: ProWritingAid for sentence-level reports; Writing Desk for editing built into the writing app
-  why: Editing tools split into two kinds. Sentence-level checkers such as ProWritingAid, Grammarly and LanguageTool work inside the tools you already use, and ProWritingAid has the widest set of style reports. Manuscript analysers such as AutoCrit, Fictionary StoryTeller and Marlowe look at structure, pacing and character across a whole draft. My pick depends on where you write. If you are on Windows or live in Word, ProWritingAid. If you are on a Mac and want editing in the app where you draft, Writing Desk puts a Proofreader, Prose Analysis and editorial AI review beside the manuscript, and every suggestion is yours to accept or reject.
-  method: Each app is checked against its own pages for platforms, price and AI stance, and prices carry the date I checked them. I have used Google Docs, Word, Scrivener, Ulysses and Obsidian for my own writing; the rest are assessed from vendor pages and published reviews.
-  runner_ups:
-  - ProWritingAid
-  - AutoCrit
-  - Fictionary StoryTeller
-  primary_keyword: best book editing software
-  featured:
-  - writing-desk
-  - prowritingaid
-  - autocrit
-  - grammarly
-  - hemingway-editor
-  - languagetool
-  - fictionary-storyteller
-  - marlowe
-  listed: []
-blogging:
-  page: Blogging and articles
-  url: /best-writing-apps/blogging/
-  h1: Best Writing Apps for Blogging and Articles
-  title: Best Writing Apps for Blogging and Articles (2026)
-  meta: Writing and editing apps for blog posts, newsletters and articles, compared on platforms, price and publishing options.
-  for_whom: Bloggers and article writers who publish regularly from the app they write in.
-  pick: Ulysses (Apple devices); Writing Desk for Markdown plus longer projects
-  why: 'This category is thin, and I would rather say so than pad it. Ulysses is the app I would point a blogger to on Apple devices: a Markdown library that syncs across Mac, iPad and iPhone, with publishing built in. iA Writer and Bear are lighter and quicker; Notion and Google Docs suit teams. Writing Desk handles Markdown documents on a Mac, and it earns a place if you also write longer projects or want editorial feedback on a draft before it goes live.'
-  method: Each app is checked against its own pages for platforms, price and AI stance, and prices carry the date I checked them. I have used Google Docs, Word, Scrivener, Ulysses and Obsidian for my own writing; the rest are assessed from vendor pages and published reviews.
-  runner_ups:
-  - iA Writer
-  - Bear
-  - Notion
-  primary_keyword: null
-  featured:
-  - writing-desk
-  - ulysses
-  - ia-writer
-  - bear
-  - typora
-  - notion
-  - google-docs
-  - microsoft-word
-  listed:
-  - apple-pages
-mac:
-  page: Mac list
-  url: /best-writing-apps-for-mac/
-  h1: Best Writing Apps for Mac
-  title: Best Writing Apps for Mac in 2026
-  meta: Writing apps you can download and run on a Mac, compared on price, features and how each is built for Apple devices.
-  for_whom: Writers on a Mac who want a downloadable app built for Apple devices.
-  pick: Writing Desk
-  why: Writing Desk is built for the Mac, so I am biased, but the list here is wide on purpose. Ulysses and Bear are the Apple-first Markdown options, iA Writer is the minimal one, and Vellum is the Mac-only book formatter. Scrivener and Atticus run on Mac and Windows, Obsidian and Zettlr are free and cross-platform, and Pages comes with the machine. Mac-first means built for Apple platforms; the cards show where an app also runs elsewhere.
   method: Each app is checked against its own pages for platforms, price and AI stance, and prices carry the date I checked them. I have used Google Docs, Word, Scrivener, Ulysses and Obsidian for my own writing; the rest are assessed from vendor pages and published reviews.
   runner_ups:
   - Ulysses
