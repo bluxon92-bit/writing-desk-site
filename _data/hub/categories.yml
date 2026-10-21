@@ -91,7 +91,7 @@ novels:
 essays:
   page: Essays and long-form non-fiction
   url: /best-writing-apps/essays/
-  wd_link_url: /blog/write-anything-in-writing-desk/
+  wd_link_url: /features/software-for-writers/
   wd_link_label: "Write anything in Writing Desk"
   inline_label: "the best apps for essays and long-form non-fiction"
   go_deeper:
@@ -142,7 +142,7 @@ essays:
 markdown:
   page: Markdown and minimal
   url: /best-writing-apps/markdown/
-  wd_link_url: /blog/write-anything-in-writing-desk/
+  wd_link_url: /features/software-for-writers/
   wd_link_label: "Write anything in Writing Desk"
   inline_label: "the best Markdown writing apps"
   go_deeper:
@@ -237,7 +237,7 @@ editing:
 blogging:
   page: Blogging and articles
   url: /best-writing-apps/blogging/
-  wd_link_url: /blog/write-anything-in-writing-desk/
+  wd_link_url: /features/software-for-writers/
   wd_link_label: "Write anything in Writing Desk"
   inline_label: "the best writing apps for blogging and articles"
   go_deeper:

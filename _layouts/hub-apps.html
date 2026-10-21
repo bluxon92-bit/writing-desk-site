@@ -144,7 +144,7 @@ layout: default
     <li><a href="{{ c.url | relative_url }}">{{ c.h1 }}</a></li>
     {%- endif %}{% endfor %}
     {%- if page.hub_key != 'mac' %}<li><a href="{{ '/best-writing-apps-for-mac/' | relative_url }}">Best writing apps for Mac</a></li>{% endif %}
-    {%- if s.documents_page_live and page.hub_key != 'novels' and page.hub_key != 'editing' %}<li><a href="{{ '/features/documents/' | relative_url }}">Write anything in Writing Desk</a></li>{% endif %}
+    {%- if s.documents_page_live and page.hub_key != 'novels' and page.hub_key != 'editing' %}<li><a href="{{ '/features/software-for-writers/' | relative_url }}">Write anything in Writing Desk</a></li>{% endif %}
     {%- for slug in shown %}{% assign a = apps[slug] %}{% if a.comparison and slug != 'writing-desk' %}
     <li><a href="{{ a.comparison | relative_url }}">Writing Desk vs {{ a.name }}</a></li>
     {%- endif %}{% endfor %}
@@ -162,7 +162,7 @@ layout: default
     {%- for slug in shown %}{% assign a = apps[slug] %}{% if a.comparison and slug != 'writing-desk' %}
     <li><a href="{{ a.comparison | relative_url }}">Writing Desk vs {{ a.name }}</a></li>
     {%- endif %}{% endfor %}
-    {%- if s.documents_page_live %}<li><a href="{{ '/features/documents/' | relative_url }}">Write anything in Writing Desk</a></li>{% endif %}
+    {%- if s.documents_page_live %}<li><a href="{{ '/features/software-for-writers/' | relative_url }}">Write anything in Writing Desk</a></li>{% endif %}
     {%- for l in cat.go_deeper %}
     <li><a href="{{ l.url | relative_url }}">{{ l.title }}</a></li>
     {%- endfor %}
