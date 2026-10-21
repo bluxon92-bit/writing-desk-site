@@ -81,6 +81,8 @@ related:
   url: "/features/book-formatting-tool/"
 - title: "How to self-publish a book"
   url: "/hubs/self-publishing/"
+- title: "Best novel writing software"
+  url: "/best-writing-apps/novels/"
 cta_text: "Start a project free and see whether the planning tools suit your book."
 ---
 Yes. Export .docx from Writing Desk and import it into Reedsy Studio if you want its marketplace tools.

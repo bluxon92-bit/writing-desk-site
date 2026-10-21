@@ -1,0 +1,7 @@
+{%- comment -%}
+  One-line pointer to the best-writing-apps guides.
+  Usage: include bwa-link.html keys="novels,mac" lead="Optional lead-in?" inline=true extra_url="/hubs/characters/" extra_text="character writing guides"
+  Keys are hub keys from _data/hub/categories.yml (index, novels, essays, markdown, editing, blogging, mac).
+{%- endcomment -%}
+{%- assign bwa_keys = include.keys | split: "," -%}
+<p class="bwa-strip{% if include.inline %} bwa-strip--inline{% endif %}"><strong>{% if include.lead %}{{ include.lead }}{% else %}Choosing writing software?{% endif %}</strong> See {% for k in bwa_keys %}{% assign bwa_c = site.data.hub.categories[k] %}{% if forloop.first == false %}{% if forloop.last %} and {% else %}, {% endif %}{% endif %}<a href="{{ bwa_c.url | relative_url }}">{{ bwa_c.inline_label }}</a>{% endfor %}.{% if include.extra_url %} Or browse the <a href="{{ include.extra_url | relative_url }}">{{ include.extra_text }}</a>.{% endif %}</p>

@@ -148,6 +148,9 @@ layout: default
     {%- for slug in shown %}{% assign a = apps[slug] %}{% if a.comparison and slug != 'writing-desk' %}
     <li><a href="{{ a.comparison | relative_url }}">Writing Desk vs {{ a.name }}</a></li>
     {%- endif %}{% endfor %}
+    {%- for l in cat.go_deeper %}
+    <li><a href="{{ l.url | relative_url }}">{{ l.title }}</a></li>
+    {%- endfor %}
   </ul>
 </section>
 {%- endif %}
@@ -160,6 +163,9 @@ layout: default
     <li><a href="{{ a.comparison | relative_url }}">Writing Desk vs {{ a.name }}</a></li>
     {%- endif %}{% endfor %}
     {%- if s.documents_page_live %}<li><a href="{{ '/features/documents/' | relative_url }}">Write anything in Writing Desk</a></li>{% endif %}
+    {%- for l in cat.go_deeper %}
+    <li><a href="{{ l.url | relative_url }}">{{ l.title }}</a></li>
+    {%- endfor %}
   </ul>
 </section>
 {%- endif %}

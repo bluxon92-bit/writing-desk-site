@@ -85,6 +85,8 @@ layout: default
     <div class="post-body-inner">
       <div class="post-content">
         {{ content }}
+        {%- assign bwa_keys = site.data.interlinks.posts[page.slug] -%}
+        {%- if bwa_keys %}{% assign bwa_joined = bwa_keys | join: "," %}{% include bwa-link.html keys=bwa_joined inline=true %}{% endif %}
       </div>
 
       <aside class="post-sidebar">

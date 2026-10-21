@@ -77,6 +77,8 @@ related:
   url: "/blog/write-anything-in-writing-desk/"
 - title: "Plot your novel"
   url: "/features/plot-your-novel/"
+- title: "Best Markdown writing apps"
+  url: "/best-writing-apps/markdown/"
 cta_text: "Link a folder of your notes and start a project beside them."
 ---
 Yes. Many writers keep research and worldbuilding notes in Obsidian and write the manuscript in Writing Desk. Both work with plain Markdown files, so notes can move between them.

@@ -94,6 +94,8 @@ related:
   url: "/help/projects-organization/turn-a-document-into-a-project/"
 - title: "Our approach to AI"
   url: "/our-philosophy/"
+- title: "Best novel writing software"
+  url: "/best-writing-apps/novels/"
 cta_text: "Bring a chapter or a whole draft and see how the story bible, plot tools and editor feel in your own pages."
 ---
 Yes. Both export .docx and Markdown, so a manuscript can move between them. Writing Desk opens .docx and .md files as they are, so an export from Novelcrafter is ready to carry on writing.

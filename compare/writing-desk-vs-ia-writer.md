@@ -77,6 +77,10 @@ related:
   url: "/features/distraction-free-writing-app/"
 - title: "Write anything in Writing Desk"
   url: "/blog/write-anything-in-writing-desk/"
+- title: "Best Markdown writing apps"
+  url: "/best-writing-apps/markdown/"
+- title: "Best apps for essays and long-form non-fiction"
+  url: "/best-writing-apps/essays/"
 cta_text: "Open one of your Markdown drafts and try the editing tools on it."
 ---
 Yes. Both read and write Markdown, so files can move between them without conversion.

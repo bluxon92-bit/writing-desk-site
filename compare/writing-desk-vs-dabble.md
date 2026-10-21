@@ -77,6 +77,8 @@ related:
   url: "/features/plot-your-novel/"
 - title: "Writing tracker app"
   url: "/features/writing-tracker-app/"
+- title: "Best novel writing software"
+  url: "/best-writing-apps/novels/"
 cta_text: "Plot a chapter in the Story Plotter and compare it with your grid."
 ---
 Both export .docx, so a draft can move between them.

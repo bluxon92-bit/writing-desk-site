@@ -111,6 +111,7 @@ autocrit:
   ai_chip: 'AI: analysis only'
   rating: null
   comparison: null
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1792597672/autocrit_e0cqfz.png
 bear:
   name: Bear
   slug: bear
@@ -166,6 +167,7 @@ bibisco:
   ai_chip: No AI
   rating: null
   comparison: null
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1792597672/bibisco_app_vtfq85.png
   mac_note: null
 campfire:
   name: Campfire
@@ -256,6 +258,7 @@ devonthink:
   ai_chip: 'AI: general assistant'
   rating: null
   comparison: null
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1792597672/devonthink_mgvyqd.png
   mac_note: Mac and iOS; requires macOS Ventura or later.
 ellipsus:
   name: Ellipsus
@@ -489,6 +492,7 @@ livingwriter:
   ai_chip: 'AI: assistive'
   rating: null
   comparison: null
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1792597672/livingwriter_ejayta.png
 manuskript:
   name: Manuskript
   slug: manuskript
@@ -538,6 +542,7 @@ marlowe:
   ai_chip: 'AI: analysis only'
   rating: null
   comparison: null
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1792597672/marlowe-ai_authors_cxiv5n.png
 microsoft-word:
   name: Microsoft Word
   slug: microsoft-word
@@ -570,6 +575,7 @@ microsoft-word:
     value: 4.7
     checked: '2026-10-02'
   comparison: null
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1792597672/microsoft_word_f7o8co.png
   mac_note: null
 milanote:
   name: Milanote
@@ -697,6 +703,7 @@ noveling:
   ai_chip: 'AI: generative'
   rating: null
   comparison: null
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1792597672/noveling_pgpwsj.png
   mac_note: null
 novelist:
   name: Novelist
@@ -834,6 +841,7 @@ plotten:
   ai_chip: No AI
   rating: null
   comparison: null
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1792597672/plotten_app_nkwiz8.png
   mac_note: Universal Apple app (iPhone, iPad, Mac, Vision).
 plottr:
   name: Plottr
@@ -894,6 +902,7 @@ prowritingaid:
   ai_chip: 'AI: assistive'
   rating: null
   comparison: /compare/writing-desk-vs-prowritingaid/
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1792597672/prowriting_aid_awzpgn.png
 reedsy-studio:
   name: Reedsy Studio
   slug: reedsy-studio
@@ -997,6 +1006,7 @@ sudowrite:
   ai_chip: 'AI: generative'
   rating: null
   comparison: /compare/writing-desk-vs-sudowrite/
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1792597673/sudowrite_qav9yq.png
 the-novel-factory:
   name: The Novel Factory
   slug: the-novel-factory
@@ -1047,6 +1057,7 @@ typora:
   ai_chip: No AI
   rating: null
   comparison: null
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1792597673/typora_ljownn.png
   mac_note: Mac, Windows and Linux.
 ulysses:
   name: Ulysses
@@ -1161,6 +1172,7 @@ ywriter:
   ai_chip: No AI
   rating: null
   comparison: null
+  logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1792597673/y_writer_lpb5av.png
 zettlr:
   name: Zettlr
   slug: zettlr

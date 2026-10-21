@@ -78,6 +78,8 @@ related:
   url: "/features/novel-editing-software/"
 - title: "Self-editing guide"
   url: "/hubs/self-editing/"
+- title: "Best editing and proofreading software"
+  url: "/best-writing-apps/editing/"
 cta_text: "Run Prose Analysis on a finished chapter and compare notes."
 ---
 Yes. Run ProWritingAid on an exported .docx if you want its reports as a second opinion.

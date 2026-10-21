@@ -103,6 +103,10 @@ related:
   url: "/features/book-formatting-tool/"
 - title: "Bring in existing writing"
   url: "/help/getting-started/bring-in-existing-writing/"
+- title: "Best novel writing software"
+  url: "/best-writing-apps/novels/"
+- title: "Best editing and proofreading software"
+  url: "/best-writing-apps/editing/"
 cta_text: "Bring a chapter or a whole draft and see how the editor, planning tools and proofreading feel in your own pages."
 ---
 Yes. Draft in whichever tool suits you, export .docx, and use Writing Desk for structure checks and editorial review. Writing Desk opens .docx files as they are.

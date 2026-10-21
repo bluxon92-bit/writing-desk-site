@@ -77,6 +77,14 @@ related:
   url: "/blog/write-anything-in-writing-desk/"
 - title: "Review on your phone"
   url: "/help/export-formatter/review-on-your-phone/"
+- title: "Best Markdown writing apps"
+  url: "/best-writing-apps/markdown/"
+- title: "Best apps for essays and long-form non-fiction"
+  url: "/best-writing-apps/essays/"
+- title: "Best writing apps for blogging and articles"
+  url: "/best-writing-apps/blogging/"
+- title: "Best writing apps for Mac"
+  url: "/best-writing-apps-for-mac/"
 cta_text: "Open a Markdown file from your own library and see how it feels."
 ---
 Yes. Both work with Markdown, so a draft from Ulysses can be exported to .md and opened in Writing Desk when it needs planning or editorial tools.

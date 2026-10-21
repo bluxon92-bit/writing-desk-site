@@ -77,6 +77,8 @@ related:
   url: "/features/book-formatting-tool/"
 - title: "Exporting from Writing Desk"
   url: "/help/export-formatter/guide/exporting/"
+- title: "Best novel writing software"
+  url: "/best-writing-apps/novels/"
 cta_text: "Export a chapter through Formatter and see how it looks on the page."
 ---
 Yes. Export your manuscript as .docx from Writing Desk and import it to Atticus if you need its templates.

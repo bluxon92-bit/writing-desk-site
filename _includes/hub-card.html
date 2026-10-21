@@ -45,6 +45,20 @@
     <div class="no"><h4>Skip it if</h4><p>{{ a.skip }}</p></div>
   </div>
 
+  {%- if a.slug == 'writing-desk' %}
+  {%- assign wd_cat = site.data.hub.categories[page.hub_key] %}
+  <div class="happ-cta">
+    <a href="{{ '/download/' | relative_url }}" class="btn btn-primary" data-cta="bwa-{{ page.hub_key }}-download">
+      <svg viewBox="0 0 15 15" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7.5 2v9M4 8l3.5 3.5L11 8M2 13h11"/></svg>
+      Download Writing Desk free
+    </a>
+    {%- if wd_cat.wd_link_url %}
+    <a href="{{ wd_cat.wd_link_url | relative_url }}" class="happ-cta-link" data-cta="bwa-{{ page.hub_key }}-feature">{{ wd_cat.wd_link_label }} →</a>
+    {%- endif %}
+    <p class="happ-cta-note">Free plan, with 30 days of Premium included. Mac only.</p>
+  </div>
+  {%- endif %}
+
   {%- if a.comparison %}
   <p class="happ-links"><a href="{{ a.comparison | relative_url }}">Read the full comparison with Writing Desk →</a></p>
   {%- endif %}

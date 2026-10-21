@@ -1,6 +1,16 @@
 index:
   page: Hub index
   url: /best-writing-apps/
+  wd_link_url: /features/
+  wd_link_label: "Explore every Writing Desk feature"
+  inline_label: "our guide to the best writing apps"
+  go_deeper:
+  - title: "How to write a novel"
+    url: /hubs/how-to-write-a-novel/
+  - title: "Self-editing guides"
+    url: /hubs/self-editing/
+  - title: "Self-publishing guides"
+    url: /hubs/self-publishing/
   h1: Best Writing Apps
   title: 'Best Writing Apps in 2026: Prices, Platforms and Verdicts'
   meta: A writer's guide to writing apps for novels, essays, blogging and editing, with platforms, prices and honest verdicts.
@@ -14,6 +24,16 @@ index:
 novels:
   page: Novel writing
   url: /best-writing-apps/novels/
+  wd_link_url: /features/plot-your-novel/
+  wd_link_label: "See how Writing Desk plots a novel"
+  inline_label: "the best novel writing software"
+  go_deeper:
+  - title: "Story structure guides"
+    url: /hubs/story-structure/
+  - title: "How to write a novel outline"
+    url: /blog/how-to-write-a-novel-outline/
+  - title: "Plot your novel with the Story Plotter"
+    url: /features/plot-your-novel/
   h1: Best Novel Writing Software
   title: Best Novel Writing Software in 2026
   meta: Planning, drafting, formatting and AI-assisted tools for novelists, compared on platforms, price and who each one suits.
@@ -71,6 +91,14 @@ novels:
 essays:
   page: Essays and long-form non-fiction
   url: /best-writing-apps/essays/
+  wd_link_url: /blog/write-anything-in-writing-desk/
+  wd_link_label: "Write anything in Writing Desk"
+  inline_label: "the best apps for essays and long-form non-fiction"
+  go_deeper:
+  - title: "Editorial feedback on non-fiction"
+    url: /help/editorial-ai/non-fiction-feedback/
+  - title: "Edit Word files in Writing Desk"
+    url: /help/writing-editing/edit-word-files/
   h1: Best Apps for Writing Essays and Long-Form Non-Fiction
   title: Best Apps for Essays and Long-Form Non-Fiction (2026)
   meta: Writing apps for essays, research-heavy articles and non-fiction, with citation tools, research companions, prices and platforms.
@@ -114,6 +142,14 @@ essays:
 markdown:
   page: Markdown and minimal
   url: /best-writing-apps/markdown/
+  wd_link_url: /blog/write-anything-in-writing-desk/
+  wd_link_label: "Write anything in Writing Desk"
+  inline_label: "the best Markdown writing apps"
+  go_deeper:
+  - title: "Format as you type"
+    url: /help/writing-editing/format-as-you-type/
+  - title: "Keyboard shortcuts"
+    url: /help/writing-editing/keyboard-shortcuts/
   h1: Best Markdown Writing Apps
   title: Best Markdown Writing Apps in 2026
   meta: 'Markdown and minimal writing apps compared: platforms, prices, export options and who each one suits.'
@@ -152,6 +188,18 @@ markdown:
 editing:
   page: Editing and proofreading
   url: /best-writing-apps/editing/
+  wd_link_url: /features/novel-editing-software/
+  wd_link_label: "See Writing Desk's editing tools"
+  inline_label: "the best editing and proofreading software"
+  go_deeper:
+  - title: "Self-editing guides"
+    url: /hubs/self-editing/
+  - title: "How to self-edit a novel"
+    url: /blog/self-edit-novel/
+  - title: "Free self-editing checklist"
+    url: /downloads/checklists/self-editing-checklist/
+  - title: "Edit Word files in Writing Desk"
+    url: /help/writing-editing/edit-word-files/
   h1: Best Editing and Proofreading Software for Writers
   title: Best Editing and Proofreading Software for Writers (2026)
   meta: Grammar checkers, style tools and manuscript analysis compared, with prices, platforms and how each one uses AI.
@@ -189,6 +237,12 @@ editing:
 blogging:
   page: Blogging and articles
   url: /best-writing-apps/blogging/
+  wd_link_url: /blog/write-anything-in-writing-desk/
+  wd_link_label: "Write anything in Writing Desk"
+  inline_label: "the best writing apps for blogging and articles"
+  go_deeper:
+  - title: "Format as you type"
+    url: /help/writing-editing/format-as-you-type/
   h1: Best Writing Apps for Blogging and Articles
   title: Best Writing Apps for Blogging and Articles (2026)
   meta: Writing and editing apps for blog posts, newsletters and articles, compared on platforms, price and publishing options.
@@ -225,6 +279,12 @@ blogging:
 mac:
   page: Mac list
   url: /best-writing-apps-for-mac/
+  wd_link_url: /features/
+  wd_link_label: "Explore every Writing Desk feature"
+  inline_label: "the best writing apps for Mac"
+  go_deeper:
+  - title: "A distraction-free writing app for Mac"
+    url: /features/distraction-free-writing-app/
   h1: Best Writing Apps for Mac
   title: Best Writing Apps for Mac in 2026
   meta: Writing apps you can download and run on a Mac, compared on price, features and how each is built for Apple devices.

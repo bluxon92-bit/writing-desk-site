@@ -78,6 +78,10 @@ related:
   url: "/features/plot-your-novel/"
 - title: "Book formatting tool"
   url: "/features/book-formatting-tool/"
+- title: "Best novel writing software"
+  url: "/best-writing-apps/novels/"
+- title: "Best writing apps for Mac"
+  url: "/best-writing-apps-for-mac/"
 cta_text: "Bring a chapter or a whole draft and see how the planning and editing tools feel in your own pages."
 ---
 Yes. Compile your Scrivener project to .docx and open it in Writing Desk. It opens and saves as a .docx, and you can convert it to a .wddoc project any time to use comments, the Resource Hub, Pad, the Story Plotter and chapter variants. Writing Desk exports .docx too, so the draft can go back to Scrivener.
