@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Types of Conflict in Fiction (With Examples)"
-date: 2026-10-26
+date: 2026-10-25
 category: Craft, Character
 type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1793010308/chess_pieces_-_conflict_in_writing_1_h03gdj.jpg"
