@@ -9,8 +9,8 @@
 //    sets a cookie so the choice sticks on future visits (handles VPNs,
 //    UK expats browsing from abroad, etc).
 //
-// 2. /download — reweights the hero and default tab toward Mac or
-//    Formatter depending on the visitor's OS, read from User-Agent at
+// 2. /download — reweights the hero and default tab toward Mac, iPhone/
+//    iPad or Formatter depending on the visitor's OS, read from User-Agent at
 //    the edge rather than client-side JS, for the same "no flash"
 //    reason as the currency rewrite above. Both hero variants and both
 //    tab panels are always present in the HTML; this only decides
@@ -100,17 +100,20 @@ function isDownloadPage(pathname) {
   );
 }
 
-// Simple substring check on User-Agent — every desktop macOS browser
-// (Safari, Chrome, Firefox, Edge) includes "Macintosh" in its UA
-// string. Not trying to distinguish iPad/iPhone here since Safari on
-// iPadOS can report as "Macintosh" too depending on settings; that's
-// fine, an iPad visitor seeing the Mac-download hero and choosing
-// "Not on a Mac? See your options" one click away is a minor cost,
-// far better than a false negative sending a real Mac user to
-// Formatter first.
-function isMacUserAgent(request) {
+// Platform from User-Agent: 'ios', 'mac' or 'other'.
+//  - iPhone, iPod and older iPad UAs contain "iPhone" / "iPod" / "iPad".
+//  - Desktop macOS browsers contain "Macintosh". iPadOS 13+ Safari
+//    asks for the desktop site by default and also reports "Macintosh",
+//    so those iPads land on the Mac hero. The Mac hero carries an
+//    "Also on iPhone and iPad" App Store link and the iPhone & iPad tab
+//    sits next to the Mac tab, so that miss costs one click. It is far
+//    better than sending a real Mac user to the phone pitch.
+//  - Everything else (Windows, Linux, Android, ChromeOS) gets Formatter.
+function detectPlatform(request) {
   const ua = request.headers.get('User-Agent') || '';
-  return /Macintosh/i.test(ua);
+  if (/iPhone|iPod|iPad/i.test(ua)) return 'ios';
+  if (/Macintosh/i.test(ua)) return 'mac';
+  return 'other';
 }
 
 // SEO: writingdeskapp.com (apex) and www.writingdeskapp.com were both
@@ -219,25 +222,27 @@ async function handleDownloadPage(context, url) {
     return response;
   }
 
-  // Default assumption is Mac — most visitors to a page called
-  // /download who don't announce another OS are still more likely to
-  // be on Safari/Chrome/Firefox on a Mac than not, and it's the
-  // cheaper mistake: a wrongly-Mac'd non-Mac visitor sees one extra
-  // click ("Not on a Mac?"), while a wrongly-non-Mac'd real Mac
-  // visitor would otherwise land on a Formatter pitch by default.
-  const isMac = isMacUserAgent(context.request);
-  if (isMac) {
+  // Default assumption is Mac: the cheaper mistake. A wrongly-Mac'd
+  // visitor sees one extra click, while a wrongly-non-Mac'd real Mac
+  // visitor would land on a phone or browser pitch by default.
+  const platform = detectPlatform(context.request);
+  if (platform === 'mac') {
     return response;
   }
+
+  // Which hero and tab panel start visible. Both heroes and all three
+  // panels are always in the HTML; this only decides which is shown.
+  const active = platform === 'ios' ? 'ios' : 'formatter';
+  const hero = platform === 'ios' ? '#dl-hero-ios' : '#dl-hero-other';
 
   try {
     const rewritten = new HTMLRewriter()
       .on('#dl-hero-mac', new HideElement())
-      .on('#dl-hero-other', new ShowElement())
+      .on(hero, new ShowElement())
       .on('#dl-tab-desktop-panel', new HideElement())
-      .on('#dl-tab-formatter-panel', new ShowElement())
+      .on(`#dl-tab-${active}-panel`, new ShowElement())
       .on('#dl-tab-btn-desktop', new RemoveClass('active'))
-      .on('#dl-tab-btn-formatter', new AddClass('active'))
+      .on(`#dl-tab-btn-${active}`, new AddClass('active'))
       .transform(response.clone());
 
     const html = await rewritten.text();

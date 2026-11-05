@@ -95,23 +95,28 @@ categories:
         q: >-
           What platforms does Writing Desk run on?
         a: >-
-          The writing, planning, and editing tools currently run on macOS
-          only. The typesetting and formatting tools are available separately
-          through the online Formatter, which works in any browser.
+          Writing Desk runs on macOS, with a companion app for iPhone and
+          iPad. The Mac app has the full writing, planning and editing
+          tools. The phone app keeps your synced books, documents and notes
+          with you. Typesetting and formatting are in the online Formatter,
+          which works in any browser. An Android app is on its way.
 
       - id: windows-version
         q: >-
           Is a Windows version coming?
         a: >-
-          It's on the roadmap, but there's no launch date yet.
+          It's on the roadmap, but there's no launch date yet. In the
+          meantime the iPhone and iPad app and the browser-based Formatter
+          work on any device you already have.
 
       - id: internet-required
         q: >-
           Do I need an internet connection to use Writing Desk?
         a: >-
           No, you can write fully offline. A few features need a connection:
-          the Research Assistant, AI editorial review, and the online
-          Formatter.
+          the Research Assistant, AI editorial review, the online
+          Formatter, and syncing with your phone. The phone app works
+          offline too, and catches up when you reconnect.
 
       - id: first-launch
         q: >-
@@ -189,6 +194,119 @@ categories:
           Press ⇧⌘F to enter Focus Mode, which hides the sidebars and
           everything except your writing. Press ⇧⌘F again, or Esc, to
           come back.
+
+  - slug: phone-app
+    name: iPhone & iPad App
+    description: "Getting the app, syncing books and documents, notes, and how phone edits come back to your Mac."
+    icon: sparkle
+    questions:
+      - id: app-free
+        q: >-
+          Is the Writing Desk app free?
+        a: >-
+          Yes. Download it from the App Store and sign in with your Writing
+          Desk account. How much you can sync depends on your plan.
+        link: /help/phone-app/get-the-app/
+        link_text: Get the app on your phone
+
+      - id: app-platforms
+        q: >-
+          Is Writing Desk available for iPhone and iPad?
+        a: >-
+          Yes, it's on the App Store. An Android app is on its way, and we'll
+          announce it when it's ready.
+
+      - id: app-need-mac
+        q: >-
+          Do I need a Mac to use the phone app?
+        a: >-
+          Notes work straight away with no Mac. Your books and documents
+          come from the Mac app, so you need it to sync them to your phone.
+
+      - id: app-offline
+        q: >-
+          Does the phone app work offline?
+        a: >-
+          Yes. Read, write, comment and capture notes without a connection.
+          Everything syncs when you reconnect.
+
+      - id: app-sync-auto
+        q: >-
+          Does syncing happen automatically?
+        a: >-
+          Notes sync automatically. Books and documents sync when you switch
+          sync on for them, one at a time, using the cloud icon beside the
+          file name on your Mac.
+        link: /help/phone-app/sync-a-book/
+        link_text: Sync a book to your phone
+
+      - id: app-edits-overwrite
+        q: >-
+          Will my phone edits overwrite my manuscript?
+        a: >-
+          No. Phone edits to a manuscript arrive on your Mac as suggestions,
+          and nothing changes until you accept them. Markdown and Word files
+          merge back by paragraph, with a card that lets you undo the merge.
+        link: /help/phone-app/how-phone-edits-come-back/
+        link_text: How phone edits come back to your Mac
+
+      - id: app-new-document
+        q: >-
+          Can I create a new document on my phone?
+        a: >-
+          Start with a note, then choose Save as document on your Mac.
+        link: /help/phone-app/notes/
+        link_text: Notes on your phone and your Mac
+
+      - id: app-phone-only-document
+        q: >-
+          Can I open a document stored on my phone and sync it to my Mac?
+        a: >-
+          Not yet. Documents sync from the Mac to the phone.
+
+      - id: app-word-files
+        q: >-
+          Can I edit Word files on my phone?
+        a: >-
+          Yes, for Word files you have synced. The first time you edit one
+          you see a reminder that complex formatting may change, and you can
+          choose to edit a copy instead. Writing Desk keeps a backup copy
+          when you switch sync on for the file.
+        link: /help/phone-app/choose-which-documents-sync/
+        link_text: Choose which documents sync
+
+      - id: app-sync-limits
+        q: >-
+          How much can I sync?
+        a: >-
+          The free plan and the 30-day trial sync 1 book and 30 documents.
+          Paid plans have generous fair-use limits. Notes are unlimited, and
+          anything already synced keeps working if you downgrade.
+        link: /help/phone-app/sync-limits-and-plans/
+        link_text: Sync limits and plans
+
+      - id: app-formatter-install
+        q: >-
+          What happened to adding the Formatter to my home screen?
+        a: >-
+          The Writing Desk app replaces it. Formatter remains the place for
+          typesetting and export, and it still opens in any browser.
+
+      - id: app-read-only
+        q: >-
+          Why does my book say Read only on my phone?
+        a: >-
+          Update Writing Desk on your Mac to the latest version, then switch
+          sync off and on again for the book.
+        link: /help/phone-app/fix-sync-problems/
+        link_text: Fix sync problems
+
+      - id: app-delete-account
+        q: >-
+          How do I delete my account from the phone?
+        a: >-
+          Open the menu in the phone app and choose Delete account, below
+          Sign out.
 
   - slug: projects-organization
     name: Projects & Documents
@@ -957,10 +1075,11 @@ categories:
         q: >-
           Can I use the Formatter on my phone?
         a: >-
-          Yes, for reading your manuscript, leaving comments and
-          suggesting edits. Add it to your phone's home screen and it
-          opens like an app. Typesetting and export need room to see
-          your pages, so use the Formatter on a computer for those.
+          For reading and reviewing on a phone, use the Writing Desk app
+          for iPhone and iPad. It replaces adding the Formatter to your
+          home screen. The Formatter still opens in a phone browser, but
+          typesetting and export need room to see your pages, so use a
+          computer for those.
         link: /help/export-formatter/review-on-your-phone/
         link_text: Review your manuscript on your phone
 
@@ -984,8 +1103,9 @@ categories:
         a: >-
           Chapter text stays read-only in the Formatter, so Writing Desk
           remains the one place your writing changes. You can leave
-          comments and suggest edits in the Formatter, including from
-          your phone, and accept them back in Writing Desk.
+          comments and suggest edits in the Formatter, and accept them
+          back in Writing Desk. To edit on your phone, use the Writing
+          Desk app, where your edits also come back as suggestions.
 
       - id: why-read-only
         q: >-
@@ -1289,7 +1409,9 @@ categories:
         a: >-
           Download the app, then create an account with your email and
           password. Once you're logged in, the app keeps you signed in on
-          that device. The same login also works on the Formatter web app.
+          that device. The same login also works on the iPhone and iPad
+          app and on the Formatter web app. You can create an account
+          from the phone app too.
 
       - id: account-required
         q: >-
@@ -1312,18 +1434,20 @@ categories:
 
       - id: multiple-macs
         q: >-
-          Can I use Writing Desk on more than one Mac?
+          Can I use Writing Desk on more than one device?
         a: >-
-          Yes, there's no limit on the number of devices you can use Writing
-          Desk on.
+          Yes, there's no limit on the number of Macs, iPhones or iPads you
+          can sign in on.
 
       - id: delete-account
         q: >-
           How do I delete my account?
         a: >-
-          Go to Settings and select Delete Account. This erases your account
-          details and anything you've uploaded to the Formatter. It doesn't
-          touch any files on your own device.
+          On the Mac, go to Settings and select Delete Account. In the phone
+          app, open the menu and choose Delete account, below Sign out. This
+          erases your account details and anything you've uploaded or
+          synced, including notes, synced books and documents, and
+          Formatter uploads. It doesn't touch any files on your Mac.
 
   - slug: pricing-billing
     name: Pricing, Credits & Billing
@@ -1397,10 +1521,11 @@ categories:
         q: >-
           What happens to my manuscripts if I cancel my subscription?
         a: >-
-          Your manuscript stays yours and stays on your device. After
+          Your manuscript stays yours and stays on your Mac. After
           cancelling, you can keep using Writing Desk's free version, or open
-          your manuscript in a different app and carry on from there. Your
-          work is always yours.
+          your manuscript in a different app and carry on from there.
+          Anything already synced to your phone keeps working, and nothing
+          is removed. Your work is always yours.
 
       - id: refunds
         q: >-
@@ -1449,9 +1574,11 @@ categories:
           Google Drive if you like, but Writing Desk never uploads or backs
           up your file on your behalf, so it stays under your control.
 
-          The one exception is the Formatter. Since it runs in your browser,
-          you'll need to upload your manuscript to use it, and you can delete
-          it at any time.
+          The exceptions are the Formatter and phone sync. The Formatter
+          runs in your browser, so you upload your manuscript to use it. The
+          phone app only receives the books and documents you switch sync on
+          for, and your notes. You can delete uploaded and synced copies at
+          any time.
 
       - id: what-data-sent-to-ai
         q: >-
@@ -1532,7 +1659,8 @@ categories:
         a: >-
           Writing Desk checks for updates when it opens and lets you
           know when a new version is ready to install. The Formatter
-          updates automatically.
+          updates automatically, and the phone app updates through the App
+          Store.
 
       - id: report-bug
         q: >-

@@ -21,7 +21,7 @@
 title: Writing Desk
 email: help@writingdeskapp.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Writing Desk is a private, local writing app for Mac. Plot, write, edit,
+  Writing Desk is a private writing app for Mac, iPhone and iPad. Plot, write, edit,
   track, and format your manuscript in one place. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.writingdeskapp.com" # the base hostname & protocol for your site

@@ -3,51 +3,29 @@ layout: help-article
 title: Review your manuscript on your phone
 category: export-formatter
 order: 1
-summary: Send your manuscript to the Formatter, read it anywhere, and have your comments and suggested edits waiting in Writing Desk.
-related_faqs: [formatter-phone, send-to-formatter, formatter-suggestions, edit-in-formatter]
+summary: Read your manuscript anywhere with the Writing Desk app, and have your comments and edits waiting in Writing Desk on your Mac.
+related_faqs: [formatter-phone, formatter-suggestions, edit-in-formatter, app-edits-overwrite]
 ---
 
-The Formatter works on your phone, so you can read your manuscript on the train, leave comments and suggest edits wherever you are. Everything you add comes back into Writing Desk on your Mac, ready for you to accept or reject.
+The Writing Desk app for iPhone and iPad is the best way to read and review your manuscript on the go. Everything you add comes back into Writing Desk on your Mac, ready for you to accept or reject.
 
-## 1. Send your manuscript to the Formatter
+## 1. Get the app and sync your book
 
-1. In Writing Desk, open your project.
-2. Open the menu (☰) at the left of the toolbar and choose **Send to Formatter**.
+1. Download [Writing Desk: Novelist App](https://apps.apple.com/gb/app/writing-desk-novelist-app/id6821668661) and sign in with your Writing Desk account.
+2. On your Mac, open the book and click the cloud icon beside the file name to switch sync on.
 
-Your browser opens and your manuscript is passed to the Formatter, signed in with your Writing Desk account.
+[Full steps for syncing a book](/help/phone-app/sync-a-book/)
 
-## 2. Add the Formatter to your phone's home screen
+## 2. Read, comment and edit
 
-Adding it to your home screen makes the Formatter open like an app, full screen and one tap away.
-
-### iPhone, in Safari
-
-1. Open [formatter.writingdeskapp.com](https://formatter.writingdeskapp.com) in Safari and sign in.
-2. Tap the **Share** button.
-3. Scroll down and tap **Add to Home Screen**, then tap **Add**.
-
-### iPhone, in Chrome
-
-1. Open [formatter.writingdeskapp.com](https://formatter.writingdeskapp.com) in Chrome and sign in.
-2. Tap the **Share** button in the address bar.
-3. Tap **Add to Home Screen**, then tap **Add**.
-
-### Android, in Chrome
-
-1. Open [formatter.writingdeskapp.com](https://formatter.writingdeskapp.com) in Chrome and sign in.
-2. Tap the three-dot menu at the top right.
-3. Tap **Install app** or **Add to Home screen**, then confirm.
-
-## 3. Read, comment and suggest edits
-
-Open the Formatter from your home screen and choose your manuscript. As you read, you can:
+Open the book on the **Manuscripts** tab. As you read, you can:
 
 - **leave a comment** on any passage, for a note to your future self
-- **suggest an edit**, with the change you'd like to make
+- **edit the text**, and your changes are tracked as suggestions
 
-Your manuscript text stays read-only in the Formatter, so Writing Desk stays the single place your writing changes. Your suggestions wait there until you decide on them.
+It all works offline and syncs when you reconnect.
 
-## 4. Review everything on your Mac
+## 3. Review everything on your Mac
 
 Next time you open the project in Writing Desk, your comments and suggestions are there automatically.
 
@@ -55,6 +33,6 @@ Next time you open the project in Writing Desk, your comments and suggestions ar
 2. For each suggestion, choose to accept and apply it to your text, or reject it.
 3. Resolve comments as you deal with them.
 
-## Typesetting and export
+## Using the Formatter in a phone browser
 
-Typesetting and exporting your book need room to see your pages, so for those, open the Formatter on your computer.
+The Formatter still opens in any browser, and you can leave comments and suggest edits there. Typesetting and exporting need room to see your pages, so use the Formatter on a computer for those.

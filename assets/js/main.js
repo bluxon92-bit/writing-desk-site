@@ -192,17 +192,15 @@ function setBilling(mode) {
 
 // ── Download page tabs ───────────────────────────
 function setDownloadTab(tab) {
-  var btnDesktop   = document.getElementById('dl-tab-btn-desktop');
-  var btnFormatter = document.getElementById('dl-tab-btn-formatter');
-  var panelDesktop   = document.getElementById('dl-tab-desktop-panel');
-  var panelFormatter = document.getElementById('dl-tab-formatter-panel');
-  if (!btnDesktop) return;
-
-  var showDesktop = tab !== 'formatter';
-  btnDesktop.classList.toggle('active', showDesktop);
-  btnFormatter.classList.toggle('active', !showDesktop);
-  panelDesktop.style.display   = showDesktop ? '' : 'none';
-  panelFormatter.style.display = showDesktop ? 'none' : '';
+  var tabs = ['desktop', 'ios', 'formatter'];
+  if (!document.getElementById('dl-tab-btn-desktop')) return;
+  if (tabs.indexOf(tab) === -1) tab = 'desktop';
+  tabs.forEach(function (name) {
+    var btn = document.getElementById('dl-tab-btn-' + name);
+    var panel = document.getElementById('dl-tab-' + name + '-panel');
+    if (btn) btn.classList.toggle('active', name === tab);
+    if (panel) panel.style.display = name === tab ? '' : 'none';
+  });
 }
 
 // ── Annual pricing visibility ────────────────────
