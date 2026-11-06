@@ -33,7 +33,7 @@ description: "Plot, write, edit, track, and format — everything a novelist nee
   </a>
 </nav>
 
-<div style="max-width:1100px;margin:0 auto;padding:48px 40px 80px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div style="max-width:1100px;margin:0 auto;padding:48px 40px 56px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
 
   <a href="{{ '/features/plot-your-novel/' | relative_url }}" class="post-card scroll-fade" style="text-decoration:none">
     <div class="post-tag">01</div>
@@ -71,3 +71,38 @@ description: "Plot, write, edit, track, and format — everything a novelist nee
   </a>
 
 </div>
+
+<section class="features-more" aria-labelledby="features-more-title">
+  <div class="features-more-head scroll-fade">
+    <span class="eyebrow">More ways to write</span>
+    <h2 id="features-more-title">Write in any form, <em>on any device.</em></h2>
+    <p>Beyond the five stages, Writing Desk opens your essays, notes and Word files, and goes with you on iPhone and iPad.</p>
+  </div>
+  <div class="features-more-grid">
+    <a href="{{ '/features/software-for-writers/' | relative_url }}" class="post-card scroll-fade" style="text-decoration:none">
+      <div class="post-tag">Any form</div>
+      <h2>Essays, notes and Word files</h2>
+      <p>Open Word and Markdown files, draft essays, notes and stories, and grow any piece into a book length project when it is ready.</p>
+      <div class="post-meta">Markdown · Word files · Editorial feedback · Convert to project →</div>
+    </a>
+    <a href="{{ '/features/novel-writing-app-for-iphone/' | relative_url }}" class="post-card scroll-fade" style="text-decoration:none">
+      <div class="post-tag">Any device</div>
+      <h2>Write on iPhone and iPad</h2>
+      <p>Read and edit your manuscript, capture notes and work offline. Phone edits come back to your Mac as suggestions for you to accept or reject.</p>
+      <div class="post-meta">iPhone · iPad · Notes · Offline · Syncs with your Mac →</div>
+    </a>
+  </div>
+</section>
+
+<style>
+.features-more { max-width:1100px; margin:0 auto; padding:0 40px 80px; }
+.features-more-head { border-top:1px solid var(--border); padding-top:56px; margin-bottom:32px; text-align:center; }
+.features-more-head h2 { font-family:var(--serif); font-size:30px; font-weight:400; line-height:1.2; color:var(--ink); margin:6px 0 12px; }
+.features-more-head h2 em { color:var(--purple); font-style:italic; }
+.features-more-head p { max-width:560px; margin:0 auto; font-size:15.5px; font-weight:300; line-height:1.75; color:var(--ink-muted); }
+.features-more-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+@media (max-width: 760px) {
+  .features-more { padding:0 24px 60px; }
+  .features-more-grid { grid-template-columns:1fr; }
+}
+</style>

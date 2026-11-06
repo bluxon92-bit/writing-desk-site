@@ -7,7 +7,7 @@ competitor: "Atticus"
 competitor_url: "https://www.atticus.io"
 last_verified: 2026-10-06
 card_summary: "Write, revise and typeset in one Mac workflow."
-hero_intro: "Atticus pairs a writing editor with book formatting, so a manuscript can become an EPUB or print file in one tool. Writing Desk is a Mac novel-writing environment that also exports typeset EPUB and print ready PDFs through the attached online Formatter tool. Atticus leads on formatting depth; Writing Desk leads on the writing and editing that come before it."
+hero_intro: "Atticus pairs a writing editor with book formatting, so a manuscript can become an EPUB or print file in one tool. Writing Desk is a novel-writing app for Mac, iPhone and iPad that also exports typeset EPUB and print ready PDFs through the attached online Formatter tool. Atticus leads on formatting depth; Writing Desk leads on the writing and editing that come before it."
 differentiators:
   headline: "Write, revise and typeset in one Mac workflow"
   intro: "Three places where Writing Desk shortens the path from a blank page, or an existing draft, to a finished book."
@@ -24,7 +24,7 @@ differentiators:
 glance:
 - label: "Platforms"
   them: "Windows, Mac, Linux and Chromebook, plus a browser app"
-  wd: "macOS 13 Ventura or later (native Mac app)"
+  wd: "Mac (macOS 13 Ventura or later), plus iPhone and iPad"
 - label: "Price"
   them: "$147+VAT one-time; no free trial"
   wd: "Free plan with a 30-day Premium trial; paid plans starting at $10 per month on a annual subscription"

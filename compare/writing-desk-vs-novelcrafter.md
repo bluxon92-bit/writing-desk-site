@@ -1,13 +1,13 @@
 ---
 layout: "compare"
 title: "Writing Desk vs Novelcrafter: two ways to plan and write a novel"
-description: "Novelcrafter and Writing Desk compared on story bible, plotting, writing environment and price: a web-based studio against a local, distraction-free Mac app."
+description: "Novelcrafter and Writing Desk compared on story bible, plotting, writing environment and price: a web-based studio against a local, distraction-free app for Mac, iPhone and iPad."
 permalink: "/compare/writing-desk-vs-novelcrafter/"
 competitor: "Novelcrafter"
 competitor_url: "https://www.novelcrafter.com"
 last_verified: 2026-10-06
-card_summary: "A web-based studio, or a local Mac app for planning and writing."
-hero_intro: "Novelcrafter is a web-based writing studio built around the Codex, a wiki for your story, and scene-by-scene planning. Writing Desk is a Mac first app that brings your story bible, plot structure and manuscript together in one distraction-free place on your own computer. Both treat a novel as a connected project; they differ in how you organise the story, where you write it, and what happens when you're ready to publish."
+card_summary: "A web-based studio, or a local app for Mac, iPhone and iPad."
+hero_intro: "Novelcrafter is a web-based writing studio built around the Codex, a wiki for your story, and scene-by-scene planning. Writing Desk is a Mac first app, also on iPhone and iPad, that brings your story bible, plot structure and manuscript together in one distraction-free place on your own computer. Both treat a novel as a connected project; they differ in how you organise the story, where you write it, and what happens when you're ready to publish."
 differentiators:
   headline: "A story bible, a plot structure, and a quiet place to write"
   intro: "Three places where Writing Desk gives you a different way to build and write a novel."
@@ -20,11 +20,11 @@ differentiators:
     solution: "Start from one of eleven structure templates in the Story Plotter, then see the shape of the whole book on the Story Board and the Timeline."
   - topic: "Where you write"
     problem: "Novelcrafter runs in your browser, so you write inside a web app and your manuscript lives in an online service."
-    solution: "A distraction-free editor in a loal Mac first app. Your manuscript is stored on your Mac, and spelling, grammar and Prose Analysis run locally."
+    solution: "A distraction-free editor in a local Mac first app. Your manuscript is stored on your Mac, and spelling, grammar and Prose Analysis run locally."
 glance:
 - label: "Platforms"
   them: "Web browser"
-  wd: "macOS 13 Ventura or later (native Mac app)"
+  wd: "Mac (macOS 13 Ventura or later), plus iPhone and iPad"
 - label: "Price"
   them: "Four tiers from $4 to $20 a month. Bring-your-own AI starts at the $8 tier, with AI usage billed by your provider. 21-day trial"
   wd: "Free plan with a 30-day Premium trial; paid plans include AI credits and start at $10 per month on an annual plan"
@@ -68,7 +68,7 @@ choose_them:
 - "Need a browser-based tool on Windows or Linux."
 choose_wd:
 - "Want a structured Resource Hub, plot templates and a timeline in one project."
-- "Prefer a distraction-free pffline editor and a manuscript stored on your own Mac."
+- "Prefer a distraction-free offline editor and a manuscript stored on your own Mac."
 - "Want to write every sentence yourself, with AI only for feedback, if at all."
 - "Want a predictable plan instead of a separate AI bill."
 - "Want a tool that can also export your work to epub and print ready PDF's."
@@ -82,7 +82,7 @@ faq:
 - q: "Which is cheaper?"
   a: "Writing Desk has a generous free tier. Novelcrafter's tiers start lower, but AI usage is billed separately, which can quickly push your monthly bill above Writing Desk's all-inclusive plans."
 - q: "Can I use Writing Desk on Windows or in a browser?"
-  a: "Writing Desk runs on macOS 13 Ventura or later. If you write on Windows or Linux, Novelcrafter's browser app is the better fit."
+  a: "Writing Desk runs on macOS 13 Ventura or later, with a mobile app for iPhone and iPad. If you write on Windows or Linux, Novelcrafter's browser app is the better fit."
 related:
 - title: "Plot your novel"
   url: "/features/plot-your-novel/"

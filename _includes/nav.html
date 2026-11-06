@@ -34,15 +34,6 @@
                 Editor, Pad, Research &amp; Resource Hub
               </span>
             </a>
-            <a href="{{ '/features/software-for-writers/' | relative_url }}" class="dropdown-item">
-              <span class="dropdown-icon">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2h5l3 3v9H4z"/><path d="M9 2v3h3M6 8.5h4M6 11h4"/></svg>
-              </span>
-              <span>
-                <strong>Documents</strong>
-                Markdown, Word and shorter writing
-              </span>
-            </a>
             <a href="{{ '/features/novel-editing-software/' | relative_url }}" class="dropdown-item">
               <span class="dropdown-icon">
                 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M11.5 2.5l2 2-8 8H3.5v-2l8-8zM9.5 4.5l2 2"/></svg>
@@ -68,6 +59,25 @@
               <span>
                 <strong>Format</strong>
                 Export, typesetting &amp; agent templates
+              </span>
+            </a>
+            <span class="dropdown-list-label">More ways to write</span>
+            <a href="{{ '/features/software-for-writers/' | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2h5l3 3v9H4z"/><path d="M9 2v3h3M6 8.5h4M6 11h4"/></svg>
+              </span>
+              <span>
+                <strong>Documents</strong>
+                Markdown, Word and shorter writing
+              </span>
+            </a>
+            <a href="{{ '/features/novel-writing-app-for-iphone/' | relative_url }}" class="dropdown-item">
+              <span class="dropdown-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="1.5" width="7" height="13" rx="1.5"/><path d="M7 12h2"/></svg>
+              </span>
+              <span>
+                <strong>Mobile app</strong>
+                Write on iPhone and iPad
               </span>
             </a>
           </div>
@@ -287,10 +297,12 @@
         <div class="mobile-submenu" id="mobile-features">
           <a href="{{ '/features/plot-your-novel/' | relative_url }}">Plot</a>
           <a href="{{ '/features/distraction-free-writing-app/' | relative_url }}">Write</a>
-          <a href="{{ '/features/software-for-writers/' | relative_url }}">Documents</a>
           <a href="{{ '/features/novel-editing-software/' | relative_url }}">Edit</a>
           <a href="{{ '/features/writing-tracker-app/' | relative_url }}">Track</a>
           <a href="{{ '/features/book-formatting-tool/' | relative_url }}">Format</a>
+          <span class="mobile-submenu-label">More ways to write</span>
+          <a href="{{ '/features/software-for-writers/' | relative_url }}">Documents</a>
+          <a href="{{ '/features/novel-writing-app-for-iphone/' | relative_url }}">Mobile app</a>
         </div>
       </div>
 
@@ -351,6 +363,11 @@
   gap: 8px;
 }
 .dropdown-list { display: flex; flex-direction: column; }
+.dropdown-list-label {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink-faint); padding: 10px 12px 6px;
+  margin-top: 6px; border-top: 1px solid var(--border);
+}
 
 .nav-dropdown-split .dropdown-demo-card {
   display: flex; flex-direction: column; gap: 10px;

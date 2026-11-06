@@ -1,13 +1,13 @@
 ---
 layout: "compare"
-title: "Writing Desk vs Ulysses: two Mac writing apps compared"
-description: "Ulysses and Writing Desk compared for Mac writers: Markdown, libraries, long-form projects, editorial tools and price."
+title: "Writing Desk vs Ulysses: two Apple writing apps compared"
+description: "Ulysses and Writing Desk compared for writers on Mac, iPhone and iPad: Markdown, libraries, long-form projects, editorial tools and price."
 permalink: "/compare/writing-desk-vs-ulysses/"
 competitor: "Ulysses"
 competitor_url: "https://ulysses.app"
 last_verified: 2026-10-06
-card_summary: "Markdown documents and novel tools in one Mac app."
-hero_intro: "Ulysses is a calm, Apple-native place to keep everything you write in one library. Writing Desk is a Mac writing app that opens Markdown files for everyday documents and gives novels and longer projects their own planning and editorial tools. If you write both short pieces and books, the two cover similar ground from different directions."
+card_summary: "Markdown documents and novel tools in one app for Mac, iPhone and iPad."
+hero_intro: "Ulysses is a calm, Apple-native place to keep everything you write in one library. Writing Desk is a writing app for Mac, iPhone and iPad that opens Markdown files for everyday documents and gives novels and longer projects their own planning and editorial tools. If you write both short pieces and books, the two cover similar ground from different directions."
 differentiators:
   headline: "Write short pieces and a whole novel in one app"
   intro: "Three places where Writing Desk shortens the path from a blank page, or an existing draft, to a finished book."
@@ -24,7 +24,7 @@ differentiators:
 glance:
 - label: "Platforms"
   them: "Mac, iPad and iPhone with iCloud sync"
-  wd: "macOS 13 Ventura or later (native Mac app); Formatter lets you review and comment from a phone"
+  wd: "Mac (macOS 13 Ventura or later), plus iPhone and iPad with sync from your Mac"
 - label: "Price"
   them: "Subscription only: $5.99 a month or $39.99 a year; free trial available"
   wd: "Free plan; paid plans on a monthly or annual subscription starting at $10 per month."
@@ -63,11 +63,11 @@ choose_wd:
 - "Prefer plain Markdown files you can open anywhere."
 faq:
 - q: "Is Writing Desk a Ulysses alternative?"
-  a: "For Mac writers who want Markdown documents alongside novel tools, yes. Ulysses is the stronger pick if you rely on iPad and iPhone for drafting."
+  a: "For Mac writers who want Markdown documents alongside novel tools, yes. Ulysses is the stronger pick if you draft mostly on iPad and iPhone, because Writing Desk books and documents start on the Mac."
 - q: "Can Writing Desk edit Markdown?"
   a: "Yes. It opens .md files, edits them and autosaves back to Markdown."
 - q: "Does Writing Desk work on iPhone?"
-  a: "Writing Desk is a Mac app. Formatter, its companion, installs on a phone as a PWA for reading, comments and suggested edits."
+  a: "Yes. The Writing Desk mobile app runs on iPhone and iPad. Sync a book or documents from your Mac, then read, write and capture notes on your phone, offline too. Edits to a manuscript come back to your Mac as suggestions you accept or reject."
 related:
 - title: "Bring in existing writing"
   url: "/help/getting-started/bring-in-existing-writing/"
@@ -75,6 +75,8 @@ related:
   url: "/help/projects-organization/turn-a-document-into-a-project/"
 - title: "Write anything in Writing Desk"
   url: "/blog/write-anything-in-writing-desk/"
+- title: "The Writing Desk mobile app"
+  url: "/features/novel-writing-app-for-iphone/"
 - title: "Review on your phone"
   url: "/help/export-formatter/review-on-your-phone/"
 - title: "Best Markdown writing apps"

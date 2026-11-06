@@ -36,7 +36,7 @@ differentiators:
 glance:
 - label: "Platforms"
   them: "Web"
-  wd: "macOS 13 Ventura or later (native Mac app)"
+  wd: "Mac (macOS 13 Ventura or later), plus iPhone and iPad"
 - label: "Price"
   them: "Credit-metered subscription; about $10 to $44 per month billed annually, $19 to $59 monthly"
   wd: "Free plan with a 30-day Premium trial; paid plans include AI credits"

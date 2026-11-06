@@ -38,9 +38,9 @@ novels:
   title: Best Novel Writing Software in 2026
   meta: Planning, drafting, formatting and AI-assisted tools for novelists, compared on platforms, price and who each one suits.
   for_whom: Novelists planning, drafting, formatting and revising a book-length manuscript.
-  pick: Writing Desk (on a Mac)
+  pick: Writing Desk (on Mac, iPhone and iPad)
   why: |-
-    I built Writing Desk, so weigh my pick with that in mind. It is a Mac app that keeps your manuscript on your machine, with planning, a Resource Hub and editing tools built in. It is flexible too: it opens, drafts and edits Markdown and Word files, so it works for short stories, blogs and essays as well as novels.
+    I built Writing Desk, so weigh my pick with that in mind. It is a Mac app, with a mobile app for iPhone and iPad, that keeps your manuscript on your machine, with planning, a Resource Hub and editing tools built in. It is flexible too: it opens, drafts and edits Markdown and Word files, so it works for short stories, blogs and essays as well as novels.
  
     * Story Plotter with 11 structure templates
     * Story Board and Timeline to see the whole book at once
@@ -103,9 +103,9 @@ essays:
   title: Best Apps for Essays and Long-Form Non-Fiction (2026)
   meta: Writing apps for essays, research-heavy articles and non-fiction, with citation tools, research companions, prices and platforms.
   for_whom: Essayists, students and non-fiction writers who need citations, research tools or clean long-form documents.
-  pick: Writing Desk (on a Mac); Zettlr for citation-heavy work
+  pick: Writing Desk (on Mac, iPhone and iPad); Zettlr for citation-heavy work
   why: |-
-    For essays and long-form non-fiction on a Mac, my pick is Writing Desk. I built it, so weigh that. It opens Markdown and Word files as they are and saves back to the same format, so your documents stay yours.
+    For essays and long-form non-fiction on a Mac, my pick is Writing Desk, which also has an iPhone and iPad app. I built it, so weigh that. It opens Markdown and Word files as they are and saves back to the same format, so your documents stay yours.
  
     * Markdown and Word files that open and save in their own format
     * Editorial review for documents through four lenses: Argument, Clarity, Evidence and Voice
@@ -154,9 +154,9 @@ markdown:
   title: Best Markdown Writing Apps in 2026
   meta: 'Markdown and minimal writing apps compared: platforms, prices, export options and who each one suits.'
   for_whom: Writers who want plain-text files, a quiet editor and files they own.
-  pick: Writing Desk (Mac, if you also write long projects); iA Writer for the leanest option
+  pick: Writing Desk (Mac, iPhone and iPad, if you also write long projects); iA Writer for the leanest option
   why: |-
-    If Markdown is all you need, iA Writer is the leanest choice. My pick on a Mac is Writing Desk, which I built, so weigh that. Your .md files open, edit and autosave back to Markdown, and the same app handles Word files and full novel projects.
+    If Markdown is all you need, iA Writer is the leanest choice. My pick on a Mac is Writing Desk, which also has an iPhone and iPad app. I built it, so weigh that. Your .md files open, edit and autosave back to Markdown, and the same app handles Word files and full novel projects.
  
     * .md files that open, edit and autosave as Markdown
     * Word files and full novel projects in the same app
@@ -256,7 +256,7 @@ blogging:
  
     **Pick something else if you want…**
  
-    * Markdown plus longer projects, and editorial feedback on a draft before it goes live: Writing Desk on a Mac, which I built, so weigh that
+    * Markdown plus longer projects, and editorial feedback on a draft before it goes live: Writing Desk on Mac, iPhone and iPad, which I built, so weigh that
     * Something lighter and quicker: iA Writer or Bear
     * To write with a team: Notion or Google Docs
   method: Each app is checked against its own pages for platforms, price and AI stance, and prices carry the date I checked them. I have used Google Docs, Word, Scrivener, Ulysses and Obsidian for my own writing; the rest are assessed from vendor pages and published reviews.
@@ -291,9 +291,9 @@ mac:
   for_whom: Writers on a Mac who want a downloadable app built for Apple devices.
   pick: Writing Desk
   why: |-
-    Writing Desk is built for the Mac. I built it, so I am biased, but this list is wide on purpose. Mac-first means built for Apple platforms, and the cards show where an app also runs elsewhere.
+    Writing Desk is built for the Mac and also runs on iPhone and iPad. I built it, so I am biased, but this list is wide on purpose. Mac-first means built for Apple platforms, and the cards show where an app also runs elsewhere.
  
-    * A native Mac app for macOS 13 Ventura or later
+    * A native Mac app for macOS 13 Ventura or later, with an iPhone and iPad app
     * Planning, a Resource Hub and editing tools for a whole novel
     * Markdown and Word files that open and save as they are
     * Proofreader and Prose Analysis that run locally

@@ -78,7 +78,7 @@ The Android app is on its way. It follows once testing is complete, and an updat
 
 ## Questions
 
-The [help centre](https://www.writingdeskapp.com/help/) has step-by-step guides for [syncing](/help/phone-app/sync-a-book/), [phone edits](/help/phone-app/how-phone-edits-come-back/), [notes](/help/phone-app/notes/) and [troubleshooting](/help/phone-app/fix-sync-problems/).
+The [mobile app page](/features/novel-writing-app-for-iphone/) has the overview, and the [help centre](https://www.writingdeskapp.com/help/) has step-by-step guides for [syncing](/help/phone-app/sync-a-book/), [phone edits](/help/phone-app/how-phone-edits-come-back/), [notes](/help/phone-app/notes/) and [troubleshooting](/help/phone-app/fix-sync-problems/).
 
 > **Writing Desk tip:** Start on your phone with a note, then use Save as document on your Mac to turn it into a markdown file. When the piece grows, convert it into a project with a couple of clicks.
 

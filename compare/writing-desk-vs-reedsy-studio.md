@@ -1,13 +1,13 @@
 ---
 layout: "compare"
 title: "Writing Desk vs Reedsy Studio: two free ways to start a book"
-description: "Reedsy Studio and Writing Desk compared: free writing tools, planning, formatting, marketplace and what you get on a Mac."
+description: "Reedsy Studio and Writing Desk compared: free writing tools, planning, formatting, marketplace and what you get on Mac, iPhone and iPad."
 permalink: "/compare/writing-desk-vs-reedsy-studio/"
 competitor: "Reedsy Studio"
 competitor_url: "https://reedsy.com/studio"
 last_verified: 2026-10-06
 card_summary: "Two free ways to start a book."
-hero_intro: "Reedsy Studio browser-based editor with clean formatting and a link to Reedsy's marketplace of editors and designers. Writing Desk is a Mac app with a free plan. Features include a distraction free writing environment, a Story Plotter, grammar and spelling proofreader, and tools for revising, analysing and typesetting your manuscript."
+hero_intro: "Reedsy Studio browser-based editor with clean formatting and a link to Reedsy's marketplace of editors and designers. Writing Desk is an app for Mac, iPhone and iPad with a free plan. Features include a distraction free writing environment, a Story Plotter, grammar and spelling proofreader, and tools for revising, analysing and typesetting your manuscript."
 differentiators:
   headline: "Free to start, and your manuscript stays on your Mac"
   intro: "Three places where Writing Desk shortens the path from a blank page, or an existing draft, to a finished book."
@@ -24,7 +24,7 @@ differentiators:
 glance:
 - label: "Platforms"
   them: "Web only; no offline use"
-  wd: "macOS 13 Ventura or later (native Mac app)"
+  wd: "Mac (macOS 13 Ventura or later), plus iPhone and iPad"
 - label: "Price"
   them: "Free 30 day trial and their typsetting tool remains free. Craft add-on plan costs £4.99 a month, Outlining add-on £7.99 a month"
   wd: "Free plan with a 30-day Premium trial; paid plans start from £8 per month for annual plans."

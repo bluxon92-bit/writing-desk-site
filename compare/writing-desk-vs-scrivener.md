@@ -6,8 +6,8 @@ permalink: "/compare/writing-desk-vs-scrivener/"
 competitor: "Scrivener"
 competitor_url: "https://www.literatureandlatte.com/scrivener"
 last_verified: 2026-10-06
-card_summary: "A deep project binder, or a Mac app that opens your .docx and carries on."
-hero_intro: "Scrivener is the benchmark for writing tools for many writers with deep customisability. Writing Desk is a newer Mac app built around the same idea: one project that holds the plan, the draft, the researc, and the finished book. The difference is in how much set up is required, and how much support you get along the way, from structure templates to editorial feedback to a typeset EPUB and print PDF."
+card_summary: "A deep project binder, or an app for Mac, iPhone and iPad that opens your .docx and carries on."
+hero_intro: "Scrivener is the benchmark for writing tools for many writers with deep customisability. Writing Desk is a newer app for Mac, iPhone and iPad built around the same idea: one project that holds the plan, the draft, the research, and the finished book. The difference is in how much set up is required, and how much support you get along the way, from structure templates to editorial feedback to a typeset EPUB and print PDF."
 differentiators:
   headline: "Start writing the moment you open it"
   intro: "Three places where Writing Desk shortens the path from a blank page, or an existing draft, to a finished book."
@@ -24,7 +24,7 @@ differentiators:
 glance:
 - label: "Platforms"
   them: "Mac, Windows and iOS"
-  wd: "macOS 13 Ventura or later (native Mac app)"
+  wd: "Mac (macOS 13 Ventura or later), plus iPhone and iPad"
 - label: "Price"
   them: "£55 one-time per desktop platform; iOS $23.99 and bundle pricing for multi-device at £88. 30-day free trial available."
   wd: "Free plan with a 30-day Premium trial; paid plans on a monthly or annual subscription starting at £8/pm"

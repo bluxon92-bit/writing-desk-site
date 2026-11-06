@@ -24,7 +24,7 @@ differentiators:
 glance:
 - label: "Platforms"
   them: "Web, desktop and integrations for Word, Google Docs, Scrivener and Chrome"
-  wd: "macOS 13 Ventura or later (native Mac app)"
+  wd: "Mac (macOS 13 Ventura or later), plus iPhone and iPad"
 - label: "Price"
   them: "Pro-writingAid does have a free plan but it is very limited, allowing you to only check the first 500 words of any document. Plans then start at $30 a month or $120 a year; Premium Pro $36 a month or $144 a year; lifetime options"
   wd: "Wriring Desk has a generous free plan; paid plans start at $10 per month on an annual subscription"
@@ -39,7 +39,7 @@ glance:
   wd: "Distraction free writing environments with a full novel workspace including plotter, timeline, and linked resources"
 - label: "Local processing"
   them: "Check ProWritingAid's policy"
-  wd: "Seplling, grammar, and Prose Analysis runs on your Mac and is never metered. AI calls are transient and never used to train models."
+  wd: "Spelling, grammar, and Prose Analysis runs on your Mac and is never metered. AI calls are transient and never used to train models."
 gallery:
 - "proofreader"
 - "prose_analysis"

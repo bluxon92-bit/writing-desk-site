@@ -7,7 +7,7 @@ competitor: "Dabble"
 competitor_url: "https://www.dabblewriter.com"
 last_verified: 2026-10-06
 card_summary: "A Plot Grid or the Story Plotter, from first draft to finished book."
-hero_intro: "Dabble is a clean novel-writing tool known for its Plot Grid, that runs on any device. Writing Desk is a native Mac app with a Story Plotter, Story Board and Timeline, plus proofreading, prose analysis and editorial AI. Both aim to get you to the end of a draft; they give you different ways to see your story."
+hero_intro: "Dabble is a clean novel-writing tool known for its Plot Grid, that runs on any device. Writing Desk is a native Mac app with a mobile app for iPhone and iPad. On the Mac it has a Story Plotter, Story Board and Timeline, plus proofreading, prose analysis and editorial AI. Both aim to get you to the end of a draft; they give you different ways to see your story."
 differentiators:
   headline: "Start free, bring your documents, finish with feedback"
   intro: "Three places where Writing Desk shortens the path from a blank page, or an existing draft, to a finished book."
@@ -24,7 +24,7 @@ differentiators:
 glance:
 - label: "Platforms"
   them: "Cloud-based, on any device"
-  wd: "macOS 13 Ventura or later (Mac first app)"
+  wd: "Mac (macOS 13 Ventura or later), plus iPhone and iPad"
 - label: "Price"
   them: "Writer $19, Author $29, Bestseller $49 a month. 14-day trial with all Premium features; no free plan"
   wd: "Free plan; paid plans starting at $10 a month when you choose an annual subscription"

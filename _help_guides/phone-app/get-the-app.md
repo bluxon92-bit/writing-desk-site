@@ -35,3 +35,5 @@ Until you sync a book or document, the phone shows a prompt to sync from your Ma
 - Dark mode lives under **Appearance** in the menu.
 - To delete your account, open the menu and choose **Delete account**, below **Sign out**.
 - The Android app is on its way.
+
+Want the overview first? See [how the mobile app works](/features/novel-writing-app-for-iphone/).

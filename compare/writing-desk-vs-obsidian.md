@@ -7,7 +7,7 @@ competitor: "Obsidian"
 competitor_url: "https://obsidian.md"
 last_verified: 2026-10-06
 card_summary: "A vault for notes, or a ready-made desk for a manuscript."
-hero_intro: "Obsidian is a flexible vault of local Markdown notes, loved for linking and a large plugin ecosystem. Writing Desk is a Mac app built for finishing a manuscript, with the plan, the draft and the editorial tools in one project. Obsidians strengths are around it's adaptability, whereas Writing Desks are around its ease of use, just download and start writing, no complicated set up required."
+hero_intro: "Obsidian is a flexible vault of local Markdown notes, loved for linking and a large plugin ecosystem. Writing Desk is an app for Mac, iPhone and iPad built for finishing a manuscript, with the plan, the draft and the editorial tools in one project. Obsidian's strengths lie in its adaptability, whereas Writing Desk's lie in its ease of use: just download and start writing, no complicated set up required."
 differentiators:
   headline: "A ready-made writing desk instead of a toolkit to assemble"
   intro: "Three places where Writing Desk shortens the path from a blank page, or an existing draft, to a finished book."
@@ -24,7 +24,7 @@ differentiators:
 glance:
 - label: "Platforms"
   them: "Mac, Windows, Linux, iOS and Android"
-  wd: "macOS 13 Ventura or later (native Mac app)"
+  wd: "Mac (macOS 13 Ventura or later), plus iPhone and iPad"
 - label: "Price"
   them: "Free, including for commercial use. Optional Sync from $4 a month and Publish from $8 a month (billed yearly); optional $50 a year commercial licence"
   wd: "Free plan; paid plans on a monthly or annual subscription"

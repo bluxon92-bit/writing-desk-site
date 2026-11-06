@@ -24,7 +24,7 @@ differentiators:
 glance:
 - label: "Platforms"
   them: "Mac, iOS and Windows (the Android app was discontinued in 2024)"
-  wd: "macOS 13 Ventura or later (native Mac app)"
+  wd: "Mac (macOS 13 Ventura or later), plus iPhone and iPad"
 - label: "Price"
   them: "One-time purchase paid per platform; $49.99 for Mac"
   wd: "Free plan; paid plans strating at $10 on an annual subscription"

@@ -9,12 +9,13 @@ writing-desk:
   - Markdown
   - Editing and analysis
   - Formatting and publishing
-  overview: A native Mac app for writing a novel from first idea to finished book, with planning, editing and book formatting in one project. Markdown and Word files open and save as they are.
-  best_for: Mac novelists who want planning, editing and formatting in one app
-  choose: you write on a Mac, want the plan, the draft and the editing tools in one project, and want AI that gives feedback and leaves the prose to you
+  overview: A native Mac app, with a mobile app for iPhone and iPad, for writing a novel from first idea to finished book, with planning, editing and book formatting in one project. Markdown and Word files open and save as they are.
+  best_for: Novelists on Mac, iPhone and iPad who want planning, editing and formatting in one app
+  choose: you write on a Mac, want your book on your iPhone and iPad as well, and want the plan, the draft and the editing tools in one project with AI that gives feedback and leaves the prose to you
   skip: you need Windows, Linux or a browser version, want real-time co-authoring, or want AI to draft prose for you
   platforms:
   - name: Mac
+  - name: iOS
   mac_first: true
   pricing_model: Freemium + subscription (credit-metered AI)
   price_line: Free plan; Premium from £8/mo billed annually (£10 monthly) or $10/mo USD billed annually ($12 monthly)
@@ -32,7 +33,7 @@ writing-desk:
   rating: null
   comparison: null
   logo: https://res.cloudinary.com/dnkddcxrt/image/upload/w_96,f_auto,q_auto/v1790767006/wd-logo-gradient-512w_dmwzj2.png
-  mac_note: Native Mac app, macOS 13 Ventura or later.
+  mac_note: Native Mac app, macOS 13 Ventura or later, with a mobile app for iPhone and iPad.
 apple-pages:
   name: Apple Pages
   slug: apple-pages
