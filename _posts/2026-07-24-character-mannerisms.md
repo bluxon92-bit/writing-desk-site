@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181028/character_mannerism_c5fhur.jpg"
 excerpt: "Character mannerisms explained: the small physical habits that make fictional people feel real, and how to use them well."
 permalink: /blog/character-mannerisms/
+seo:
+  keyword: character mannerisms
 ---
 
 Every person has a physical vocabulary, the small, habitual gestures and movements that are uniquely theirs. The friend who touches their neck when they're nervous. The colleague who taps a pen three times before speaking. The family member who laughs with their whole body.

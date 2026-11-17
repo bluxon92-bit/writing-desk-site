@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181032/snowflake_nlcd0p.jpg"
 excerpt: "The Snowflake Method explained: how to build a novel outline in ten expanding steps, from a one-sentence summary to a full scene list."
 permalink: /blog/snowflake-method/
+seo:
+  keyword: the snowflake method
 ---
 
 Most outlining advice tells you to go from big to small: figure out your ending, then your acts, then your chapters, then your scenes. The Snowflake Method takes that idea and turns it into an actual sequence of ten steps, each one expanding the last, so that at every stage you have a complete (if small) version of your novel to work from.

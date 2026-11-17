@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181032/revising_your_draft_zvhqbc.jpg"
 excerpt: "How to revise a first draft: why order matters, what to fix first, and why line editing too early wastes your own time."
 permalink: /blog/revising-your-first-draft/
+seo:
+  keyword: revising your first draft
 ---
 
 Finishing a first draft and starting revision are two completely different skills, and the most common mistake writers make in the transition is applying the wrong one: opening the manuscript at page one and starting to fix sentences, in order, from the beginning. That approach feels productive and is usually the least efficient way to revise a novel, because it fixes prose in scenes that might not survive a structural pass.

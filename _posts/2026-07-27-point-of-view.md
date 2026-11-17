@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181031/mirror_-_point_of_view_e2sik1.jpg"
 excerpt: "Point of view explained: first, third limited, omniscient, and second person, and how to choose the right one for your novel."
 permalink: /blog/point-of-view/
+seo:
+  keyword: point of view in fiction
 ---
 
 POV broke my second novel.

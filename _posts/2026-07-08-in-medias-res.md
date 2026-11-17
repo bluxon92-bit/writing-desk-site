@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181031/in_media_res_ggtzcd.jpg"
 excerpt: "In medias res explained: what it actually means, the three ways to use it, and when a conventional opening works better."
 permalink: /blog/in-medias-res/
+seo:
+  keyword: in medias res
 ---
 
 The advice "start with action" gets misused more than almost any other piece of writing guidance. Writers take it to mean open with a chase, a fight, an explosion, something kinetic, and are then baffled when feedback comes back saying the opening doesn't work. The reader doesn't care yet.

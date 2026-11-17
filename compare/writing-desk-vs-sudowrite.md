@@ -108,5 +108,7 @@ related:
 - title: "Best editing and proofreading software"
   url: "/best-writing-apps/editing/"
 cta_text: "Bring a chapter or a whole draft and see how the editor, planning tools and proofreading feel in your own pages."
+seo:
+  keyword: writing desk vs sudowrite
 ---
 Yes. Draft in whichever tool suits you, export .docx, and use Writing Desk for structure checks and editorial review. Writing Desk opens .docx files as they are.

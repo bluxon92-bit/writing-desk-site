@@ -7,6 +7,8 @@ type: Product Update
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1791130988/writing_desk_formatter_g09b2u.png"
 excerpt: "Writing Desk's biggest update yet: Markdown and Word editing, non-fiction editorial feedback, keyboard shortcuts and a redesigned interface."
 permalink: /blog/write-anything-in-writing-desk/
+seo:
+  keyword: write anything in writing desk
 ---
 
 I built Writing Desk around the novel. Streamlining everything from plotting to publishing has been my goal to date. But if you're anything like me, novel writing might be your passion, but it's far from where you spend all of your writing time.

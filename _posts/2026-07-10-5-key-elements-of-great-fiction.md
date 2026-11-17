@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181028/5_key_elements_yxn895.jpg"
 excerpt: "5 key elements of great fiction writing, plot, character, tension, voice, and structure. The foundations every novelist needs."
 permalink: /blog/5-key-elements-of-great-fiction/
+seo:
+  keyword: 5 key elements of a great
 ---
 
 As a writer you want to create something original, something that draws the reader in, holds them by the collar and sets them down right at the end out of breath and changed. You want to impress with unique ideas and creative prowess.

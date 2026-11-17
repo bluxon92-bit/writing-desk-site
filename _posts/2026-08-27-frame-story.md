@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/frame_story_e8ehvc.jpg"
 excerpt: "Frame stories explained: a story told inside another story, why writers use the device, and when it earns its place."
 permalink: /blog/frame-story/
+seo:
+  keyword: frame story
 ---
 
 A frame story is a narrative structure in which one story contains another: an outer story that establishes a narrator or a situation, within which the main story is told. The outer layer is the frame. The story being told inside it is what most readers experience as the actual novel.

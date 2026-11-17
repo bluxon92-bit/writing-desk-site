@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181033/subplot_threads_ozefo4.jpg"
 excerpt: "Subplots explained: what makes one worth having, the most common types, and how to keep several running without losing the thread."
 permalink: /blog/what-is-a-subplot/
+seo:
+  keyword: subplot and how to write one
 ---
 
 Every novel has a main plot. The big engine, the central conflict your protagonist is driving toward. But most novels that feel rich and real have something else running underneath: subplots.

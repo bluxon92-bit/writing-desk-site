@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181032/static_vs_dynamic_vep7aa.jpg"
 excerpt: "Static vs dynamic characters explained, what they are, how they differ, and why both matter to make your story work."
 permalink: /blog/static-vs-dynamic-characters/
+seo:
+  keyword: static vs dynamic characters
 ---
 
 Ever read a book and felt like the main character went on a life-changing journey while others seemed frozen in time? That's the distinction between static and dynamic characters. In fiction, characters can either transform dramatically or stay essentially the same from beginning to end, and both play an essential role in making a story work.

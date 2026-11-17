@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/how_to_write_novel_outline_eifh97.jpg"
 excerpt: "How to write a novel outline: five methods to choose from, the building blocks every outline needs, and what to do when the plan stops working."
 permalink: /blog/how-to-write-a-novel-outline/
+seo:
+  keyword: how to write a novel outline
 ---
 
 The first novel I wrote, I approached with the gung-ho arrogance of a fresh English literature graduate. That's what I was, after all. The idea, in short: what would happen if you trapped a cannibal in a hyper-realistic virtual reality where there were no consequences for his cannibalism? Writing it was great fun.

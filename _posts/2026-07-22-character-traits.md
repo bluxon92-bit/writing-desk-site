@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181029/character_traits_lyoe1f.jpg"
 excerpt: "A working master list of character traits, plus the craft principles that turn a list of adjectives into an actual person."
 permalink: /blog/character-traits/
+seo:
+  keyword: character traits
 ---
 
 Every memorable character has a constellation of traits, qualities that shape how they think, speak, act, and react. But "good character traits" is vague advice. The real work is knowing which traits to choose, how to make them specific, and how to let them create friction.

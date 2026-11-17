@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/deus_ex_machina_hidden_oor_ytagai.jpg"
 excerpt: "Deus ex machina explained: what it means, why it undermines an otherwise strong story, and how to avoid writing one by accident."
 permalink: /blog/deus-ex-machina/
+seo:
+  keyword: deus ex machina
 ---
 
 A deus ex machina is a plot device in which an unexpected, poorly set up event or character resolves a seemingly unsolvable conflict, arriving from outside the story's established logic rather than growing out of it. The term is Latin for "god from the machine," referring to a literal stage mechanism used in ancient Greek theatre to lower an actor playing a god onto the stage, who would then resolve whatever problem the mortal characters couldn't.

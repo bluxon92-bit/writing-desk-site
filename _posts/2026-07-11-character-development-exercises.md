@@ -7,6 +7,8 @@ type: Guide
 image: "https://images.squarespace-cdn.com/content/v1/61dd3a4e102f883537ae2f1d/1745987499094-ACO857YNJETM40PN3K0P/writing+character+%281%29.jpg"
 excerpt: "Character development exercises for writers, practical techniques to build unforgettable characters your readers will care about."
 permalink: /blog/character-development-exercises/
+seo:
+  keyword: character development exercises for fiction writers
 ---
 
 Every gripping story, no matter how packed with action or plot twists, hinges on one essential element: compelling characters. You can have a world-ending disaster, an epic sword fight, or a mind-bending mystery, but if your characters fall flat, your readers won't stick around.

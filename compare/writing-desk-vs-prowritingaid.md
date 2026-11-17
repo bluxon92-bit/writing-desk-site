@@ -81,5 +81,7 @@ related:
 - title: "Best editing and proofreading software"
   url: "/best-writing-apps/editing/"
 cta_text: "Run Prose Analysis on a finished chapter and compare notes."
+seo:
+  keyword: writing desk vs prowritingaid
 ---
 Yes. Run ProWritingAid on an exported .docx if you want its reports as a second opinion.

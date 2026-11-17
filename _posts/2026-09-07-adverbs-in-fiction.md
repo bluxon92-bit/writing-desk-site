@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788771738/adverbs_-_drafting_by_hand_1_wyvo6v.jpg"
 excerpt: "Adverbs in fiction: why they usually signal a weak verb underneath, when they're the right choice anyway, and how to find the ones worth cutting."
 permalink: /blog/adverbs-in-fiction/
+seo:
+  keyword: adverbs in fiction
 ---
 
 An adverb modifying a verb is a sentence telling on itself. *She walked slowly* is a verb, *walked*, that wasn't specific enough, propped up by a word explaining what it should have shown. The fix is finding the verb that didn't need one.

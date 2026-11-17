@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/flashback_ex1ljq.jpg"
 excerpt: "Flashbacks explained: what separates an earned flashback from a stalling one, and how to use them without losing the reader."
 permalink: /blog/flashback/
+seo:
+  keyword: flashback
 ---
 
 A flashback is a scene that interrupts the present-day story to dramatise something that happened earlier, taking the reader fully into a past event rather than alluding to it through [backstory](/blog/backstory/) delivered in the present tense.

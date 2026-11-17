@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1789678233/passive_voice_1_f7ebmu.jpg"
 excerpt: "Passive voice in fiction: what it is, why grammar checkers get it wrong more often than you'd expect, and the specific situations where it's the right choice."
 permalink: /blog/passive-voice-fiction/
+seo:
+  keyword: passive voice in fiction
 ---
 
 One of the most commonly repeated pieces of writing advice I've recieved is to "avoid passive voice". For a time I followed the rule blindly, not entirely sure what it meant but aware that the word "was" appeared to be the primary culprit. I joined the many people out there comfortably missapplying a rule because it was never properly explained to me. Also, the grammar checking app I was using at the time flagged pretty much every instance of "was" as passive which didn't help, essentially meaning I found myself writing elliptical sentences and doing all sorts of prosaic acrobatics unnecessarily. 

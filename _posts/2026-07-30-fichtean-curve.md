@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/fichtean_curve_-_tense_desk_adl0ju.jpg"
 excerpt: "The Fichtean Curve explained: a structure that opens in crisis and escalates without a calm setup, and how to tell if it fits your novel."
 permalink: /blog/fichtean-curve/
+seo:
+  keyword: the fichtean curve
 ---
 
 Most structural frameworks start with calm. Ordinary world, protagonist in their life, slow accumulation of stakes before anything terrible happens. The reader eases in.

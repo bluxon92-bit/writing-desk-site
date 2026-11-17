@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181033/unreliable_narrator_-_fractured_chccmd.jpg"
 excerpt: "Unreliable narrators explained: the different types, why they work, and how to signal unreliability without confusing your reader."
 permalink: /blog/unreliable-narrator/
+seo:
+  keyword: unreliable narrator
 ---
 
 An unreliable narrator is a point-of-view character whose account of events the reader can't fully trust, whether because they're lying, mistaken, limited in what they understand, or psychologically compromised in some way that distorts what they perceive.

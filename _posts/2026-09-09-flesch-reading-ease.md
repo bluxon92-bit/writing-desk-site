@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1789678233/flesh_reading_score_1_lsjqoj.jpg"
 excerpt: "Flesch Reading Ease explained for novelists: what the score measures, what it doesn't, and how to use it as a diagnostic rather than a target."
 permalink: /blog/flesch-reading-ease/
+seo:
+  keyword: flesch reading ease
 ---
 
 Flesch Reading Ease is a formula, developed by Rudolf Flesch in the 1940s, that scores a piece of text from 0 to 100 based on two things: average sentence length and average syllables per word. Shorter sentences and shorter words push the score up. Longer sentences and longer words push it down. That's the entire mechanism. It has no idea whether the writing is any good.

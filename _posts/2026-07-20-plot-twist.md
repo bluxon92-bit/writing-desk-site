@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/crossroads_r862fj.jpg"
 excerpt: "Plot twists explained: what makes one land, the four main types, and how to plant clues without telegraphing the reveal."
 permalink: /blog/plot-twist/
+seo:
+  keyword: plot twists
 ---
 
 Plot twists are one of the most satisfying things a story can do, and one of the easiest to get wrong.

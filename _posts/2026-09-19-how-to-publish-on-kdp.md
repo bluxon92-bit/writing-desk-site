@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1789893656/kindle_direct_publishing_1_rqowxa.jpg"
 excerpt: "How to self-publish on Amazon KDP, from account setup through file requirements, royalty tiers, and the upload process itself, step by step."
 permalink: /blog/how-to-publish-on-kdp/
+seo:
+  keyword: how to self-publish on amazon kdp
 ---
 
 Publishing on Amazon KDP is free, and the platform itself is straightforward once you know the sequence. The parts that take time are the ones that happen before you ever open a KDP account: the finished, edited manuscript and a cover that meets the technical requirements. This is the process once both of those are ready.

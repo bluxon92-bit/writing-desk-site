@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181032/redemption_arc_olcxnc.jpg"
 excerpt: "Redemption arcs explained: what separates genuine change from a cheap reset, and how to structure one that earns its ending."
 permalink: /blog/redemption-arc/
+seo:
+  keyword: redemption arc
 ---
 
 A well-written redemption arc is one of the most powerful things fiction can do. It takes a character at their worst, puts them through hell, and brings them out the other side as someone the reader actually believes in again.

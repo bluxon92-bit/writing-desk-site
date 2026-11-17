@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181028/character_motivation_hdlm4o.jpg"
 excerpt: "Character motivation in fiction, how to write believable characters whose choices and actions feel earned and authentic."
 permalink: /blog/character-motivation/
+seo:
+  keyword: how to write believable characters
 ---
 
 While readers will happily suspend their disbelief for anything from fantasy stories with dragons to horror stories with ghosts, nothing brings them out of a story faster than a character acting against their own interests or desires. As an author it is crucial to fully understand what character motivation is, the role it plays in your story, and how to clearly establish it early on so that your readers can understand and relate to your characters.

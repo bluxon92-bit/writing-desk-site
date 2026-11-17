@@ -88,5 +88,7 @@ related:
 - title: "Best writing apps for Mac"
   url: "/best-writing-apps-for-mac/"
 cta_text: "Open a Markdown file from your own library and see how it feels."
+seo:
+  keyword: writing desk vs ulysses
 ---
 Yes. Both work with Markdown, so a draft from Ulysses can be exported to .md and opened in Writing Desk when it needs planning or editorial tools.

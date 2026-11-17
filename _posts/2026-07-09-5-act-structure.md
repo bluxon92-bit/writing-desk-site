@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/five_act_structure_rt0dof.jpg"
 excerpt: "Freytag's Pyramid explained: the five-act structure behind classical tragedy, with percentage breakdowns and a worked Romeo and Juliet example."
 permalink: /blog/5-act-structure/
+seo:
+  keyword: freytag's pyramid
 ---
 
 Freytag's Pyramid has a reputation as a schoolroom diagram, the kind of thing you labelled in English class and promptly forgot. That reputation isn't entirely unfair. Taught in isolation, as a diagram of shape rather than a tool for understanding story mechanics, it's not especially useful.

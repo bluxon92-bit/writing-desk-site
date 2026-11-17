@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181031/kishotenkutsu_japanese_desk_rwcxka.jpg"
 excerpt: "Kishotenketsu explained: a four-act structure built on revelation rather than conflict, with a real example and how to use its twist."
 permalink: /blog/kishotenketsu/
+seo:
+  keyword: kishotenketsu
 ---
 
 A story structure with no conflict. No [antagonist](/blog/antagonist-foil-character/) forcing the protagonist's hand. No problem to be solved. That's not quite right, but there's enough truth in it to be genuinely unsettling for anyone trained on Western three-act story logic. Kishotenketsu doesn't build through conflict escalation. It builds through revelation, and once you understand what it's doing, you start seeing it in places you didn't expect.

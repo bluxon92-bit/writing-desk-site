@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181033/three_act_structure_lklnuh.jpg"
 excerpt: "Three-act structure explained: the beats each act needs, common mistakes, and how to use it to diagnose a stalled draft."
 permalink: /blog/three-act-structure/
+seo:
+  keyword: three-act structure
 ---
 
 The three-act structure gets a bad reputation in certain writing circles. Too simple, too prescriptive, too Hollywood. I've heard novelists dismiss it as a formula for people who can't think for themselves.

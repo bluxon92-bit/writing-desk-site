@@ -80,5 +80,7 @@ related:
 - title: "Best Markdown writing apps"
   url: "/best-writing-apps/markdown/"
 cta_text: "Link a folder of your notes and start a project beside them."
+seo:
+  keyword: writing desk vs obsidian
 ---
 Yes. Many writers keep research and worldbuilding notes in Obsidian and write the manuscript in Writing Desk. Both work with plain Markdown files, so notes can move between them.

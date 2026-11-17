@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788771738/self-editing_-_red_pen_1_cgyvnn.jpg"
 excerpt: "How to self-edit your novel before it goes to beta readers: the three passes that matter, in the order that works, and how to know when you're done."
 permalink: /blog/self-edit-novel/
+seo:
+  keyword: how to self-edit your novel before
 ---
 
 Skip self-editing and send a manuscript to beta readers after one pass, fix the obvious typos, cut the scene that already felt slow, call it done, and you can end up with feedback like this: two readers stuck in the same chapter, for reasons that turn out to be the same reason, a third flagging a character motivation that makes complete sense to the writer and to nobody else, because it lived entirely in their head and never made it to the page.

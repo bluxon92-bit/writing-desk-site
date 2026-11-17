@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181032/story_spine_aqp57c.jpg"
 excerpt: "The Story Spine explained: Kenn Adams' seven-sentence framework for testing whether an idea is actually a story, with worked examples."
 permalink: /blog/story-spine/
+seo:
+  keyword: the story spine
 ---
 
 Most structural frameworks are designed for people who already have a story and need to organise it. The Story Spine is different. It's for people who have an idea, a character, a situation, a feeling, and need to find out if there's actually a story in it.

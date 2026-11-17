@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181029/character_flaws_lzbdfi.jpg"
 excerpt: "A comprehensive list of character flaws for fiction writers, organised by what they're actually rooted in."
 permalink: /blog/character-flaws/
+seo:
+  keyword: character flaws
 ---
 
 A character without flaws isn't a character, they're a fantasy. Real people are contradictory, self-defeating, and often their own worst enemy. The best fictional characters are too.

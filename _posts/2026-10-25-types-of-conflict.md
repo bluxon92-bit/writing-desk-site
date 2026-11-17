@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1793010308/chess_pieces_-_conflict_in_writing_1_h03gdj.jpg"
 excerpt: "The seven types of conflict in literature, with examples from classic and modern fiction, and how to layer them to build tension."
 permalink: /blog/types-of-conflict/
+seo:
+  keyword: types of conflict in fiction
 ---
 
 Every story you love runs on a collision course. The characters want something, but something stands in the way. This is the core tension that gets you turning the pages. That collision is conflict, and as a writer knowing the different types and how to use conflict effectively gives you a set of tools you can leverage intentionally and to great effect.

@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181031/how_to_create_tension_uqnxfm.jpg"
 excerpt: "How to create tension in your story, 10 techniques to keep readers hooked, from the inciting incident to the final page."
 permalink: /blog/how-to-create-tension/
+seo:
+  keyword: how to create tension in your writing
 ---
 
 Tension is a critical element in any story. It keeps readers engaged, invested, and on the edge of their seats. But how do you actually create tension in your writing? Here are ten techniques to build it effectively.

@@ -7,6 +7,8 @@ type: Product Update
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1793973097/hero_white_background_1_dt9wmn.png"
 excerpt: "Writing Desk is now a novel writing app for iPhone and iPad. Edit your manuscript, capture notes and work offline, synced with your Mac."
 permalink: /blog/writing-desk-iphone-ipad-app/
+seo:
+  keyword: novel writing app for iphone and ipad
 ---
 
 If you're anything like me, writing can be something of a messy process. Ideas come when they come, and often you're snatching moments of your day on the train or in a waiting room to make edits or add scenes.

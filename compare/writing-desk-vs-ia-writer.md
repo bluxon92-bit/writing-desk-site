@@ -82,5 +82,7 @@ related:
 - title: "Best apps for essays and long-form non-fiction"
   url: "/best-writing-apps/essays/"
 cta_text: "Open one of your Markdown drafts and try the editing tools on it."
+seo:
+  keyword: writing desk vs ia writer
 ---
 Yes. Both read and write Markdown, so files can move between them without conversion.

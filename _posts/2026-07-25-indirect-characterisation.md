@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181031/indirect_characterisation_x4hlxn.jpg"
 excerpt: "Indirect characterisation explained: the five techniques for revealing character without stating it, and when direct statement still works."
 permalink: /blog/indirect-characterisation/
+seo:
+  keyword: indirect characterisation
 ---
 
 There are two ways to tell a reader what a character is like. You can tell them directly, "Marcus was an impatient man", or you can show them indirectly, through behaviour, speech, choices, and reaction.

@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181032/seven_point_structure_ud0f2s.jpg"
 excerpt: "Seven-point story structure explained: Dan Wells' framework, pinch points, and planning a novel backwards from its ending."
 permalink: /blog/seven-point-story-structure/
+seo:
+  keyword: the seven-point story structure
 ---
 
 Most structural frameworks describe the shape of a story from the outside. Seven-point structure does something slightly different: it gives you specific leverage points, moments where the story pivots, and asks you to design each one before you write the scenes between them.

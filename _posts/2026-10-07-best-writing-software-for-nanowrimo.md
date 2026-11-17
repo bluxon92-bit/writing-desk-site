@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1784480204/Writing_Desk_Demo_Video_Open_Graph_1_lvzbnr.png"
 excerpt: "The best writing software for NaNoWriMo 2026: what to look for, twelve apps compared on price and setup, and where to find a writing community this November."
 permalink: /blog/best-writing-software-for-nanowrimo/
+seo:
+  keyword: best writing software for nanowrimo
 ---
 
 Thirty days, 50,000 words, and one job: get the draft down. The right writing software makes that easier from the first session. The wrong software hands you a setup project, a tour of features and a dozen distractions, when all you wanted to do was write.

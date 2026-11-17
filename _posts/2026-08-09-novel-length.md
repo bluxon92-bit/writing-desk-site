@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181031/novel_length_eglrmn.jpg"
 excerpt: "Novel length by genre: typical word counts for adult fiction, YA, and genre categories, and what happens if you go over or under."
 permalink: /blog/novel-length/
+seo:
+  keyword: how long should a novel be
 ---
 
 There's no single correct length for a novel, but there are strong genre conventions, and straying too far outside them creates real practical problems, particularly if you're planning to query agents or list a self-published book in a category readers have expectations for.

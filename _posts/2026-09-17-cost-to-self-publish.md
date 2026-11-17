@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1789677809/book_formatting_1_pax16n.jpg"
 excerpt: "The real cost to self-publish a book: editing, cover design, formatting, ISBNs, and marketing, with realistic budgets at three different price points."
 permalink: /blog/cost-to-self-publish/
+seo:
+  keyword: cost of self-publishing
 ---
 
 Self-publishing a novel to a professional standard costs somewhere between $500 and $5,000, depending on how much of the work you outsource versus do yourself. The two things that move that number the most are editing and cover design, everything else is comparatively small.

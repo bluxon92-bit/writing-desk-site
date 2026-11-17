@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181032/scene_and_sequel_zpb0iu.jpg"
 excerpt: "Scene and sequel explained: the unit-level structure underneath every chapter, and how to use it to fix pacing and reaction problems."
 permalink: /blog/scene-and-sequel/
+seo:
+  keyword: scene and sequel
 ---
 
 The big frameworks (three-act, Save the Cat, the [Hero's Journey](/blog/heros-journey/)) describe the shape of a whole novel. Scene and sequel describes something smaller and, in a lot of ways, more useful day to day: the shape of a single unit of story, repeated hundreds of times across a manuscript.

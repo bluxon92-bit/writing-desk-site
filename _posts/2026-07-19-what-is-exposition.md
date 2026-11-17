@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/exposition_mlk0gx.jpg"
 excerpt: "Exposition explained: what it actually means, why it goes wrong, and how to deliver information without stopping the story."
 permalink: /blog/what-is-exposition/
+seo:
+  keyword: exposition
 ---
 
 Every novel has a job to do in its first few pages: make a reader care before they've been given a reason to. Exposition is the tool you use to do that job, and it's also the thing most likely to sink you if you get it wrong. Get the balance right and readers sink into your world without noticing how they got there. Get it wrong and they're skimming past paragraphs of [backstory](/blog/backstory/) looking for something to actually happen.

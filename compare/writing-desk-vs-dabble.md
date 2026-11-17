@@ -80,5 +80,7 @@ related:
 - title: "Best novel writing software"
   url: "/best-writing-apps/novels/"
 cta_text: "Plot a chapter in the Story Plotter and compare it with your grid."
+seo:
+  keyword: writing desk vs dabble
 ---
 Both export .docx, so a draft can move between them.

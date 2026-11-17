@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181033/write_faster_rimsxc.jpg"
 excerpt: "How to write faster: the specific, fixable habits that slow novelists down, and what actually increases output."
 permalink: /blog/write-faster/
+seo:
+  keyword: how to write faster
 ---
 
 I don't like the phrase "write faster." It implies the problem is speed, which it usually isn't.

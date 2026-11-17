@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/heroes_journey_xthepk.jpg"
 excerpt: "The Hero's Journey explained: Campbell's twelve stages, how to adapt them by genre, and where writers go wrong."
 permalink: /blog/heros-journey/
+seo:
+  keyword: the hero's journey
 ---
 
 I resisted the Hero's Journey for years. It felt like a formula, the kind of thing that turns living stories into paint-by-numbers. I wanted to believe my novels were more original than that.

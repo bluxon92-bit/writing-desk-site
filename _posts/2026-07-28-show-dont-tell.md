@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181032/show_don_t_tell_fqyveq.jpg"
 excerpt: "Show don't tell explained properly: what telling actually is, when it's the right choice, and how to fix the most common mistake."
 permalink: /blog/show-dont-tell/
+seo:
+  keyword: show don't tell
 ---
 
 I've heard "show, don't tell" more times than I can count. Most of the time I heard it without fully understanding it. And for a long time, I followed it wrong, cutting every narrative summary I could find and replacing it with scene, which made my drafts slower and longer without making them better.

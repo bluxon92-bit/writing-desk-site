@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181032/save_the_cat_clapperboadr_p9g7th.jpg"
 excerpt: "The Save the Cat beat sheet explained: all fifteen beats, with percentage targets, adapted from screenwriting for novelists."
 permalink: /blog/save-the-cat-beat-sheet/
+seo:
+  keyword: save the cat beat sheet
 ---
 
 I first came across Save the Cat as a screenwriting tool and assumed it wouldn't translate to fiction. Too prescriptive. Too page-count specific. Too tied to the two-hour structure of film.

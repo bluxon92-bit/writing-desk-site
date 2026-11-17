@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/harmons_story_circle_eo6oep.jpg"
 excerpt: "Dan Harmon's Story Circle. The eight-step framework behind Community and Rick and Morty, with real examples from Jane Eyre, and The Great Gatsby."
 permalink: /blog/dan-harmon-story-circle/
+seo:
+  keyword: dan harmon's story circle
 ---
 
 If you've ever finished a first draft and thought, "something's off, but I can't figure out what," you're not alone. Structure is usually the culprit. And Dan Harmon's Story Circle might be the clearest, most practical fix out there.

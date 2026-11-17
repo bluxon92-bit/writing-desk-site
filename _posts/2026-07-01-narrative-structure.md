@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181031/narrative_structure_b5rz07.jpg"
 excerpt: "Narrative structure explained: what it actually is, why it matters, and the elements every structural framework shares."
 permalink: /blog/narrative-structure/
+seo:
+  keyword: narrative structure
 ---
 
 I spent the first few years of my writing life thinking narrative structure was something you either had instinctively or didn't. The writers I admired made it look invisible. Their stories felt inevitable, like they couldn't have been told any other way. I assumed that was talent, not craft.

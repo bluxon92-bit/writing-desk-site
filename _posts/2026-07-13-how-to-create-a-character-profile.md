@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181029/character_profile_ds1zfn.jpg"
 excerpt: "How to create a character profile: what to include, a free template, and how to use it without losing spontaneity on the page."
 permalink: /blog/how-to-create-a-character-profile/
+seo:
+  keyword: how to create a character profile
 ---
 
 Most writers have a rough sense of their characters before they start writing. What they look like, maybe. How they speak. Their name.

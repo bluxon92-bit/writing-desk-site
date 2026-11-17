@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1792328456/rising_and_falling_action_1_erg9zf.jpg"
 excerpt: "Learn what rising action and falling action are, how they fit the plot diagram, and how to write both, with examples from four published novels."
 permalink: /blog/rising-falling-action/
+seo:
+  keyword: rising action and falling action explained
 ---
 
 Rising action and falling action are the two halves of the shape most novels share. The rising action is everything that builds toward the climax. The falling action is everything that follows it. Get both right and your story has momentum on the way up and a satisfying landing on the way down.
@@ -29,7 +31,7 @@ The two parts this guide focuses on are highlighted. Here is what each part of t
 | Falling action | The consequences of the climax play out | Releases tension and ties up threads |
 | Resolution | The new normal | Shows how your protagonist has changed |
 
-The diagram is a simplification, and few published novels trace it as a smooth curve. Real rising action zigzags, with setbacks and small wins on the way up. Treat the diagram as a map of where tension is heading, not a line your story has to follow exactly. If you want the wider picture of how this shape relates to other frameworks, our [story structure guide](/blog/story-structure/) compares them, and [Freytag's pyramid](/blog/5-act-structure/) covers the five-act version in depth.
+The diagram is a simplification, and few published novels trace it as a smooth curve. Real rising action zigzags, with setbacks and small wins on the way up. Treat the diagram as a map of where tension is heading, not a line your story has to follow exactly. If you want the wider picture of how this shape relates to other frameworks, our [story structure guide](/hubs/story-structure/) compares them, and [Freytag's pyramid](/blog/5-act-structure/) covers the five-act version in depth.
 
 ## What Is Rising Action?
 
@@ -121,7 +123,7 @@ The plot diagram works as a diagnostic tool. When a draft isn't working, find th
 | A subplot is left hanging | It never joined the main plot | Resolve it in the falling action, or connect it to a turning point in the rising action |
 | The protagonist hasn't changed | The arc was not planned across the curve | Decide what they believe at the start and let the climax test it |
 
-Work top to bottom, since a weak rising action causes most of the problems below it. For a wider checklist of structural fixes, our [story structure guide](/blog/story-structure/) has a longer diagnostic table, and [revising your first draft](/blog/revising-your-first-draft/) shows where structural checks fit in the revision process.
+Work top to bottom, since a weak rising action causes most of the problems below it. For a wider checklist of structural fixes, our [story structure guide](/hubs/story-structure/) has a longer diagnostic table, and [revising your first draft](/blog/revising-your-first-draft/) shows where structural checks fit in the revision process.
 
 ## How Rising and Falling Action Fit Other Story Structures
 

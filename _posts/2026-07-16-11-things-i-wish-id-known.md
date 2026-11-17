@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181028/11_things_qttibz.jpg"
 excerpt: "11 things I wish I'd known before writing my first book, honest lessons on craft, process, and mindset from a published author."
 permalink: /blog/11-things-i-wish-id-known/
+seo:
+  keyword: 11 things i wish i'd known
 ---
 
 A lot of the time when you think about authors, you think about the literary greats. Orwell and Dostoyevsky, Austen and Le Guin. Books that make you look in the mirror and question the very nature of reality, meaning, existence.

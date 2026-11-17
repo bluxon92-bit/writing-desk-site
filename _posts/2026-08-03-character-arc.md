@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181029/character_arc_-_winding_path_uc3eor.jpg"
 excerpt: "Character arc explained: positive, negative, and flat arcs, the lie your character believes, and how to build an arc that actually earns its ending."
 permalink: /blog/character-arc/
+seo:
+  keyword: character arc
 ---
 
 A character arc is the internal change a character goes through over the course of a story: the difference between who they are at the start and who they are by the end, and the specific process that gets them from one to the other.

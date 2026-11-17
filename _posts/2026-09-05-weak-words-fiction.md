@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788771738/weak_words_-_megaphone_1_lddtjv.jpg"
 excerpt: "Weak words in fiction, the full list to search your draft for, why they dilute a sentence, and when a few of them earn their place anyway."
 permalink: /blog/weak-words-fiction/
+seo:
+  keyword: weak words in fiction
 ---
 
 A weak word doesn't add meaning. It sits in a sentence taking up space, softening a claim that would land harder without it, or standing in for a more specific word the sentence needed. Cut them and the sentence underneath does more with less.

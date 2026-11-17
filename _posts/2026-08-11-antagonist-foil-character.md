@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181028/antagonist_foil_mfbhz8.jpg"
 excerpt: "Antagonists and foil characters explained: what separates a good antagonist from a generic villain, and how a foil sharpens your protagonist."
 permalink: /blog/antagonist-foil-character/
+seo:
+  keyword: antagonists and foil characters
 ---
 
 Every protagonist needs pressure from somewhere, and two of the most common sources are the antagonist and the foil. They're often confused with each other, and a character can technically be both, but they do different structural jobs.

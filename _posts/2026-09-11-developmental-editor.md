@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1789678233/developmental_editor_1_fszohy.jpg"
 excerpt: "What a developmental editor does, how it differs from line editing and copyediting, and how to tell whether your manuscript needs one."
 permalink: /blog/developmental-editor/
+seo:
+  keyword: what does a developmental editor do
 ---
 
 A developmental editor works on the big-picture problems in a manuscript: structure, pacing, character arc, plot holes, point of view, whether the story works as a whole. The shape of the thing underneath the prose, rather than the sentences or the typos.

@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181029/chekhovs_guns_jb0vfr.jpg"
 excerpt: "Chekhov's Gun explained: the principle that every significant detail in a story needs to earn its place, and how to apply it."
 permalink: /blog/chekhovs-gun/
+seo:
+  keyword: chekhov's gun
 ---
 
 Chekhov's Gun is a principle of narrative economy, usually summarised as: if you show a loaded gun on the wall in the first act, it needs to go off by the end of the story. If it isn't going to be used, it shouldn't be there in the first place.

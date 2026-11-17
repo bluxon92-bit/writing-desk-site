@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788771738/filter_words_-_almost_1_jta5qw.jpg"
 excerpt: "What are filter words? Learn why they distance the reader, and how do you find and cut them from your manuscript without losing your narrator's voice."
 permalink: /blog/filter-words/
+seo:
+  keyword: filter words in fiction
 ---
 
 A filter word sits between the reader and the moment, reporting a character's experience instead of putting the reader inside it. *She felt the cold.* *He saw the door open.* *I noticed she was crying.* Grammatically fine. Structurally, each one adds a narrator filtering the sensation before the reader gets to it, instead of letting the reader have the sensation directly.

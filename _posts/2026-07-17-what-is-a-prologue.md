@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181032/prologue_jlhkas.jpg"
 excerpt: "Prologues explained: when they earn their place in a novel, when to skip one, and a quick test to check which applies to yours."
 permalink: /blog/what-is-a-prologue/
+seo:
+  keyword: prologue
 ---
 
 Prologues are one of those things that writers either swear by or refuse to touch. And honestly? Both camps have a point.

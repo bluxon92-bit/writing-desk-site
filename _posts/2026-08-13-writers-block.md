@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181033/writers_block_sa1hrl.jpg"
 excerpt: "Writer's block explained: the specific, fixable causes behind it, and practical ways to get moving again on a stalled novel."
 permalink: /blog/writers-block/
+seo:
+  keyword: writer's block
 ---
 
 Writer's block gets talked about as one thing, a mysterious creative shutdown with no clear cause, but it's rarely one thing in practice. Most of what people call writer's block traces back to a specific, identifiable problem, and the fix depends entirely on which problem it actually is. Treating all of them the same way, usually with generic advice like "just push through it," is why that advice so often doesn't work.

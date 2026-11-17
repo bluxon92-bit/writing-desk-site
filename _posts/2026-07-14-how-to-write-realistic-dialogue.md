@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181032/realistic_dialogue_dwreka.jpg"
 excerpt: "How to write realistic dialogue: craft conversation that reveals character, advances plot, and keeps readers fully engaged."
 permalink: /blog/how-to-write-realistic-dialogue/
+seo:
+  keyword: how to write realistic and engaging dialogue
 ---
 
 The first piece of feedback many writers get about their dialogue is some version of "it's a bit... expository." Characters who speak in paragraphs. Who explain things to each other that they both already know. Who say exactly what they mean and mean exactly what they say. Nobody arguing properly, nobody dodging a question, nobody saying the wrong thing at the wrong moment and having to live with it.

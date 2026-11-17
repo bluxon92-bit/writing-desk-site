@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1793654615/words_per_chapter_editing_1_hqlooe.jpg"
 excerpt: "How many words should a chapter have? Typical chapter lengths, pages per chapter, how many chapters a novel needs, and a flexible method for planning your own."
 permalink: /blog/words-per-chapter/
+seo:
+  keyword: how many words per chapter
 ---
 
 Chapter length is one of the few craft decisions you can feel working. Get it right and a reader says "just one more chapter" at midnight. Get it wrong and they drift off in the middle of a long one, or never build momentum through a run of tiny ones.

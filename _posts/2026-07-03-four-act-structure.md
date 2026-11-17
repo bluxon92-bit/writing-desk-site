@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181030/four_act_structure_gvi9tz.jpg"
 excerpt: "Four-act structure explained: how splitting Act Two solves the saggy middle, with a full beat breakdown by percentage."
 permalink: /blog/four-act-structure/
+seo:
+  keyword: four-act structure
 ---
 
 Most writers learn the [three-act structure](/blog/three-act-structure/) first. I did too. And for a long time I found the second act, the long middle that spans roughly half the book, the hardest section to sustain. It would start well and then somewhere around the 40% mark I'd lose the thread. The escalation would flatten out. The protagonist would feel like they were treading water.

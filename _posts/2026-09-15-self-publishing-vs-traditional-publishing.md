@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1789678233/self_publish_1_v00fhh.jpg"
 excerpt: "Self-publishing vs traditional publishing: the real trade-offs across timeline, royalties, control, and cost, and how to decide between them."
 permalink: /blog/self-publishing-vs-traditional-publishing/
+seo:
+  keyword: self-publishing vs traditional publishing
 ---
 
 The choice between self-publishing and traditional publishing comes down to five real trade-offs: timeline, money, control, distribution, and how much marketing lands on you. Everything else people argue about online is detail sitting on top of those five things.

@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1788181029/backstory_k858as.jpg"
 excerpt: "Backstory explained: what it is, why too much of it kills momentum, and how to reveal a character's past without stopping the story."
 permalink: /blog/backstory/
+seo:
+  keyword: backstory
 ---
 
 Backstory is everything that happened to a character before the story you're currently telling begins: their history, their relationships, the events that shaped who they are on page one. Every character has one, whether or not the reader ever sees most of it.

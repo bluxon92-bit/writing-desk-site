@@ -7,6 +7,8 @@ type: Guide
 image: "https://res.cloudinary.com/dnkddcxrt/image/upload/v1789893656/book_cover_design_table_1_n0pb68.jpg"
 excerpt: "Book cover design for self-publishing: the thumbnail test, genre conventions that matter, typography rules, and DIY versus professional design."
 permalink: /blog/book-cover-design-self-publishing/
+seo:
+  keyword: designing your book cover for self-publishing
 ---
 
 A book cover's job isn't to be beautiful in the abstract. It's to be instantly readable at thumbnail size and to signal genre correctly within a couple of seconds, because that's the format almost every reader encounters it in first. A gorgeous cover that fails at 150 pixels wide has failed at the one job that matters most.
